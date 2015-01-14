@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" standalone="yes" ?>
+<NewDataSet>
+	<!--  Parameter List   -->
+  <Item DoWhat="Start" Url="/WF/Port.aspx?DoWhat=Start:UserNo=@UserNo:SID=@SID"
+        CH=" Work initiated " DESCCH=" Initiate a job with no parameters "
+        />
+  <Item DoWhat="StartSmall" Url="/WF/Port.aspx?DoWhat=StartSmall:UserNo=@UserNo:SID=@SID"
+      CH=" Work initiated by small screen " DESCCH=" Initiate a job with no parameters "
+        />
+  <Item1 DoWhat="StartSmallSingle" Url="/WF/Port.aspx?DoWhat=StartSmallSingle:UserNo=@UserNo:SID=@SID"
+    CH=" Work initiated ( Special widget )" DESCCH=" Initiate a job with no parameters "
+        />
+
+  <Item DoWhat="Runing" Url="/WF/Port.aspx?DoWhat=Runing:UserNo=@UserNo:SID=@SID"
+CH=" Working in transit " DESCCH=" Working in transit "
+        />
+  <Item DoWhat="Runing" Url="/WF/Port.aspx?DoWhat=Runing:UserNo=@UserNo:SID=@SID"
+  CH=" Working in transit ( Small window )" DESCCH=" Working in transit "
+        />
+  
+  <Item1 DoWhat="Runing" Url="/WF/Port.aspx?DoWhat=Runing:UserNo=@UserNo:SID=@SID"
+CH=" Working in transit ( Special widget )" DESCCH=" Working in transit "
+        />
+
+  <Item DoWhat="EmpWorks" Url="/WF/Port.aspx?DoWhat=EmpWorks:UserNo=@UserNo:SID=@SID"
+  CH=" Upcoming work " DESCCH=" Upcoming work "
+        />
+  <Item DoWhat="EmpWorks" Url="/WF/Port.aspx?DoWhat=EmpWorks:UserNo=@UserNo:SID=@SID"
+  CH=" Upcoming work ( Small window )" DESCCH=" Upcoming work "
+        />
+
+  <Item1 DoWhat="EmpWorks" Url="/WF/Port.aspx?DoWhat=EmpWorks:UserNo=@UserNo:SID=@SID"
+CH=" Upcoming work ( Special widget )" DESCCH=" Upcoming work "
+        />
+
+
+  <Item DoWhat="FlowSearch" Url="/WF/Port.aspx?DoWhat=FlowSearch:UserNo=@UserNo:SID=@SID"
+  CH=" Process Query " DESCCH=" Upcoming work "
+        />
+  <Item DoWhat="FlowSearchSmall" Url="/WF/Port.aspx?DoWhat=FlowSearchSmall:UserNo=@UserNo:SID=@SID"
+  CH=" Process Query ( Small window )" DESCCH=" Upcoming work "
+        />
+  <Item1 DoWhat="FlowSearchSmallSingle" Url="/WF/Port.aspx?DoWhat=FlowSearchSmallSingle:UserNo=@UserNo:SID=@SID"
+CH=" Process Query ( Special widget )" DESCCH=" Upcoming work "
+        />
+
+  <!--<Item DoWhat="StartSmall"  CH=" Work initiated small screen " />
+  <Item DoWhat="StartSmallSingle"   CH=" Work initiated small screen ( Single )"  />
+  <Item DoWhat="FlowSearch"   CH=" Can I delete process ?"  />
+  <Item DoWhat="Login"   CH=" No work permit allocation ?"  />
+  <Item DoWhat="MyFlow"   CH=" Can people choose to accept "  />
+  <Item DoWhat="IsCanCC"   CH=" Can CC "  />
+  <Item DoWhat="IsCanRpt"   CH=" Can I view Report " />
+  <Item DoWhat="IsSecret"   CH=" Is secrecy step "  />
+  <Item DoWhat="FJOpen"   CH=" Accessories Permissions "  />
+  <Item DoWhat="DoWhat" CH=" Perform content " />
+  <Item DoWhat="RunModel" CH=" Run mode " />-->
+</NewDataSet>

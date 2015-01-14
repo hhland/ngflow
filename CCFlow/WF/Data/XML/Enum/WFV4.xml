@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Item Key="WhoIsPK"
+   CH="@0= The work ID Is the primary key @1= Process ID Is the primary key @2= Parent process ID Is the primary key @3= Continuation of the process ID Is the primary key "
+   EN="@0= The work ID Is the primary key @1= Process ID Is the primary key @2= Parent process ID Is the primary key @3= Continuation of the process ID Is the primary key "
+   JP="@0= The work ID Is the primary key @1= Process ID Is the primary key @2= Parent process ID Is the primary key @3= Continuation of the process ID Is the primary key "
+   RU="@0= The work ID Is the primary key @1= Process ID Is the primary key @2= Parent process ID Is the primary key @3= Continuation of the process ID Is the primary key "
+/>
+
+  <Item Key="WFSta"
+   CH="@0= Run @1= Completed @2= Other "
+   EN="@0= Run @1= Completed @2= Other "
+   JP="@0= Run @1= Completed @2= Other "
+   RU="@0= Run @1= Completed @2= Other "
+/>
+  
+  <Item Key="SaveModel"
+    CH="@0= Only node table @1= Node table and Rpt表"
+    EN="@0= Only node table @1= Node table and Rpt表"
+    JP="@0= Only node table @1= Node table and Rpt表"
+    RU="@0= Only node table @1= Node table and Rpt表"  />
+
+  <Item Key="AuthorWay"
+  CH="@0= Not authorized @1= All authorization process @2= Specifies the authorization process "
+  EN="@0= Not authorized @1= All authorization process @2= Specifies the authorization process "
+  JP="@0= Not authorized @1= All authorization process @2= Specifies the authorization process "
+  RU="@0= Not authorized @1= All authorization process @2= Specifies the authorization process "  />
+    
+    <Item Key="PRI"
+  CH="@0=低@1=中@2=高"
+  EN="@0=低@1=中@2=高"
+  JP="@0=低@1=中@2=高"
+  RU="@0=低@1=中@2=高"  />
+    
+  <Item Key="SelectAccepterEnable"
+    CH="@0= Not enabled @1= Individually enabled @2= Before sending open "
+    EN="@0= Not enabled @1= Individually enabled @2= Before sending open "
+    JP="@0= Not enabled @1= Individually enabled @2= Before sending open "
+    RU="@0= Not enabled @1= Individually enabled @2= Before sending open "
+        />
+  
+    <Item Key="FrmType"
+    CH="@0= Freedom Form @1= Fool form @2= Custom Form @3= Form tree "
+    EN="@0= Freedom Form @1= Fool form @2= Custom Form @3= Form tree "
+    JP="@0= Freedom Form @1= Fool form @2= Custom Form @3= Form tree "
+    RU="@0= Freedom Form @1= Fool form @2= Custom Form @3= Form tree "
+        />
+  
+    <Item Key="DeliveryWay"
+    CH="@0= According to the current operator organization structure step by step to find jobs @1= By department @2=按SQL Calculate @3= Press officers set computing @4= Select from the previous step Sender @5= Press a node form SysSendEmps Field calculations @6= Previous press operator @7= Previous press operator and automatically jump @8= By the staff of the specified node computing @9= By computing the intersection of jobs and departments @10= Calculation by post ( Sectoral set latitude )@11= Press staff positions specified node computing @12=按SQL Determine the child thread to accept people with a data source @13= From the list on a node to determine the recipient of the child thread @14= Only post by computing @100=按ccflow的BPM Mode processing "
+    EN=""
+    JP=""
+    RU=""
+        />
+
+    <!--  Jump Rules  -->
+    <Item Key="JumpWay"
+    CH="@0= Can not jump @1= Can only jump backwards @2= Can only jump forward @3= Any node Jump @4= Skip the specified rules "
+    EN=""
+    JP=""
+    RU=""
+        />
+
+    <!--  Return rules  -->
+    <Item Key="ReturnRole"
+    CH="@0= Can not be returned @1= Only to return on a node @2= Returnable before any node @3= Returnable specified node @4= Return route is determined by the flow design "
+    EN=""
+    JP=""
+    RU=""        />
+  
+    <!--  CC rules  -->
+    <Item Key="CCRole"
+    CH="@0= Not Cc @1= Hand Cc @2= Automatic CC @3= Manual and automatic @4= By Form SysCCEmps Field calculations "
+    EN="@0= Not Cc @1= Hand Cc @2= Automatic CC @3= Manual and automatic "
+    JP="@0= Not Cc @1= Hand Cc @2= Automatic CC @3= Manual and automatic "
+    RU="@0= Not Cc @1= Hand Cc @2= Automatic CC @3= Manual and automatic "         />
+
+  <!--  Process delete rules  -->
+  <Item Key="DelEnable"
+  CH="@0= You can not delete @1= Tombstone @2= Logging way to delete @3= Completely remove @4= Let the user decide to delete the way "
+  EN=""
+  JP=""
+  RU=""         />
+  
+    
+	<Item Key="EventDoType" 
+        CH="@0= Disable @1= Execute a stored procedure @2= Carried out SQL Statement @3= Carried out URL@4=WebServices( Unfinished )@5=exe File ( Unfinished )@6=EventBase类"
+        EN="@0= Disable @1= Execute a stored procedure @2= Carried out SQL Statement @3= Carried out URL@4=WebServices( Unfinished )@5=exe File ( Unfinished )@6=EventBase类"
+        JP="@0= Disable @1= Execute a stored procedure @2= Carried out SQL Statement @3= Carried out URL@4=WebServices( Unfinished )@5=exe File ( Unfinished )@6=EventBase类"
+        RU="@0= Disable @1= Execute a stored procedure @2= Carried out SQL Statement @3= Carried out URL@4=WebServices( Unfinished )@5=exe File ( Unfinished )@6=EventBase类"   />
+
+  <Item Key="WFState"
+        CH="@0= Blank @1= Draft @2= Run @3= Completed @4= Pending @5= Return @6= Forwarding @7= Delete @8= Plus sign @9= Freeze @10= Batch "
+        EN="@0= Blank @1= Draft @2= Run @3= Completed @4= Pending @5= Return @6= Forwarding @7= Delete @8= Plus sign @9= Freeze @10= Batch "
+        JP="@0= Blank @1= Draft @2= Run @3= Completed @4= Pending @5= Return @6= Forwarding @7= Delete @8= Plus sign @9= Freeze @10= Batch "
+        RU="@0= Blank @1= Draft @2= Run @3= Completed @4= Pending @5= Return @6= Forwarding @7= Delete @8= Plus sign @9= Freeze @10= Batch " />
+
+  <Item Key="WFStateApp"
+        CH="@2= Run @3= Completed @4= Pending @5= Return @6= Forwarding @7= Delete @8= Plus sign @9= Freeze @10= Batch "
+        EN="@2= Run @3= Completed @4= Pending @5= Return @6= Forwarding @7= Delete @8= Plus sign @9= Freeze @10= Batch "
+        JP="@2= Run @3= Completed @4= Pending @5= Return @6= Forwarding @7= Delete @8= Plus sign @9= Freeze @10= Batch "
+        RU="@2= Run @3= Completed @4= Pending @5= Return @6= Forwarding @7= Delete @8= Plus sign @9= Freeze @10= Batch " />
+  
+  <!--  Run mode   -->
+<Item Key="RunModel"
+          CH="@0= General @1= Confluence @2= Bypass @3= Confluence points @4= Child thread "
+          EN="@0=General@1=Confluence@2=Shunt@3=Sub-confluent"
+          JP="@0=General@1=Confluence@2=Shunt@3=Sub-confluent"
+          RU="@0=General@1=Confluence@2=Shunt@3=Sub-confluent" />
+
+  <!--  Diversion rules   -->
+<Item Key="FLRole"
+        CH="@0= By recipient @1= By sector @2= By post "
+        EN="@0=By recipient@1=By sector@2=By post"
+        JP="@0=By recipient@1=By sector@2=By post"
+        RU="@0=By recipient@1=By sector@2=By post"
+         />
+
+  <!--  Accessories Permissions   -->
+<Item Key="FJOpen"
+    CH="@0= Close Accessories @1= The operator @2= The work ID@3= Process ID"
+    EN="@0=Close attachments@1=Operator@2=WorkID@3=FlowID"
+    JP="@0=Close attachments@1=Operator@2=WorkID@3=FlowID"
+    RU="@0=Close attachments@1=Operator@2=WorkID@3=FlowID" />
+    
+  <!--  Form type   -->
+<Item Key="FormType"
+     CH="@0= Fool form @1= Freedom Form @2= Custom Form @3=SDK Form @4=SL Form ( Beta version )@5= Form tree @9= Disable ( Form for more efficient processes )"
+     EN="@0=System Form@1=Custom Form@2=SDK Form"
+     JP="@0=System Form@1=Custom Form@2=SDK Form"
+     RU="@0=System Form@1=Custom Form@2=SDK Form" />
+
+  <!--  Document Type   -->
+<Item Key="DocType"
+    CH="@0= Official documents @1= Memo "
+    EN="@0=Official documents@1=Memo"
+    JP="@0=Official documents@1=Memo"
+    RU="@0=Official documents@1=Memo" />
+
+  <!--  Run   -->
+<Item Key="FlowRunWay"
+ CH="@0= Manually start @1= Start time designated staff @2= Data collection started on time @3= Trigger Start "
+ EN="@0=By Hand@1=By Year@2=By Month@3=By Week@4=By Day@5=By Hour"
+ JP="@0=By Hand@1=By Year@2=By Month@3=By Week@4=By Day@5=By Hour"
+ RU="@0=By Hand@1=By Year@2=By Month@3=By Week@4=By Day@5=By Hour" />
+
+<!--  Application Type   -->
+<Item Key="AppType"
+  CH="@0= External Url Connection @1= Local executable file "
+  EN="@0=Url@1=exe"
+  JP="@0=Url@1=exe"
+  RU="@0=Url@1=exe" />
+  <!--  Message Type   -->
+<Item Key="AlertType"
+CH="@0= SMS @1= Mail @2= E-mail and SMS @3= System ( Internal ) News "
+EN="@0=SMS@1=Email@2=SMS-Email@3= System ( Internal ) News "
+JP="@0=SMS@1=Email@2=SMS-Email@3= System ( Internal ) News "
+RU="@0=SMS@1=Email@2=SMS-Email@3= System ( Internal ) News " />
+     
+<!--  Listen to the way   -->
+<Item Key="AlertWay"  
+CH="@0= Do not receive @1= SMS @2= Mail @3= Internal message @4=QQ News @5=RTX News @6=MSN News "
+EN="@0=None@1=SMS@2=Email@3=SMS-Email"
+JP="@0=None@1=SMS@2=Email@3=SMS-Email"
+RU="@0=None@1=SMS@2=Email@3=SMS-Email" />
+ 
+  <!-- Target  -->
+    <Item Key="Target"
+CH="@0= New Window @1= The window @2= The parent window "
+EN="@0=New@1=Self@2=Parent"
+JP="@0=New@1=Self@2=Parent"
+RU="@0=New@1=SMS@2=Parent" />
+
+  <!-- SharingType  -->
+<Item Key="SharingType"
+CH="@0= Share @1= Private "
+EN="@0=Share@1=Privete"
+JP="@0=Share@1=Privete"
+RU="@0=Share@1=Privete" />
+
+<!-- TaskSta Status   -->
+<Item Key="TaskSta"
+CH="@0= Not Started @1= In progress @2= Carry out @3= Put off "
+EN="@0=Init@1=Runing@2=Complete@3=Postpone"
+JP="@0=Init@1=Runing@2=Complete@3=Postpone"
+RU="@0=Init@1=Runing@2=Complete@3=Postpone" />
+
+  <!-- JMCD Confidential degree   -->
+  <Item Key="JMCD"
+  CH="@0= General @1= Secrecy @2= Secret @3= Confidential "
+  EN="@0=Init@1=Runing@2=Complete@3=Postpone"
+  JP="@0=Init@1=Runing@2=Complete@3=Postpone"
+  RU="@0=Init@1=Runing@2=Complete@3=Postpone" />
+</NewDataSet>

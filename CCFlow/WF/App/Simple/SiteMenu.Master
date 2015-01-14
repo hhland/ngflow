@@ -1,0 +1,45 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteMenu.master.cs" Inherits="CCFlow.App.SiteMenu" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head >
+
+<body  style="background-color:Silver; margin-top:0px;" >
+<center>
+
+<table width="910px"    border="0"  cellpadding="0" cellspacing="0"   style="margin-top:0px;height:700px;background:white; text-align:left"> 
+<tr>
+<td valign=top  style="margin:5px;" >
+    <% if (BP.Web.WebUser.No != null)
+       {
+           /*如果登录信息失效，就不要显示菜单。 */
+           %>
+           <br>
+  [登录信息：<%=BP.Web.WebUser.No%>,<%=BP.Web.WebUser.Name%>]
+  <a href="Start.aspx">发起</a> 
+  - <a href="Todolist.aspx">待办(<%=BP.WF.Dev2Interface.Todolist_EmpWorks%>)</a>
+    - <a href="Runing.aspx">在途(<%=BP.WF.Dev2Interface.Todolist_Runing%>)</a>
+    - <a href="CC.aspx">抄送(<%=BP.WF.Dev2Interface.Todolist_CCWorks%>)</a>
+    - <a href="Complete.aspx">已完成(<%=BP.WF.Dev2Interface.Todolist_Complete%>)</a>
+
+   <%} %>
+   <div style="float:right">[<a href="Login.aspx">登陆</a>] [<a href='/WF/Admin/Xap/Designer.aspx' target="_blank"  >进入流程设计器</a>]</div> 
+    </td>
+    </tr>
+
+    <tr>
+    <td valign="top"  height="100%;margin-top:5px;">
+   <form id="form1" runat="server">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+        </td>
+        </tr>
+      </table>
+ </center>
+
+</body>
+</html>

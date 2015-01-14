@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <!--  Description webconfig Configuration information  
+  No=是webconfig Configured Key.
+  Name= Its name is , 
+  Note= A description  DBType Is the data type . 
+  IsEnable= Whether it can be modified .
+   Modification web.config The connection .  Functional connection :\Comm\Sys\EditWebconfig.aspx.  
+   Other : To be able to modify web.config, You need to set the file inside .
+    <identity impersonate="true"  userName="administrator" password="" /> 
+    -->
+  
+  <Item No="IsDebug" Name=" Whether the test status " Note=" Whether the test status " DBType="Boolen"  IsShow="1" />
+
+  <Item No="FlowCtrlBtnPos" Name=" Process control buttons position " Note="@Top= Head @Bottom= Bottom " DBType="String"  IsShow="1" />
+  <Item No="OSModel" Name=" Organizational Model " Note=" @0= Integrated ( Embed ) Mode @1= Independent operation (BPM) Mode " DBType="Int"  IsShow="1" />
+
+
+
+  <Item No="IsAuth" Name=" The need for security verification " Note=" When embedded in the way work , To check the security of visitors " DBType="Boolen"  IsShow="1" />
+
+    <Item No="IsEnablePRI" Name=" Whether it is a priority to increase the flow " Note=" Some customers do not need to process priority , It is set to 0" DBType="Boolen"  IsShow="1" />
+    <Item No="IsEnableCheckUseSta" Name=" To disable the user with immediate effect " Note=" If the application needs to be disabled after the user with immediate effect if it is set to 1, Set 1 After frequently detected , Adds some overhead systems ."
+          DBType="Boolen"  IsShow="1" />
+
+    <Item No="SysLanguage" Name=" System Language " Note=" System Language " DBType="String"   IsEnable="0" />
+    <Item No="SysNo" Name=" System Number " Note=" System Number " DBType="String"  IsEnable="0" />
+    <Item No="SysName" Name=" System Name "  Note=" System Name " DBType="String"  IsEnable=""  />
+    <Item No="CopyRight" Name=" All rights reserved "  Note=" Is displayed at the bottom of the system " DBType="String"  IsEnable="1"  />
+    <Item No="TouchWay" Name=" Contact information "  Note=" Is displayed at the bottom of the system " DBType="String"  IsEnable="1"  />
+  
+    <Item No="UIRowStyleGlo" Name=" Table style "  Note=" Role in the background components " DBType="String"  IsEnable="1"  />
+    <Item No="UIIsEnableDouclickGlo" Name=" Double-click to start "  Note=" Double-click to start " DBType="String"  IsEnable="1"  />
+  
+  <Item No="IsEnablePRI" Name=" Whether it is a priority to increase the flow "  Note="" DBType="Boolen"  IsEnable="1"  />
+  <Item No="IsEnableTaskPool" Name=" Whether to enable shared task pool "  Note="" DBType="Boolen"  IsEnable="1"  />
+  <Item No="IsEnableDraft" Name=" Whether the draft enabled "  Note="" DBType="Boolen"  IsEnable="1"  />
+  <Item No="IsEnableZhiDu" Name=" Whether the system is enabled "  Note="" DBType="Boolen"  IsEnable="1"  />
+
+  <Item No="PageSize" Name=" Page size "  Note=" Page size " DBType="String" />
+    <Item No="UITableOrderWay" Name=" Sort by page "  Note="DESC  Descending , No input is ascending " DBType="String" />
+
+  <Item No="InitConnNum" Name=" System Connections "  Note=" Connection data system initialization " DBType="String"  IsEnable="1"  />
+  <Item No="AppCenterDSN" Name=" Application connection "  Note=" Connect to the database password and user " DBType="String" />
+  <Item No="AppCenterDBType" Name=" Database Type "  Note=" Support type :MSSQL,Oracle, DB2,Access,MySQL" DBType="String"  IsEnable="1" IsShow="0" />
+  <Item No="DBAccessOfMSSQL2000" Name="  Auxiliary application data MSSQL2000 Connection "  Note=" The name of the system " DBType="String" IsEnable="0" />
+
+  <Item No="DBAccessOfOLE" Name=" Auxiliary application data Ole Connection "  Note=" Auxiliary application data Ole Connection   " DBType="String" />
+  <Item No="DBAccessOfODBC" Name=" Auxiliary application data  ODBC  Connection "  Note=" Ditto " DBType="String" />
+  <Item No="DBAccessOfOracle" Name=" Auxiliary application data oracle Connection "  Note=" Ditto " DBType="String" />
+
+  <Item No="DeveloperName" Name=" Developers "  Note=" Developers " DBType="String"   IsEnable="0"  IsShow="0" />
+  <Item No="DeveloperShortName" Name="  Developers "  Note=" Developers " DBType="String"  IsEnable="0"   IsShow="0" />
+  <Item No="DeveloperTel" Name=" Phone "  Note=" Phone " DBType="String"  IsEnable="0"  IsShow="0" />
+  <Item No="DeveloperAddr" Name=" Developers Address "  Note="" DBType="String"  IsEnable="0"   IsShow="0" />
+  <Item No="DeveloperMail" Name=" Developers Mail "  Note="" DBType="String"  IsEnable="0"   IsShow="0" />
+  
+  <Item No="ServiceMail" Name="Tel"  Note=" System users have a problem , Or abnormal will display this information ." DBType="String" />
+  <Item No="ServiceTel"  Name="Email"  Note=" Ditto " DBType="String" />
+  
+  <Item No="CustomerNo" Name=" Customer Number "  Note=" The name of the system " DBType="String" IsShow="0" />
+  <Item No="CustomerName" Name=" Customer Name "  Note=" The name of the system " DBType="String" IsShow="0" />
+  <Item No="CustomerShortName" Name="  Abbreviation "  Note=" The name of the system " DBType="String" IsShow="0" />
+  <Item No="CustomerTel" Name="  Phone "  Note=" Developer Phone " DBType="String"  IsShow="0" />
+  <Item No="CustomerAddr" Name=" Address "  Note=" Developers " DBType="String"  IsShow="0" />
+  
+  <Item No="SysIP" Name=" System IP"  Note="" DBType="String" IsEnable="1" />
+  <Item No="TopNum" Name=" Show the number of "  Note=" Show the number of " DBType="String" />
+
+  <Item No="CIP" Name=" Cluster IP"  Note=" Server computing distributed on multiple machines , Cluster IP." DBType="String" />
+  <Item No="FtpIP" Name=" File server "  Note=" Server storage system attachments " DBType="String" />
+  <Item No="FtpUser" Name=" Username "  Note="" DBType="String" />
+  <Item No="FtpPass" Name=" Password "  Note="" DBType="String" />
+
+    <Item No="FileFtpIP" Name=" External resource server "  Note=" Also called Business Resource Server " DBType="String" />
+    <Item No="FileFtpUser" Name=" Username "  Note="" DBType="String" />
+    <Item No="FileFtpPass" Name=" Password "  Note="" DBType="String" />
+  
+  <Item No="ServiceTel" Name=" Customer Service Phone " Note=" Contact Page Letter   Customer Service Phone " DBType="String" />
+  <Item No="Tel" Name=" Phone " Note=" Contact Page information   Phone " DBType="String" />
+  <Item No="Fax" Name=" Fax " Note=" Contact Page information   Fax " DBType="String" />
+  <Item No="WebSite" Name=" Site " Note=" Contact Page information   Site " DBType="String" />
+  <Item No="Email" Name=" E-mail " Note=" Contact Page information   E-mail " DBType="String" />
+  <Item No="Address" Name=" Address " Note=" Contact Page information   Address " DBType="String" />
+  <Item No="Contacter" Name=" Contacts " Note=" Contact Page information   Contacts " DBType="String" />
+
+
+  <Item No="AMFrom" Name=" Morning work hours " Note=" The following data is used to calculate the aging process assessment " DBType="String" IsShow="0"  IsEnable="1" />
+  <Item No="AMTo" Name=" Working hours "  DBType="String" IsShow="0"  IsEnable="1" />
+
+    <Item No="PMFrom" Name=" Afternoon working hours "  DBType="String" IsShow="0"  IsEnable="1" />
+  <Item No="PMTo" Name=" Working hours "  DBType="String" IsShow="0"  IsEnable="1" />
+
+  <Item No="WeekResetType" Name=" Rest "  DBType="Enum" IsShow="0"  IsEnable="1"  Vals="@0= Weekend @1= Single break @2= Endlessly " />
+  <Item No="Holiday" Name=" Holidays "  DBType="String" IsShow="0"  IsEnable="1" Note=" Format :05-01,05-02,05-03 Representation 5 Three days before the holiday month " />
+
+  <Item No="IsShowFlowNum" Name=" Upcoming whether to display the number of jobs ?" Note=" Standalone mode prompt the number of jobs to be run "
+        DBType="Boolen"  IsShow="1" />
+  <Item No="IsEnableStyle" Name=" Whether to enable the system style ?" Note=" Whether to allow users to set the system style " DBType="Boolen"  IsShow="1" />
+  <Item No="BPMHost" Name=" Process Design server address " Note="" DBType="String"  IsShow="1" />
+</NewDataSet>

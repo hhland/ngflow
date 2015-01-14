@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" standalone="yes" ?>
+<NewDataSet>
+	<!--  External connection configuration instructions   No,  Department number ,URL  Other side sqlserver  Connection .  -->
+	<Item No="630105"  Url="Password=;Persist Security Info=True;User ID=sa;Initial Catalog=ds_wc;Data Source=127.0.0.1;Timeout=2"  />
+    <Item No="630104"  Url="Password=;Persist Security Info=True;User ID=sa;Initial Catalog=ds_wc;Data Source=127.0.0.1;Timeout=2"  />
+</NewDataSet>

@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" standalone="yes" ?>
+<NewDataSet>
+   <AdminTools>
+		<ICON> ../../Images/System/User_1.gif </ICON>
+		<URL> /WF/Port/SignInOfRe.aspx?IsChangeUser=1 </URL>
+		<Name>  Change User   </Name>
+		<DESC>  Change User .</DESC>
+		<Enable>0</Enable>		
+	</AdminTools>
+	<AdminTools>
+		<ICON> ../../Images/System/Sys.gif </ICON>
+		<URL> ../Port/ChangePass.aspx  </URL>
+		<Name>  Change Password   </Name>
+		<DESC>  Change your login password in the system .</DESC>
+		<Enable>1</Enable>		
+	</AdminTools>
+	
+	<AdminTools>
+		<ICON> ../../Images/System/Sys.gif </ICON>
+		<URL> ../Port/Authorize.aspx</URL>
+		<Name>  Authorize / License landing / Exit authorize landing mode  </Name>
+		<DESC>  The system will automatically select the appropriate action based on your current login status .</DESC>
+		<Enable>1</Enable>		
+	</AdminTools>
+	
+	<AdminTools>
+		<ICON> ../../Images/System/UI.gif </ICON>
+		<URL> ../Port/Personal.aspx</URL>
+		<Name>  User Interface Settings   </Name>
+		<DESC>  User style settings .</DESC>
+		<Enable>0</Enable>
+	</AdminTools>
+	<AdminTools>
+		<ICON> ../../Images/System/Ring.gif </ICON>
+		<URL> ../Port/NoticeSound.aspx</URL>
+		<Name>  Message ringtone   </Name>
+		<DESC>  In the new message arrival time , What kind of sound alert to you ．</DESC>
+		<Enable>0</Enable>		
+		
+	</AdminTools>
+	<AdminTools>
+		<ICON> ../../Images/System/NewMsg.gif </ICON>
+		<URL>  ../Msg/Reader.aspx </URL>
+		<Name> My Messages </Name>
+		<DESC>  System or your colleagues to send a message to you .</DESC>
+		<Enable>0</Enable>		
+	</AdminTools>
+	<AdminTools>
+		<ICON> ../../Images/System/NewMsg.gif </ICON>
+		<URL>  ../Msg/Sender.aspx</URL>
+		<Name> Send a message </Name>
+		<DESC>  Send a message </DESC>
+		<Enable>0</Enable>
+	</AdminTools>
+	<AdminTools>
+		<ICON>../../Images/System/NewMsg.gif </ICON>
+		<URL>../FAQ/FAQ.aspx</URL>
+		<Name>  My question </Name>
+		<DESC>  My question , Wait for the administrator to resolve .</DESC>
+		<Enable>1</Enable>		
+	</AdminTools>
+	<AdminTools>
+		<ICON> ../../Images/System/DataIO.gif </ICON>
+		<URL> DTS.aspx</URL>
+		<Name>  Data Synchronization   </Name>
+		<DESC>  He was executed manually scheduling system </DESC>
+	</AdminTools>
+	<AdminTools>
+		<ICON> ../../Images/System/Users.gif </ICON>
+		<URL>../../Comm/Port/OnlineUsers.aspx</URL>
+		<Name>  Online Users   </Name>
+		<DESC>  View user is online </DESC>
+	</AdminTools>
+</NewDataSet>

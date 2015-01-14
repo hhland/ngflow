@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" standalone="yes" ?>
+<NewDataSet>
+  <!--  Organization Management   -->
+  <Item No="01" Name=" Organization Management " Url="" Img="../Images/Btn/Help.gif" ForUser="" DESC=""  DFor="" Enable="">    
+    <Item No="0102" Name=" Sector Type " Url="../WF/Comm/SearchEUI.aspx?EnsName=BP.GPM.DeptTypes" Img="../WF/Img/Btn/Card.gif" />
+    <Item No="0102" Name=" Post Type " Url="../WF/Comm/SearchEUI.aspx?EnsName=BP.GPM.StationTypes" Img="../WF/Img/Btn/Card.gif" />
+    <Item No="0103" Name=" Post " Url="../WF/Comm/SearchEUI.aspx?EnsName=BP.GPM.Stations" Img="../WF/Img/Btn/WorkerList.gif" />
+    <Item No="0104" Name=" Maintenance duties " Url="../WF/Comm/SearchEUI.aspx?EnsName=BP.GPM.Dutys" Img="../WF/Img/Btn/Reply.gif" />
+    <Item No="0105" Name=" Organizational Structure " Url="OrganizationalStructure.aspx" Img="../WF/Img/Btn/DTS.gif" />
+  </Item>
+  <!--  Menu Rights Management   -->
+  <Item No="02" Name="BPM Menu Rights Management " Url="" Img="../Images/Btn/Help.gif" ForUser="" DESC=""  DFor="" Enable="">    
+    <Item No="0202" Name="BPM System Menu " Url="AppMenu.aspx?FK_App=CCFlowBPM" Img="Images/Menu/application.png" />
+    <Item No="0203" Name=" Rights Groups " Url="../WF/Comm/SearchEUI.aspx?EnsName=BP.GPM.Groups" Img="../WF/Img/Btn/AllotTask.gif" />
+    <Item No="0204" Name=" Press Menu to assign permissions " Url="AppMenuToEmp.aspx" Img="Images/Menu/credit_card.png" />
+    <Item No="0205" Name=" Assign permissions by user " Url="EmpForMenus.aspx" Img="Images/Menu/customers.png" />
+    <Item No="0206" Name=" Assign permissions by post " Url="StationForMenus.aspx" Img="Images/Menu/feed.png" />
+    <Item No="0207" Name=" By permission groups to assign permissions " Url="EmpGroupForMenus.aspx" Img="Images/Menu/sitemap.png" />
+  </Item>
+  <!--  System Settings   -->
+  <Item No="03" Name=" System Settings " Url="" Img="../Images/Btn/Help.gif" ForUser="" DESC=""  DFor="" Enable="">    
+    <Item No="0302" Name=" Table Structure " Url="/WF/Comm/Sys/SystemClass.aspx" Img="Images/Menu/application.png" />
+    <Item No="0302" Name=" System enumeration values " Url="/WF/Comm/Sys/EnumList.aspx" Img="Images/Menu/credit_card.png" />
+    <Item No="0303" Name=" Data Sources " Url="/WF/Comm/Sys/SFTableList.aspx" Img="Images/Menu/customers.png" />
+    <Item No="0304" Name=" Coding table " Url="/WF/Comm/Sys/SFTableList.aspx" Img="Images/Menu/feed.png" />
+    <Item No="0305" Name="JS Check the library " Url="/WF/Comm/Sys/FuncLib.aspx" Img="Images/Menu/sitemap.png" />
+    <Item No="0306" Name=" Function execution " Url="/WF/Comm/MethodLink.aspx" Img="Images/Menu/sitemap.png" />
+    <Item No="0307" Name=" Pre-approval authority to set rules " Url="/WF/Admin/GetTask.aspx" Img="Images/Menu/sitemap.png" />
+    <Item No="0308" Name=" File upload " Url="/WF/FileUploadEUI.aspx" Img="Images/Menu/sitemap.png" /> 
+  </Item>
+</NewDataSet>
