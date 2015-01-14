@@ -1,0 +1,70 @@
+﻿<UserControl xmlns:data="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data"  
+             x:Class="WorkNode.Page"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:local="clr-namespace:WorkNode"
+    xmlns:classes="clr-namespace:WorkNode.Classes"
+             Background="White" x:Name="MainPageUC">
+    <UserControl.Resources>
+        <classes:ByteConverter x:Key="ByteConverter"/>
+    </UserControl.Resources>
+    <Grid x:Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="200" />
+            <RowDefinition Height="15" />
+            <RowDefinition Height="40" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal"  Grid.Row="0" Width="Auto">
+            <TextBlock Text=" File name " Width="180" Margin="15,0,0,0"/>
+            <TextBlock Text=" Status " Width="50" TextAlignment="Left"/>
+            <TextBlock Text=" Size " Width="50" TextAlignment="Left"/>
+            <TextBlock Text=" Progress " Width="100" TextAlignment="Left"/>
+            <TextBlock Text=" Remark " Width="70" TextAlignment="Left"/>
+        </StackPanel>
+        <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Visible" Background="White">
+            <ItemsControl x:Name="FileList" >
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <local:FileRowControl></local:FileRowControl>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+
+        <Grid Grid.Row="2" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="15" />               
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            
+            <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" Margin="15,0,0,0">
+                <TextBlock Text=" Number of files : "></TextBlock><TextBlock x:Name="FilesCount" Text="{Binding Count}"></TextBlock>
+           
+            </StackPanel>
+
+            <StackPanel Grid.Row="0" Grid.Column="1"  Orientation="Horizontal">
+                <TextBlock Text=" Upload cumulative : "></TextBlock><TextBlock x:Name="TotalKB" Text="{Binding BytesUploaded, Converter={StaticResource ByteConverter}}" ></TextBlock>
+            </StackPanel>
+
+            <StackPanel Grid.Row="0" Grid.Column="2" Height="15"  Orientation="Horizontal">
+                <ProgressBar x:Name="TotalProgress" Width="50" Value="{Binding Percentage}"></ProgressBar>
+            </StackPanel>
+
+        </Grid>
+        
+        <StackPanel Grid.Row="3" HorizontalAlignment="Center" Orientation="Horizontal" VerticalAlignment="Bottom" >
+            <Button x:Name="SelectFilesButton" Content=" Choose ..." Click="SelectFilesButton_Click" Margin="5" Width="80"></Button>
+            <Button x:Name="UploadButton" Content=" Upload " Click="UploadButton_Click" Margin="5" Width="80"></Button>
+            <Button x:Name="ClearButton" Content=" Empty " Click="ClearButton_Click" Margin="5" Width="80"></Button>
+            <TextBlock Text=" Click Delete Files list !" VerticalAlignment="Bottom"/>
+        </StackPanel>
+
+        <local:MessageBoxControl x:Name="MessageBoxControl" Visibility="Collapsed"  Grid.RowSpan="3"></local:MessageBoxControl>
+    </Grid>
+</UserControl>
