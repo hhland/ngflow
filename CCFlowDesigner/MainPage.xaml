@@ -1,0 +1,304 @@
+﻿<UserControl 
+    x:Class="BP.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+    xmlns:controlsPrimitives="clr-namespace:System.Windows.Controls.Primitives;assembly=System.Windows.Controls"  
+    xmlns:BP="clr-namespace:BP"
+    xmlns:local="clr-namespace:BP.Controls" 
+    xmlns:liquidTreeView="clr-namespace:Liquid;assembly=Liquid.TreeView"
+    xmlns:liquidMenu="clr-namespace:Liquid;assembly=Liquid.Menu"
+    mc:Ignorable="d"   
+    d:DesignHeight="400" 
+    d:DesignWidth="1000"
+  >
+    
+    
+    <Grid x:Name="LayoutRoot" ShowGridLines="False" Margin="0" Background="white"  >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="285" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel 
+            Name="stackPanelLeft" 
+            Grid.Row="0"  
+            Grid.RowSpan="2" 
+            Grid.Column="0"  
+            HorizontalAlignment="Left" 
+            Orientation="Vertical"  
+            Background="white" >
+            <Image 
+                x:Name="imageLogo" 
+                Width="270" 
+                Height="70" 
+                Margin="5,0,5,0" 
+                Source="./Images/Icons/CCFlow/Icon.png"   />
+            <sdk:TabControl  Name="tbcLeft" Width="280" >
+                
+                <sdk:TabItem 
+                    Header=" Process tree " 
+                    Name="tbiFlowLibrary" 
+                    Background="white" 
+                    BorderThickness="0">
+                    <Canvas 
+                        Background="white" 
+                        VerticalAlignment="Top" 
+                        HorizontalAlignment="Stretch" >
+                        <liquidTreeView:Tree 
+                            x:Name="tvwFlow"  
+                            BorderThickness="0" 
+                            Width="270"
+                            HorizontalScrollBarVisibility="Auto" 
+                            VerticalScrollBarVisibility="Auto"  
+                            EnableLines="True" >
+                        </liquidTreeView:Tree>
+                        <liquidMenu:Menu 
+                            x:Name="MuFlowTree" 
+                            Background="white" 
+                            Visibility="Collapsed"
+                            ItemSelected="menu_ItemSelected"  
+                            MouseLeave="Menu_MouseLeave">
+                            <liquidMenu:MenuItem ID="OpenFlow" Text=" Open Process "  Icon="../Images/MenuItem/Open.png" />
+                            <liquidMenu:MenuItem ID="NewFlow_Blank" Text=" New / Import process "  Icon="../Images/MenuItem/New.png" />
+                            <liquidMenu:MenuDivider />
+                            <liquidMenu:MenuItem ID="NewSameLevelFlowSort" Text=" New sibling Process category " Icon="../Images/MenuItem/FlowSort.png"  />
+                            <liquidMenu:MenuItem ID="NewSubFlowSort" Text=" New lower flow category " Icon="../Images/MenuItem/FlowSort.png"  />
+                            <liquidMenu:MenuItem ID="Edit" Text=" Editing Process category "  Icon="../Images/MenuItem/Edit.png" />
+                            <liquidMenu:MenuDivider />
+                            <liquidMenu:MenuItem ID="Delete" Text=" Delete " Icon="../Images/MenuItem/Delete.png" />
+                            <liquidMenu:MenuDivider />
+                            <liquidMenu:MenuItem ID="Share" Text=" Assign permissions " Icon="../Images/MenuItem/Share.png" />
+                            <liquidMenu:MenuDivider />
+                            <liquidMenu:MenuItem ID="Refresh" Text=" Refresh " Icon="../Images/MenuItem/Refresh.png"  />
+                        </liquidMenu:Menu>
+                    </Canvas>
+                </sdk:TabItem>
+
+                <sdk:TabItem 
+                    Header=" Form Library " 
+                    Name="tbiFormLibrary" 
+                    Background="white" 
+                    BorderThickness="0">
+                    <Canvas 
+                        Background="white" 
+                        Width="Auto" 
+                        Height="Auto" 
+                        VerticalAlignment="Top" 
+                        HorizontalAlignment="Stretch" >
+                        <liquidTreeView:Tree 
+                            x:Name="tvwForm"  
+                            BorderThickness="0" 
+                            Width="270"  
+                            HorizontalScrollBarVisibility="Auto" 
+                            VerticalScrollBarVisibility="Auto" 
+                            EnableLines="True" >
+                        </liquidTreeView:Tree>
+                        <liquidMenu:Menu 
+                            x:Name="menuFormSort" 
+                            Background="white" 
+                            Visibility="Collapsed" 
+                            ItemSelected="menu_ItemSelected" 
+                            MouseLeave="Menu_MouseLeave">
+                            <liquidMenu:MenuItem ID="Frm_NewSameLevelSort" Text=" New sibling category " Icon="../Images/MenuItem/FlowSort.png"  />
+                            <liquidMenu:MenuItem ID="Frm_NewSubSort" Text=" New junior category " Icon="../Images/MenuItem/FlowSort.png"  />
+                            <liquidMenu:MenuItem ID="Frm_EditSort" Text=" Edit Category "  Icon="../Images/MenuItem/Edit.png" />
+                            <liquidMenu:MenuDivider />
+                          
+                            <liquidMenu:MenuItem ID="Frm_NewForm" Text=" New Form "  Icon="../Images/FormNew.png" />
+                            <liquidMenu:MenuItem ID="Frm_Up"  Text=" Move "   Icon="../Images/MenuItem/up.png"  />
+                            <liquidMenu:MenuItem ID="Frm_Down" Text=" Down "   Icon="../Images/MenuItem/Down.png" />
+                            <liquidMenu:MenuItem ID="Frm_Delete" Text=" Delete " Icon="../Images/MenuItem/Delete.png" />
+                            <liquidMenu:MenuItem ID="Frm_Refresh" Text=" Refresh " Icon="../Images/MenuItem/Refresh.png" />
+                        </liquidMenu:Menu>
+                        <liquidMenu:Menu 
+                            x:Name="menuForm" 
+                            Background="white" 
+                            Visibility="Collapsed" 
+                            ItemSelected="menu_ItemSelected" 
+                            MouseLeave="Menu_MouseLeave">
+                            <liquidMenu:MenuItem ID="Frm_EditForm" Text=" Form Properties "  Icon="../Images/Form.png" />
+                            <liquidMenu:MenuItem ID="Frm_FormDesignerFix"  Text=" Form design fool "   Icon="../Images/MenuItem/Edit.png"  />
+                            <liquidMenu:MenuItem ID="Frm_FormDesignerFree" Text=" Form design freedom "   Icon="../Images/MenuItem/Edit.png" />
+                            <liquidMenu:MenuDivider />
+                            <liquidMenu:MenuItem ID="Frm_Up"  Text=" Move "   Icon="../Images/MenuItem/up.png"  />
+                            <liquidMenu:MenuItem ID="Frm_Down" Text=" Down "   Icon="../Images/MenuItem/Down.png" />
+                            <liquidMenu:MenuItem ID="Frm_Delete" Text=" Delete " Icon="../Images/MenuItem/Delete.png" />
+                            <liquidMenu:MenuItem ID="Frm_Refresh" Text=" Refresh " Icon="../Images/MenuItem/Refresh.png" />
+                        </liquidMenu:Menu>
+
+                    </Canvas>
+                </sdk:TabItem>
+
+
+                <sdk:TabItem  
+                    Header=" Organizational Structure " 
+                    Name="tbiOrg" 
+                    Background="white" 
+                    BorderThickness="0">
+                    <Canvas 
+                        Name="cvsOrg" 
+                        Background="white" 
+                        Width="Auto" 
+                        Height="Auto" 
+                        VerticalAlignment="Top" 
+                        HorizontalAlignment="Stretch" >
+                        <liquidTreeView:Tree 
+                            x:Name="tvwOrg" 
+                            BorderThickness="0" 
+                            Width="270"  
+                            HorizontalScrollBarVisibility="Auto" 
+                            VerticalScrollBarVisibility="Auto" 
+                        >
+                          
+                        </liquidTreeView:Tree >
+                        <liquidMenu:Menu 
+                            x:Name="menuOrg" 
+                            Background="white" 
+                            Visibility="Collapsed" 
+                            ItemSelected="menu_ItemSelected" 
+                            MouseLeave="Menu_MouseLeave" >
+                            <liquidMenu:MenuItem Text=" Editorial departments " ID="Dept_Edit" FontFamily="SimSun" FontSize="13.333"/>
+                            <liquidMenu:MenuItem Text=" New flat level departments " ID="Dept_CrateSameLevel"  FontFamily="SimSun" FontSize="13.333"/>
+                            <liquidMenu:MenuItem Text=" New lower sector " ID="Dept_CrateSubLevel" FontFamily="SimSun" FontSize="13.333"/>
+                            <liquidMenu:MenuItem Text=" Delete department " ID="Dept_Delete" FontFamily="SimSun" FontSize="13.333"/>
+                            <liquidMenu:MenuItem Text=" Refresh " ID="Dept_Refresh" FontFamily="SimSun" FontSize="13.333"/>
+                            <liquidMenu:MenuItem Text=" Editorial staff " ID="Emp_Edit" FontFamily="SimSun" FontSize="13.333"/>
+                            <liquidMenu:MenuItem Text=" Increase staff " ID="Emp_Add" FontFamily="SimSun" FontSize="13.333"/>
+                            <liquidMenu:MenuItem Text=" Related persons " ID="Emp_Related" FontFamily="SimSun" FontSize="13.333"/>
+                            <liquidMenu:MenuItem Text=" Move " ID="Btn_Up"  FontFamily="SimSun" FontSize="13.333"/>
+                            <liquidMenu:MenuItem Text=" Down " ID="Btn_Down"  FontFamily="SimSun" FontSize="13.333"/>
+
+                            </liquidMenu:Menu>
+                    </Canvas>
+                </sdk:TabItem>
+                
+                <sdk:TabItem 
+                    Header=" System Maintenance " 
+                    Name="tbiSysManger" 
+                    Background="white"   >
+                    <liquidTreeView:Tree 
+                        x:Name="tvwSysMenu"  
+                        BorderThickness="0" 
+                        Width="270"  
+                        HorizontalScrollBarVisibility="Auto"  
+                        VerticalScrollBarVisibility="Auto"
+                        EnableLines="True" >
+                        <liquidTreeView:Tree.Effect>
+                            <DropShadowEffect/>
+                        </liquidTreeView:Tree.Effect>
+                    </liquidTreeView:Tree>
+                </sdk:TabItem>
+                
+            </sdk:TabControl>
+        </StackPanel>
+
+        <StackPanel 
+            Name="panelToolBar" 
+            Grid.Column="1"  
+            Grid.Row="0" 
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Bottom" 
+            Orientation="Horizontal">
+            <local:Toolbar x:Name="toolbar1">
+            </local:Toolbar>
+        </StackPanel>
+
+        <Canvas x:Name="workSpace" 
+                Grid.Row="1" Grid.Column="1" 
+                MouseLeftButtonUp="workSpace_MouseLeftButtonUp" 
+                MouseMove="workSpace_MouseMove" 
+                MouseEnter="workSpace_MouseEnter" 
+                MouseLeave="workSpace_MouseLeave">
+
+            
+            <local:TabControlEx  
+                x:Name="tbDesigner"  
+                Width="Auto" 
+                TabStripPlacement="Top" 
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Top"  
+                SelectionChanged="tabControlDesigner_SelectionChanged" >
+                <local:TabControlEx.Background>
+                    <ImageBrush 
+                        ImageSource="./Images/Icons/CCFlow/Welcome.png" 
+                        Stretch="Fill"/>
+                </local:TabControlEx.Background>
+
+                <local:TabControlEx.Template>
+                    <ControlTemplate>
+                        <!-- TabStripPlacement Top -->
+                        <Grid x:Name="TemplateTop" Visibility="Collapsed" >
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid>
+                                <StackPanel 
+                                    Orientation="Horizontal" 
+                                    VerticalAlignment="Stretch" 
+                                    HorizontalAlignment="Stretch" Canvas.ZIndex="1">
+                                    <controlsPrimitives:TabPanel x:Name="TabPanelTop" Margin="2,2,2,-1">
+                                    </controlsPrimitives:TabPanel>
+                                </StackPanel>
+                                <StackPanel VerticalAlignment="Bottom">
+                                    <Button x:Name="btnShowList" 
+                                            HorizontalAlignment="Right" 
+                                            Content="/WF;component/Themes/img1.png" Height="20">
+                                        <Button.Template>
+                                            <ControlTemplate TargetType="Button">
+                                                <Image Source="{TemplateBinding Content}" x:Name="btnImg"></Image>
+                                            </ControlTemplate>
+                                        </Button.Template>
+                                    </Button>
+                                    <Popup Width="auto" Height="auto" x:Name="HeadList" IsOpen="False">
+                                    </Popup>
+                                </StackPanel>
+                            </Grid>
+                            <Border 
+                                BorderBrush="{TemplateBinding BorderBrush}" 
+                                BorderThickness="{TemplateBinding BorderThickness}" 
+                                Background="{TemplateBinding Background}" 
+                                Grid.Row="1" MinHeight="10" MinWidth="10" 
+                                CornerRadius="0,0,3,3">
+                                <ContentPresenter 
+                                    x:Name="ContentTop" 
+                                    HorizontalAlignment="{TemplateBinding HorizontalAlignment}" 
+                                    VerticalAlignment="{TemplateBinding VerticalAlignment}" 
+                                    Margin="{TemplateBinding Padding}" 
+                                    Cursor="{TemplateBinding Cursor}" />
+                            </Border>
+                            <Border 
+                                x:Name="DisabledVisualTop" 
+                                IsHitTestVisible="False" 
+                                Opacity="0" 
+                                Background="#8CFFFFFF" 
+                                Canvas.ZIndex="1" 
+                                Grid.RowSpan="2" Grid.Row="1"
+                                CornerRadius="0,0,3,3" 
+                                 />
+                        </Grid>
+                    </ControlTemplate>
+                </local:TabControlEx.Template>
+            </local:TabControlEx>
+        </Canvas>
+
+        <Canvas  Grid.Row="1" Grid.Column="1" >
+            <BP:ToolBox 
+                x:Name="flowToolBox" 
+                Canvas.Left="10" 
+                Canvas.Top="35" ></BP:ToolBox>
+            <local:ToolBoxNodeIcons 
+                    x:Name="flowToolBoxIcon" 
+                    Canvas.Left="10" 
+                    Canvas.Top="35" >
+            
+            </local:ToolBoxNodeIcons>
+        </Canvas>
+    </Grid>
+</UserControl>

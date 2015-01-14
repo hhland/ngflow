@@ -1,0 +1,41 @@
+﻿<controls:ChildWindow x:Class="CCForm.FrmImg"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           Width="563" Height="387" 
+           Title=" Browse " xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+    <Grid x:Name="LayoutRoot" Margin="2" Height="323" Width="524">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+      
+
+        <sdk:Label Content=" Chinese Name :" Height="16" HorizontalAlignment="Left" Margin="41,8,0,0" Name="label2" VerticalAlignment="Top" Width="71" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="98,5,0,0" Name="TB_CN_Seal" VerticalAlignment="Top" Width="227" LostFocus="TB_CN_Seal_LostFocus" />
+        
+        <sdk:Label Content=" English name :" Height="16" HorizontalAlignment="Left" Margin="41,34,0,0" Name="label6" VerticalAlignment="Top" Width="71" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="98,34,0,0" Name="TB_En_Seal" VerticalAlignment="Top" Width="227" />
+       
+        <RadioButton Content=" Local Photos : The system supports only png,jpg Picture file format , Then press the OK button ." Height="16" HorizontalAlignment="Left" Margin="41,72,0,0" Name="RB_0" VerticalAlignment="Top" Checked="RB_0_Checked" Click="RB_0_Checked" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="41,100,0,0" Name="TB_ImgPath" VerticalAlignment="Top" Width="350" />
+        <Button Content=" Browse ..." Height="23" HorizontalAlignment="Right" Margin="0,100,52,0" Name="Btn_B" VerticalAlignment="Top" Width="75" Click="Btn_B_Click" />
+
+        <RadioButton Content=" Specify the path : Please fill in a text box below URL, Stand by ccflow The expression ." Height="16" HorizontalAlignment="Left" Margin="41,130,0,0" Name="RB_1" VerticalAlignment="Top" Checked="RB_1_Checked" Click="RB_1_Checked" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="41,150,0,0" Name="TB_ImgUrl" VerticalAlignment="Top" Width="431" Text="http://ccflow.org/Images/ccflow4.jpg" />
+
+        <sdk:Label Height="18" HorizontalAlignment="Left" Margin="41,180,0,0" Name="label3" VerticalAlignment="Top" Width="305" Content=" Picture connected to :( You can not fill )" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="41,201,0,0" Name="TB_LinkUrl" VerticalAlignment="Top" Width="385" />
+       
+        <sdk:Label Content=" Open Window " Height="28"     HorizontalAlignment="Left" Margin="41,235,0,0" Name="label4" VerticalAlignment="Top" Width="50" />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,229,171,0" Name="TB_WinName" VerticalAlignment="Top" Width="84" />
+        <sdk:Label Content=" Window Name :" Height="28" HorizontalAlignment="Left" Margin="209,231,0,0" Name="label5" VerticalAlignment="Top" Width="57" />
+        <ComboBox Height="23" HorizontalAlignment="Left" ItemsSource="{Binding}" Margin="97,230,0,0" Name="DDL_WinName" VerticalAlignment="Top" Width="113" SelectionChanged="DDL_WinName_SelectionChanged" />
+
+
+
+        <Button x:Name="CancelButton" Content=" Cancel " Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
+        <Button x:Name="OKButton" Content=" Determine " Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" />
+    </Grid>
+</controls:ChildWindow>

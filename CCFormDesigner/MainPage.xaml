@@ -1,0 +1,397 @@
+﻿<UserControl 
+    x:Class="CCForm.MainPage" 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+    xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions" 
+    xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" 
+    xmlns:toolBar="clr-namespace:Toolbar"
+    xmlns:toolBox="clr-namespace:CCForm"
+    xmlns:liquidTreeView="clr-namespace:Liquid;assembly=Liquid.TreeView"
+    xmlns:liquidMenu="clr-namespace:Liquid;assembly=Liquid.Menu"
+   >
+    <UserControl.Resources>
+        <DataTemplate x:Key="Move">
+            <Image Width="24" Height="24" Source="/CCFormDesigner;component/Img/arrow-move.png" >
+                <Image.RenderTransform>
+                    <!--Apply offset to center on the center of the ellipse-->
+                    <TranslateTransform X="-10" Y="-10" />
+                </Image.RenderTransform>
+            </Image>
+        </DataTemplate>
+        <DataTemplate x:Key="Selected">
+            <Image Width="24" Height="24" Source="/CCFormDesigner;component/Img/Selected.png" >
+                <Image.RenderTransform>
+                    <!--Apply offset to center on the center of the ellipse-->
+                    <TranslateTransform X="-10" Y="-10" />
+                </Image.RenderTransform>
+            </Image>
+        </DataTemplate>
+        <DataTemplate x:Key="Line">
+            <Image Width="20" Height="30" Source="/CCFormDesigner;component/Img/PenInk.png" >
+                <Image.RenderTransform>
+                    <!--Apply offset to center on the center of the ellipse-->
+                    <TranslateTransform X="0" Y="-30" />
+                </Image.RenderTransform>
+            </Image>
+        </DataTemplate>
+        <DataTemplate x:Key="Label">
+            <Image Width="24" Height="24" Source="/CCFormDesigner;component/Img/Label.png" >
+                <Image.RenderTransform>
+                    <!--Apply offset to center on the center of the ellipse-->
+                    <TranslateTransform X="-10" Y="-10" />
+                </Image.RenderTransform>
+            </Image>
+        </DataTemplate>        
+        <DataTemplate x:Key="Link">
+            <Image Width="24" Height="24" Source="/CCFormDesigner;component/Img/Link.png" >
+                <Image.RenderTransform>
+                    <!--Apply offset to center on the center of the ellipse-->
+                    <TranslateTransform X="-10" Y="-10" />
+                </Image.RenderTransform>
+            </Image>
+        </DataTemplate>
+        <DataTemplate x:Key="Btn">
+            <Image Width="24" Height="24" Source="/CCFormDesigner;component/Img/Btn.png" >
+                <Image.RenderTransform>
+                    <!--Apply offset to center on the center of the ellipse-->
+                    <TranslateTransform X="-10" Y="-10" />
+                </Image.RenderTransform>
+            </Image>
+        </DataTemplate>
+
+        <DataTemplate x:Key="Img">
+            <Image Width="24" Height="24" Source="/CCFormDesigner;component/Img/Img.png" >
+                <Image.RenderTransform>
+                    <!--Apply offset to center on the center of the ellipse-->
+                    <TranslateTransform X="-10" Y="-10" />
+                </Image.RenderTransform>
+            </Image>
+        </DataTemplate>
+        <DataTemplate x:Key="SealImg">
+            <Image Width="24" Height="24" Source="/CCFormDesigner;component/Img/seal.png" >
+                <Image.RenderTransform>
+                    <!--Apply offset to center on the center of the ellipse-->
+                    <TranslateTransform X="-10" Y="-10" />
+                </Image.RenderTransform>
+            </Image>
+        </DataTemplate>
+
+        <DataTemplate x:Key="TextBox">
+            <Image Width="24" Height="24" Source="/CCFormDesigner;component/Img/TextBox.png" >
+                <Image.RenderTransform>
+                    <!--Apply offset to center on the center of the ellipse-->
+                    <TranslateTransform X="-10" Y="-10" />
+                </Image.RenderTransform>
+            </Image>
+        </DataTemplate>
+        <DataTemplate x:Key="DateCtl">
+            <Image Width="24" Height="24" Source="/CCFormDesigner;component/Img/Calendar.png" >
+                <Image.RenderTransform>
+                    <!--Apply offset to center on the center of the ellipse-->
+                    <TranslateTransform X="-10" Y="-10" />
+                </Image.RenderTransform>
+            </Image>
+        </DataTemplate>
+        <DataTemplate x:Key="CheckBox">
+            <Image Width="24" Height="24" Source="/CCFormDesigner;component/Img/CheckBox.png" >
+                <Image.RenderTransform>
+                    <!--Apply offset to center on the center of the ellipse-->
+                    <TranslateTransform X="-10" Y="-10" />
+                </Image.RenderTransform>
+            </Image>
+        </DataTemplate>
+        <DataTemplate x:Key="DDLEnum">
+            <Image Width="24" Height="24" Source="/CCFormDesigner;component/Img/DDLEnum.png" >
+                <Image.RenderTransform>
+                    <!--Apply offset to center on the center of the ellipse-->
+                    <TranslateTransform X="-10" Y="-10" />
+                </Image.RenderTransform>
+            </Image>
+        </DataTemplate>
+        <DataTemplate x:Key="DDLTable">
+            <Image Width="24" Height="24" Source="/CCFormDesigner;component/Img/DDLEnum.png" >
+                <Image.RenderTransform>
+                    <!--Apply offset to center on the center of the ellipse-->
+                    <TranslateTransform X="-10" Y="-10" />
+                </Image.RenderTransform>
+            </Image>
+        </DataTemplate>
+        
+        <DataTemplate x:Key="RBS">
+            <Image Width="24" Height="24" Source="/CCFormDesigner;component/Img/RB.png" >
+                <Image.RenderTransform>
+                    <!--Apply offset to center on the center of the ellipse-->
+                    <TranslateTransform X="-10" Y="-10" />
+                </Image.RenderTransform>
+            </Image>
+        </DataTemplate>
+        <DataTemplate x:Key="FrmEle">
+            <Image Width="24" Height="24" Source="/CCFormDesigner;component/Img/FrmEle.png" >
+                <Image.RenderTransform>
+                    <!--Apply offset to center on the center of the ellipse-->
+                    <TranslateTransform X="-10" Y="-10" />
+                </Image.RenderTransform>
+            </Image>
+        </DataTemplate>
+        <DataTemplate x:Key="AttachmentM">
+            <Image Width="24" Height="24" Source="/CCFormDesigner;component/Img/AttachmentM.png" >
+                <Image.RenderTransform>
+                    <!--Apply offset to center on the center of the ellipse-->
+                    <TranslateTransform X="-10" Y="-10" />
+                </Image.RenderTransform>
+            </Image>
+        </DataTemplate>
+        <DataTemplate x:Key="Attachment">
+            <Image Width="24" Height="24" Source="/CCFormDesigner;component/Img/Attachment.png" >
+                <Image.RenderTransform>
+                    <!--Apply offset to center on the center of the ellipse-->
+                    <TranslateTransform X="-10" Y="-10" />
+                </Image.RenderTransform>
+            </Image>
+        </DataTemplate>
+        <DataTemplate x:Key="ImgAth">
+            <Image Width="24" Height="24" Source="/CCFormDesigner;component/Img/ImgAth.png" >
+                <Image.RenderTransform>
+                    <!--Apply offset to center on the center of the ellipse-->
+                    <TranslateTransform X="-10" Y="-10" />
+                </Image.RenderTransform>
+            </Image>
+        </DataTemplate>
+
+        <DataTemplate x:Key="Dtl">
+            <Image Width="24" Height="24" Source="/CCFormDesigner;component/Img/Dtl.png" >
+                <Image.RenderTransform>
+                    <!--Apply offset to center on the center of the ellipse-->
+                    <TranslateTransform X="-10" Y="-10" />
+                </Image.RenderTransform>
+            </Image>
+        </DataTemplate>
+        <DataTemplate x:Key="M2M">
+            <Image Width="24" Height="24" Source="/CCFormDesigner;component/Img/M2M.png" >
+                <Image.RenderTransform>
+                    <!--Apply offset to center on the center of the ellipse-->
+                    <TranslateTransform X="-10" Y="-10" />
+                </Image.RenderTransform>
+            </Image>
+        </DataTemplate>
+        <DataTemplate x:Key="M2MM">
+            <Image Width="24" Height="24" Source="/CCFormDesigner;component/Img/M2M.png" >
+                <Image.RenderTransform>
+                    <!--Apply offset to center on the center of the ellipse-->
+                    <TranslateTransform X="-10" Y="-10" />
+                </Image.RenderTransform>
+            </Image>
+        </DataTemplate>
+        <DataTemplate x:Key="WorkCheck">
+            <Image Width="24" Height="24" Source="/CCFormDesigner;component/Img/M2M.png" >
+                <Image.RenderTransform>
+                    <!--Apply offset to center on the center of the ellipse-->
+                    <TranslateTransform X="-10" Y="-10" />
+                </Image.RenderTransform>
+            </Image>
+        </DataTemplate>
+      
+    </UserControl.Resources>
+
+    <Grid x:Name="LayoutRoot" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+       
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"   />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Image Name="img" Grid.Column="0" Grid.Row="0" Height="30" Grid.ColumnSpan="2"  Stretch="Fill" 
+               HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+               Source="/CCFormDesigner;component/Img/menuBK.png" />
+        <toolBar:Bar  x:Name="toolbar1" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Height="30"
+                      Margin="0,1,0,0"  HorizontalAlignment="Left" VerticalAlignment="Top" >
+        </toolBar:Bar>
+       
+        <!--  Toolbox   -->
+            <ListBox 
+                Name="lbTools" 
+                Grid.Row="1" Grid.Column="0" 
+                Background="Lavender"  
+                Width="180" Height="600" Margin="0,0,1,0" 
+                HorizontalAlignment="Right" VerticalAlignment="Top" >
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel  Height="24" Orientation="Horizontal">
+                            <Image Width="24" Height="24" Margin="10,0,0,0"   Stretch="Fill" 
+                                       HorizontalAlignment="Left" Source="{Binding IcoImage}"  />
+                            <TextBlock AllowDrop="False" Margin="0,0,0,0" FontSize="14" 
+                                           HorizontalAlignment="Left" Text="{Binding IcoNameText}" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        <!-- end Toolbox   -->
+      
+        <!--  Painted version  -->
+        <ScrollViewer 
+            Name="svWorkSpace" 
+            Grid.Column="1" Grid.Row="1"
+            HorizontalAlignment="Left" VerticalAlignment="Top" 
+            VerticalScrollBarVisibility="Auto" 
+            HorizontalScrollBarVisibility="Auto" 
+                       >
+            <ScrollViewer.Content>
+                <Canvas  
+                    Name="workSpace" 
+                    Height="600" 
+                    Width="1000"  
+                    Background="Beige"  
+                    VerticalAlignment="Top" 
+                    HorizontalAlignment="Left"  
+                 >
+                    <Canvas.Effect>
+                        <DropShadowEffect Color="Gray"></DropShadowEffect>
+                    </Canvas.Effect>
+
+                    <liquidMenu:Menu x:Name="muFrm" Visibility="Collapsed"   Width="190"  MouseLeave="Menu_MouseLeave">
+                        <liquidMenu:MenuItem Name="FrmTempleteExp" Text=" Export Form Template " Icon="./Img/Menu/Download.png" 
+                                             MouseLeftButtonDown="menuItem_MouseLeftButtonDown"/>
+                       
+                        <!--<liquidMenu:MenuItem Name="FrmTempleteShareIt" Text=" Share this template " Icon="./Img/Menu/Share.png" 
+                                             MouseLeftButtonDown="menuItem_MouseLeftButtonDown" />-->
+
+                        <liquidMenu:MenuItem Name="FrmTempleteImp" Text=" Import form templates "   Icon="./Img/Menu/Upload.png"
+                                             MouseLeftButtonDown="menuItem_MouseLeftButtonDown" />
+
+                        <liquidMenu:MenuItem Name="FrmTempleteShare" Text=" Shared form template library "   Icon="./Img/Menu/ShareNet.png"
+                                             MouseLeftButtonDown="menuItem_MouseLeftButtonDown" />
+<!--
+                        <liquidMenu:MenuItem Name="FrmTempleteWord" Text=" Importing Word Stencil "
+                                             Icon="./Img/Menu/Word.png" MouseLeftButtonDown="menuItem_MouseLeftButtonDown" />
+                        <liquidMenu:MenuDivider />
+                        <liquidMenu:MenuItem Name="FrmDo" Text=" Cancel "  Icon="./Img/ForwardDo.png"  MouseLeftButtonDown="menuItem_MouseLeftButtonDown" />
+                        <liquidMenu:MenuItem Name="FrmUnDo" Text=" Recovery "  Icon="./Img/Undo.png"  MouseLeftButtonDown="menuItem_MouseLeftButtonDown" />-->
+
+                        <!--<liquidMenu:MenuDivider />
+                        <liquidMenu:MenuItem Name="AdvAction" Text=" Form events " MouseLeftButtonDown="menuItem_MouseLeftButtonDown" />
+                        <liquidMenu:MenuItem Name="AdvUAC" Text=" Access form "    MouseLeftButtonDown="menuItem_MouseLeftButtonDown" />-->
+
+                        <liquidMenu:MenuItem Name="FrmBill" Text=" Document Printing Templates " Icon="./Img/Menu/Word.png"
+                                             MouseLeftButtonDown="tvmi_MouseLeftButtonDown"  />
+
+                        <liquidMenu:MenuDivider />
+                        <liquidMenu:MenuItem Name="FullScreen" Text=" Full screen / Cancel Screen " MouseLeftButtonDown="menuItem_MouseLeftButtonDown" />
+                        <liquidMenu:MenuItem Name="GradeLine" Text=" Show / Hide Grid " IsChecked="True" Icon="./Img/Menu/Grid.png" MouseLeftButtonDown="menuItem_MouseLeftButtonDown" />
+                        <liquidMenu:MenuItem Name="eleTabIdx" Text=" Set up Tab Order key " MouseLeftButtonDown="menuItem_MouseLeftButtonDown"  />
+                        <liquidMenu:MenuItem 
+                            Name="sysErrorLog" Text=" Error Log "
+                            MouseLeftButtonDown="menuItem_MouseLeftButtonDown" />
+                        <liquidMenu:MenuItem 
+                            Name="refresh" Text=" Refresh "
+                            MouseLeftButtonDown="menuItem_MouseLeftButtonDown" />
+
+                    </liquidMenu:Menu>
+                    <liquidMenu:Menu x:Name="muElePanel"  Visibility="Collapsed" Width="190" MouseLeave="Menu_MouseLeave">
+                        <liquidMenu:MenuItem Name="eleEdit" Text=" Editor "  Icon="./Img/Menu/Edit.png"
+                                             MouseLeftButtonDown="menuItem_MouseLeftButtonDown" />
+                        
+                        <liquidMenu:MenuItem Name="eleDel" Text=" Delete " Icon="./Img/Menu/Delete.png"
+                                             MouseLeftButtonDown="menuItem_MouseLeftButtonDown" />
+
+                        <liquidMenu:MenuItem Name="eleHid" Text=" Hide " Icon="./Img/Menu/Hidden.png"
+                                             MouseLeftButtonDown="menuItem_MouseLeftButtonDown" />
+
+                        <liquidMenu:MenuItem Name="eleCopyTo" Text=" Batch " Icon="./Img/Copy.png"
+                                             MouseLeftButtonDown="menuItem_MouseLeftButtonDown" />
+                        
+                       <liquidMenu:MenuDivider />
+                        <liquidMenu:MenuItem Name="eleDtlFrm" Text=" Form design schedule "
+                                             MouseLeftButtonDown="menuItem_MouseLeftButtonDown"  />
+                        <liquidMenu:MenuItem 
+                            Name="eleTabIdx_Ext" Text=" Set up Tab Order key "
+                            MouseLeftButtonDown="menuItem_MouseLeftButtonDown"  />
+                    </liquidMenu:Menu>
+                    <!--
+                    <liquidMenu:MenuDivider />
+
+                        <liquidMenu:MenuItem Name="FrmTempleteExp_Ext" Text=" Export Form Template " Icon="./Img/Menu/Download.png" MouseLeftButtonDown="menuItem_MouseLeftButtonDown"/>
+                        <liquidMenu:MenuItem Name="FrmTempleteImp_Ext" Text=" Import form templates "   Icon="./Img/Menu/Upload.png"
+                                             MouseLeftButtonDown="menuItem_MouseLeftButtonDown" />
+                        <liquidMenu:MenuItem Name="FrmTempleteWord_Ext" Text=" Importing Word Stencil "
+                                             Icon="./Img/Menu/Word.png" MouseLeftButtonDown="menuItem_MouseLeftButtonDown" />-->
+
+                        <!--<liquidMenu:MenuDivider />
+                        <liquidMenu:MenuItem Name="AdvActionExt" Text=" Form events " MouseLeftButtonDown="menuItem_MouseLeftButtonDown" />
+                        <liquidMenu:MenuItem Name="AdvUACExt" Text=" Access form "  Icon="./Img/Menu/Grid.png" MouseLeftButtonDown="menuItem_MouseLeftButtonDown" />
+                      
+                        
+                        <liquidMenu:MenuDivider />
+                        <liquidMenu:MenuItem Name="FullScreen_Ext" Text=" Full screen / Cancel Screen " MouseLeftButtonDown="menuItem_MouseLeftButtonDown" />
+                        <liquidMenu:MenuItem Name="GradeLine_Ext" Text=" Show / Hide Grid " IsChecked="True"   Icon="./Img/Menu/Grid.png" MouseLeftButtonDown="menuItem_MouseLeftButtonDown" />
+                         -->
+                      
+                </Canvas>
+            
+            </ScrollViewer.Content>
+        </ScrollViewer>
+        <!-- end  Painted version  -->
+
+
+        <!--<sdk:TabControl Name="tabControl1"  Visibility="Collapsed"  
+                        Grid.Column="0" Grid.Row="1" Height="120" MinWidth="220" 
+                        HorizontalAlignment="Left"  VerticalAlignment="Top">
+            <sdk:TabItem Header=" Toolbox " Name="tabItem1">
+            </sdk:TabItem>
+            <sdk:TabItem Header=" Node Form "  Name="tabItem2" Visibility="Collapsed">
+                <Canvas Name="canvasNode" >
+                    <sdk:TreeView Name="tvNode"   Height="1200" Width="220" 
+                                  HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="0,0,0,0"  />
+
+                    <liquidMenu:Menu x:Name="muNodeFrm" Visibility="Collapsed" Height="280" Width="150" MouseLeave="Menu_MouseLeave">
+                        <liquidMenu:MenuItem Name="DeFrm" Text=" Design " Icon="./Img/Menu/deFrm.png"
+                                             MouseLeftButtonDown="tvmi_MouseLeftButtonDown" />
+
+                        <liquidMenu:MenuItem Name="NewFrm" Text=" New Process Form "  Icon="./Img/Menu/New.png"
+                                             MouseLeftButtonDown="tvmi_MouseLeftButtonDown" />
+
+                        <liquidMenu:MenuItem Name="EditFrm" Text=" Form Properties "
+                                             MouseLeftButtonDown="tvmi_MouseLeftButtonDown"  />
+
+                        <liquidMenu:MenuItem Name="FrmAction" Text=" Form events " Icon="./Img/Menu/Event.png"
+                                             MouseLeftButtonDown="tvmi_MouseLeftButtonDown"  />
+                        <liquidMenu:MenuDivider />
+                        <liquidMenu:MenuItem Name="RefFrm" Text=" Increase / Remove Form "
+                                             MouseLeftButtonDown="tvmi_MouseLeftButtonDown"  />
+                        <liquidMenu:MenuItem Name="FrmUp" Text=" Move "  Icon="./Img/Menu/Up.png"
+                                             MouseLeftButtonDown="tvmi_MouseLeftButtonDown"  />
+                        <liquidMenu:MenuItem Name="FrmDown" Text=" Down " Icon="./Img/Menu/Down.png"
+                                             MouseLeftButtonDown="tvmi_MouseLeftButtonDown"  />
+
+                        <liquidMenu:MenuDivider />
+                        <liquidMenu:MenuItem Name="DeleteFrm" Text=" Delete " Icon="./Img/Menu/Delete.png"
+                                             MouseLeftButtonDown="tvmi_MouseLeftButtonDown"  />
+                        <liquidMenu:MenuItem Name="FrmRef" Text=" Refresh "
+                                             MouseLeftButtonDown="tvmi_MouseLeftButtonDown"  />
+                    </liquidMenu:Menu>
+                </Canvas>
+            </sdk:TabItem>
+            <sdk:TabItem Header=" Process Form " Name="tabItem3" Visibility="Collapsed" >
+                <Canvas Name="canvasFlow" >
+                    <sdk:TreeView Name="tvFlow"  Height="1200" Width="220"  
+                                  HorizontalAlignment="Left"  VerticalAlignment="Top"
+                                  MouseLeftButtonDown="treeViewItem_MouseLeftButtonDown"  />
+                    <liquidMenu:Menu x:Name="muFlowFrm" Visibility="Collapsed" Height="100" Width="150" MouseLeave="Menu_MouseLeave" >
+                        <liquidMenu:MenuItem ID="OpenFlow" Text=" Turn on "  Icon="./Img/Menu/Open.png"  />
+                        <liquidMenu:MenuItem ID="EditFrm" Text=" Increase / Remove Form " />
+                        <liquidMenu:MenuDivider />
+                        <liquidMenu:MenuItem ID="Up" Text=" Move "  Icon="./Img/Menu/Up.png" />
+                        <liquidMenu:MenuItem ID="Down" Text=" Down " Icon="./Img/Menu/Down.png" />
+                    </liquidMenu:Menu>
+                </Canvas>
+            </sdk:TabItem>
+        </sdk:TabControl>-->
+
+    </Grid>
+</UserControl>
