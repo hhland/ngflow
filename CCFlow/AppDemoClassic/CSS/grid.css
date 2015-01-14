@@ -1,0 +1,11 @@
+﻿table, td{ border:none; }
+
+table.grid2 { border-collapse:collapse; border:1px solid #ccc; width:98%; margin:auto; }
+table.grid2 td{ border:none; border-bottom:#ccc solid 1px; padding:3px; text-align:center; }
+table.grid2 thead td, table.grid2 th { padding:0; border-right:1px solid #ccc; border-bottom:#ccc solid 1px; height:22px; line-height:22px; background:url(../image/grid_head.jpg) repeat-x;}
+
+table.grid { border-collapse:collapse; width:98%; margin:auto; }
+table.grid td{ border:#ccc solid 1px; padding:3px; text-align:center; }
+table.grid thead td, table.grid th { padding:0; border:1px solid #ccc; text-align:center; height:24px; line-height:25px; background:url(../image/grid_head.jpg) repeat-x center;}
+
+table.grid a { text-decoration:none; color:#0368bb}
