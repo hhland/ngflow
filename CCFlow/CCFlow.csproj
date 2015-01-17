@@ -38,6 +38,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BP.GPM">
+      <HintPath>..\DLL\BP.GPM.dll</HintPath>
+    </Reference>
+    <Reference Include="BP.GPMClient">
+      <HintPath>..\DLL\BP.GPMClient.dll</HintPath>
+    </Reference>
     <Reference Include="ChineseConverter">
       <HintPath>..\DLL\ChineseConverter.dll</HintPath>
     </Reference>
@@ -1221,24 +1227,6 @@
     <Content Include="GPM\WhoCanUseApp.aspx" />
     <Content Include="GPM\WhoCanViewInfoPush.aspx" />
     <Content Include="index.htm" />
-    <Content Include="SDKFlowDemo\QingJia\S1_TianxieShenqingDan.aspx" />
-    <Content Include="SDKFlowDemo\QingJia\S2_BumenJingliShenpi.aspx" />
-    <Content Include="SDKFlowDemo\QingJia\S3_ZongJingLiShenpi.aspx" />
-    <Content Include="SDKFlowDemo\QingJia\S4_RenShi.aspx" />
-    <Content Include="SDKFlowDemo\SDK\F111\DocRelease.ascx" />
-    <Content Include="SDKFlowDemo\SDK\F111\S11101.aspx" />
-    <Content Include="SDKFlowDemo\SDK\F112\DocRelease.ascx" />
-    <Content Include="SDKFlowDemo\SDK\F112\S11201.aspx" />
-    <Content Include="SDKFlowDemo\SDK\F114\S11401.aspx" />
-    <Content Include="SDKFlowDemo\SDK\F114\S11402.aspx" />
-    <Content Include="SDKFlowDemo\SDK\F114\S11403.aspx" />
-    <Content Include="SDKFlowDemo\SDK\F115\S11501.aspx" />
-    <Content Include="SDKFlowDemo\SDK\F116\S11601.aspx" />
-    <Content Include="SDKFlowDemo\SDK\F118\S11801.aspx" />
-    <Content Include="SDKFlowDemo\SDK\F131\S131.aspx" />
-    <Content Include="SDKFlowDemo\SDK\Info.aspx" />
-    <Content Include="SDKFlowDemo\SDK\Readme.txt" />
-    <Content Include="SDKFlowDemo\TeleCom\3SheBei\S1_WangLuoFenXi.aspx" />
     <Content Include="WF\Admin\ActionEvent.aspx" />
     <Content Include="WF\Admin\ActionPush2Curr.aspx" />
     <Content Include="WF\Admin\ActionPush2Spec.aspx" />
@@ -1533,57 +1521,12 @@
     <Content Include="WF\SDKComponents\Toolbar.ascx" />
     <Content Include="WF\App\Simple\CC.aspx" />
     <Content Include="WF\App\Simple\Default.aspx" />
-    <Content Include="SDKFlowDemo\SDK\F110\S11001.aspx" />
     <Content Include="WF\App\Simple\Info.aspx" />
     <Content Include="WF\App\Simple\Login.aspx" />
     <Content Include="WF\App\Simple\Runing.aspx" />
     <Content Include="WF\App\Simple\Readme.txt" />
     <Content Include="WF\App\Simple\Start.aspx" />
     <Content Include="WF\App\Simple\ToDoList.aspx" />
-    <Content Include="SDKFlowDemo\BPFramework\DataInput\Cell2D.aspx" />
-    <Content Include="SDKFlowDemo\BPFramework\DataInput\Cell3DLeft.aspx" />
-    <Content Include="SDKFlowDemo\BPFramework\DataInput\Cell3DTop.aspx" />
-    <Content Include="SDKFlowDemo\BPFramework\DataInput\HTMLPage1.htm" />
-    <Content Include="SDKFlowDemo\BPFramework\EasyUI\DemoUserListExt.aspx" />
-    <Content Include="SDKFlowDemo\BPFramework\EasyUI\DeptEmpTree.aspx" />
-    <Content Include="SDKFlowDemo\BPFramework\Output\DemoUserList.aspx" />
-    <Content Include="SDKFlowDemo\ccflow.js" />
-    <Content Include="SDKFlowDemo\Comm\Track.ascx" />
-    <Content Include="SDKFlowDemo\Comm\Track.aspx" />
-    <Content Include="SDKFlowDemo\DemoBP.aspx" />
-    <Content Include="SDKFlowDemo\DemoCCFlow.aspx" />
-    <Content Include="SDKFlowDemo\DemoComm.htm" />
-    <Content Include="SDKFlowDemo\BPFramework\Output\DemoJZOut.aspx" />
-    <Content Include="SDKFlowDemo\BPFramework\DataInput\DemoRegUserWithRequest.aspx" />
-    <Content Include="SDKFlowDemo\BPFramework\DataInput\DemoRegUserWithUserContral.aspx" />
-    <Content Include="SDKFlowDemo\BPFramework\Output\DemoTurnPage.aspx" />
-    <Content Include="SDKFlowDemo\Do.aspx" />
-    <Content Include="SDKFlowDemo\DoUrl.aspx" />
-    <Content Include="SDKFlowDemo\FrmEventND8601.aspx" />
-    <Content Include="SDKFlowDemo\GuestFlow\Login.aspx" />
-    <Content Include="SDKFlowDemo\MyForm.aspx" />
-    <Content Include="SDKFlowDemo\PopSelectVal.aspx" />
-    <Content Include="SDKFlowDemo\Pub.ascx" />
-    <Content Include="SDKFlowDemo\TeleCom\1ShengJu\Do.aspx" />
-    <Content Include="SDKFlowDemo\TeleCom\1ShengJu\S1_Start.aspx" />
-    <Content Include="SDKFlowDemo\TeleCom\1ShengJu\S2_WatherSubFlow.aspx" />
-    <Content Include="SDKFlowDemo\TeleCom\1ShengJu\S3_Checker.aspx" />
-    <Content Include="SDKFlowDemo\TeleCom\1ShengJu\ShowMsg.aspx" />
-    <Content Include="SDKFlowDemo\TeleCom\2DiShi\CallSubFlow.aspx" />
-    <Content Include="SDKFlowDemo\TeleCom\2DiShi\DealSubFlow.aspx" />
-    <Content Include="SDKFlowDemo\TeleCom\2DiShi\S1_PaiDan.aspx" />
-    <Content Include="SDKFlowDemo\TeleCom\2DiShi\S2_WangLuoFenXi.aspx" />
-    <Content Include="SDKFlowDemo\TeleCom\2DiShi\S3_HuiZong.aspx" />
-    <Content Include="SDKFlowDemo\TeleCom\2DiShi\ShowMsg.aspx" />
-    <Content Include="SDKFlowDemo\TeleCom\3SheBei\S2_FangAnZhiDing.aspx" />
-    <Content Include="SDKFlowDemo\TeleCom\3SheBei\S3_FangAnShenHe.aspx" />
-    <Content Include="SDKFlowDemo\TeleCom\3SheBei\S4_FangAnShiShi.aspx" />
-    <Content Include="SDKFlowDemo\TeleCom\3SheBei\S5_XiaoGuoPingGu.aspx" />
-    <Content Include="SDKFlowDemo\TeleCom\3SheBei\S6_GuiDang.aspx" />
-    <Content Include="SDKFlowDemo\TeleCom\3SheBei\ShowMsg.aspx" />
-    <Content Include="SDKFlowDemo\TeleCom\Pub.ascx" />
-    <Content Include="SDKFlowDemo\TestCond.aspx" />
-    <Content Include="SDKFlowDemo\TestCondOfFlowOver.aspx" />
     <Content Include="Silverlight.js" />
     <Content Include="WF\Activex\grbsctl5.cab" />
     <Content Include="WF\Activex\grbsctl5.exe" />
@@ -3477,15 +3420,12 @@
     </Compile>
     <Compile Include="DataUser\Event.cs">
       <DependentUpon>Event.asmx</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="DataUser\AppCoder\FrmEventHandle.aspx.cs">
       <DependentUpon>FrmEventHandle.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="DataUser\Do.aspx.cs">
       <DependentUpon>Do.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -3612,154 +3552,6 @@
       <DependentUpon>WinOpen.master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SDKFlowDemo\QingJia\S1_TianxieShenqingDan.aspx.cs">
-      <DependentUpon>S1_TianxieShenqingDan.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\QingJia\S1_TianxieShenqingDan.aspx.designer.cs">
-      <DependentUpon>S1_TianxieShenqingDan.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\QingJia\S2_BumenJingliShenpi.aspx.cs">
-      <DependentUpon>S2_BumenJingliShenpi.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\QingJia\S2_BumenJingliShenpi.aspx.designer.cs">
-      <DependentUpon>S2_BumenJingliShenpi.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\QingJia\S3_ZongJingLiShenpi.aspx.cs">
-      <DependentUpon>S3_ZongJingLiShenpi.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\QingJia\S3_ZongJingLiShenpi.aspx.designer.cs">
-      <DependentUpon>S3_ZongJingLiShenpi.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\QingJia\S4_RenShi.aspx.cs">
-      <DependentUpon>S4_RenShi.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\QingJia\S4_RenShi.aspx.designer.cs">
-      <DependentUpon>S4_RenShi.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\QingJia\Site1.Master.cs">
-      <DependentUpon>Site1.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\QingJia\Site1.Master.designer.cs">
-      <DependentUpon>Site1.Master</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\SDK\F111\DocRelease.ascx.cs">
-      <DependentUpon>DocRelease.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\SDK\F111\DocRelease.ascx.designer.cs">
-      <DependentUpon>DocRelease.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\SDK\F111\S11101.aspx.cs">
-      <DependentUpon>S11101.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\SDK\F111\S11101.aspx.designer.cs">
-      <DependentUpon>S11101.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\SDK\F112\DocRelease.ascx.cs">
-      <DependentUpon>DocRelease.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\SDK\F112\DocRelease.ascx.designer.cs">
-      <DependentUpon>DocRelease.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\SDK\F112\Serv.ashx.cs">
-      <DependentUpon>Serv.ashx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\SDK\F112\S11201.aspx.cs">
-      <DependentUpon>S11201.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\SDK\F112\S11201.aspx.designer.cs">
-      <DependentUpon>S11201.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\SDK\F114\S11401.aspx.cs">
-      <DependentUpon>S11401.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\SDK\F114\S11401.aspx.designer.cs">
-      <DependentUpon>S11401.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\SDK\F114\S11402.aspx.cs">
-      <DependentUpon>S11402.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\SDK\F114\S11402.aspx.designer.cs">
-      <DependentUpon>S11402.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\SDK\F114\S11403.aspx.cs">
-      <DependentUpon>S11403.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\SDK\F114\S11403.aspx.designer.cs">
-      <DependentUpon>S11403.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\SDK\F114\Serv.ashx.cs">
-      <DependentUpon>Serv.ashx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\SDK\F115\S11501.aspx.cs">
-      <DependentUpon>S11501.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\SDK\F115\S11501.aspx.designer.cs">
-      <DependentUpon>S11501.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\SDK\F115\Serv.ashx.cs">
-      <DependentUpon>Serv.ashx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\SDK\F116\S11601.aspx.cs">
-      <DependentUpon>S11601.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\SDK\F116\S11601.aspx.designer.cs">
-      <DependentUpon>S11601.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\SDK\F116\Serv.ashx.cs">
-      <DependentUpon>Serv.ashx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\SDK\F118\S11801.aspx.cs">
-      <DependentUpon>S11801.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\SDK\F118\S11801.aspx.designer.cs">
-      <DependentUpon>S11801.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\SDK\F118\Serv.ashx.cs">
-      <DependentUpon>Serv.ashx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\SDK\F131\S131.aspx.cs">
-      <DependentUpon>S131.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\SDK\F131\S131.aspx.designer.cs">
-      <DependentUpon>S131.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\SDK\Info.aspx.cs">
-      <DependentUpon>Info.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\SDK\Info.aspx.designer.cs">
-      <DependentUpon>Info.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\SDK\Site.Master.cs">
-      <DependentUpon>Site.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\SDK\Site.Master.designer.cs">
-      <DependentUpon>Site.Master</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\TeleCom\3SheBei\S1_WangLuoFenXi.aspx.cs">
-      <DependentUpon>S1_WangLuoFenXi.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\TeleCom\3SheBei\S1_WangLuoFenXi.aspx.designer.cs">
-      <DependentUpon>S1_WangLuoFenXi.aspx.cs</DependentUpon>
-    </Compile>
     <Compile Include="WF\Admin\ActionEvent.aspx.cs">
       <DependentUpon>ActionEvent.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -4128,13 +3920,6 @@
     <Compile Include="WF\App\Simple\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="SDKFlowDemo\SDK\F110\S11001.aspx.cs">
-      <DependentUpon>S11001.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\SDK\F110\S11001.aspx.designer.cs">
-      <DependentUpon>S11001.aspx</DependentUpon>
-    </Compile>
     <Compile Include="WF\App\Simple\Info.aspx.cs">
       <DependentUpon>Info.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -4176,328 +3961,6 @@
     </Compile>
     <Compile Include="WF\App\Simple\ToDoList.aspx.designer.cs">
       <DependentUpon>ToDoList.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\BPFramework\DataInput\Cell2D.aspx.cs">
-      <DependentUpon>Cell2D.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\BPFramework\DataInput\Cell2D.aspx.designer.cs">
-      <DependentUpon>Cell2D.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\BPFramework\DataInput\Cell3DLeft.aspx.cs">
-      <DependentUpon>Cell3DLeft.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\BPFramework\DataInput\Cell3DLeft.aspx.designer.cs">
-      <DependentUpon>Cell3DLeft.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\BPFramework\DataInput\Cell3DTop.aspx.cs">
-      <DependentUpon>Cell3DTop.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\BPFramework\DataInput\Cell3DTop.aspx.designer.cs">
-      <DependentUpon>Cell3DTop.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\BPFramework\EasyUI\DemoUserListExt.aspx.cs">
-      <DependentUpon>DemoUserListExt.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\BPFramework\EasyUI\DemoUserListExt.aspx.designer.cs">
-      <DependentUpon>DemoUserListExt.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\BPFramework\EasyUI\DeptEmpTree.aspx.cs">
-      <DependentUpon>DeptEmpTree.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\BPFramework\EasyUI\DeptEmpTree.aspx.designer.cs">
-      <DependentUpon>DeptEmpTree.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\BPFramework\Output\DemoUserList.aspx.cs">
-      <DependentUpon>DemoUserList.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\BPFramework\Output\DemoUserList.aspx.designer.cs">
-      <DependentUpon>DemoUserList.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\Comm\Site.Master.cs">
-      <DependentUpon>Site.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\Comm\Site.Master.designer.cs">
-      <DependentUpon>Site.Master</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\Comm\Track.ascx.cs">
-      <DependentUpon>Track.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\Comm\Track.ascx.designer.cs">
-      <DependentUpon>Track.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\Comm\Track.aspx.cs">
-      <DependentUpon>Track.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\Comm\Track.aspx.designer.cs">
-      <DependentUpon>Track.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\DemoBP.aspx.cs">
-      <DependentUpon>DemoBP.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\DemoBP.aspx.designer.cs">
-      <DependentUpon>DemoBP.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\DemoCCFlow.aspx.cs">
-      <DependentUpon>DemoCCFlow.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\DemoCCFlow.aspx.designer.cs">
-      <DependentUpon>DemoCCFlow.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\BPFramework\Output\DemoJZOut.aspx.cs">
-      <DependentUpon>DemoJZOut.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\BPFramework\Output\DemoJZOut.aspx.designer.cs">
-      <DependentUpon>DemoJZOut.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\BPFramework\DataInput\DemoRegUserWithRequest.aspx.cs">
-      <DependentUpon>DemoRegUserWithRequest.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\BPFramework\DataInput\DemoRegUserWithRequest.aspx.designer.cs">
-      <DependentUpon>DemoRegUserWithRequest.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\BPFramework\DataInput\DemoRegUserWithUserContral.aspx.cs">
-      <DependentUpon>DemoRegUserWithUserContral.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\BPFramework\DataInput\DemoRegUserWithUserContral.aspx.designer.cs">
-      <DependentUpon>DemoRegUserWithUserContral.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\BPFramework\Output\DemoTurnPage.aspx.cs">
-      <DependentUpon>DemoTurnPage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\BPFramework\Output\DemoTurnPage.aspx.designer.cs">
-      <DependentUpon>DemoTurnPage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\Do.aspx.cs">
-      <DependentUpon>Do.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\Do.aspx.designer.cs">
-      <DependentUpon>Do.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\DoUrl.aspx.cs">
-      <DependentUpon>DoUrl.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\DoUrl.aspx.designer.cs">
-      <DependentUpon>DoUrl.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\FrmEventND8601.aspx.cs">
-      <DependentUpon>FrmEventND8601.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\FrmEventND8601.aspx.designer.cs">
-      <DependentUpon>FrmEventND8601.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\GuestFlow\Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\GuestFlow\Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\MyForm.aspx.cs">
-      <DependentUpon>MyForm.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\MyForm.aspx.designer.cs">
-      <DependentUpon>MyForm.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\PopSelectVal.aspx.cs">
-      <DependentUpon>PopSelectVal.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\PopSelectVal.aspx.designer.cs">
-      <DependentUpon>PopSelectVal.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\Pub.ascx.cs">
-      <DependentUpon>Pub.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\Pub.ascx.designer.cs">
-      <DependentUpon>Pub.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\TeleCom\1ShengJu\Do.aspx.cs">
-      <DependentUpon>Do.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\TeleCom\1ShengJu\Do.aspx.designer.cs">
-      <DependentUpon>Do.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\TeleCom\1ShengJu\S1_Start.aspx.cs">
-      <DependentUpon>S1_Start.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\TeleCom\1ShengJu\S1_Start.aspx.designer.cs">
-      <DependentUpon>S1_Start.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\TeleCom\1ShengJu\S2_WatherSubFlow.aspx.cs">
-      <DependentUpon>S2_WatherSubFlow.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\TeleCom\1ShengJu\S2_WatherSubFlow.aspx.designer.cs">
-      <DependentUpon>S2_WatherSubFlow.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\TeleCom\1ShengJu\S3_Checker.aspx.cs">
-      <DependentUpon>S3_Checker.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\TeleCom\1ShengJu\S3_Checker.aspx.designer.cs">
-      <DependentUpon>S3_Checker.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\TeleCom\1ShengJu\ShowMsg.aspx.cs">
-      <DependentUpon>ShowMsg.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\TeleCom\1ShengJu\ShowMsg.aspx.designer.cs">
-      <DependentUpon>ShowMsg.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\TeleCom\1ShengJu\Site1.Master.cs">
-      <DependentUpon>Site1.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\TeleCom\1ShengJu\Site1.Master.designer.cs">
-      <DependentUpon>Site1.Master</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\TeleCom\2DiShi\CallSubFlow.aspx.cs">
-      <DependentUpon>CallSubFlow.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\TeleCom\2DiShi\CallSubFlow.aspx.designer.cs">
-      <DependentUpon>CallSubFlow.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\TeleCom\2DiShi\DealSubFlow.aspx.cs">
-      <DependentUpon>DealSubFlow.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\TeleCom\2DiShi\DealSubFlow.aspx.designer.cs">
-      <DependentUpon>DealSubFlow.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\TeleCom\2DiShi\S1_PaiDan.aspx.cs">
-      <DependentUpon>S1_PaiDan.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\TeleCom\2DiShi\S1_PaiDan.aspx.designer.cs">
-      <DependentUpon>S1_PaiDan.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\TeleCom\2DiShi\S2_WangLuoFenXi.aspx.cs">
-      <DependentUpon>S2_WangLuoFenXi.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\TeleCom\2DiShi\S2_WangLuoFenXi.aspx.designer.cs">
-      <DependentUpon>S2_WangLuoFenXi.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\TeleCom\2DiShi\S3_HuiZong.aspx.cs">
-      <DependentUpon>S3_HuiZong.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\TeleCom\2DiShi\S3_HuiZong.aspx.designer.cs">
-      <DependentUpon>S3_HuiZong.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\TeleCom\2DiShi\ShowMsg.aspx.cs">
-      <DependentUpon>ShowMsg.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\TeleCom\2DiShi\ShowMsg.aspx.designer.cs">
-      <DependentUpon>ShowMsg.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\TeleCom\2DiShi\Site.Master.cs">
-      <DependentUpon>Site.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\TeleCom\2DiShi\Site.Master.designer.cs">
-      <DependentUpon>Site.Master</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\TeleCom\3SheBei\S2_FangAnZhiDing.aspx.cs">
-      <DependentUpon>S2_FangAnZhiDing.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\TeleCom\3SheBei\S2_FangAnZhiDing.aspx.designer.cs">
-      <DependentUpon>S2_FangAnZhiDing.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\TeleCom\3SheBei\S3_FangAnShenHe.aspx.cs">
-      <DependentUpon>S3_FangAnShenHe.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\TeleCom\3SheBei\S3_FangAnShenHe.aspx.designer.cs">
-      <DependentUpon>S3_FangAnShenHe.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\TeleCom\3SheBei\S4_FangAnShiShi.aspx.cs">
-      <DependentUpon>S4_FangAnShiShi.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\TeleCom\3SheBei\S4_FangAnShiShi.aspx.designer.cs">
-      <DependentUpon>S4_FangAnShiShi.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\TeleCom\3SheBei\S5_XiaoGuoPingGu.aspx.cs">
-      <DependentUpon>S5_XiaoGuoPingGu.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\TeleCom\3SheBei\S5_XiaoGuoPingGu.aspx.designer.cs">
-      <DependentUpon>S5_XiaoGuoPingGu.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\TeleCom\3SheBei\S6_GuiDang.aspx.cs">
-      <DependentUpon>S6_GuiDang.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\TeleCom\3SheBei\S6_GuiDang.aspx.designer.cs">
-      <DependentUpon>S6_GuiDang.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\TeleCom\3SheBei\ShowMsg.aspx.cs">
-      <DependentUpon>ShowMsg.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\TeleCom\3SheBei\ShowMsg.aspx.designer.cs">
-      <DependentUpon>ShowMsg.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\TeleCom\3SheBei\Site.Master.cs">
-      <DependentUpon>Site.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\TeleCom\3SheBei\Site.Master.designer.cs">
-      <DependentUpon>Site.Master</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\TeleCom\Pub.ascx.cs">
-      <DependentUpon>Pub.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\TeleCom\Pub.ascx.designer.cs">
-      <DependentUpon>Pub.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\TestCond.aspx.cs">
-      <DependentUpon>TestCond.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\TestCond.aspx.designer.cs">
-      <DependentUpon>TestCond.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\TestCondOfFlowOver.aspx.cs">
-      <DependentUpon>TestCondOfFlowOver.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\TestCondOfFlowOver.aspx.designer.cs">
-      <DependentUpon>TestCondOfFlowOver.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SDKFlowDemo\WinOpen.master.cs">
-      <DependentUpon>WinOpen.master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SDKFlowDemo\WinOpen.master.designer.cs">
-      <DependentUpon>WinOpen.master</DependentUpon>
     </Compile>
     <Compile Include="WF\Admin\BatchStartFields.aspx.cs">
       <DependentUpon>BatchStartFields.aspx</DependentUpon>
@@ -7059,23 +6522,11 @@
     <None Include="DataUser\Style\Skin\t3\Thumbs.db" />
     <None Include="DataUser\Style\Skin\t4\Thumbs.db" />
     <None Include="DataUser\Style\Tabs\Thumbs.db" />
-    <Content Include="SDKFlowDemo\WinOpen.master" />
-    <Content Include="SDKFlowDemo\TeleCom\2DiShi\Site.Master" />
-    <Content Include="SDKFlowDemo\TeleCom\3SheBei\Site.Master" />
-    <Content Include="SDKFlowDemo\TeleCom\1ShengJu\Site1.Master" />
-    <Content Include="SDKFlowDemo\Comm\Site.Master" />
     <Content Include="WF\Admin\WinOpen.master" />
     <Content Include="WF\Admin\XAP\WebClientDownloadHandler.ashx" />
     <Content Include="WF\Admin\FindWorker\Site.Master" />
     <Content Include="WF\Admin\EventEntity\Site.Master" />
     <Content Include="WF\App\Simple\SiteMenu.Master" />
-    <Content Include="SDKFlowDemo\SDK\Site.Master" />
-    <Content Include="SDKFlowDemo\SDK\F112\Serv.ashx" />
-    <Content Include="SDKFlowDemo\SDK\F114\Serv.ashx" />
-    <Content Include="SDKFlowDemo\SDK\F115\Serv.ashx" />
-    <Content Include="SDKFlowDemo\SDK\F116\Serv.ashx" />
-    <Content Include="SDKFlowDemo\SDK\F118\Serv.ashx" />
-    <Content Include="SDKFlowDemo\QingJia\Site1.Master" />
     <Content Include="WF\Admin\XAP\WorkFlowTrack.ashx" />
     <Content Include="WF\Admin\Condition.Master" />
     <None Include="GPM\themes\black\images\Thumbs.db" />
@@ -7163,7 +6614,6 @@
     <Folder Include="DataUser\Temp\" />
     <Folder Include="DataUser\UploadFile\" />
     <Folder Include="GPM\Admin\" />
-    <Folder Include="SDKFlowDemo\TeleCom\Comm\" />
     <Folder Include="WF\App\Comm\" />
     <Folder Include="WF\App\LigerUI\" />
     <Folder Include="WF\Comm\kindeditor\attached\" />
@@ -7173,19 +6623,11 @@
     <Folder Include="WF\WorkOpt\OneWork\Img\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\CCPortal\CCGPM\Components\BP.GPMClient\BP.GPMClient.csproj">
-      <Project>{FF691E0A-4A23-4E7A-AA0F-A7EBAA2E711B}</Project>
-      <Name>BP.GPMClient</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\CCPortal\CCGPM\Components\BP.GPM\BP.GPM.csproj">
-      <Project>{3AE8C44B-7DBA-4312-A775-57172697FAA7}</Project>
-      <Name>BP.GPM</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\trunk\Components\BP.En30\BP.En30.csproj">
+    <ProjectReference Include="..\Components\BP.En30\BP.En30.csproj">
       <Project>{F9D27BAB-758D-4205-BFC8-76B49A4C87F1}</Project>
       <Name>BP.En30</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\trunk\Components\BP.Web.Controls30\BP.Web.Controls30.csproj">
+    <ProjectReference Include="..\Components\BP.Web.Controls30\BP.Web.Controls30.csproj">
       <Project>{B04D173B-69F6-4BF3-8EA4-8DB2FC7F33F4}</Project>
       <Name>BP.Web.Controls30</Name>
     </ProjectReference>
