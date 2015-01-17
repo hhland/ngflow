@@ -1,0 +1,12 @@
+﻿<!--
+可在 <windir>\Microsoft.NET\Framework\<ver>\CONFIG\Browsers 中找到现有的浏览器定义
+-->
+<browsers>
+  <browser refID="Default">
+    <capabilities>
+      <!-- To avoid wrong detections of e.g. IE10 -->
+      <capability name="cookies" value="true" />
+      <capability name="ecmascriptversion" value="3.0" />
+    </capabilities>
+  </browser>
+</browsers>
