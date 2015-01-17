@@ -271,7 +271,7 @@ namespace BP.WF
                 map.AddDDLEntities(FlowDataAttr.FK_Flow, null, " Process ", new Flows(), false);
                 map.AddTBDateTime(FlowDataAttr.FlowEnderRDT, null, " End Date ", true, true);
                 map.AddTBInt(FlowDataAttr.FlowEndNode, 0, " End node ", true, true);
-                map.AddTBInt(FlowDataAttr.FlowDaySpan, 0, " Span (Ìì)", true, true);
+                map.AddTBInt(FlowDataAttr.FlowDaySpan, 0, " Span (days)", true, true);
                 map.AddTBInt(FlowDataAttr.MyNum, 1, " The number of ", true, true);
                 map.AddTBString(FlowDataAttr.FlowEmps, null, " Participants ", false, false, 0, 100, 100);
 

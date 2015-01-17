@@ -86,7 +86,7 @@ namespace CCForm
         /// </summary>
         public void DeleteIt()
         {
-            if (MessageBox.Show(" Are you sure you want to delete [" + this.Name + "]吗? If it is determined previously generated historical data will be deleted .",
+            if (MessageBox.Show(" Are you sure you want to delete [" + this.Name + "]? If it is determined previously generated historical data will be deleted .",
                 " Delete Tip ", MessageBoxButton.OKCancel)
                 == MessageBoxResult.Cancel)
                 return;

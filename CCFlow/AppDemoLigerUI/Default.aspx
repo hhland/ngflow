@@ -268,7 +268,7 @@
         </div>
         <div position="center" id="framecenter">
             <div tabid="home" title=" Home " style="height: 300px">
-                <iframe frameborder="0" name="home" id="home" src="Welcome.aspx"></iframe>
+                <iframe frameborder="0" name="home" id="home" style="width:100%;height:100%;" src="Welcome.aspx"></iframe>
             </div>
         </div>
     </div>

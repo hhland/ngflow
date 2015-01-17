@@ -947,9 +947,9 @@ namespace BP.Web.UC
                     + "showPageList: false," + Environment.NewLine
                     + "showRefresh: false," + Environment.NewLine
                     + "layout: [{3}]," + Environment.NewLine
-                    + "beforePageText: '第&nbsp;'," + Environment.NewLine
-                    + "afterPageText: '&nbsp;/ {{pages}} 页'," + Environment.NewLine
-                    + "displayMsg: ' Show  {{from}} 到 {{to}} 条,共 {{total}} 条'\"" + Environment.NewLine
+                    + "beforePageText: 'Page&nbsp;'," + Environment.NewLine
+                    + "afterPageText: '&nbsp;/ {{pages}} '," + Environment.NewLine
+                    + "displayMsg: ' Show  {{from}} to {{to}} ,Total {{total}} '\"" + Environment.NewLine
                 + "></div>" + Environment.NewLine, totalRecords, pageSize, pageIdx, layout));
 
             if (showParentPanel)
@@ -1056,7 +1056,7 @@ namespace BP.Web.UC
             int pageSpan = 20;
             if (recNum <= pageSize)
             {
-                this.Add("<div class=PageIdx><ul><li href=#> Home </li> <li href=#> Previous </li> <li href=#> Next </li> <li href=#> Last Page </li>,<li href=#>共" + recNum + "</li>条.</DIV>");
+                this.Add("<div class=PageIdx><ul><li href=#> Home </li> <li href=#> Previous </li> <li href=#> Next </li> <li href=#> Last Page </li>,<li href=#>Total " + recNum + "</li>.</DIV>");
                 return 1;
             }
 
@@ -1124,7 +1124,7 @@ namespace BP.Web.UC
             }
             else
             {
-                this.Add("<li> Next </li> <li>第" + PageIdx + "/" + pageNum + "页</li> <li><a href='" + url + "&PageIdx=" + pageNum + "'> Last Page </a></li>,<li>共" + recNum + "条.</li></div>");
+                this.Add("<li> Next </li> <li>第" + PageIdx + "/" + pageNum + "页</li> <li><a href='" + url + "&PageIdx=" + pageNum + "'> Last Page </a></li>,<li>Total " + recNum + " records.</li></div>");
                 // this.Add("<img src='/WF/Img/Page_Down.gif' border=1 />");
             }
             return pageNum;

@@ -981,7 +981,7 @@ namespace CCFlow.WF.Rpt.UC
             else  /*  If you do not include the cumulative  */
             {
                 this.UCSys1.AddTR();
-                this.UCSys1.AddTDGroupTitle("style='text-align:center'", "序");
+                this.UCSys1.AddTDGroupTitle("style='text-align:center'", "No.");
 
                 //  Grouping criteria 
                 foreach (Attr attr in AttrsOfGroup)

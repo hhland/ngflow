@@ -517,7 +517,7 @@ namespace BP.WF
                 map.AddTBString(TrackAttr.EmpToT, null, " To staff ( Name )", true, false, 0, 2000, 100);
 
                 map.AddTBString(TrackAttr.RDT, null, " Date ", true, false, 0, 20, 100);
-                map.AddTBFloat(TrackAttr.WorkTimeSpan, 0, " Time span (Ìì)", true, false);
+                map.AddTBFloat(TrackAttr.WorkTimeSpan, 0, " Time span (days)", true, false);
                 map.AddTBStringDoc(TrackAttr.Msg, null, " News ", true, false);
                 map.AddTBStringDoc(TrackAttr.NodeData, null, " Node data ( Log Information )", true, false);
                 map.AddTBString(TrackAttr.Tag, null, " Parameters ", true, false, 0, 300, 3000);

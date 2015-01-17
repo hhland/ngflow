@@ -137,7 +137,7 @@ namespace CCForm
         /// </summary>
         public void DeleteIt()
         {
-            if (MessageBox.Show(" Are you sure you want to delete [" + this.Name + "]吗? If it is determined that the relevant fields and settings will also be deleted , Historical data previously generated will be deleted .", " Delete Tip ", MessageBoxButton.OKCancel)
+            if (MessageBox.Show(" Are you sure you want to delete [" + this.Name + "]? If it is determined that the relevant fields and settings will also be deleted , Historical data previously generated will be deleted .", " Delete Tip ", MessageBoxButton.OKCancel)
                 == MessageBoxResult.Cancel)
                 return;
 

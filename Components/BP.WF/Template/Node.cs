@@ -1998,7 +1998,7 @@ namespace BP.WF
 
                 #region  Property assessment .
                 map.AddTBFloat(NodeAttr.WarningDays, 0,  " Warning period (0 Without warning )", false, false); // " Warning period (0 Without warning )"
-                map.AddTBFloat(NodeAttr.DeductDays, 1, " Deadline (Ìì)", false, false); //" Deadline (Ìì)"
+                map.AddTBFloat(NodeAttr.DeductDays, 1, " Deadline (days)", false, false); //" Deadline (Ìì)"
                 map.AddTBFloat(NodeAttr.DeductCent, 2, " Deduction ( Each extension 1 Days buckle )", false, false); //" Deduction ( Each extension 1 Days buckle )"
                 map.AddTBFloat(NodeAttr.MaxDeductCent, 10, " Maximum deduction ", false, false); //" Maximum deduction "
                 map.AddTBFloat(NodeAttr.SwinkCent, float.Parse("0.1"), " Working score ", false, false); //" Working score "

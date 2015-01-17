@@ -64,7 +64,7 @@ namespace CCFlow.WF.UC
 
             #region  Output Title .
             this.AddTR();
-            this.AddTDTitle("序");
+            this.AddTDTitle("No.");
 
             string str1 = "<INPUT id='checkedAll' onclick=\"SelectAllBS(this);\" value=' Choose ' type='checkbox' name='checkedAll' > Select All ";
             this.AddTDTitle("align='left'", str1);

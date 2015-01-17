@@ -13,7 +13,7 @@
         <Button x:Name="CancelButton" Content=" Cancel " Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
         <Button x:Name="OKButton" Content=" Determine " Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" />
         <controls:TabControl Height="227" HorizontalAlignment="Left" Margin="10,4,0,0" Name="tabControl1" VerticalAlignment="Top" Width="438" Grid.RowSpan="2">
-            <controls:TabItem Header="从ccflow Importing website " Name="tabItem1">
+            <controls:TabItem Header="Import from ccflow website" Name="tabItem1">
                 <Canvas Height="159" Name="canvas1" Width="330">
                     <sdk:Label Canvas.Left="-16" Canvas.Top="74" Content="ccflow  To provide you with a wealth of shared template form , You can easily create your BPM System ." Height="28" Name="label3" Width="357" />
                     <Button Canvas.Left="42" Canvas.Top="45" Content=" Enter templete.ccflow.org The import ." Height="23" Name="Btn_ImpIntenert" Width="251" Click="Btn_ImpIntenert_Click_1" />

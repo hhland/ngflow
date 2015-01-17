@@ -15,7 +15,7 @@
         <sdk:Label Height="15" HorizontalAlignment="Left" Margin="31,66,0,0" Name="label1" Content=" Can edit :" VerticalAlignment="Top" Width="69" />
         <RadioButton Content=" Not editable " Height="16" HorizontalAlignment="Left" Margin="106,65,0,0" Name="RD_DisEnble" VerticalAlignment="Top" />
         <RadioButton Content=" Editable " Height="16" HorizontalAlignment="Left" Margin="176,65,0,0" Name="RD_Enble" VerticalAlignment="Top" />
-        <sdk:Label Content="类  型:" Height="15" HorizontalAlignment="Left" Margin="53,108,0,0" Name="label2" VerticalAlignment="Top" Width="47" />
+        <sdk:Label Content="Type:" Height="15" HorizontalAlignment="Left" Margin="53,108,0,0" Name="label2" VerticalAlignment="Top" Width="47" />
         <ComboBox Height="23" HorizontalAlignment="Left" Margin="106,104,0,0" Name="CB_FWCType" VerticalAlignment="Top" Width="120" SelectedIndex="0">
             <ComboBoxItem Content=" Audit Components " />
             <ComboBoxItem Content=" Multi-recording component " />

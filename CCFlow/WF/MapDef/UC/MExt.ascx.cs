@@ -641,7 +641,7 @@ public partial class WF_MapDef_UC_MExt : BP.Web.UC.UCBase3
         this.Pub2.AddCaption(" Regex  -<a href=\"MapExt.aspx?s=3&FK_MapData=" + this.FK_MapData + "&ExtType=" + this.ExtType + "&OperAttrKey=" + this.OperAttrKey + "&DoType=templete\"> Load Template </a>- <a href='MapExt.aspx?s=3&FK_MapData=" + this.FK_MapData + "&ExtType=" + this.ExtType + "' > Return </a>");
 
         this.Pub2.AddTR();
-        this.Pub2.AddTDTitle("序");
+        this.Pub2.AddTDTitle("No.");
         this.Pub2.AddTDTitle(" Event ");
         this.Pub2.AddTDTitle(" Event Content ");
         this.Pub2.AddTDTitle(" Message ");

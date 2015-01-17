@@ -14,9 +14,9 @@
     <script src="javascript/AppData.js" type="text/javascript"></script>
     <script language="javascript" type="text/javascript">
         if ($.fn.pagination) {
-            $.fn.pagination.defaults.beforePageText = '第';
-            $.fn.pagination.defaults.afterPageText = '共{pages}页';
-            $.fn.pagination.defaults.displayMsg = ' Show {from}到{to},共{total} Record ';
+            $.fn.pagination.defaults.beforePageText = 'Page ';
+            $.fn.pagination.defaults.afterPageText = 'Total {pages}';
+            $.fn.pagination.defaults.displayMsg = ' Show {from} to {to},Total {total} Record ';
         }
         if ($.fn.datagrid) {
             $.fn.datagrid.defaults.loadMsg = ' Being processed , Please wait ...';

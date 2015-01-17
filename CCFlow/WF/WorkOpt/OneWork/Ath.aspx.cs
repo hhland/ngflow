@@ -51,7 +51,7 @@ namespace CCFlow.WF.OneWork
             {
                 this.Pub1.AddTable("class='Table' cellpadding='0' cellspacing='0' border='0' style='width: 100%'");
                 this.Pub1.AddTR();
-                this.Pub1.AddTDGroupTitle("style='text-align:center'", "序");
+                this.Pub1.AddTDGroupTitle("style='text-align:center'", "No.");
                 this.Pub1.AddTDGroupTitle(" Annex No. ");
                 this.Pub1.AddTDGroupTitle(" Node ");
                 this.Pub1.AddTDGroupTitle(" Name ");
@@ -96,7 +96,7 @@ namespace CCFlow.WF.OneWork
             {
                 this.Pub1.AddTable("class='Table' cellpadding='0' cellspacing='0' border='0' style='width: 100%'");
                 this.Pub1.AddTR();
-                this.Pub1.AddTDGroupTitle("style='text-align:center'", "序");
+                this.Pub1.AddTDGroupTitle("style='text-align:center'", "No.");
                 this.Pub1.AddTDGroupTitle(" Name ");
                 this.Pub1.AddTDGroupTitle(" Node ");
                 this.Pub1.AddTDGroupTitle(" Print People ");

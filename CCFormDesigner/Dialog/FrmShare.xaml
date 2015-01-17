@@ -12,12 +12,12 @@
 
         <Button x:Name="CancelButton" Content=" Cancel " Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
         <Button x:Name="OKButton" Content=" Determine " Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" />
-        <sdk:Label HorizontalAlignment="Left" Margin="28,12,0,186" Name="label1" Width="51" Content=" Forms category " />
-        <sdk:Label Content=" Form Name " Height="28" HorizontalAlignment="Left" Margin="27,49,0,0" Name="label2" VerticalAlignment="Top" Width="51" />
-        <sdk:Label Content="描    述" Height="28" HorizontalAlignment="Left" Margin="32,76,0,0" Name="label3" VerticalAlignment="Top" Width="51" />
-        <sdk:Label Height="28" HorizontalAlignment="Left" Margin="28,173,0,0" Name="label4" VerticalAlignment="Top" Width="120" Content=" Company Name " />
-        <sdk:Label HorizontalAlignment="Left" Margin="39,144,0,54" Name="label5" Width="41" Content=" Sharer " />
-        <sdk:Label Height="28" HorizontalAlignment="Left" Margin="26,198,0,0" Name="label6" VerticalAlignment="Top" Width="120" Content=" Contact " />
+        <sdk:Label HorizontalAlignment="Left" Margin="-2,10,0,188" Name="label1" Width="98" Content=" Forms category " />
+        <sdk:Label Content=" Form Name " Height="28" HorizontalAlignment="Left" Margin="0,49,0,0" Name="label2" VerticalAlignment="Top" Width="78" />
+        <sdk:Label Content="Description" Height="28" HorizontalAlignment="Left" Margin="17,77,0,0" Name="label3" VerticalAlignment="Top" Width="70" />
+        <sdk:Label Height="28" HorizontalAlignment="Left" Margin="0,173,0,0" Name="label4" VerticalAlignment="Top" Width="148" Content=" Company Name " />
+        <sdk:Label HorizontalAlignment="Left" Margin="28,144,0,54" Name="label5" Width="41" Content=" Sharer " />
+        <sdk:Label Height="28" HorizontalAlignment="Left" Margin="28,198,0,0" Name="label6" VerticalAlignment="Top" Width="118" Content=" Contact " />
         <ComboBox Height="23" HorizontalAlignment="Left" Margin="89,12,0,0" Name="DDL_Sort" VerticalAlignment="Top" Width="120" />
         <TextBox Height="23" HorizontalAlignment="Left" Margin="88,45,0,0" Name="TB_FrmName" VerticalAlignment="Top" Width="207" />
         <TextBox Height="23" HorizontalAlignment="Left" Margin="88,75,0,0" Name="TB_FrmDesc" VerticalAlignment="Top" Width="207" />

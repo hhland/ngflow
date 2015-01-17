@@ -830,9 +830,9 @@ namespace BP.En
 
                 Attr attr = this.EnMap.GetAttrByKey(pk);
                 if (SystemConfig.IsDebug)
-                    throw new Exception("@在[" + this.EnDesc + this.EnMap.PhysicsTable + "] Not found [" + attr.Field + attr.Desc + "]=[" + this.PKVal + "] Records .");
+                    throw new Exception("@At [" + this.EnDesc + this.EnMap.PhysicsTable + "] Not found [" + attr.Field + attr.Desc + "]=[" + this.PKVal + "] Records .");
                 else
-                    throw new Exception("@在[" + this.EnDesc + "] Not found [" + attr.Desc + "]=[" + this.PKVal + "] Records .");
+                    throw new Exception("@At [" + this.EnDesc + "] Not found [" + attr.Desc + "]=[" + this.PKVal + "] Records .");
             }
             #endregion  Obtained from the cache .
 
@@ -877,7 +877,7 @@ namespace BP.En
                 {
                     if (ex.Message.Contains(" Invalid "))
                         this.CheckPhysicsTable();
-                    throw new Exception(ex.Message +"@在Entity(" + this.ToString() + ") An error occurred during query @" + ex.StackTrace);
+                    throw new Exception(ex.Message +"@At Entity(" + this.ToString() + ") An error occurred during query @" + ex.StackTrace);
                 }
             }
             #endregion  Anything hold .
@@ -1915,15 +1915,15 @@ namespace BP.En
                 {
                     return 0;
                 }
-                str = "@在beforeUpdateInsertAction Error ";
+                str = "@before Update InsertAction Error ";
                 if (this.beforeUpdateInsertAction() == false)
                 {
                     return 0;
                 }
                 int i = EntityDBAccess.Update(this, keys);
-                str = "@在afterUpdate Error ";
+                str = "@after Update Error ";
                 this.afterUpdate();
-                str = "@在afterInsertUpdateAction Error ";
+                str = "@after Insert UpdateAction Error ";
                 this.afterInsertUpdateAction();
                 //this.UpdateMemory();
                 return i;

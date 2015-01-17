@@ -54,7 +54,7 @@ namespace CCFlow.WF.Admin
             this.Pub1.AddTable("width='70%'");
             this.Pub1.AddCaptionLeft(" Setting Process Goto approval rules :<a href='GetTask.aspx'> Return </a> ");
             this.Pub1.AddTR();
-            this.Pub1.AddTDTitle("序");
+            this.Pub1.AddTDTitle("No.");
             this.Pub1.AddTDTitle(" Node number ");
             this.Pub1.AddTDTitle(" Name ");
             this.Pub1.AddTDTitle(" Step ");
@@ -106,7 +106,7 @@ namespace CCFlow.WF.Admin
             this.Pub1.AddTable("width='70%'");
             this.Pub1.AddCaptionLeft(" Select nodes can jump Audit ");
             this.Pub1.AddTR();
-            this.Pub1.AddTDTitle("序");
+            this.Pub1.AddTDTitle("No.");
             this.Pub1.AddTDTitle(" Node number ");
             this.Pub1.AddTDTitle(" Name ");
             this.Pub1.AddTDTitle(" Step ");
@@ -214,7 +214,7 @@ namespace CCFlow.WF.Admin
             this.Pub1.AddTable("width='70%'");
             this.Pub1.AddCaptionLeft(" Setting Process Goto approval rules ");
             this.Pub1.AddTR();
-            this.Pub1.AddTDTitle("序");
+            this.Pub1.AddTDTitle("No.");
             this.Pub1.AddTDTitle(" Process Category ");
             this.Pub1.AddTDTitle(" Name ");
             this.Pub1.AddTDTitle(" Flow chart ");

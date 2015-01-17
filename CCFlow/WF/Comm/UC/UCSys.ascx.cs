@@ -1036,7 +1036,7 @@ namespace CCFlow.WF.Comm.UC
                 this.AddCaptionLeft(title);
 
             this.AddTR();
-            this.AddTDTitle("序");
+            this.AddTDTitle("No.");
             foreach (DataColumn dc in dt.Columns)
                 this.AddTDTitle(dc.ColumnName);
             this.AddTREnd();
@@ -1075,7 +1075,7 @@ namespace CCFlow.WF.Comm.UC
                 this.AddCaptionLeft(title);
 
             this.AddTR();
-            this.AddTDTitle("序");
+            this.AddTDTitle("No.");
             foreach (DataColumn dc in dt.Columns)
                 this.AddTDTitle(dc.ColumnName);
             this.AddTREnd();
@@ -1452,7 +1452,7 @@ namespace CCFlow.WF.Comm.UC
             //  Generation title 
             this.Add("<TABLE  style='border-collapse: collapse' bordercolor='#111111' >");
             this.Add("<TR >");
-            this.Add("<TH  nowrap >序</TH>");
+            this.Add("<TH  nowrap >No.</TH>");
             this.Add("<TH nowrap >" + colName + "</TH>");
 
             foreach (Attr attrT in selectedAttrs)
@@ -1753,7 +1753,7 @@ namespace CCFlow.WF.Comm.UC
             this.Add("<Table border='1' width='100%' align=left cellpadding='0' cellspacing='0' style='border-collapse: collapse' bordercolor='#C0C0C0'>");
             // this.AddTable("");
             this.AddTR();
-            this.AddTDTitle("序");
+            this.AddTDTitle("No.");
             foreach (Attr attrT in selectedAttrs)
             {
                 if (attrT.UIVisible == false)
@@ -2087,7 +2087,7 @@ namespace CCFlow.WF.Comm.UC
                         continue;
 
                     this.AddTR();
-                    this.Add("<TD colspan=" + num + " class='Bar' >&nbsp;" + se.Lab + "&nbsp;(共" + i + "项)</TD>");
+                    this.Add("<TD colspan=" + num + " class='Bar' >&nbsp;" + se.Lab + "&nbsp;(Total " + i + " records)</TD>");
                     this.AddTREnd();
 
                     foreach (Entity en in ens)
@@ -2142,7 +2142,7 @@ namespace CCFlow.WF.Comm.UC
                     if (i == 0)
                         continue;
 
-                    this.Add("<TR ><TD colspan=" + num + " class='Bar' >" + groupAttr.Desc + ":" + enG.GetValByKey(groupAttr.UIRefKeyText) + "&nbsp;(共" + i + "项)</TD></TR>");
+                    this.Add("<TR ><TD colspan=" + num + " class='Bar' >" + groupAttr.Desc + ":" + enG.GetValByKey(groupAttr.UIRefKeyText) + "&nbsp;(Total " + i + " records)</TD></TR>");
 
                     foreach (Entity en in ens)
                     {
@@ -2233,7 +2233,7 @@ namespace CCFlow.WF.Comm.UC
                         if (i == 0)
                             continue;
 
-                        this.Add("<TR ><TD colspan=" + num + " class='Bar' >" + groupAttr.Desc + ":" + se.Lab + "&nbsp;(共" + i + "项)</TD></TR>");
+                        this.Add("<TR ><TD colspan=" + num + " class='Bar' >" + groupAttr.Desc + ":" + se.Lab + "&nbsp;(Total " + i + " records)</TD></TR>");
 
                         //  Convenient start 2 Packet .
                         foreach (SysEnum se2 in ses2)
@@ -2249,7 +2249,7 @@ namespace CCFlow.WF.Comm.UC
                             if (i == 0)
                                 continue;
 
-                            this.Add("<TR><TD colspan=" + num + " class='Bar' >&nbsp;&nbsp;" + groupAttr2.Desc + ":" + se2.Lab + "&nbsp;(共" + i + "项)</TD></TR>");
+                            this.Add("<TR><TD colspan=" + num + " class='Bar' >&nbsp;&nbsp;" + groupAttr2.Desc + ":" + se2.Lab + "&nbsp;(Total " + i + " records)</TD></TR>");
                             foreach (Entity en in ens)
                             {
                                 if (en.GetValStringByKey(groupAttr.Key) != gval || en.GetValStringByKey(groupAttr2.Key) != gval2)
@@ -2287,7 +2287,7 @@ namespace CCFlow.WF.Comm.UC
                         if (i == 0)
                             continue;
 
-                        this.Add("<TR ><TD colspan=" + num + " class='Bar' >" + groupAttr.Desc + ":" + se.Lab + "&nbsp;(共" + i + "项)</TD></TR>");
+                        this.Add("<TR ><TD colspan=" + num + " class='Bar' >" + groupAttr.Desc + ":" + se.Lab + "&nbsp;(Total " + i + " records)</TD></TR>");
 
                         //  Convenient start 2 Packet .
                         foreach (Entity enG2 in ensG2)
@@ -2303,7 +2303,7 @@ namespace CCFlow.WF.Comm.UC
                             if (i == 0)
                                 continue;
 
-                            this.Add("<TR><TD colspan=" + num + " class='Bar' >&nbsp;&nbsp;" + groupAttr2.Desc + ":" + enG2.GetValByKey(groupAttr2.UIRefKeyText) + "&nbsp;(共" + i + "项)</TD></TR>");
+                            this.Add("<TR><TD colspan=" + num + " class='Bar' >&nbsp;&nbsp;" + groupAttr2.Desc + ":" + enG2.GetValByKey(groupAttr2.UIRefKeyText) + "&nbsp;(Total " + i + " records)</TD></TR>");
                             foreach (Entity en in ens)
                             {
                                 if (en.GetValStringByKey(groupAttr.Key) != gval || en.GetValStringByKey(groupAttr2.Key) != gval2)
@@ -2350,7 +2350,7 @@ namespace CCFlow.WF.Comm.UC
                     if (i == 0)
                         continue;
 
-                    this.Add("<TR ><TD colspan=" + num + " class='Bar' >" + groupAttr.Desc + ":" + enG.GetValByKey(groupAttr.UIRefKeyText) + "&nbsp;(共" + i + "项)</TD></TR>");
+                    this.Add("<TR ><TD colspan=" + num + " class='Bar' >" + groupAttr.Desc + ":" + enG.GetValByKey(groupAttr.UIRefKeyText) + "&nbsp;(Total " + i + " records)</TD></TR>");
 
                     //  Convenient start 2 Packet .
                     foreach (SysEnum se in ses)
@@ -2366,7 +2366,7 @@ namespace CCFlow.WF.Comm.UC
                         if (i == 0)
                             continue;
 
-                        this.Add("<TR><TD colspan=" + num + " class='Bar' >&nbsp;&nbsp;" + groupAttr2.Desc + ":" + se.Lab + "&nbsp;(共" + i + "项)</TD></TR>");
+                        this.Add("<TR><TD colspan=" + num + " class='Bar' >&nbsp;&nbsp;" + groupAttr2.Desc + ":" + se.Lab + "&nbsp;(Total " + i + " records)</TD></TR>");
                         foreach (Entity en in ens)
                         {
                             if (en.GetValStringByKey(groupAttr.Key) != gval || en.GetValStringByKey(groupAttr2.Key) != gval2)
@@ -2403,7 +2403,7 @@ namespace CCFlow.WF.Comm.UC
                 if (i == 0)
                     continue;
 
-                this.Add("<TR ><TD colspan=" + num + " class='Bar' >" + groupAttr.Desc + ":" + enG.GetValByKey(groupAttr.UIRefKeyText) + "&nbsp;(共" + i + "项)</TD></TR>");
+                this.Add("<TR ><TD colspan=" + num + " class='Bar' >" + groupAttr.Desc + ":" + enG.GetValByKey(groupAttr.UIRefKeyText) + "&nbsp;(Total " + i + " records)</TD></TR>");
 
                 //  Convenient start 2 Packet .
                 foreach (Entity enG2 in ensG2)
@@ -2421,7 +2421,7 @@ namespace CCFlow.WF.Comm.UC
                     if (i == 0)
                         continue;
 
-                    this.Add("<TR><TD colspan=" + num + " class='Bar' >&nbsp;&nbsp;" + groupAttr2.Desc + ":" + enG2.GetValByKey(groupAttr2.UIRefKeyText) + "&nbsp;(共" + i + "项)</TD></TR>");
+                    this.Add("<TR><TD colspan=" + num + " class='Bar' >&nbsp;&nbsp;" + groupAttr2.Desc + ":" + enG2.GetValByKey(groupAttr2.UIRefKeyText) + "&nbsp;(Total " + i + " records)</TD></TR>");
                     foreach (Entity en in ens)
                     {
                         if (en.GetValStringByKey(groupAttr.Key) != gval || en.GetValStringByKey(groupAttr2.Key) != gval2)

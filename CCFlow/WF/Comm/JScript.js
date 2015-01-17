@@ -162,10 +162,33 @@ function WinOpen(url) {
 }
 
 function WinOpen(url, winName) {
+    if (EUIWinOpen(url, winName)) return;
+    //如果没有easyui，才使用原来的方式
     var newWindow = window.open(url, winName, 'width=700,height=400,top=100,left=300,scrollbars=yes,resizable=yes,toolbar=false,location=false,center=yes,center: yes;');
     newWindow.focus();
     return;
 }
+
+//使用easyui打开窗口
+function EUIWinOpen(url, winName) {
+    if (!$.fn.window)return false;
+    var $div = $("<div></div>");
+    url += "&flag=frame";
+    var w = 700, h=400;
+    var fw = w - 30, fh = h - 40;
+    var content = "<iframe src='" + url + "' width='" + fw + "' height='" + fh + "' style='border-width:0px' ><" + "/iframe>";
+    
+    $div.window({
+        title: winName
+        , width:w
+        , height: h
+        ,modal:true
+        //,href:url
+        ,content:content
+    });
+    return true;
+}
+
 function openAcc(url) {
     location.href = url;
 }

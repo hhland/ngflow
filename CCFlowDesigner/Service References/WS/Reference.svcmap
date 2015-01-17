@@ -20,11 +20,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:1106/WF/Admin/XAP/WebService.asmx" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:8020/WF/Admin/XAP/WebService.asmx" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="WebService1.disco" MetadataType="Disco" ID="4d215d2a-9824-42af-bccf-8e21ee91d531" SourceId="1" SourceUrl="http://localhost:1106/WF/Admin/XAP/WebService.asmx?disco" />
-    <MetadataFile FileName="WebService1.wsdl" MetadataType="Wsdl" ID="48f40d9d-f552-4159-93b8-40d84f5bf270" SourceId="1" SourceUrl="http://localhost:1106/WF/Admin/XAP/WebService.asmx?wsdl" />
+    <MetadataFile FileName="WebService1.wsdl" MetadataType="Wsdl" ID="2bdadff0-b2eb-45bd-8017-d10f938f151c" SourceId="1" SourceUrl="http://localhost:8020/WF/Admin/XAP/WebService.asmx?wsdl" />
+    <MetadataFile FileName="WebService1.disco" MetadataType="Disco" ID="57024e12-9b60-4dec-899b-7744d789d85d" SourceId="1" SourceUrl="http://localhost:8020/WF/Admin/XAP/WebService.asmx?disco" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

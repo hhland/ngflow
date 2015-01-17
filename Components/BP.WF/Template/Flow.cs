@@ -2745,7 +2745,7 @@ namespace BP.WF
                 attr.FK_MapData = md.No;
                 attr.HisEditType = EditType.UnDel;
                 attr.KeyOfEn = GERptAttr.FlowDaySpan; // "FlowStartRDT";
-                attr.Name = " Span (Ìì)";
+                attr.Name = " Span (days)";
                 attr.MyDataType = DataType.AppMoney;
                 attr.UIContralType = UIContralType.TB;
                 attr.LGType = FieldTypeS.Normal;

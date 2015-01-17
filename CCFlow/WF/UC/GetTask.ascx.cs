@@ -64,7 +64,7 @@ namespace CCFlow.WF.UC
             this.AddTable("width='90%' align=left");
             this.AddCaption("<a href='GetTask" + pageid + ".aspx'><img src='/WF/Img/Start.gif' > Retrieve processing </a>");
             this.AddTR();
-            this.AddTDTitle("序");
+            this.AddTDTitle("No.");
             this.AddTDTitle(" Title ");
             this.AddTDTitle(" Sponsor ");
             this.AddTDTitle(" Start Time ");
@@ -171,7 +171,7 @@ namespace CCFlow.WF.UC
             this.AddTable("width='90%' align=left");
             this.AddCaption("<a href='GetTask" + pageid + ".aspx'><img src='/WF/Img/Start.gif' > Retrieve processing </a>");
             this.AddTR();
-            this.AddTDTitle("序");
+            this.AddTDTitle("No.");
             this.AddTDTitle(" Process Category ");
             this.AddTDTitle(" Name ");
             this.AddTDTitle(" Flow chart ");

@@ -5,7 +5,7 @@
 <head runat="server">
     <title><%=BP.Sys.SystemConfig.SysName %></title>
     <%--<style type="text/css">
-      dds  
+      dds   
        * { margin:0; padding:0;}
         html, body, form { width:100%; height:100%; font-family:" Microsoft elegant black "; }
         body { background:#efefef;}

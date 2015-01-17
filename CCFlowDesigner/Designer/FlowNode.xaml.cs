@@ -113,9 +113,9 @@ namespace BP
 
                     //  The first point should be  xxx在xxx Time launched , Instead xxx What time accepted .
                     if (rowIndex == 0)
-                        sdt = DateTime.Parse(dr["RDT"].ToString()).ToString("MM月dd号HH时mm分") + " Launch ";
+                        sdt = DateTime.Parse(dr["RDT"].ToString()).ToString("yyyy-MM-dd HH:mm") + " Launch ";
                     else
-                        sdt = DateTime.Parse(dr["RDT"].ToString()).ToString("MM月dd号HH时mm分") + " Receive ";
+                        sdt = DateTime.Parse(dr["RDT"].ToString()).ToString("yyyy-MM-dd HH:mm") + " Receive ";
                 }
                 rowIndex++;
             }

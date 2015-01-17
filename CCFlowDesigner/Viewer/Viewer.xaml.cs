@@ -462,7 +462,7 @@ namespace BP
                             try
                             {
                                 DateTime time = Convert.ToDateTime(rdt);
-                                rdt = time.ToString("MM月dd日HH:mm");
+                                rdt = time.ToString("yyyy-MM-dd HH:mm");
                             }
                             catch { }
 

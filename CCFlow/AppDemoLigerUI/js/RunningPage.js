@@ -66,9 +66,9 @@ function callBack(jsonData, scope) {
         $(p).pagination({
             pageSize: 20,
             pageList: [20, 50, 100],
-            beforePageText: '第',
-            afterPageText: '页    共 {pages} 页',
-            displayMsg: ' Current display  {from} - {to}  Records    共 {total}  Records '
+            beforePageText: 'Page ',
+            afterPageText: '    Total  {pages} ',
+            displayMsg: ' Current display  {from} - {to}  Records    Total  {total}  Records '
         });
     }
     else {

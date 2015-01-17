@@ -33,7 +33,7 @@ public partial class WF_WorkOpt_OneWork_CH : System.Web.UI.Page
         this.Pub1.AddTDTitle(" Node ");
         this.Pub1.AddTDTitle(" Processors ");
         this.Pub1.AddTDTitle(" Accept time ");
-        this.Pub1.AddTDTitle(" Deadline (天)");
+        this.Pub1.AddTDTitle(" Deadline (days)");
         this.Pub1.AddTDTitle(" Time should be completed ");
         this.Pub1.AddTDTitle(" The actual completion time ");
         this.Pub1.AddTDTitle(" Status ");

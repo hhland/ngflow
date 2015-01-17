@@ -25,7 +25,7 @@ namespace CCFlow.WF.UC
             Attrs attrs = wks.GetNewEntity.EnMap.Attrs;
             this.AddTable("width='100%' align=center class=Table");
             this.AddTR();
-            this.AddTDTitle("序");
+            this.AddTDTitle("No.");
             foreach (Attr attr in attrs)
             {
                 if (attr.UIVisible == false)

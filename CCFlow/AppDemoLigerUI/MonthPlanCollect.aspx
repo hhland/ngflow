@@ -30,7 +30,7 @@
             LODOP.SET_PRINT_STYLEA(0, "VOrient", 3);
             LODOP.SET_SHOW_MODE("HIDE_PAPER_BOARD", 1);
             LODOP.SET_SHOW_MODE("LANDSCAPE_DEFROTATED", 1); // Forward displayed when the transverse 
-            LODOP.ADD_PRINT_TEXT(580, 660, 165, 22, "第#页/共&页");
+            LODOP.ADD_PRINT_TEXT(580, 660, 165, 22, "Page #/Total &");
             LODOP.SET_PRINT_STYLEA(0, "ItemType", 2);
             LODOP.SET_PRINT_STYLEA(0, "Horient", 3);
             LODOP.SET_PRINT_STYLEA(0, "Vorient", 3);

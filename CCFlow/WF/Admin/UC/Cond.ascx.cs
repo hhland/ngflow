@@ -430,12 +430,12 @@ namespace CCFlow.WF.Admin
             #region  Condition 
             this.AddTable("class='Table' cellpadding='2' cellspacing='2' style='width:100%;'");
             this.AddTR();
-            this.AddTDTitleGroup("序");
+            this.AddTDTitleGroup("No.");
             this.AddTDTitleGroup(" Node ");
             this.AddTDTitleGroup(" English name field ");
             this.AddTDTitleGroup(" Chinese name field ");
             this.AddTDTitleGroup(" Operator ");
-            this.AddTDTitleGroup("值");
+            this.AddTDTitleGroup("Value");
             this.AddTDTitleGroup(" Label ");
             this.AddTDTitleGroup(" Operational Relations ");
             this.AddTDTitleGroup(" Operating ");

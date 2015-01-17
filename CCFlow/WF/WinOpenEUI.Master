@@ -86,7 +86,7 @@
     <div id="loading-mask" class="loddingMask">
         <div id="pageloading" class="pageloading">
             <img alt="" src="Img/loading.gif" align="middle" />
-            请稍候...
+            Please wait...
         </div>
     </div>
     <form id="form1" runat="server" onkeypress="NoSubmit(event);">

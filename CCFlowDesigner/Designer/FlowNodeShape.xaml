@@ -127,7 +127,8 @@
              Visibility="Collapsed" 
              TextChanged="tbNodeName_TextChanged"  
              LostFocus="tbNodeName_LostFocus"
-          >
+             
+             >
              
          </TextBox>
     </Grid>  

@@ -332,7 +332,7 @@ namespace CCFlow.WF.WorkOpt.OneWork
 
             this.AddTable("class='Table' cellpadding='0' cellspacing='0' border='0' style='width: 100%'");
             this.AddTR();
-            this.AddTDGroupTitle("style='text-align:center'", "序");
+            this.AddTDGroupTitle("style='text-align:center'", "No.");
             this.AddTDGroupTitle(" Operation time ");
             this.AddTDGroupTitle(" Form "); //moved by liuxc,2014-12-18,应zhangqingpeng This column requires advance 
             this.AddTDGroupTitle(" From node ");

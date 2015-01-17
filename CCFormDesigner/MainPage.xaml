@@ -219,7 +219,7 @@
                 Name="lbTools" 
                 Grid.Row="1" Grid.Column="0" 
                 Background="Lavender"  
-                Width="180" Height="600" Margin="0,0,1,0" 
+                Width="200" Height="600" Margin="0,0,1,0" 
                 HorizontalAlignment="Right" VerticalAlignment="Top" >
                 <ListBox.ItemTemplate>
                     <DataTemplate>

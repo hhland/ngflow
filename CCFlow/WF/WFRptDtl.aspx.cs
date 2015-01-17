@@ -62,7 +62,7 @@ namespace CCFlow.WF
             this.Ucsys1.AddTable();
             this.Ucsys1.AddCaptionLeft(map.EnDesc + " - <a href='WFRptDtl.aspx?RefPK=" + this.RefPK + "&EnName=" + this.EnName + "&DoType=Exp' ><img src='./Img/Btn/Excel.gif' border=0> Output to Excel</a>");
             this.Ucsys1.AddTR();
-            this.Ucsys1.AddTDTitle("序");
+            this.Ucsys1.AddTDTitle("No.");
             foreach (Attr attr in map.Attrs)
             {
                 if (attr.UIVisible == false)

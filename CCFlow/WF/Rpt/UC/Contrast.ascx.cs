@@ -808,7 +808,7 @@ namespace CCFlow.WF.Rpt.UC
             string str = "";
             str += "<Table class='Table' cellspacing='0' cellpadding='0' border='0' style='width:100%'>";
             str += "<TR>";
-            str += "  <TD warp=false class='GroupTitle' nowrap style='text-align:center' >序</TD>";
+            str += "  <TD warp=false class='GroupTitle' nowrap style='text-align:center' >No.</TD>";
             str += "  <TD warp=false class='GroupTitle' nowrap >" + this.DDL_D.SelectedItem.Text + "</TD>";
             str += "  <TD warp=false class='GroupTitle' nowrap >" + this.DDL_V1.SelectedItem == null ? "" : this.DDL_V1.SelectedItem.Text + "</TD>";
             str += "  <TD warp=false class='GroupTitle' nowrap >" + this.DDL_V2.SelectedItem.Text + "</TD>";

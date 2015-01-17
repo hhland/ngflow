@@ -22,7 +22,7 @@
                     <sdk:Label Content=" Construction ....." Height="28" HorizontalAlignment="Left" Margin="85,72,0,0" Name="label1" VerticalAlignment="Top" Width="120" />
                 </Grid>
             </controls:TabItem>
-            <controls:TabItem Header="从ccflow Importing Resource Network " Name="tabItem2">
+            <controls:TabItem Header="Import from ccflow by Network " Name="tabItem2">
                 <Grid />
             </controls:TabItem>
         </controls:TabControl>

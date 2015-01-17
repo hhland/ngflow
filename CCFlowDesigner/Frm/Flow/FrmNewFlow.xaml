@@ -73,7 +73,7 @@
                     <TextBox Name="flowImpSpecialNo" FontSize="14" Margin="4,35,4,93" Grid.Column="1" Grid.Row="2" LostFocus="flowImpSpecialNo_LostFocus" VerticalAlignment="Bottom" Text=" Please enter the specified process ID " Foreground="#FF3399FF" />
                 </Grid>
             </controls:TabItem>
-            <sdk:TabItem Header="从ccflow Importing Resource Network " Name="tabItemCCflow"></sdk:TabItem>
+            <sdk:TabItem Header="Import from ccflow by Network " Name="tabItemCCflow"></sdk:TabItem>
         </controls:TabControl>
 
         <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="310,0,38,0">

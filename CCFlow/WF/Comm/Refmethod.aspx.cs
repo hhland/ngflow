@@ -21,7 +21,17 @@ namespace CCFlow.Web.Comm
 	/// </summary>
 	public partial class UIRefMethod : BP.Web.WebPage
 	{
-        protected void Page_Load(object sender, System.EventArgs e)
+
+	    public string flag
+	    {
+	        get
+	        {
+	            string v= HttpContext.Current.Request["flag"];
+	            return string.IsNullOrWhiteSpace(v) ? "" : v;
+	        }
+	    }
+
+	    protected void Page_Load(object sender, System.EventArgs e)
         {
             string ensName = this.Request.QueryString["EnsName"];
             int index = int.Parse(this.Request.QueryString["Index"]);
@@ -54,7 +64,15 @@ namespace CCFlow.Web.Comm
                 object obj = rm.Do(null);
                 if (obj == null)
                 {
-                    this.WinClose();
+                    if (flag.Contains("frame"))
+                    {
+
+                    }
+                    else
+                    {
+                        this.WinClose();  
+                    }
+                    
                     return;
                 }
 

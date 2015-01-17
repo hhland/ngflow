@@ -15,15 +15,15 @@
         <controls:TabControl Height="223" HorizontalAlignment="Left" Margin="4,3,0,0" Name="tabControl1" VerticalAlignment="Top" Width="374">
             <controls:TabItem Header=" Routine " Name="tabItem1">
                 <Grid>
-                    <sdk:Label Height="28" HorizontalAlignment="Left" Margin="46,66,0,0" Name="label1" VerticalAlignment="Top" Width="49" Content=" Canvas Width " />
-                    <sdk:Label Content=" Canvas height " Height="28" HorizontalAlignment="Left" Margin="46,99,0,0" Name="label2" VerticalAlignment="Top" Width="49" />
+                    <sdk:Label Height="28" HorizontalAlignment="Left" Margin="17,69,0,0" Name="label1" VerticalAlignment="Top" Width="82" Content=" Canvas Width " />
+                    <sdk:Label Content=" Canvas height " Height="28" HorizontalAlignment="Left" Margin="15,104,0,0" Name="label2" VerticalAlignment="Top" Width="90" />
                     <TextBox Height="23" HorizontalAlignment="Right"
-                             Margin="0,64,141,0" Name="TB_FrmW" 
+                             Margin="0,65,142,0" Name="TB_FrmW" 
                              VerticalAlignment="Top" Width="120" />
                     <TextBox Height="23" HorizontalAlignment="Right"
-                             Margin="0,0,141,65" Name="TB_FrmH"
+                             Margin="0,0,142,65" Name="TB_FrmH"
                              VerticalAlignment="Bottom" Width="120" />
-                    <sdk:Label Content=" Form Name " HorizontalAlignment="Left" Margin="45,35,0,126" Name="label3" Width="49" />
+                    <sdk:Label Content=" Form Name " HorizontalAlignment="Left" Margin="28,28,0,133" Name="label3" Width="73" />
                     <TextBox Height="23" HorizontalAlignment="Right" Margin="0,31,58,0" Name="TB_Name" VerticalAlignment="Top" Width="204" Text="" />
                 </Grid>
             </controls:TabItem>

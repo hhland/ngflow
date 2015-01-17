@@ -21,19 +21,19 @@ namespace CCForm
 {
     public delegate void CCBPFormClosed();
     public delegate void CCBPFormLoaded();
-    public partial class MainPage:UserControl
+    public partial class MainPage : UserControl
     {
         static MainPage instance = null;
         public static MainPage Instance
         {
-            get 
+            get
             {
                 if (instance == null)
                     instance = new MainPage();
                 return MainPage.instance;
             }
             set
-            { 
+            {
                 MainPage.instance = value;
             }
         }
@@ -42,7 +42,7 @@ namespace CCForm
         ///  If you are from CCFlowDesigner Application into this page , When the form is loaded after the need to update the caller callback 
         /// </summary>
         public event CCBPFormLoaded CCBPFormLoaded;
-        #region  Mobile processing variables 
+        #region  Mobile processing variables
 
         private Point pFrom;  /*  Click the mouse position    */
         public static Rectangle RectSelected;   /*   Region selection   */
@@ -55,10 +55,10 @@ namespace CCForm
 
         #endregion
 
-        #region  Global Variables 
+        #region  Global Variables
         LoadingWindow loadingWindow = new LoadingWindow();
 
-        
+
         public SelectM2M winSelectM2M = new SelectM2M();
         public FlowFrm winFlowFrm = new FlowFrm();
         public FrmLink winFrmLink = new FrmLink();
@@ -80,7 +80,7 @@ namespace CCForm
         public SelectAttachment winSelectAttachment = new SelectAttachment();
         public FrmAttachmentM winFrmAttachmentM = new FrmAttachmentM();
 
-        public bool IsRB ;
+        public bool IsRB;
 
 
         string selectType = ToolBox.Mouse; //  Select the type of the current tool  hand line1 line2 label txt cannel
@@ -88,8 +88,8 @@ namespace CCForm
         BPLabel currLab; // Current  label
         BPLink currLink;  // Current  linke
         BPLine currLine;  // Current  Line
-     
-       
+
+
 
         private DataTemplate cursor;// customerCursor
         private CustomCursor cCursor = null;// which is used to replace the default cursor of UIElement
@@ -113,9 +113,9 @@ namespace CCForm
                NameFlowFrm = "NameFlowFrm",
                NameNodeFrms = "NameNodeFrms",
                NameAttachmentM = "NameAttachmentM";
-        #endregion  Global Variables 
+        #endregion  Global Variables
 
-        #region  Initialization load 
+        #region  Initialization load
         /// <summary>
         ///  Flag this application caller  true: 由web Calling ,false: 由FlowDesigner Calling 
         /// </summary>
@@ -124,7 +124,7 @@ namespace CCForm
         {
             if (!LoadSource)
             {
-                
+
             }
             else
             {
@@ -259,7 +259,7 @@ namespace CCForm
                 };
             }
 
-            #region toolbar 
+            #region toolbar
             List<Func> ens = new List<Func>();
             ens = Func.instance.GetToolList();
             foreach (Func en in ens)
@@ -330,7 +330,7 @@ namespace CCForm
 
             #endregion
 
-            #region  Toolbox 
+            #region  Toolbox
             this.lbTools.ItemsSource = ToolBoxes.instance.GetToolBoxList();
             this.lbTools.SelectionMode = SelectionMode.Single;
             this.lbTools.AddHandler(ListBox.MouseLeftButtonDownEvent, new MouseButtonEventHandler(lbTools_MouseLeftButtonDown), true);
@@ -339,43 +339,43 @@ namespace CCForm
             #endregion
 
             #region chinwin
-            winFrmImg.Name           = NameImg;
-            winFrmImgAth.Name        = NameImgAth;
-            winFrmImgSeal.Name       = NameImgSeal;
-            winWorkCheck.Name        = NameWorkCheck;
-            winFrmLab.Name           = NameLab;
-            winSelectM2M.Name        = NameM2M;
-            winFrmLink.Name          = NameLink;
-            winSelectTB.Name         = NameTB;
-            winSelectDDL.Name        = NameDDL;
-            winSelectRB.Name         = NameRB;
-            winFrmImp.Name           = NameImp;
-            winFrmEle.Name           = NameEle;
+            winFrmImg.Name = NameImg;
+            winFrmImgAth.Name = NameImgAth;
+            winFrmImgSeal.Name = NameImgSeal;
+            winWorkCheck.Name = NameWorkCheck;
+            winFrmLab.Name = NameLab;
+            winSelectM2M.Name = NameM2M;
+            winFrmLink.Name = NameLink;
+            winSelectTB.Name = NameTB;
+            winSelectDDL.Name = NameDDL;
+            winSelectRB.Name = NameRB;
+            winFrmImp.Name = NameImp;
+            winFrmEle.Name = NameEle;
             winSelectAttachment.Name = NameAttachment;
-            winFrmOp.Name            = NameOp;
-            winFrmBtn.Name           = NameBtn;
-            winFlowFrm.Name          = NameFlowFrm;
-            winNodeFrms.Name         = NameNodeFrms;
-            winFrmAttachmentM.Name   = NameAttachmentM;
+            winFrmOp.Name = NameOp;
+            winFrmBtn.Name = NameBtn;
+            winFlowFrm.Name = NameFlowFrm;
+            winNodeFrms.Name = NameNodeFrms;
+            winFrmAttachmentM.Name = NameAttachmentM;
 
-            winFrmImg.Closed           += WindowDilag_Closed;
-            winFrmImgAth.Closed        += WindowDilag_Closed;
-            winFrmImgSeal.Closed       += WindowDilag_Closed;
-            winWorkCheck.Closed        += WindowDilag_Closed;
-            winFrmLab.Closed           += WindowDilag_Closed;
-            winFrmLink.Closed          += WindowDilag_Closed;
-            winNodeFrms.Closed         += WindowDilag_Closed;
-            winSelectTB.Closed         += WindowDilag_Closed;
-            winSelectDDL.Closed        += WindowDilag_Closed;
-            winSelectRB.Closed         += WindowDilag_Closed;
-            winFrmImp.Closed           += WindowDilag_Closed;
-            winFrmEle.Closed           += WindowDilag_Closed;
-            winFrmBtn.Closed           += WindowDilag_Closed;
+            winFrmImg.Closed += WindowDilag_Closed;
+            winFrmImgAth.Closed += WindowDilag_Closed;
+            winFrmImgSeal.Closed += WindowDilag_Closed;
+            winWorkCheck.Closed += WindowDilag_Closed;
+            winFrmLab.Closed += WindowDilag_Closed;
+            winFrmLink.Closed += WindowDilag_Closed;
+            winNodeFrms.Closed += WindowDilag_Closed;
+            winSelectTB.Closed += WindowDilag_Closed;
+            winSelectDDL.Closed += WindowDilag_Closed;
+            winSelectRB.Closed += WindowDilag_Closed;
+            winFrmImp.Closed += WindowDilag_Closed;
+            winFrmEle.Closed += WindowDilag_Closed;
+            winFrmBtn.Closed += WindowDilag_Closed;
             winSelectAttachment.Closed += WindowDilag_Closed;
-            winFrmOp.Closed            += WindowDilag_Closed;
-            winFlowFrm.Closed          += WindowDilag_Closed;
-            winFrmAttachmentM.Closed   += WindowDilag_Closed;
-            winSelectM2M.Closed        += WindowDilag_Closed;
+            winFrmOp.Closed += WindowDilag_Closed;
+            winFlowFrm.Closed += WindowDilag_Closed;
+            winFrmAttachmentM.Closed += WindowDilag_Closed;
+            winSelectM2M.Closed += WindowDilag_Closed;
             #endregion chinwin.
 
             initPoint();
@@ -397,7 +397,7 @@ namespace CCForm
             this.workSpace.SizeChanged += _SizeChanged;
             Application.Current.Host.Content.Resized += Content_Resized;
             #endregion
-          
+
         }
 
 
@@ -435,22 +435,22 @@ namespace CCForm
             this.SetSelectedTool(ToolBox.Mouse);
 
             ChildWindow c = sender as ChildWindow;
-            if ( c.DialogResult == false)
+            if (c.DialogResult == false)
             {
-                  return;
+                return;
             }
 
             switch (c.Name)
             {
                 case NameImg:
 
-                    Glo.currEle =this.winFrmImg.HisImg;
+                    Glo.currEle = this.winFrmImg.HisImg;
                     break;
                 case NameImgAth:
-                    Glo.currEle =this.winFrmImgAth.HisImgAth;
+                    Glo.currEle = this.winFrmImgAth.HisImgAth;
                     break;
                 case NameM2M:
-                  
+
                     BPM2M m2m = new BPM2M(this.winSelectM2M.IsM2M);
                     m2m.Name = Glo.TempVal.ToString();
                     if (this.workSpace.FindName(m2m.Name) != null)
@@ -545,7 +545,7 @@ namespace CCForm
 
 
                     //  Check for generation   Label .
-                    if (this.attachElementEvent(mytb) 
+                    if (this.attachElementEvent(mytb)
                         && this.winSelectTB.CB_IsGenerLabel.IsChecked == true)
                     {
                         BPLabel lab = new BPLabel();
@@ -553,7 +553,7 @@ namespace CCForm
                         lab.Cursor = Cursors.Hand;
                         lab.SetValue(Canvas.LeftProperty, Glo.X - 20);
                         lab.SetValue(Canvas.TopProperty, Glo.Y);
-                       
+
                         this.attachElementEvent(lab);
                     }
 
@@ -601,9 +601,9 @@ namespace CCForm
 
                     #region
                     BPAttachment atthMy = new BPAttachment(
-                        this.winSelectAttachment.TB_No.Text.Trim() , 
+                        this.winSelectAttachment.TB_No.Text.Trim(),
                         this.winSelectAttachment.TB_Name.Text.Trim(),
-                        this.winSelectAttachment.TB_Exts.Text, 
+                        this.winSelectAttachment.TB_Exts.Text,
                         70,
                         this.winSelectAttachment.TB_SaveTo.Text);
                     atthMy.SetValue(Canvas.LeftProperty, Glo.X);
@@ -620,7 +620,7 @@ namespace CCForm
                     /* Generate labels */
                     BPLabel lb = new BPLabel();
                     lb.Content = this.winSelectAttachment.TB_Name.Text;
-                    lb.Name = getElementNameFromUI( lb);
+                    lb.Name = getElementNameFromUI(lb);
                     lb.Cursor = Cursors.Hand;
                     lb.SetValue(Canvas.LeftProperty, Glo.X - 20);
                     lb.SetValue(Canvas.TopProperty, Glo.Y);
@@ -638,14 +638,14 @@ namespace CCForm
                     string enKey = mylbi.Content.ToString();
                     enKey = enKey.Substring(0, enKey.IndexOf(':'));
 
-                    BPDDL myddl = new BPDDL() 
+                    BPDDL myddl = new BPDDL()
                     {
                         KeyName = this.winSelectDDL.TB_KeyOfName.Text.Trim(),
                         Name = this.winSelectDDL.TB_KeyOfEn.Text.Trim(),
                         Width = 100,
                         Height = 23
                     };
-                  
+
                     myddl.SetValue(Canvas.LeftProperty, Glo.X);
                     myddl.SetValue(Canvas.TopProperty, Glo.Y);
                     myddl.BindEns(enKey);
@@ -681,7 +681,7 @@ namespace CCForm
                     {
                         int addX = 0;
                         int addY = 0;
-                        string gName = this.winSelectRB.TB_KeyOfEn.Text.Trim(); 
+                        string gName = this.winSelectRB.TB_KeyOfEn.Text.Trim();
                         foreach (string str in strs)
                         {
                             if (string.IsNullOrEmpty(str))
@@ -716,14 +716,14 @@ namespace CCForm
                     else
                     {
                         /*  In the case of ddl.*/
-                        BPDDL myddlEnum = new BPDDL() 
+                        BPDDL myddlEnum = new BPDDL()
                         {
                             Name = this.winSelectRB.TB_KeyOfEn.Text.Trim(),
                             KeyName = this.winSelectRB.TB_KeyOfName.Text.Trim(),
                             Width = 100,
                             Height = 23
                         };
-                       
+
                         myddlEnum.SetValue(Canvas.LeftProperty, Glo.X);
                         myddlEnum.SetValue(Canvas.TopProperty, Glo.Y);
                         myddlEnum.BindEnum(enumKey);
@@ -746,9 +746,9 @@ namespace CCForm
                     }
                     #endregion
                     break;
-                 /*  
-                 * Property
-                 */
+                /*  
+                * Property
+                */
                 case NameFlowFrm:
 
                     Glo.FK_MapData = this.winFlowFrm.TB_No.Text;
@@ -765,7 +765,7 @@ namespace CCForm
                 case NameOp:
                     this.changeFormSize(double.Parse(this.winFrmOp.TB_FrmW.Text), double.Parse(this.winFrmOp.TB_FrmH.Text));
                     break;
-               
+
             }
         }
 
@@ -786,17 +786,17 @@ namespace CCForm
             string gKey = this.winSelectTB.TB_KeyOfEn.Text;
 
 
-            BPTextBox tbNote = new BPTextBox(TBType.String, gKey + "_Note") 
+            BPTextBox tbNote = new BPTextBox(TBType.String, gKey + "_Note")
             {
                 KeyName = gName,
                 Cursor = Cursors.Hand,
                 Width = 550,
                 Height = 70
             };
-        
+
             tbNote.SetValue(Canvas.LeftProperty, Glo.X - 10);
             tbNote.SetValue(Canvas.TopProperty, Glo.Y);
-       
+
 
             this.attachElementEvent(tbNote);
 
@@ -816,7 +816,7 @@ namespace CCForm
 
             /* To generate a label */
             BPLabel abCheckNote = new BPLabel();
-            abCheckNote.Content = gName.Replace(" Audit opinion ","@ Audit opinion "); // " Audit opinion ";
+            abCheckNote.Content = gName.Replace(" Audit opinion ", "@ Audit opinion "); // " Audit opinion ";
             abCheckNote.Name = "Lab" + gKey + "Note";
             abCheckNote.SetValue(Canvas.LeftProperty, Glo.X - 30);
             abCheckNote.SetValue(Canvas.TopProperty, Glo.Y);
@@ -841,7 +841,7 @@ namespace CCForm
         }
 
         JsonObject jsonObject = null;
-      
+
         public void BindFrm()
         {
             this.workSpace.Children.Clear();
@@ -895,581 +895,582 @@ namespace CCForm
 
                     if (jsonObject == null || jsonObject.Count == 0) toBeContinued = false;
                     #region
-                   
-                    if(toBeContinued)
-                    foreach (KeyValuePair<string, JsonValue> item in jsonObject)
-                    {
-                        table = item.Key;
-                        Glo.TempVal = table;
 
-                        string tmpStr = string.Empty;
-                        double tmpDouble = 0;
-                        switch (table)
+                    if (toBeContinued)
+                        foreach (KeyValuePair<string, JsonValue> item in jsonObject)
                         {
-                            case EEleTableNames.WF_Node:
-                                foreach (JsonValue dr in item.Value)
-                                {
-                                    if (dr.Count == 0)
-                                        continue;
+                            table = item.Key;
+                            Glo.TempVal = table;
 
-                                    tmpStr = dr["NODEID"].ToString();
-                                    BPWorkCheck dtl = new BPWorkCheck(tmpStr);
-
-                                    tmpDouble = dr["FWC_X"];
-                                    dtl.SetValue(Canvas.LeftProperty, tmpDouble);
-                                    tmpDouble = dr["FWC_Y"];
-                                    dtl.SetValue(Canvas.TopProperty, tmpDouble);
-                                    tmpDouble = dr["FWC_W"];
-                                    dtl.Width = tmpDouble;
-                                    tmpDouble = dr["FWC_H"];
-                                    dtl.Height = tmpDouble;
-
-                                    tmpStr = dr["FWCSTA"].ToString();
-                                    dtl.FWC_Sta = string.IsNullOrEmpty(tmpStr) ? "0" : tmpStr;
-                                    tmpStr = dr["FWCTYPE"].ToString();
-                                    dtl.FWC_Type = string.IsNullOrEmpty(tmpStr) ? "0" : tmpStr;
-                                    attachElementEvent(dtl);
-                                }
-                                break;
-                            case EEleTableNames.Sys_FrmEle:
-                                foreach (JsonValue dr in item.Value)
-                                {
-                                    if (dr.Count == 0)
-                                        continue;
-
-                                    if ((string)dr["FK_MAPDATA"] != Glo.FK_MapData)
-                                        continue;
-
-                                    BPEle bpele = new BPEle();
-                                    bpele.Name = dr["MYPK"];
-
-                                    if (string.IsNullOrEmpty((string)dr["ELETYPE"]))
-                                        continue;
-
-                                    if (string.IsNullOrEmpty((string)dr["ELEID"]))
-                                        continue;
-
-                                    if (string.IsNullOrEmpty(dr["ELENAME"]))
-                                        continue;
-
-                                    bpele.EleType = (string)dr["ELETYPE"]  ;
-                                    bpele.EleName = dr["ELENAME"];
-                                    bpele.EleID = (string)dr["ELEID"];
-
-                                    tmpDouble = dr["X"];
-                                    bpele.SetValue(Canvas.LeftProperty, tmpDouble);
-                                    tmpDouble = dr["Y"];
-                                    bpele.SetValue(Canvas.TopProperty, tmpDouble);
-
-                                    bpele.Width = dr["W"];
-                                    bpele.Height = dr["H"];
-
-                                    attachElementEvent(bpele);
-                                }
-                                continue;
-                            case EEleTableNames.Sys_MapData:
-
-                                foreach (JsonValue dr in item.Value)
-                                {
-                                    if (dr.Count == 0)
-                                        continue;
-
-                                    if ((string)dr["NO"] != Glo.FK_MapData)
-                                        continue;
-                                  
-                                    Glo.HisMapData = new MapData();
-                                    Glo.HisMapData.FrmH = dr["FRMH"];
-                                    Glo.HisMapData.FrmW = dr["FRMW"];
-                                    Glo.HisMapData.No = dr["NO"];
-                                    Glo.HisMapData.Name = dr["NAME"];
-                                    Glo.IsDtlFrm = false;
-
-                                    this.workSpace.Width = Glo.HisMapData.FrmW;
-                                    this.workSpace.Height = Glo.HisMapData.FrmH;
-                                }
-
-                                break;
-                            case EEleTableNames.Sys_FrmBtn:
-                                foreach (JsonValue dr in item.Value)
-                                {
-                                    if (dr.Count == 0)
-                                        continue;
-                                    if ((string)dr["FK_MAPDATA"] != Glo.FK_MapData)
-                                        continue;
-
-                                    BPBtn btn = new BPBtn();
-
-                                    btn.Name = dr["MYPK"];
-                                    tmpStr = dr["TEXT"];
-                                    btn.Content = tmpStr.Replace("&nbsp;", " ");
-                                    int type = dr["BTNTYPE"];
-                                    btn.HisBtnType = (BtnType)type;
-                                    type = dr["EVENTTYPE"];
-                                    btn.HisEventType = (EventType)type;
-
-                                    tmpStr = dr["EVENTCONTEXT"];
-                                    if (!string.IsNullOrEmpty(tmpStr))
-                                        btn.EventContext = tmpStr.Replace("~", "'");
-
-                                    tmpStr = dr["MSGERR"];
-                                    if (!string.IsNullOrEmpty(tmpStr))
-                                        btn.MsgErr = tmpStr.Replace("~", "'");
-
-                                    tmpStr = dr["MSGOK"];
-                                    if (!string.IsNullOrEmpty(tmpStr))
-                                        btn.MsgOK = tmpStr.Replace("~", "'");
-
-                                    tmpDouble = dr["X"];
-                                    btn.SetValue(Canvas.LeftProperty, tmpDouble);
-                                    tmpDouble = dr["Y"];
-                                    btn.SetValue(Canvas.TopProperty, tmpDouble);
-                                    attachElementEvent(btn);
-                                }
-                                continue;
-                            case EEleTableNames.Sys_FrmLine:
-                                foreach (JsonValue dr in item.Value)
-                                {
-                                    if (dr.Count == 0)
-                                        continue;
-
-                                    if ((string)dr["FK_MAPDATA"] != Glo.FK_MapData)
-                                        continue;
-
-                                    string color = dr["BORDERCOLOR"];
-                                    if (string.IsNullOrEmpty(color))
-                                        color = "Black";
-
-                                    BPLine myline = new BPLine(color, dr["BORDERWIDTH"],
-                                        dr["X1"], dr["Y1"], dr["X2"],  dr["Y2"]);
-                                    myline.Name = dr["MYPK"];
-                                    attachElementEvent(myline);
-                                }
-                                continue;
-                            case EEleTableNames.Sys_FrmLab:
-                                foreach (JsonValue dr in item.Value)
-                                {
-                                    if (dr.Count == 0)
-                                        continue;
-
-                                    if ((string)dr["FK_MAPDATA"] != Glo.FK_MapData)
-                                        continue;
-
-                                    BPLabel lab = new BPLabel();
-                                    lab.Name = dr["MYPK"];
-
-                                    tmpStr = dr["TEXT"];
-                                    tmpStr = tmpStr.Replace("&nbsp;", " ").Replace("@", "\n");
-                                    lab.Content = tmpStr;
-
-                                    lab.FontSize = dr["FONTSIZE"];
-
-                                    lab.SetValue(Canvas.LeftProperty, (double)dr["X"]);
-                                    lab.SetValue(Canvas.TopProperty, (double)dr["Y"]);
-
-                                    if (dr["ISBOLD"] == 1)
-                                        lab.FontWeight = FontWeights.Bold;
-                                    else
-                                        lab.FontWeight = FontWeights.Normal;
-
-                                    string color = dr["FONTCOLOR"];
-                                    lab.Foreground = new SolidColorBrush(Glo.ToColor(color));
-
-                                    attachElementEvent(lab);
-                                }
-                                continue;
-                            case EEleTableNames.Sys_FrmLink:
-                                foreach (JsonValue dr in item.Value)
-                                {
-                                    if (dr.Count == 0)
-                                        continue;
-
-                                 
-                                    if ((string)dr["FK_MAPDATA"] != Glo.FK_MapData)
-                                        continue;
-
-                                    BPLink link = new BPLink();
-                                    link.Name = dr["MYPK"];
-                                    tmpStr = dr["TEXT"];
-                                    link.Content = tmpStr;
-                                    link.URL = dr["URL"];
-                                    link.WinTarget = dr["TARGET"];
-                                    link.FontSize = dr["FONTSIZE"];
-
-                                    link.SetValue(Canvas.LeftProperty, (double)dr["X"]);
-                                    link.SetValue(Canvas.TopProperty, (double)dr["Y"]);
-
-                                    string color = dr["FONTCOLOR"];
-                                    if (string.IsNullOrEmpty(color))
-                                        color = "Black";
-
-                                    link.Foreground = new SolidColorBrush(Glo.ToColor(color));
-
-                                    attachElementEvent(link);
-                                }
-                                continue;
-                            case EEleTableNames.Sys_FrmImg:
-                                foreach (JsonValue dr in item.Value)
-                                {
-                                    if (dr.Count == 0)
-                                        continue;
-
-                                    if ((string)dr["FK_MAPDATA"] != Glo.FK_MapData)
-                                        continue;
-
-                                    int ImgAppType = 0;
-                                    try
+                            string tmpStr = string.Empty;
+                            double tmpDouble = 0;
+                            switch (table)
+                            {
+                                case EEleTableNames.WF_Node:
+                                    foreach (JsonValue dr in item.Value)
                                     {
-                                        ImgAppType = dr["IMGAPPTYPE"];
+                                        if (dr.Count == 0)
+                                            continue;
+
+                                        tmpStr = dr["NODEID"].ToString();
+                                        BPWorkCheck dtl = new BPWorkCheck(tmpStr);
+
+                                        tmpDouble = dr["FWC_X"];
+                                        dtl.SetValue(Canvas.LeftProperty, tmpDouble);
+                                        tmpDouble = dr["FWC_Y"];
+                                        dtl.SetValue(Canvas.TopProperty, tmpDouble);
+                                        tmpDouble = dr["FWC_W"];
+                                        dtl.Width = tmpDouble;
+                                        tmpDouble = dr["FWC_H"];
+                                        dtl.Height = tmpDouble;
+
+                                        tmpStr = dr["FWCSTA"].ToString();
+                                        dtl.FWC_Sta = string.IsNullOrEmpty(tmpStr) ? "0" : tmpStr;
+                                        tmpStr = dr["FWCTYPE"].ToString();
+                                        dtl.FWC_Type = string.IsNullOrEmpty(tmpStr) ? "0" : tmpStr;
+                                        attachElementEvent(dtl);
                                     }
-                                    catch (Exception)
+                                    break;
+                                case EEleTableNames.Sys_FrmEle:
+                                    foreach (JsonValue dr in item.Value)
                                     {
-                                    } 
+                                        if (dr.Count == 0)
+                                            continue;
 
-                                    switch (ImgAppType)
-                                    {
-                                        case 1:
-                                            BPImgSeal imgSeal = new BPImgSeal();
-                                            imgSeal.Name = dr["MYPK"];
-                                            imgSeal.SetValue(Canvas.LeftProperty, (double)dr["X"]);
-                                            imgSeal.SetValue(Canvas.TopProperty, (double)dr["Y"]);
+                                        if ((string)dr["FK_MAPDATA"] != Glo.FK_MapData)
+                                            continue;
 
-                                            imgSeal.Width = dr["W"];
-                                            imgSeal.Height = dr["H"];
-                                            imgSeal.TB_CN_Name = dr["NAME"] == null ? dr["MYPK"] : dr["NAME"];
-                                            imgSeal.TB_En_Name = dr["ENPK"] == null ? dr["MYPK"]: dr["ENPK"];
-                                            imgSeal.Tag0 = dr["TAG0"];
-                                            imgSeal.IsEdit = false;
-                                           
-                                            imgSeal.IsEdit = dr["ISEDIT"] == 1 ? true : false;
-                                            
-                                            attachElementEvent(imgSeal);
-                                            break;
-                                        default:
-                                            BPImg img = new BPImg();
-                                            img.Name = dr["MYPK"];
-                                            img.SetValue(Canvas.LeftProperty, (double)dr["X"]);
-                                            img.SetValue(Canvas.TopProperty, (double)dr["Y"]);
-                                            img.TB_CN_Name = dr["NAME"] == null ? dr["MYPK"] : dr["NAME"];
-                                            img.TB_En_Name = dr["ENPK"] == null ? dr["MYPK"] : dr["ENPK"];
-                                            img.Width = dr["W"];
-                                            img.Height = dr["H"];
+                                        BPEle bpele = new BPEle();
+                                        bpele.Name = dr["MYPK"];
 
-                                            string imgPath = string.Empty;
-                                            if (dr["IMGPATH"] != null)
-                                            {
-                                                imgPath = dr["IMGPATH"];
-                                            }
-                                            string imgUrl = string.Empty;
-                                            if (dr["IMGURL"] != null)
-                                            {
-                                                imgUrl = dr["IMGURL"];
-                                            }
-                                            // Local Photos 
-                                            if ( dr["SRCTYPE"] == 0)
-                                            {
-                                                img.SrcType = 0;
-                                                // Determine whether to modify the image path 
-                                                if (imgPath.Contains("DataUser"))
-                                                {
-                                                    ImageBrush ib = new ImageBrush();
-                                                    imgPath = Glo.BPMHost + imgPath;
-                                                    BitmapImage png = new BitmapImage(new Uri(imgPath, UriKind.RelativeOrAbsolute));
-                                                    ib.ImageSource = png;
-                                                    img.Background = ib;
-                                                    img.HisPng = png;
-                                                }
-                                            }
-                                            else if ( dr["SRCTYPE"] == 1)// Specify the path 
-                                            {
-                                                img.SrcType = 1;
-                                                // Judge image path is not empty , And does not contain ccflow Expression 
-                                                if (!imgUrl.Contains("@"))
-                                                {
-                                                    ImageBrush ib = new ImageBrush();
-                                                    BitmapImage png = new BitmapImage(new Uri(imgUrl, UriKind.RelativeOrAbsolute));
-                                                    ib.ImageSource = png;
-                                                    img.Background = ib;
-                                                    img.HisPng = png;
-                                                }
-                                            }
+                                        if (string.IsNullOrEmpty((string)dr["ELETYPE"]))
+                                            continue;
 
-                                            img.LinkTarget = dr["LINKTARGET"];
-                                            img.LinkURL = dr["LINKURL"];
-                                            img.ImgURL = imgUrl;
-                                            img.ImgPath = imgPath;
-                                            attachElementEvent(img);
-                                            break;
-                                    }
-                                }
-                                continue;
-                            case EEleTableNames.Sys_FrmImgAth:
-                                foreach (JsonValue dr in item.Value)
-                                {
-                                    if (dr.Count == 0)
-                                        continue;
+                                        if (string.IsNullOrEmpty((string)dr["ELEID"]))
+                                            continue;
 
-                                    if ((string)dr["FK_MAPDATA"] != Glo.FK_MapData)
-                                        continue;
+                                        if (string.IsNullOrEmpty(dr["ELENAME"]))
+                                            continue;
 
-                                    BPImgAth ath = new BPImgAth();
-                                    ath.Name = dr["MYPK"];
-                                    ath.CtrlID = dr["CTRLID"]; // Accessory ID.
-
-                                    ath.SetValue(Canvas.LeftProperty, (double)dr["X"]);
-                                    ath.SetValue(Canvas.TopProperty, (double)dr["Y"]);
-                                    ath.IsEdit = dr["ISEDIT"] == 1 ? true : false;
-                                    ath.Height = dr["H"];
-                                    ath.Width = dr["W"];
-                                    attachElementEvent(ath);
-                                }
-                                continue;
-                            case EEleTableNames.Sys_FrmRB:
-                                foreach (JsonValue dr in item.Value)
-                                {
-                                    if (dr.Count == 0)
-                                        continue;
-                                    if ((string)dr["FK_MAPDATA"] != Glo.FK_MapData)
-                                        continue;
-
-                                    BPRadioBtn btn = new BPRadioBtn();
-                                    btn.Name = dr["MYPK"];
-                                    btn.GroupName = dr["KEYOFEN"];
-                                    btn.Content = (string)dr["LAB"];
-                                    btn.UIBindKey = dr["ENUMKEY"];
-                                    btn.Tag = dr["INTKEY"].ToString();
-                                    btn.SetValue(Canvas.LeftProperty, (double)dr["X"]);
-                                    btn.SetValue(Canvas.TopProperty, (double)dr["Y"]);
-
-
-                                    attachElementEvent(btn);
-                                }
-                                continue;
-                            case EEleTableNames.Sys_MapAttr:
-                                foreach (JsonValue dr in item.Value)
-                                {
-                                    if (dr.Count == 0)
-                                        continue;
-
-                                    if (dr["UIVISIBLE"] == 0)
-                                        continue;
-
-                                    if ((string)dr["FK_MAPDATA"] != Glo.FK_MapData)
-                                        continue;
-
-                                    string myPk = dr["KEYOFEN"];
-                                    string FK_MapData = dr["FK_MAPDATA"];
-                                    string keyOfEn = dr["KEYOFEN"];
-                                    string name = dr["NAME"];
-                                    string defVal = dr["DEFVAL"];
-                                    string UIContralType = dr["UICONTRALTYPE"].ToString();
-                                    string MyDataType = dr["MYDATATYPE"].ToString();
-                                    string lgType = dr["LGTYPE"].ToString();
-                                    double X = dr["X"];
-                                    double Y = dr["Y"];
-                                    if (X == 0)
-                                        X = 100;
-                                    if (Y == 0)
-                                        Y = 100;
-
-                                    string uIBindKey = dr["UIBINDKEY"];
-                                    switch (UIContralType)
-                                    {
-                                        case CtrlType.TextBox:
-                                            TBType tp = TBType.String;
-                                            switch (MyDataType)
-                                            {
-                                                case DataType.AppInt:
-                                                    tp = TBType.Int;
-                                                    break;
-                                                case DataType.AppFloat:
-                                                case DataType.AppDouble:
-                                                    tp = TBType.Float;
-                                                    break;
-                                                case DataType.AppMoney:
-                                                    tp = TBType.Money;
-                                                    break;
-                                                case DataType.AppString:
-                                                    tp = TBType.String;
-                                                    break;
-                                                case DataType.AppDateTime:
-                                                    tp = TBType.DateTime;
-                                                    break;
-                                                case DataType.AppDate:
-                                                    tp = TBType.Date;
-                                                    break;
-                                                default:
-                                                    break;
-                                            }
-
-                                            BPTextBox tb = new BPTextBox(tp)
-                                            {
-                                                NameOfReal = keyOfEn,
-                                                Name = myPk,
-                                                X = X,
-                                                Y = Y,
-                                                Width = dr["UIWIDTH"],
-                                                Height = dr["UIHEIGHT"]
-                                            };
-
-                                            tb.SetValue(Canvas.LeftProperty, X);
-                                            tb.SetValue(Canvas.TopProperty, Y);
-
-                                            if (this.workSpace.FindName(tb.Name) != null)
-                                            {
-                                                MessageBox.Show(" Already exists " + tb.Name);
-                                                continue;
-                                            }
-                                            attachElementEvent(tb);
-                                            break;
-                                        case CtrlType.DDL:
-                                            BPDDL ddl = new BPDDL()
-                                            {
-                                                Name = myPk,
-                                                UIBindKey = uIBindKey,
-                                                _HisDataType = lgType,
-                                                Width =dr["UIWIDTH"]
-                                            };
-
-                                            if (lgType == LGType.Enum)
-                                            {
-                                                ddl.BindEnum(uIBindKey);
-                                            }
-                                            else
-                                            {
-                                                ddl.BindEns(uIBindKey);
-                                            }
-
-                                            ddl.SetValue(Canvas.LeftProperty, X);
-                                            ddl.SetValue(Canvas.TopProperty, Y);
-                                            attachElementEvent(ddl);
-                                            break;
-                                        case CtrlType.CheckBox:
-                                            BPCheckBox cb = new BPCheckBox();
-                                            cb.Name = keyOfEn;
-
-                                            cb.Content = new Label()
-                                            {
-                                                Name = myPk,
-                                                Content = name,
-                                                Tag = keyOfEn
-                                            };
-
-                                            if (defVal == "1")
-                                                cb.IsChecked = true;
-                                            else
-                                                cb.IsChecked = false;
-
-                                            cb.SetValue(Canvas.LeftProperty, X);
-                                            cb.SetValue(Canvas.TopProperty, Y);
-
-                                            attachElementEvent(cb);
-                                            break;
-                                        case CtrlType.RB:
-                                            break;
-                                        default:
-                                            break;
-                                    }
-                                }
-                                continue;
-                            case EEleTableNames.Sys_MapM2M:
-                                foreach (JsonValue dr in item.Value)
-                                {
-                                    if (dr.Count == 0)
-                                        continue;
-
-                                    if ((string)dr["FK_MAPDATA"] != Glo.FK_MapData)
-                                        continue;
-
-                                    tmpStr = dr["MYPK"];
-                                    BPM2M m2m = new BPM2M(tmpStr);
-                                    tmpDouble = dr["X"];
-                                    m2m.SetValue(Canvas.LeftProperty, tmpDouble);
-                                    tmpDouble = dr["Y"];
-                                    m2m.SetValue(Canvas.TopProperty, tmpDouble);
-
-                                    m2m.Width = dr["W"];
-                                    m2m.Height = dr["H"];
-
-                                    attachElementEvent(m2m);
-                                }
-                                continue;
-                            case EEleTableNames.Sys_MapDtl:
-                                foreach (JsonValue dr in item.Value)
-                                {
-                                    if (dr.Count == 0)
-                                        continue;
-
-                                    BPDtl dtl = new BPDtl(dr["NO"]);
-                                    tmpDouble = dr["X"];
-                                    dtl.SetValue(Canvas.LeftProperty, tmpDouble);
-                                    tmpDouble = dr["Y"];
-                                    dtl.SetValue(Canvas.TopProperty, tmpDouble);
-                                    dtl.Width = dr["W"];
-                                    dtl.Height = dr["H"];
-
-                                    attachElementEvent(dtl);
-                                }
-                                continue;
-                            case EEleTableNames.Sys_FrmAttachment:
-                                foreach (JsonValue dr in item.Value)
-                                {
-                                    if (dr.Count == 0)
-                                        continue;
-                                    if ((string)dr["FK_MAPDATA"] != Glo.FK_MapData)
-                                        continue;
-
-                                    int uploadTypeInt = dr["UPLOADTYPE"];
-                                    AttachmentUploadType uploadType = (AttachmentUploadType)uploadTypeInt;
-                                    if (uploadType == AttachmentUploadType.Single)
-                                    {
-                                        BPAttachment ath = new BPAttachment(dr["NOOFOBJ"],
-                                            dr["NAME"], dr["EXTS"], dr["W"], dr["SAVETO"]);
+                                        bpele.EleType = (string)dr["ELETYPE"];
+                                        bpele.EleName = dr["ELENAME"];
+                                        bpele.EleID = (string)dr["ELEID"];
 
                                         tmpDouble = dr["X"];
-                                        ath.SetValue(Canvas.LeftProperty, tmpDouble);
+                                        bpele.SetValue(Canvas.LeftProperty, tmpDouble);
                                         tmpDouble = dr["Y"];
-                                        ath.SetValue(Canvas.TopProperty, tmpDouble);
-                                        ath.Label = dr["NAME"];
-                                        ath.Exts = dr["EXTS"];
-                                        ath.SaveTo = dr["SAVETO"];
+                                        bpele.SetValue(Canvas.TopProperty, tmpDouble);
 
-                                        ath.X = dr["X"];
-                                        ath.Y = dr["Y"];
+                                        bpele.Width = dr["W"];
+                                        bpele.Height = dr["H"];
 
-                                        ath.IsUpload = dr["ISUPLOAD"] == 1 ? true : false;
-                                        ath.IsDelete = dr["ISDELETE"] == 1 ? true : false;
-                                        ath.IsDownload =dr["ISDOWNLOAD"] == 1? true :false;
-                                      
+                                        attachElementEvent(bpele);
+                                    }
+                                    continue;
+                                case EEleTableNames.Sys_MapData:
+
+                                    foreach (JsonValue dr in item.Value)
+                                    {
+                                        if (dr.Count == 0)
+                                            continue;
+
+                                        if ((string)dr["NO"] != Glo.FK_MapData)
+                                            continue;
+
+                                        Glo.HisMapData = new MapData();
+                                        Glo.HisMapData.FrmH = dr["FRMH"];
+                                        Glo.HisMapData.FrmW = dr["FRMW"];
+                                        Glo.HisMapData.No = dr["NO"];
+                                        Glo.HisMapData.Name = dr["NAME"];
+                                        Glo.IsDtlFrm = false;
+
+                                        this.workSpace.Width = Glo.HisMapData.FrmW;
+                                        this.workSpace.Height = Glo.HisMapData.FrmH;
+                                    }
+
+                                    break;
+                                case EEleTableNames.Sys_FrmBtn:
+                                    foreach (JsonValue dr in item.Value)
+                                    {
+                                        if (dr.Count == 0)
+                                            continue;
+                                        if ((string)dr["FK_MAPDATA"] != Glo.FK_MapData)
+                                            continue;
+
+                                        BPBtn btn = new BPBtn();
+
+                                        btn.Name = dr["MYPK"];
+                                        tmpStr = dr["TEXT"];
+                                        btn.Content = tmpStr.Replace("&nbsp;", " ");
+                                        int type = dr["BTNTYPE"];
+                                        btn.HisBtnType = (BtnType)type;
+                                        type = dr["EVENTTYPE"];
+                                        btn.HisEventType = (EventType)type;
+
+                                        tmpStr = dr["EVENTCONTEXT"];
+                                        if (!string.IsNullOrEmpty(tmpStr))
+                                            btn.EventContext = tmpStr.Replace("~", "'");
+
+                                        tmpStr = dr["MSGERR"];
+                                        if (!string.IsNullOrEmpty(tmpStr))
+                                            btn.MsgErr = tmpStr.Replace("~", "'");
+
+                                        tmpStr = dr["MSGOK"];
+                                        if (!string.IsNullOrEmpty(tmpStr))
+                                            btn.MsgOK = tmpStr.Replace("~", "'");
+
+                                        tmpDouble = dr["X"];
+                                        btn.SetValue(Canvas.LeftProperty, tmpDouble);
+                                        tmpDouble = dr["Y"];
+                                        btn.SetValue(Canvas.TopProperty, tmpDouble);
+                                        attachElementEvent(btn);
+                                    }
+                                    continue;
+                                case EEleTableNames.Sys_FrmLine:
+                                    foreach (JsonValue dr in item.Value)
+                                    {
+                                        if (dr.Count == 0)
+                                            continue;
+
+                                        if ((string)dr["FK_MAPDATA"] != Glo.FK_MapData)
+                                            continue;
+
+                                        string color = dr["BORDERCOLOR"];
+                                        if (string.IsNullOrEmpty(color))
+                                            color = "Black";
+
+                                        BPLine myline = new BPLine(color, dr["BORDERWIDTH"],
+                                            dr["X1"], dr["Y1"], dr["X2"], dr["Y2"]);
+                                        myline.Name = dr["MYPK"];
+                                        attachElementEvent(myline);
+                                    }
+                                    continue;
+                                case EEleTableNames.Sys_FrmLab:
+                                    foreach (JsonValue dr in item.Value)
+                                    {
+                                        if (dr.Count == 0)
+                                            continue;
+
+                                        if ((string)dr["FK_MAPDATA"] != Glo.FK_MapData)
+                                            continue;
+
+                                        BPLabel lab = new BPLabel();
+                                        lab.Name = dr["MYPK"];
+
+                                        tmpStr = dr["TEXT"];
+                                        tmpStr = tmpStr.Replace("&nbsp;", " ").Replace("@", "\n");
+                                        lab.Content = tmpStr;
+
+                                        lab.FontSize = dr["FONTSIZE"];
+
+                                        lab.SetValue(Canvas.LeftProperty, (double)dr["X"]);
+                                        lab.SetValue(Canvas.TopProperty, (double)dr["Y"]);
+
+                                        if (dr["ISBOLD"] == 1)
+                                            lab.FontWeight = FontWeights.Bold;
+                                        else
+                                            lab.FontWeight = FontWeights.Normal;
+
+                                        string color = dr["FONTCOLOR"];
+                                        lab.Foreground = new SolidColorBrush(Glo.ToColor(color));
+
+                                        attachElementEvent(lab);
+                                    }
+                                    continue;
+                                case EEleTableNames.Sys_FrmLink:
+                                    foreach (JsonValue dr in item.Value)
+                                    {
+                                        if (dr.Count == 0)
+                                            continue;
+
+
+                                        if ((string)dr["FK_MAPDATA"] != Glo.FK_MapData)
+                                            continue;
+
+                                        BPLink link = new BPLink();
+                                        link.Name = dr["MYPK"];
+                                        tmpStr = dr["TEXT"];
+                                        link.Content = tmpStr;
+                                        link.URL = dr["URL"];
+                                        link.WinTarget = dr["TARGET"];
+                                        link.FontSize = dr["FONTSIZE"];
+
+                                        link.SetValue(Canvas.LeftProperty, (double)dr["X"]);
+                                        link.SetValue(Canvas.TopProperty, (double)dr["Y"]);
+
+                                        string color = dr["FONTCOLOR"];
+                                        if (string.IsNullOrEmpty(color))
+                                            color = "Black";
+
+                                        link.Foreground = new SolidColorBrush(Glo.ToColor(color));
+
+                                        attachElementEvent(link);
+                                    }
+                                    continue;
+                                case EEleTableNames.Sys_FrmImg:
+                                    foreach (JsonValue dr in item.Value)
+                                    {
+                                        if (dr.Count == 0)
+                                            continue;
+
+                                        if ((string)dr["FK_MAPDATA"] != Glo.FK_MapData)
+                                            continue;
+
+                                        int ImgAppType = 0;
+                                        try
+                                        {
+                                            ImgAppType = dr["IMGAPPTYPE"];
+                                        }
+                                        catch (Exception)
+                                        {
+                                        }
+
+                                        switch (ImgAppType)
+                                        {
+                                            case 1:
+                                                BPImgSeal imgSeal = new BPImgSeal();
+                                                imgSeal.Name = dr["MYPK"];
+                                                imgSeal.SetValue(Canvas.LeftProperty, (double)dr["X"]);
+                                                imgSeal.SetValue(Canvas.TopProperty, (double)dr["Y"]);
+
+                                                imgSeal.Width = dr["W"];
+                                                imgSeal.Height = dr["H"];
+                                                imgSeal.TB_CN_Name = dr["NAME"] == null ? dr["MYPK"] : dr["NAME"];
+                                                imgSeal.TB_En_Name = dr["ENPK"] == null ? dr["MYPK"] : dr["ENPK"];
+                                                imgSeal.Tag0 = dr["TAG0"];
+                                                imgSeal.IsEdit = false;
+
+                                                imgSeal.IsEdit = dr["ISEDIT"] == 1 ? true : false;
+
+                                                attachElementEvent(imgSeal);
+                                                break;
+                                            default:
+                                                BPImg img = new BPImg();
+                                                img.Name = dr["MYPK"];
+                                                img.SetValue(Canvas.LeftProperty, (double)dr["X"]);
+                                                img.SetValue(Canvas.TopProperty, (double)dr["Y"]);
+                                                img.TB_CN_Name = dr["NAME"] == null ? dr["MYPK"] : dr["NAME"];
+                                                img.TB_En_Name = dr["ENPK"] == null ? dr["MYPK"] : dr["ENPK"];
+                                                img.Width = dr["W"];
+                                                img.Height = dr["H"];
+
+                                                string imgPath = string.Empty;
+                                                if (dr["IMGPATH"] != null)
+                                                {
+                                                    imgPath = dr["IMGPATH"];
+                                                }
+                                                string imgUrl = string.Empty;
+                                                if (dr["IMGURL"] != null)
+                                                {
+                                                    imgUrl = dr["IMGURL"];
+                                                }
+                                                // Local Photos 
+                                                if (dr["SRCTYPE"] == 0)
+                                                {
+                                                    img.SrcType = 0;
+                                                    // Determine whether to modify the image path 
+                                                    if (imgPath.Contains("DataUser"))
+                                                    {
+                                                        ImageBrush ib = new ImageBrush();
+                                                        imgPath = Glo.BPMHost + imgPath;
+                                                        BitmapImage png = new BitmapImage(new Uri(imgPath, UriKind.RelativeOrAbsolute));
+                                                        ib.ImageSource = png;
+                                                        img.Background = ib;
+                                                        img.HisPng = png;
+                                                    }
+                                                }
+                                                else if (dr["SRCTYPE"] == 1)// Specify the path 
+                                                {
+                                                    img.SrcType = 1;
+                                                    // Judge image path is not empty , And does not contain ccflow Expression 
+                                                    if (!imgUrl.Contains("@"))
+                                                    {
+                                                        ImageBrush ib = new ImageBrush();
+                                                        BitmapImage png = new BitmapImage(new Uri(imgUrl, UriKind.RelativeOrAbsolute));
+                                                        ib.ImageSource = png;
+                                                        img.Background = ib;
+                                                        img.HisPng = png;
+                                                    }
+                                                }
+
+                                                img.LinkTarget = dr["LINKTARGET"];
+                                                img.LinkURL = dr["LINKURL"];
+                                                img.ImgURL = imgUrl;
+                                                img.ImgPath = imgPath;
+                                                attachElementEvent(img);
+                                                break;
+                                        }
+                                    }
+                                    continue;
+                                case EEleTableNames.Sys_FrmImgAth:
+                                    foreach (JsonValue dr in item.Value)
+                                    {
+                                        if (dr.Count == 0)
+                                            continue;
+
+                                        if ((string)dr["FK_MAPDATA"] != Glo.FK_MapData)
+                                            continue;
+
+                                        BPImgAth ath = new BPImgAth();
+                                        ath.Name = dr["MYPK"];
+                                        ath.CtrlID = dr["CTRLID"]; // Accessory ID.
+
+                                        ath.SetValue(Canvas.LeftProperty, (double)dr["X"]);
+                                        ath.SetValue(Canvas.TopProperty, (double)dr["Y"]);
+                                        ath.IsEdit = dr["ISEDIT"] == 1 ? true : false;
+                                        ath.Height = dr["H"];
+                                        ath.Width = dr["W"];
                                         attachElementEvent(ath);
                                     }
-                                    else if (uploadType == AttachmentUploadType.Multi)
+                                    continue;
+                                case EEleTableNames.Sys_FrmRB:
+                                    foreach (JsonValue dr in item.Value)
                                     {
-                                        BPAttachmentM athM = new BPAttachmentM();
+                                        if (dr.Count == 0)
+                                            continue;
+                                        if ((string)dr["FK_MAPDATA"] != Glo.FK_MapData)
+                                            continue;
 
+                                        BPRadioBtn btn = new BPRadioBtn();
+                                        btn.Name = dr["MYPK"];
+                                        btn.GroupName = dr["KEYOFEN"];
+                                        btn.Content = (string)dr["LAB"];
+                                        btn.UIBindKey = dr["ENUMKEY"];
+                                        btn.Tag = dr["INTKEY"].ToString();
+                                        btn.SetValue(Canvas.LeftProperty, (double)dr["X"]);
+                                        btn.SetValue(Canvas.TopProperty, (double)dr["Y"]);
+
+
+                                        attachElementEvent(btn);
+                                    }
+                                    continue;
+                                case EEleTableNames.Sys_MapAttr:
+                                    foreach (JsonValue dr in item.Value)
+                                    {
+                                        if (dr.Count == 0)
+                                            continue;
+
+                                        if (dr["UIVISIBLE"] == 0)
+                                            continue;
+
+                                        if ((string)dr["FK_MAPDATA"] != Glo.FK_MapData)
+                                            continue;
+
+                                        string myPk = dr["KEYOFEN"];
+                                        string FK_MapData = dr["FK_MAPDATA"];
+                                        string keyOfEn = dr["KEYOFEN"];
+                                        string name = dr["NAME"];
+                                        string defVal = dr["DEFVAL"];
+                                        string UIContralType = dr["UICONTRALTYPE"].ToString();
+                                        string MyDataType = dr["MYDATATYPE"].ToString();
+                                        string lgType = dr["LGTYPE"].ToString();
+                                        double X = dr["X"];
+                                        double Y = dr["Y"];
+                                        if (X == 0)
+                                            X = 100;
+                                        if (Y == 0)
+                                            Y = 100;
+
+                                        string uIBindKey = dr["UIBINDKEY"];
+                                        switch (UIContralType)
+                                        {
+                                            case CtrlType.TextBox:
+                                                TBType tp = TBType.String;
+                                                switch (MyDataType)
+                                                {
+                                                    case DataType.AppInt:
+                                                        tp = TBType.Int;
+                                                        break;
+                                                    case DataType.AppFloat:
+                                                    case DataType.AppDouble:
+                                                        tp = TBType.Float;
+                                                        break;
+                                                    case DataType.AppMoney:
+                                                        tp = TBType.Money;
+                                                        break;
+                                                    case DataType.AppString:
+                                                        tp = TBType.String;
+                                                        break;
+                                                    case DataType.AppDateTime:
+                                                        tp = TBType.DateTime;
+                                                        break;
+                                                    case DataType.AppDate:
+                                                        tp = TBType.Date;
+                                                        break;
+                                                    default:
+                                                        break;
+                                                }
+
+                                                BPTextBox tb = new BPTextBox(tp)
+                                                {
+                                                    NameOfReal = keyOfEn,
+                                                    Name = myPk,
+                                                    X = X,
+                                                    Y = Y,
+                                                    Width = dr["UIWIDTH"],
+                                                    Height = dr["UIHEIGHT"]
+                                                };
+
+                                                tb.SetValue(Canvas.LeftProperty, X);
+                                                tb.SetValue(Canvas.TopProperty, Y);
+
+                                                if (this.workSpace.FindName(tb.Name) != null)
+                                                {
+                                                    MessageBox.Show(" Already exists " + tb.Name);
+                                                    continue;
+                                                }
+                                                attachElementEvent(tb);
+                                                break;
+                                            case CtrlType.DDL:
+                                                BPDDL ddl = new BPDDL()
+                                                {
+                                                    Name = myPk,
+                                                    UIBindKey = uIBindKey,
+                                                    _HisDataType = lgType,
+                                                    Width = dr["UIWIDTH"]
+                                                };
+
+                                                if (lgType == LGType.Enum)
+                                                {
+                                                    ddl.BindEnum(uIBindKey);
+                                                }
+                                                else
+                                                {
+                                                    ddl.BindEns(uIBindKey);
+                                                }
+
+                                                ddl.SetValue(Canvas.LeftProperty, X);
+                                                ddl.SetValue(Canvas.TopProperty, Y);
+                                                attachElementEvent(ddl);
+                                                break;
+                                            case CtrlType.CheckBox:
+                                                BPCheckBox cb = new BPCheckBox();
+                                                cb.Name = keyOfEn;
+                                                cb.Content = name;
+
+                                                cb.Content = new Label()
+                                                {
+                                                    Name = "CBLab" + cb.Name,
+                                                    Content = name,
+                                                    Tag = keyOfEn
+                                                };
+
+                                                if (defVal == "1")
+                                                    cb.IsChecked = true;
+                                                else
+                                                    cb.IsChecked = false;
+
+                                                cb.SetValue(Canvas.LeftProperty, X);
+                                                cb.SetValue(Canvas.TopProperty, Y);
+
+                                                attachElementEvent(cb);
+                                                break;
+                                            case CtrlType.RB:
+                                                break;
+                                            default:
+                                                break;
+                                        }
+                                    }
+                                    continue;
+                                case EEleTableNames.Sys_MapM2M:
+                                    foreach (JsonValue dr in item.Value)
+                                    {
+                                        if (dr.Count == 0)
+                                            continue;
+
+                                        if ((string)dr["FK_MAPDATA"] != Glo.FK_MapData)
+                                            continue;
+
+                                        tmpStr = dr["MYPK"];
+                                        BPM2M m2m = new BPM2M(tmpStr);
                                         tmpDouble = dr["X"];
-                                        athM.SetValue(Canvas.LeftProperty, tmpDouble);
+                                        m2m.SetValue(Canvas.LeftProperty, tmpDouble);
                                         tmpDouble = dr["Y"];
-                                        athM.SetValue(Canvas.TopProperty, tmpDouble);
-                                      
-                                        athM.Name = dr["NOOFOBJ"];
-                                        athM.Width = dr["W"];
-                                        athM.Height = dr["H"];
-                                        athM.X = dr["X"];
-                                        athM.Y = dr["Y"];
-                                        athM.SaveTo = dr["SAVETO"];
-                                        athM.Label = dr["NAME"];
+                                        m2m.SetValue(Canvas.TopProperty, tmpDouble);
 
-                                        attachElementEvent(athM);
+                                        m2m.Width = dr["W"];
+                                        m2m.Height = dr["H"];
+
+                                        attachElementEvent(m2m);
+                                    }
+                                    continue;
+                                case EEleTableNames.Sys_MapDtl:
+                                    foreach (JsonValue dr in item.Value)
+                                    {
+                                        if (dr.Count == 0)
+                                            continue;
+
+                                        BPDtl dtl = new BPDtl(dr["NO"]);
+                                        tmpDouble = dr["X"];
+                                        dtl.SetValue(Canvas.LeftProperty, tmpDouble);
+                                        tmpDouble = dr["Y"];
+                                        dtl.SetValue(Canvas.TopProperty, tmpDouble);
+                                        dtl.Width = dr["W"];
+                                        dtl.Height = dr["H"];
+
+                                        attachElementEvent(dtl);
+                                    }
+                                    continue;
+                                case EEleTableNames.Sys_FrmAttachment:
+                                    foreach (JsonValue dr in item.Value)
+                                    {
+                                        if (dr.Count == 0)
+                                            continue;
+                                        if ((string)dr["FK_MAPDATA"] != Glo.FK_MapData)
+                                            continue;
+
+                                        int uploadTypeInt = dr["UPLOADTYPE"];
+                                        AttachmentUploadType uploadType = (AttachmentUploadType)uploadTypeInt;
+                                        if (uploadType == AttachmentUploadType.Single)
+                                        {
+                                            BPAttachment ath = new BPAttachment(dr["NOOFOBJ"],
+                                                dr["NAME"], dr["EXTS"], dr["W"], dr["SAVETO"]);
+
+                                            tmpDouble = dr["X"];
+                                            ath.SetValue(Canvas.LeftProperty, tmpDouble);
+                                            tmpDouble = dr["Y"];
+                                            ath.SetValue(Canvas.TopProperty, tmpDouble);
+                                            ath.Label = dr["NAME"];
+                                            ath.Exts = dr["EXTS"];
+                                            ath.SaveTo = dr["SAVETO"];
+
+                                            ath.X = dr["X"];
+                                            ath.Y = dr["Y"];
+
+                                            ath.IsUpload = dr["ISUPLOAD"] == 1 ? true : false;
+                                            ath.IsDelete = dr["ISDELETE"] == 1 ? true : false;
+                                            ath.IsDownload = dr["ISDOWNLOAD"] == 1 ? true : false;
+
+                                            attachElementEvent(ath);
+                                        }
+                                        else if (uploadType == AttachmentUploadType.Multi)
+                                        {
+                                            BPAttachmentM athM = new BPAttachmentM();
+
+                                            tmpDouble = dr["X"];
+                                            athM.SetValue(Canvas.LeftProperty, tmpDouble);
+                                            tmpDouble = dr["Y"];
+                                            athM.SetValue(Canvas.TopProperty, tmpDouble);
+
+                                            athM.Name = dr["NOOFOBJ"];
+                                            athM.Width = dr["W"];
+                                            athM.Height = dr["H"];
+                                            athM.X = dr["X"];
+                                            athM.Y = dr["Y"];
+                                            athM.SaveTo = dr["SAVETO"];
+                                            athM.Label = dr["NAME"];
+
+                                            attachElementEvent(athM);
+
+                                        }
+                                        continue;
 
                                     }
                                     continue;
-
-                                }
-                                continue;
-                            default:
-                                break;
+                                default:
+                                    break;
+                            }
                         }
-                    }
                     #endregion
 
                 }
@@ -1522,7 +1523,7 @@ namespace CCForm
                     }
 
                 DataTable dtMapData = dsLatest.Tables[EEleTableNames.Sys_MapData];
-                 // Form data modifications in the properties form 
+                // Form data modifications in the properties form 
                 DataRow drMapDR = dtMapData.NewRow();
                 drMapDR["NAME"] = Glo.HisMapData.Name;
                 drMapDR["NO"] = Glo.FK_MapData;
@@ -1728,7 +1729,7 @@ namespace CCForm
             dtWorkCheck.Columns.Add(new DataColumn("FWC_Y", typeof(double)));
             dtWorkCheck.Columns.Add(new DataColumn("FWC_H", typeof(double)));
             dtWorkCheck.Columns.Add(new DataColumn("FWC_W", typeof(double)));
-          
+
             #region m2mDT
             DataTable m2mDT = new DataTable();
             m2mDT.TableName = EEleTableNames.Sys_MapM2M;
@@ -1781,7 +1782,7 @@ namespace CCForm
 
         public void SaveJson()
         {
-            DataTable 
+            DataTable
             dtLine = dsLatest.Tables[EEleTableNames.Sys_FrmLine],
             dtBtn = dsLatest.Tables[EEleTableNames.Sys_FrmBtn],
             dtLabel = dsLatest.Tables[EEleTableNames.Sys_FrmLab],
@@ -1795,12 +1796,12 @@ namespace CCForm
             dtWorkCheck = dsLatest.Tables[EEleTableNames.WF_Node],
             dtM2M = dsLatest.Tables[EEleTableNames.Sys_MapM2M],
             dtAth = dsLatest.Tables[EEleTableNames.Sys_FrmAttachment];
-           
+
             #region
             foreach (UIElement ctl in this.workSpace.Children)
             {
                 if (!(ctl is IElement)) continue;
-                if((ctl as IElement).ViewDeleted) continue;
+                if ((ctl as IElement).ViewDeleted) continue;
 
                 double dX = Canvas.GetLeft(ctl);
                 double dY = Canvas.GetTop(ctl);
@@ -2181,7 +2182,7 @@ namespace CCForm
                             DataRow mapDtl = dtlDT.NewRow();
                             string myPk = dtlCtl.Name.Contains(Glo.FK_MapData) ? dtlCtl.Name : Glo.FK_MapData + "_" + dtlCtl.Name;
                             mapDtl["NO"] = myPk;
-                        
+
                             mapDtl["FK_MAPDATA"] = Glo.FK_MapData;
                             MatrixTransform transform = dtlCtl.TransformToVisual(this.workSpace) as MatrixTransform;
 
@@ -2196,7 +2197,7 @@ namespace CCForm
                     }
                     else if (ctl is BPWorkCheck)
                     {
-                        #region   Audit Components 
+                        #region   Audit Components
                         BPWorkCheck wkCheck = ctl as BPWorkCheck;
                         if (wkCheck != null)
                         {
@@ -2298,7 +2299,7 @@ namespace CCForm
                     BPDDL ddl = ctl as BPDDL;
                     if (ddl != null)
                     {
-                      
+
                         DataRow mapAttrDR = dtMapAttr.NewRow();
                         string myPk = ddl.Name.Contains(Glo.FK_MapData) ? ddl.Name : Glo.FK_MapData + "_" + ddl.Name;
                         mapAttrDR["MYPK"] = myPk;
@@ -2314,7 +2315,7 @@ namespace CCForm
                         mapAttrDR["UIWIDTH"] = ddl.Width.ToString("0.00");
                         mapAttrDR["UIHEIGHT"] = "23";
 
-                        mapAttrDR["X"] = dX.ToString("0.00");
+                        mapAttrDR["x"] = dX.ToString("0.00");
                         mapAttrDR["Y"] = dY.ToString("0.00");
 
                         mapAttrDR["UIBINDKEY"] = ddl.UIBindKey;
@@ -2375,7 +2376,7 @@ namespace CCForm
             }
             #endregion
 
-            #region  Deal with  RB  Enum value 
+            #region  Deal with  RB  Enum value
             string keys = "";
             foreach (DataRow dr in dtRDB.Rows)
             {
@@ -2384,7 +2385,7 @@ namespace CCForm
                     continue;
                 else
                     keys += "@" + keyOfEn + "@";
-                
+
 
                 string enumKey = dr["ENUMKEY"];
                 DataRow mapAttrDR = dtMapAttr.NewRow();
@@ -2405,7 +2406,7 @@ namespace CCForm
                 mapAttrDR["UIHEIGHT"] = "23";
                 dtMapAttr.Rows.Add(mapAttrDR);
             }
-            #endregion 
+            #endregion
 
             #region DELETE
             string sqls = "", table = string.Empty;
@@ -2467,7 +2468,7 @@ namespace CCForm
                         #region WF_Node, Does not contain FK_MapData Temporarily placed in front .
                         if (dr["NODEID"].ToString() != Glo.FK_MapData.Replace("ND", ""))
                             continue;
-                      
+
                         //  Audit component judgment  
                         isStillExit = false;
                         foreach (DataRow newDr in newDt.Rows)
@@ -2479,7 +2480,7 @@ namespace CCForm
                             }
                         }
 
-                        if(!isStillExit)
+                        if (!isStillExit)
                             sqls += "@UPDATE WF_Node SET FWCSta=0 WHERE " + pk + "='" + pkVal + "'";
 
 
@@ -2524,7 +2525,7 @@ namespace CCForm
                     {
                         foreach (DataRow newDr in newDt.Rows)
                         {
-                            if ( dr["UIVISIBLE"] == 0)
+                            if (dr["UIVISIBLE"] == 0)
                             {
                                 isStillExit = true;
                                 break;
@@ -2645,7 +2646,7 @@ namespace CCForm
             catch (Exception e)
             {
                 loadingWindow.DialogResult = false;
-                MessageBox.Show(" Save error :"+ e.Message);
+                MessageBox.Show(" Save error :" + e.Message);
             }
         }
 
@@ -2656,13 +2657,13 @@ namespace CCForm
                 e.Handled = true;
 
             FrameworkElement element = sender as FrameworkElement;
-         
+
             IElement ele = element as IElement;
             bool dbClicked = false;
             if (Keyboard.Modifiers == ModifierKeys.Control)
             {//  Multiple choice 
                 bool op;
-                if (op=selectedElements.Contains(element))//  The same element   Selected  -->  Uncheck 
+                if (op = selectedElements.Contains(element))//  The same element   Selected  -->  Uncheck 
                 {
                     selectedElements.Remove(element);
                 }
@@ -2671,7 +2672,7 @@ namespace CCForm
                     selectedElements.Add(element);
                 }
 
-                if (ele  != null)
+                if (ele != null)
                 {
                     ele.IsSelected = !op;
                 }
@@ -2726,7 +2727,7 @@ namespace CCForm
 
 
             Glo.SetTracking(ele, !dbClicked);
-            if (dbClicked ||　 ele is BPLine)
+            if (dbClicked || ele is BPLine)
             {
                 UIElementDbClickEdit(sender);
             }
@@ -2967,14 +2968,14 @@ namespace CCForm
 
 
             // Other elements 
-            if ( Glo.IsDbClick)
+            if (Glo.IsDbClick)
             {// ToolboxItem Double-click Add a new element 
-               
+
                 addNewElementToWorkSpace(null);
             }
             else
             {// ToolboxItem  Drag and drop elements 
-               
+
             }
         }
 
@@ -3008,7 +3009,7 @@ namespace CCForm
 
                     currLine = new BPLine("Black", 2, pFrom.X, pFrom.Y, pFrom.X, pFrom.Y);
                     string name = getElementNameFromUI(currLine);
-                    name = name.Contains(Glo.FK_MapData) ? name : Glo.FK_MapData +"_"+ name;
+                    name = name.Contains(Glo.FK_MapData) ? name : Glo.FK_MapData + "_" + name;
                     currLine.Name = name;
                     this.selectedElements.Add(currLine);
                     Glo.currEle = currLine;
@@ -3044,7 +3045,7 @@ namespace CCForm
                     RectSelected.MouseLeave += rectSelected_MouseLeave;
                     RectSelected.SetValue(Canvas.LeftProperty, pFrom.X);
                     RectSelected.SetValue(Canvas.TopProperty, pFrom.Y);
-                    RectSelected.Fill = new SolidColorBrush(Color.FromArgb(255,201, 224, 252));//r.FromArgb(201,224,252)
+                    RectSelected.Fill = new SolidColorBrush(Color.FromArgb(255, 201, 224, 252));//r.FromArgb(201,224,252)
                     RectSelected.Stroke = new SolidColorBrush(Color.FromArgb(255, 36, 93, 219));
                     RectSelected.StrokeThickness = 1;
                     RectSelected.Opacity = 0.3;
@@ -3088,8 +3089,8 @@ namespace CCForm
 
         private void workSpace_MouseMove(object sender, MouseEventArgs e)
         {
-          
-            #region  Draw the line 
+
+            #region  Draw the line
             if (this.isDrawingLine && this.currLine != null && this.selectType == ToolBox.Line)
             {
                 currLine.MyLine.X2 = e.GetPosition(this.workSpace).X;
@@ -3107,9 +3108,9 @@ namespace CCForm
                 }
                 return;
             }
-            #endregion  Draw the line 
+            #endregion  Draw the line
 
-            #region  Change the length of the line 
+            #region  Change the length of the line
             if (selectType == ToolBox.Mouse && isPointSelected == true)
             {
                 lineSizeChange(e.GetPosition(this.workSpace));
@@ -3146,13 +3147,13 @@ namespace CCForm
             #endregion  Rectangular Selection .
 
 
-            if ( null != Glo.currEle &&  Glo.currEle is BPLine )
+            if (null != Glo.currEle && Glo.currEle is BPLine)
             {
                 //IElement ie = Glo.currEle as IElement;
                 //if (ie.TrackingMouseMove)
                 //{
                 //    currLine = Glo.currEle as BPLine;
-                  
+
                 //    Point curPoint = e.GetPosition(workSpace);
 
                 //    double deltaV = curPoint.Y - pFrom.Y;
@@ -3170,12 +3171,12 @@ namespace CCForm
         private void workSpace_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             CloseMenu();
-           
+
             this.setUnTracking();
-           
+
             this.isPointSelected = false;
             this.isDrawingLine = false;
-          
+
 
             if (Keyboard.Modifiers == ModifierKeys.Control && MouseEventHandlers.IsCopy)
             {// Copy 
@@ -3189,7 +3190,7 @@ namespace CCForm
                 return;
             }
 
-           
+
             if (eCurrent != null)
             { //  Current point selection .
                 eCurrent.Fill = new SolidColorBrush(Colors.Green);
@@ -3201,7 +3202,7 @@ namespace CCForm
             if (selectState == StateRectangleSelected.SelectBegin)
             {
                 selectState = StateRectangleSelected.SelectComplete;
-            
+
                 SelectUIElement();
                 cCursor.SetCursorDefault(Cursors.Arrow);
             }
@@ -3250,7 +3251,7 @@ namespace CCForm
             Glo.X = point.X;
             Glo.Y = point.Y;
 
-          
+
             #region
             try
             {
@@ -3283,13 +3284,13 @@ namespace CCForm
 
                         attachElementEvent(link);
                         break;
-                 
+
                     case ToolBox.TextBox:  //  Textbox 
                         this.winSelectTB.Show();
                         this.winSelectTB.RB_String.IsChecked = true;
 
                         break;
-                    case ToolBox.DateCtl:  
+                    case ToolBox.DateCtl:
                         this.winSelectTB.RB_Data.IsChecked = true;
                         this.winSelectTB.Show();
 
@@ -3300,12 +3301,12 @@ namespace CCForm
                         this.winSelectTB.Show();
 
                         break;
-                    case ToolBox.RBS:  
+                    case ToolBox.RBS:
                         this.winSelectRB.Show();
                         this.IsRB = true;
 
                         break;
-                    case ToolBox.DDLEnum:  
+                    case ToolBox.DDLEnum:
                         this.winSelectRB.Show();
                         this.IsRB = false;
 
@@ -3356,7 +3357,7 @@ namespace CCForm
                     case ToolBox.AttachmentM:  //  More Accessories 
                         BPAttachmentM myAthM = new BPAttachmentM();
                         Glo.currEle = myAthM;
-                        name = getElementNameFromUI( myAthM);
+                        name = getElementNameFromUI(myAthM);
 
                         myAthM.X = Glo.X;
                         myAthM.Y = Glo.Y;
@@ -3366,7 +3367,7 @@ namespace CCForm
                         myAthM.IsDelete = true;
                         myAthM.IsDownload = true;
                         myAthM.IsUpload = true;
-                    
+
                         this.winFrmAttachmentM.BindIt(myAthM);
                         this.winFrmAttachmentM.Show();
 
@@ -3377,7 +3378,7 @@ namespace CCForm
                         Glo.currEle = newDtl;
                         name = getElementNameFromUI(newDtl);
                         name = name.Contains(Glo.FK_MapData) ? name : Glo.FK_MapData + "_" + name;
-                        newDtl.Name = name ;
+                        newDtl.Name = name;
                         newDtl.NewDtl();
 
                         newDtl.SetValue(Canvas.LeftProperty, point.X);
@@ -3398,7 +3399,7 @@ namespace CCForm
                         bool find = false;
                         foreach (UIElement ctl in this.workSpace.Children)
                         {
-                            if(ctl is IElement )
+                            if (ctl is IElement)
                                 if (ctl is BPWorkCheck)
                                 {
                                     if ((ctl as BPWorkCheck) == null)
@@ -3437,7 +3438,7 @@ namespace CCForm
 
                         BPImgAth ath = new BPImgAth();
                         Glo.currEle = ath;
-                        name = getElementNameFromUI( ath);
+                        name = getElementNameFromUI(ath);
 
                         ath.Name = name;
                         ath.CtrlID = name; //  Accessory ID.
@@ -3479,7 +3480,7 @@ namespace CCForm
                 {
                     if (!this.workSpace.Children.Contains(element))
                         this.workSpace.Children.Add(element);
-                    
+
                     if (element is IRouteEvent)
                     {
                         IRouteEvent route = element as IRouteEvent;
@@ -3498,7 +3499,7 @@ namespace CCForm
                     element.MouseEnter += UIElement_MouseEnter;
                     element.MouseLeave += UIElement_MouseLeave;
 
-                    if( element is BPLine)
+                    if (element is BPLine)
                         (element as BPLine).Moved += new LineMoved(BPLine_MouseMove);
                     element.Cursor = Cursors.Hand;
 
@@ -3506,15 +3507,15 @@ namespace CCForm
                 }
                 else
                 {
-                    MessageBox.Show(" Already exists ID为" + element.Name + " Elements , Not allowed to add elements of the same name !", "CCForm Prompt :", MessageBoxButton.OK);
+                    MessageBox.Show(" Already exists ID:" + element.Name + " Elements , Not allowed to add elements of the same name !", "CCForm Prompt :", MessageBoxButton.OK);
                 }
 
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 flag = false;
                 BP.SL.LoggerHelper.Write(ex);
-                MessageBox.Show(" Controls ID:" + element.Name + " Add error . Error Info:" + ex.Message+"\n trace:"+ex.StackTrace);
+                MessageBox.Show(" Controls ID:" + element.Name + " Add error . Error Info:" + ex.Message);
             }
             return flag;
         }
@@ -3526,7 +3527,7 @@ namespace CCForm
             {
                 if (ele.Name == name)
                 {
-                    flag = true ;
+                    flag = true;
                     break;
                 }
             }
@@ -3621,7 +3622,7 @@ namespace CCForm
 
             this.SetGridLines(this.workSpace, true);
         }
-      
+
         private void Paste()
         {
             if (!MouseEventHandlers.IsCopy)
@@ -3636,7 +3637,7 @@ namespace CCForm
                     BPLine line = item as BPLine;
                     if (line != null)
                     {
-                        BPLine lineN = new BPLine( line.Color, line.MyLine.StrokeThickness,
+                        BPLine lineN = new BPLine(line.Color, line.MyLine.StrokeThickness,
                             line.MyLine.X1 + 10, line.MyLine.Y1 + 10, line.MyLine.X2 + 10, line.MyLine.Y2 + 10);
                         lineN.Name = getElementNameFromUI(lineN);
                         copyEles.Add(lineN);
@@ -3648,7 +3649,7 @@ namespace CCForm
                     BPLabel lab = item as BPLabel;
                     if (lab != null)
                     {
-                        name = getElementNameFromUI( lab);
+                        name = getElementNameFromUI(lab);
                         BPLabel labN = new BPLabel()
                         {
                             Name = name,
@@ -3670,7 +3671,7 @@ namespace CCForm
                     BPLink link = item as BPLink;
                     if (link != null)
                     {
-                        name = getElementNameFromUI( link);
+                        name = getElementNameFromUI(link);
                         BPLink labN = new BPLink()
                         {
                             Name = name,
@@ -3689,7 +3690,7 @@ namespace CCForm
                 else if (item is BPTextBox)
                 {
                     BPTextBox tb = item as BPTextBox;
-                    if (tb != null )// Was never set up conditions ,textbox Copy suspended .
+                    if (tb != null)// Was never set up conditions ,textbox Copy suspended .
                     {
                         name = getElementNameFromUI(tb);
                         BPTextBox tbN = new BPTextBox()
@@ -3745,7 +3746,7 @@ namespace CCForm
         {
             string id = "";
             FrameworkElement ele = sender as FrameworkElement;
-            if( ele != null)
+            if (ele != null)
                 id = ele.Tag.ToString();
             else return;
 
@@ -3774,13 +3775,13 @@ namespace CCForm
                         }
 
                         BPLink link = item as BPLink;
-                        if (link != null )
+                        if (link != null)
                         {
                             link.FontSize = link.FontSize + 1;
                         }
 
                         BPLine line = item as BPLine;
-                        if (line != null )
+                        if (line != null)
                         {
                             line.MyLine.StrokeThickness = line.MyLine.StrokeThickness + 2;//re,1
                         }
@@ -3799,7 +3800,7 @@ namespace CCForm
                         }
 
                         BPLink link = item as BPLink;
-                        if (link != null )
+                        if (link != null)
                         {
                             if (link.FontSize < 8)
                                 continue;
@@ -3808,7 +3809,7 @@ namespace CCForm
                         }
 
                         BPLine line = item as BPLine;
-                        if (line != null )
+                        if (line != null)
                         {
                             if (line.MyLine.StrokeThickness < 3)//re,0.5
                                 continue;
@@ -3958,7 +3959,7 @@ namespace CCForm
                         item.SetValue(Canvas.LeftProperty, miudeLine - item.ActualWidth / 2);
                     }
                     break;
-                
+
                 case Func.View:
 
                     try
@@ -3995,7 +3996,7 @@ namespace CCForm
                 case Func.Save:
                     this.Save();
                     break;
-              
+
                 case Func.Copy:
                     this.winFrmImp.Show();
                     break;
@@ -4006,7 +4007,7 @@ namespace CCForm
                 case Func.HiddenField:
                     new FrmHiddenField().Show();
                     break;
-              
+
                 case "Btn_Glo":
                     MessageBox.Show(Glo.currEle.ToString());
                     break;
@@ -4033,9 +4034,9 @@ namespace CCForm
                     String fileName = fileInfoOfMapImage.Name;
                     FF.CCFormSoapClient da = Glo.GetCCFormSoapClientServiceInstance();
                     da.UploadFileAsync(buffer, "\\Temp\\s.xml");
-                    da.UploadFileCompleted +=(object senders, FF.UploadFileCompletedEventArgs ee)=>
+                    da.UploadFileCompleted += (object senders, FF.UploadFileCompletedEventArgs ee) =>
                     {
-                        if( ee.Error == null)
+                        if (ee.Error == null)
                             this.OpenFormJson(ee.Result);
                     };
                     break;
@@ -4090,7 +4091,7 @@ namespace CCForm
             e2.SetValue(Canvas.LeftProperty, line.MyLine.X2 - 4);
             e2.SetValue(Canvas.TopProperty, line.MyLine.Y2 - 4);
         }
-       
+
         void e_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             e.Handled = true;
@@ -4101,7 +4102,7 @@ namespace CCForm
 
         void lineSizeChange(Point p)
         {
-            #region  Change the length of the line 
+            #region  Change the length of the line
 
             if (eCurrent.Tag.ToString() == "e1")
             {
@@ -4148,11 +4149,11 @@ namespace CCForm
         {
             if (selectType == ToolBox.Mouse)
             {
-                if (!workSpace.Children.Contains(e1) )
+                if (!workSpace.Children.Contains(e1))
                     this.workSpace.Children.Add(e1);
                 if (!workSpace.Children.Contains(e2))
                     this.workSpace.Children.Add(e2);
-               
+
 
                 e1.SetValue(Canvas.LeftProperty, line.MyLine.X1 - 4);
                 e1.SetValue(Canvas.TopProperty, line.MyLine.Y1 - 4);
@@ -4173,7 +4174,7 @@ namespace CCForm
         }
         #endregion
 
-        #region  Shortcut menu 
+        #region  Shortcut menu
 
         private void UIElement_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
         {
@@ -4186,7 +4187,7 @@ namespace CCForm
             else if (sender is IElement)
             {
                 UIElement ele = sender as UIElement;
-               
+
                 if (Glo.currEle != ele)
                 {
                     if (Glo.currEle != null)
@@ -4198,11 +4199,11 @@ namespace CCForm
                     (ele as IElement).TrackingMouseMove = false;
                     Glo.currEle = ele;
                 }
-              
-                ShowMenu(this.muElePanel,e);
+
+                ShowMenu(this.muElePanel, e);
             }
-          
-            else if( sender == this.lbTools)
+
+            else if (sender == this.lbTools)
             {
 
             }
@@ -4216,7 +4217,7 @@ namespace CCForm
         {
             foreach (var item in menus)
             {
-               item.Hide();
+                item.Hide();
             }
         }
         void ShowMenu(Menu menu, MouseButtonEventArgs e)
@@ -4246,7 +4247,7 @@ namespace CCForm
 
                 var hostWidth = this.svWorkSpace.ActualWidth;// Application.Current.Host.Content.ActualWidth - 180;
                 var hostHeight = this.svWorkSpace.ActualHeight;// Application.Current.Host.Content.ActualHeight - 35;
-                
+
                 if (x + menuWidth > hostWidth)
                 {
                     x = x - (x + menuWidth - hostWidth);
@@ -4257,14 +4258,14 @@ namespace CCForm
 
                 double menuTop = y + menuHeight;
 
-                if (double.IsNaN(this.svWorkSpace.VerticalOffset) || this.svWorkSpace.VerticalOffset ==0)
+                if (double.IsNaN(this.svWorkSpace.VerticalOffset) || this.svWorkSpace.VerticalOffset == 0)
                 {
                     if (menuTop > hostHeight)
                     {
                         y = y - (menuTop - hostHeight);
                     }
                 }
-                else 
+                else
                 {
                     if (menuTop - this.svWorkSpace.VerticalOffset > hostHeight)
                     {
@@ -4274,7 +4275,7 @@ namespace CCForm
             }
             else
             {
-            
+
             }
 
 
@@ -4288,17 +4289,17 @@ namespace CCForm
                 menu.SetValue(Canvas.ZIndexProperty, ++d);
             }
             menu.Show();
-           
+
         }
 
         //  Close the shortcut menu in the main menu 
         private void Menu_MouseLeave(object sender, MouseEventArgs e)
         {
             Menu menu = sender as Menu;
-            if( null != menu)
+            if (null != menu)
                 menu.Hide();
         }
-       
+
         private void menuItem_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             e.Handled = true;
@@ -4326,7 +4327,7 @@ namespace CCForm
                 case "GradeLine":
                 case "GradeLine_Ext":
                     this.GradeLine.IsChecked = !this.GradeLine.IsChecked;
-                    this.SetGridLines( this.workSpace,this.GradeLine.IsChecked); // Re-draw the line 
+                    this.SetGridLines(this.workSpace, this.GradeLine.IsChecked); // Re-draw the line 
                     break;
                 case "FullScreen": // Full screen 
                 case "FullScreen_Ext": // Full screen 
@@ -4393,10 +4394,10 @@ namespace CCForm
                     break;
             }
         }
-      
+
         #endregion
 
-        #region  Selected 
+        #region  Selected
         void SetSelectedTool(string id)
         {  //  Setting choice ToolBox. And configure the mouse style 
             this.selectType = id;
@@ -4418,7 +4419,7 @@ namespace CCForm
                     this.SetSelectedState(false);
                     break;
                 default:
-                    cursor = null;     
+                    cursor = null;
                     cursor = Resources[id] as DataTemplate;
                     break;
             }
@@ -4446,10 +4447,10 @@ namespace CCForm
         {
             Glo.SetTracking(Glo.currEle as IElement, false);
         }
-      
+
         #endregion
 
-        #region   Selection rectangle deal 
+        #region   Selection rectangle deal
         double left = 0.0, top = 0.0;
         void rectSelected_MouseMove(object sender, MouseEventArgs e)
         {
@@ -4490,7 +4491,7 @@ namespace CCForm
             {
                 cCursor.SetCursorTemplate(cursor);
             }
-            else 
+            else
                 cCursor.SetCursorDefault(Cursors.Hand);
         }
 
@@ -4498,11 +4499,11 @@ namespace CCForm
         {
             e.Handled = true;
         }
-       
+
         private void SelectUIElement()
         {
             if (RectSelected == null) return;
-           
+
             this.selectedElements.Clear();
             // Automatic variable adjustment marquee area  
             bool isHaveLine = false;// There is no line judge 
@@ -4511,7 +4512,7 @@ namespace CCForm
             double finalTop = double.MaxValue;
             double finalBottom = double.MinValue;
 
-         
+
             double Left = Convert.ToDouble(RectSelected.GetValue(Canvas.LeftProperty));
             double Top = Convert.ToDouble(RectSelected.GetValue(Canvas.TopProperty));
             double Right = Left + RectSelected.ActualWidth;
@@ -4545,7 +4546,7 @@ namespace CCForm
                         bottom = top + c.ActualHeight;
                     }
 
-                    if (Left < right &&left < Right  && Top < bottom && top < Bottom )
+                    if (Left < right && left < Right && Top < bottom && top < Bottom)
                     //if (!(right < Left || bottom < Top || Right < left  ||  Bottom < top ))
                     {
                         this.selectedElements.Add(c);
@@ -4629,36 +4630,36 @@ namespace CCForm
 
         #endregion
 
-        #region  Gets the element default name 
-      
-        public string getElementNameFromUI( object obj )
+        #region  Gets the element default name
+
+        public string getElementNameFromUI(object obj)
         {
             string prefix = string.Empty;
-            if (obj is BPAttachment)        prefix = "Attach";
-            else if (obj is BPAttachmentM)  prefix = "AttachM";
-            else if (obj is BPBtn)          prefix = "Btn";
-            else if (obj is BPCheckBox)   { prefix = "Ckb"; }
+            if (obj is BPAttachment) prefix = "Attach";
+            else if (obj is BPAttachmentM) prefix = "AttachM";
+            else if (obj is BPBtn) prefix = "Btn";
+            else if (obj is BPCheckBox) { prefix = "Ckb"; }
             else if (obj is BPDatePicker) { prefix = "Date"; }
-            else if (obj is BPDDL)        { prefix = "Ddl"; }
-            else if (obj is BPDir)        { prefix = "Dir"; }
-        
-            else if (obj is BPEle)        { prefix = "Ele"; }
-            else if (obj is BPLabel)      { prefix = "LB"; }
-            else if (obj is BPLine)       { prefix = "LE"; }
+            else if (obj is BPDDL) { prefix = "Ddl"; }
+            else if (obj is BPDir) { prefix = "Dir"; }
+
+            else if (obj is BPEle) { prefix = "Ele"; }
+            else if (obj is BPLabel) { prefix = "LB"; }
+            else if (obj is BPLine) { prefix = "LE"; }
             else if (obj is BPLink) { prefix = "LK"; }
             else if (obj is BPM2M) { prefix = "M2M"; }
             else if (obj is BPRadioBtn) { prefix = "Rdb"; }
-          
+
             else if (obj is BPImg) { prefix = "Img"; }
             else if (obj is BPImgAth) { prefix = "ImgAth"; }
             else if (obj is BPImgSeal) { prefix = "ImgSeal"; }
             else if (obj is BPTextBox) { prefix = "TB"; }
             else if (obj is BPDtl) { prefix = "Dtl"; }
 
-             if (obj is BPWorkCheck)
+            if (obj is BPWorkCheck)
             {
                 prefix = "Wc" + Glo.FK_MapData.Replace("ND", "");
-                return prefix ;
+                return prefix;
             }
             else
             {
@@ -4692,13 +4693,13 @@ namespace CCForm
 
                 //  Element names define rules :
 
-             
-                prefix = prefix  + Glo.FK_Flow +maxSuffix.ToString();
+
+                prefix = prefix + Glo.FK_Flow + maxSuffix.ToString();
                 //suffix = DateTime.Now.ToString("yyMMddhhmmss");
 
                 if (obj is BPLine || obj is BPLabel)
                 {
-                    prefix = prefix.Contains(Glo.FK_MapData) ? prefix : Glo.FK_MapData + "_" + prefix ;
+                    prefix = prefix.Contains(Glo.FK_MapData) ? prefix : Glo.FK_MapData + "_" + prefix;
                 }
 
                 return prefix;
@@ -4706,7 +4707,7 @@ namespace CCForm
         }
         #endregion
 
-        #region  Draw grid lines 
+        #region  Draw grid lines
         List<string> gridLineNames = new List<string>();
         public void SetGridLines(Canvas workSpace, bool isShow)
         {
@@ -4716,7 +4717,7 @@ namespace CCForm
 
         public void SetGridLines(Canvas workSpace, Color bursh, bool isShow, bool isVirtualLine)
         {
-            #region  Remove 
+            #region  Remove
             foreach (string id in gridLineNames)
             {
                 Line mylin = workSpace.FindName(id) as Line;
@@ -4732,11 +4733,11 @@ namespace CCForm
             if (!isShow)
                 return;
 
-            #region  Show 
+            #region  Show
             SolidColorBrush brush = new SolidColorBrush(bursh);
-           
+
             double thickness = 0.3;
-            double top = 0,left = 0;
+            double top = 0, left = 0;
             double width = workSpace.Width;
             double height = workSpace.Height;
             double stepLength = 40;
@@ -4790,7 +4791,7 @@ namespace CCForm
         }
         #endregion
 
-        #region  Treatment and recovery of revocation . Unrealized 
+        #region  Treatment and recovery of revocation . Unrealized
         public void DoRecStep(string doType, UIElement obj, double x1, double y1, double x2, double y2)
         {
             Glo.CurrOpStep = Glo.CurrOpStep + 1;
@@ -4818,10 +4819,10 @@ namespace CCForm
             switch (e.Key)
             {
                 case Key.C:
-                    if(Keyboard.Modifiers == ModifierKeys.Control)
-                         MouseEventHandlers.IsCopy = true;
+                    if (Keyboard.Modifiers == ModifierKeys.Control)
+                        MouseEventHandlers.IsCopy = true;
                     break;
-              
+
                 case Key.Escape:
                     //  Deselect 
                     if (this.selectedElements != null && this.selectedElements.Count > 0)
@@ -4841,7 +4842,7 @@ namespace CCForm
                         }
                     }
                     break;
-              
+
                 //  Up 
                 case Key.W:
                 case Key.Up:
@@ -4855,7 +4856,7 @@ namespace CCForm
                                 line.MyLine.Y1 += -1;
                                 line.MyLine.Y2 += -1;
                             }
-                            continue ;
+                            continue;
                         }
                         else if (item is BPLabel)
                         {
@@ -4870,7 +4871,7 @@ namespace CCForm
                         {
                             if (item is IElement && (item as IElement).IsCanReSize)
                                 if (item.Height > 18)
-                                item.Height += -1;
+                                    item.Height += -1;
                         }
                         else
                         {
@@ -4880,7 +4881,8 @@ namespace CCForm
                     break;
 
                 //  Down 
-                case Key.S: case Key.Down:
+                case Key.S:
+                case Key.Down:
                     if (e.Key == Key.S)
                     {
                         //  Save 
@@ -4914,7 +4916,7 @@ namespace CCForm
 
                         if (Keyboard.Modifiers == ModifierKeys.Shift)
                         {
-                            if (item is IElement && ( item as IElement).IsCanReSize)
+                            if (item is IElement && (item as IElement).IsCanReSize)
                             {
                                 item.Height += 1;
                             }
@@ -4953,7 +4955,7 @@ namespace CCForm
                         }
                         if (Keyboard.Modifiers == ModifierKeys.Shift)
                         {
-                            if (item is IElement && ( item as IElement).IsCanReSize)
+                            if (item is IElement && (item as IElement).IsCanReSize)
                             {
                                 item.Width += 1;
                             }
@@ -5000,7 +5002,7 @@ namespace CCForm
                         {
                             if (item is IElement && (item as IElement).IsCanReSize)
                                 if (item.Height > 18)
-                                item.Width += -1;
+                                    item.Width += -1;
                         }
                         else
                         {
@@ -5028,7 +5030,7 @@ namespace CCForm
                     //specific Ctrl+V action here
                     this.Paste();
                 }
-            } 
+            }
         }
 
         #region
@@ -5172,7 +5174,7 @@ namespace CCForm
                                     if (string.IsNullOrEmpty(color))
                                         color = "Black";
 
-                                    BPLine myline = new BPLine( color, double.Parse(dr["BORDERWIDTH"]),
+                                    BPLine myline = new BPLine(color, double.Parse(dr["BORDERWIDTH"]),
                                         double.Parse(dr["X1"]), double.Parse(dr["Y1"]), double.Parse(dr["X2"]),
                                         double.Parse(dr["Y2"]));
                                     myline.Name = dr["MYPK"];
@@ -5591,898 +5593,898 @@ namespace CCForm
                     CCBPFormLoaded();
             }
         }
-//        public void SaveXml()
-//        {
-//            DataTable
-//            dtLine = dsLatest.Tables[ElementTable.Sys_FrmLine],
-//            dtBtn = dsLatest.Tables[ElementTable.Sys_FrmBtn],
-//            dtLabel = dsLatest.Tables[ElementTable.Sys_FrmLab],
-//            dtLikn = dsLatest.Tables[ElementTable.Sys_FrmLink],
-//            dtImg = dsLatest.Tables[ElementTable.Sys_FrmImg],
-//            dtEle = dsLatest.Tables[ElementTable.Sys_FrmEle],
-//            dtImgAth = dsLatest.Tables[ElementTable.Sys_FrmImgAth],
-//            dtMapAttr = dsLatest.Tables[ElementTable.Sys_MapAttr],
-//            dtRDB = dsLatest.Tables[ElementTable.Sys_FrmRB],
-//            dtlDT = dsLatest.Tables[ElementTable.Sys_MapDtl],
-//            dtWorkCheck = dsLatest.Tables[ElementTable.WF_Node],
-//            dtM2M = dsLatest.Tables[ElementTable.Sys_MapM2M],
-//            dtAth = dsLatest.Tables[ElementTable.Sys_FrmAttachment];
-
-//            #region
-//            foreach (UIElement ctl in this.workSpace.Children)
-//            {
-//                if (!(ctl is IElement)) continue;
-//                if ((ctl as IElement).ViewDeleted) continue;
-
-//                double dX = Canvas.GetLeft(ctl);
-//                double dY = Canvas.GetTop(ctl);
-
-
-//                if (ctl is BPLine)
-//                {
-//                    #region
-//                    BPLine line = ctl as BPLine;
-//                    if (line != null)
-//                    {
-//                        DataRow drline = dtLine.NewRow();
-//                        drline["MYPK"] = line.Name;
-//                        drline["FK_MAPDATA"] = Glo.FK_MapData;
-
-//                        drline["X"] = dX.ToString("0.00");
-//                        drline["Y"] = dY.ToString("0.00");
-
-//                        drline["X1"] = line.MyLine.X1.ToString("0.00");
-//                        drline["X2"] = line.MyLine.X2.ToString("0.00");
-//                        drline["Y1"] = line.MyLine.Y1.ToString("0.00");
-//                        drline["Y2"] = line.MyLine.Y2.ToString("0.00");
-//                        drline["BORDERWIDTH"] = line.MyLine.StrokeThickness.ToString("0.00");
-
-//                        SolidColorBrush d = (SolidColorBrush)line.MyLine.Stroke;
-//                        drline["BORDERCOLOR"] = Glo.PreaseColorToName(d.Color.ToString());
-//                        dtLine.Rows.Add(drline);
-//                    }
-//                    #endregion
-//                }
-//                else if (ctl is TextBoxExt)
-//                {
-//                    if (ctl is BPEle)
-//                    {
-//                        #region
-//                        BPEle ele = ctl as BPEle;
-//                        if (ele != null)
-//                        {
-//                            DataRow drImg = dtEle.NewRow();
-//                            drImg["MYPK"] = ele.Name;
-//                            drImg["FK_MAPDATA"] = Glo.FK_MapData;
-
-//                            //drImg["ELETYPE"] = ele.EleType;
-//                            //drImg["ELENAME"] = ele.EleName;
-//                            //drImg["ELEID"] = ele.EleID;
-
-//                            //eleDT.Columns.Add(new DataColumn("EleType", typeof(string)));
-//                            //eleDT.Columns.Add(new DataColumn("EleID", typeof(string)));
-//                            //eleDT.Columns.Add(new DataColumn("EleName", typeof(string)));
-
-//                            MatrixTransform transform = ctl.TransformToVisual(this.workSpace) as MatrixTransform;
-//                            double x = transform.Matrix.OffsetX;
-//                            double y = transform.Matrix.OffsetY;
-
-//                            if (x <= 0)
-//                                x = 0;
-//                            if (y == 0)
-//                                y = 0;
-//                            if (y.ToString() == "NaN")
-//                            {
-//                                x = Canvas.GetLeft(ctl);
-//                                y = Canvas.GetTop(ctl);
-//                            }
-
-//                            drImg["X"] = x.ToString("0.00");
-//                            drImg["Y"] = y.ToString("0.00");
-
-//                            drImg["W"] = ele.Width.ToString("0.00");
-//                            drImg["H"] = ele.Height.ToString("0.00");
-
-//                            dtEle.Rows.Add(drImg);
-
-//                        }
-//                        continue;
-//                        #endregion
-//                    }
-//                    else if (ctl is BPTextBox)
-//                    {
-//                        #region
-//                        BPTextBox tb = ctl as BPTextBox;
-//                        if (tb != null)
-//                        {
-//                            DataRow mapAttrDR = dtMapAttr.NewRow();
-//                            mapAttrDR["MYPK"] = Glo.FK_MapData + "_" + tb.Name.Trim();
-//                            mapAttrDR["FK_MAPDATA"] = Glo.FK_MapData;
-//                            mapAttrDR["KEYOFEN"] = tb.Name.Trim();
-
-//                            mapAttrDR["UICONTRALTYPE"] = CtrlType.TextBox;
-//                            mapAttrDR["MYDATATYPE"] = tb.HisDataType;
-
-//                            mapAttrDR["UIWIDTH"] = tb.Width.ToString("0.00");
-//                            mapAttrDR["UIHEIGHT"] = tb.Height.ToString("0.00");
-//                            mapAttrDR["LGTYPE"] = LGType.Normal;
-
-
-//                            MatrixTransform transform = ctl.TransformToVisual(this.workSpace) as MatrixTransform;
-//                            double x = transform.Matrix.OffsetX;
-//                            double y = transform.Matrix.OffsetY;
-
-//                            if (y.ToString() == "NaN")
-//                            {
-//                                x = Canvas.GetLeft(ctl);
-//                                y = Canvas.GetTop(ctl);
-//                            }
-
-//                            mapAttrDR["X"] = x.ToString("0.00");
-//                            mapAttrDR["Y"] = y.ToString("0.00");
-//                            // mapAttrDR["UIVISIBLE"] = "1";
-//                            dtMapAttr.Rows.Add(mapAttrDR);
-
-//                        }
-//                        continue;
-//                        #endregion
-//                    }
-//                    else if (ctl is BPImg)
-//                    {
-//                        #region
-//                        BPImg img = ctl as BPImg;
-//                        if (img != null)
-//                        {
-//                            DataRow drImg = dtImg.NewRow();
-//                            drImg["MYPK"] = img.Name;
-//                            drImg["FK_MAPDATA"] = Glo.FK_MapData;
-
-//                            MatrixTransform transform = ctl.TransformToVisual(this.workSpace) as MatrixTransform;
-//                            double x = transform.Matrix.OffsetX;
-//                            double y = transform.Matrix.OffsetY;
-
-//                            if (x <= 0)
-//                                x = 0;
-//                            if (y == 0)
-//                                y = 0;
-//                            if (y.ToString() == "NaN")
-//                            {
-//                                x = Canvas.GetLeft(ctl);
-//                                y = Canvas.GetTop(ctl);
-//                            }
-
-//                            drImg["X"] = x.ToString("0.00"); // Canvas.GetLeft(ctl).ToString("0.00");
-//                            drImg["Y"] = y.ToString("0.00"); // Canvas.GetTop(ctl).ToString("0.00");
-
-//                            drImg["W"] = img.Width.ToString("0.00");
-//                            drImg["H"] = img.Height.ToString("0.00");
-
-//                            BitmapImage png = img.HisPng;
-
-//                            drImg["LINKURL"] = img.LinkURL;
-//                            drImg["LINKTARGET"] = img.LinkTarget;
-//                            drImg["SRCTYPE"] = img.SrcType.ToString();
-
-//                            drImg["IMGPATH"] = png.UriSource.ToString().Contains("DataUser") ? png.UriSource.ToString().Replace(Glo.BPMHost, "") : png.UriSource.ToString();
-//                            drImg["IMGURL"] = img.ImgURL;
-
-//                            drImg["IMGAPPTYPE"] = "0";
-//                            drImg["ISEDIT"] = "1";
-//                            drImg["NAME"] = img.TB_CN_Name;
-//                            drImg["ENPK"] = img.TB_En_Name;
-//                            dtImg.Rows.Add(drImg);
-
-//                        }
-//                        #endregion
-//                    }
-//                    else if (ctl is BPImgAth)
-//                    {
-//                        #region
-//                        BPImgAth imgAth = ctl as BPImgAth;
-//                        if (imgAth != null)
-//                        {
-//                            DataRow mapAth = dtImgAth.NewRow();
-//                            mapAth["MYPK"] = imgAth.Name;
-//                            mapAth["CTRLID"] = imgAth.CtrlID; // Accessory ID.
-//                            mapAth["FK_MAPDATA"] = Glo.FK_MapData;
-//                            mapAth["ISEDIT"] = imgAth.IsEdit ? "1" : "0";
-//                            MatrixTransform transform = imgAth.TransformToVisual(this.workSpace) as MatrixTransform;
-
-//                            mapAth["X"] = transform.Matrix.OffsetX.ToString("0.00");
-//                            mapAth["Y"] = transform.Matrix.OffsetY.ToString("0.00");
-
-//                            mapAth["W"] = imgAth.Width.ToString("0.00");
-//                            mapAth["H"] = imgAth.Height.ToString("0.00");
-//                            dtImgAth.Rows.Add(mapAth);
-
-//                        }
-//                        #endregion
-//                    }
-//                    else if (ctl is BPImgSeal)
-//                    {
-//                        #region
-//                        BPImgSeal imgSeal = ctl as BPImgSeal;
-//                        if (imgSeal != null)
-//                        {
-//                            DataRow drImgSeal = dtImg.NewRow();
-//                            drImgSeal["MYPK"] = imgSeal.Name;
-//                            drImgSeal["FK_MAPDATA"] = Glo.FK_MapData;
-//                            drImgSeal["IMGAPPTYPE"] = "1";
-//                            MatrixTransform transform = ctl.TransformToVisual(this.workSpace)
-//                                as MatrixTransform;
-//                            double x = transform.Matrix.OffsetX;
-//                            double y = transform.Matrix.OffsetY;
-
-//                            if (x <= 0)
-//                                x = 0;
-//                            if (y == 0)
-//                                y = 0;
-//                            if (y.ToString() == "NaN")
-//                            {
-//                                x = Canvas.GetLeft(ctl);
-//                                y = Canvas.GetTop(ctl);
-//                            }
-
-//                            drImgSeal["X"] = x.ToString("0.00");
-//                            drImgSeal["Y"] = y.ToString("0.00");
-
-//                            drImgSeal["W"] = imgSeal.Width.ToString("0.00");
-//                            drImgSeal["H"] = imgSeal.Height.ToString("0.00");
-
-//                            BitmapImage png = imgSeal.HisPng;
-//                            drImgSeal["IMGURL"] = png.UriSource.ToString();
-//                            drImgSeal["TAG0"] = imgSeal.Tag0;
-//                            drImgSeal["NAME"] = imgSeal.TB_CN_Name;
-//                            drImgSeal["ENPK"] = imgSeal.TB_En_Name;
-//                            drImgSeal["ISEDIT"] = imgSeal.IsEdit ? "1" : "0";
-//                            dtImg.Rows.Add(drImgSeal);
-
-//                        }
-//                        #endregion
-//                    }
-//                }
-//                else if (ctl is LabelExt)
-//                {
-//                    if (ctl is BPLabel)
-//                    {
-//                        #region
-//                        BPLabel lab = ctl as BPLabel;
-//                        if (lab != null)
-//                        {
-//                            DataRow drLab = dtLabel.NewRow();
-//                            drLab["MYPK"] = lab.Name;
-//                            drLab["TEXT"] = lab.Content.ToString().Replace(" ", "&nbsp;").Replace("\n", "@");
-//                            drLab["FK_MAPDATA"] = Glo.FK_MapData;
-
-//                            drLab["X"] = dX.ToString("0.00");
-//                            drLab["Y"] = dY.ToString("0.00");
-
-//                            // drLab["FONTCOLOR"] = lab.GetValue( lapp ).ToString();
-//#warning  How to get the font color  ? .
-
-//                            SolidColorBrush d = (SolidColorBrush)lab.Foreground;
-//                            drLab["FONTCOLOR"] = d.Color.ToString();
-//                            // Glo.PreaseColorToName(d.Color.ToString());
-//                            drLab["FONTNAME"] = lab.FontFamily.ToString();
-//                            drLab["FONTSTYLE"] = lab.FontStyle.ToString();
-//                            drLab["FONTSIZE"] = lab.FontSize.ToString();
-
-//                            if (lab.FontWeight == FontWeights.Normal)
-//                                drLab["ISBOLD"] = "0";
-//                            else
-//                                drLab["ISBOLD"] = "1";
-
-//                            if (lab.FontStyle.ToString() == "Italic")
-//                                drLab["ISITALIC"] = "1";
-//                            else
-//                                drLab["ISITALIC"] = "0";
-
-//                            dtLabel.Rows.Add(drLab);
-
-//                        }
-//                        #endregion
-//                    }
-//                    else if (ctl is BPLink)
-//                    {
-//                        #region
-//                        BPLink link = ctl as BPLink;
-//                        if (link != null)
-//                        {
-//                            DataRow drLink = dtLikn.NewRow();
-//                            drLink["MYPK"] = link.Name;
-
-//                            drLink["TEXT"] = link.Content.ToString();
-//                            drLink["FK_MAPDATA"] = Glo.FK_MapData;
-
-//                            drLink["X"] = dX.ToString("0.00");
-//                            drLink["Y"] = dY.ToString("0.00");
-
-//                            SolidColorBrush d = (SolidColorBrush)link.Foreground;
-//                            drLink["FONTCOLOR"] = Glo.PreaseColorToName(d.Color.ToString());
-//                            drLink["FONTNAME"] = link.FontFamily.ToString();
-//                            drLink["FONTSTYLE"] = link.FontStyle.ToString();
-//                            drLink["FONTSIZE"] = link.FontSize.ToString();
-//                            drLink["URL"] = link.URL;
-//                            drLink["TARGET"] = link.WinTarget;
-
-//                            if (link.FontWeight == FontWeights.Normal)
-//                                drLink["ISBOLD"] = "0";
-//                            else
-//                                drLink["ISBOLD"] = "1";
-
-//                            if (link.FontStyle.ToString() == "Italic")
-//                                drLink["ISITALIC"] = "1";
-//                            else
-//                                drLink["ISITALIC"] = "0";
-
-//                            dtLikn.Rows.Add(drLink);
-
-//                        }
-//                        #endregion
-//                    }
-//                }
-//                else if (ctl is UCExt)
-//                {
-//                    if (ctl is BPAttachment)
-//                    {
-//                        #region
-//                        BPAttachment athCtl = ctl as BPAttachment;
-//                        if (athCtl != null)
-//                        {
-
-//                            DataRow mapAth = dtAth.NewRow();
-//                            mapAth["MYPK"] = Glo.FK_MapData + "_" + athCtl.Name;
-//                            mapAth["FK_MAPDATA"] = Glo.FK_MapData;
-//                            mapAth["NOOFOBJ"] = athCtl.Name;
-//                            mapAth["UPLOADTYPE"] = "0";
-
-//                            MatrixTransform transform = athCtl.TransformToVisual(this.workSpace) as MatrixTransform;
-//                            mapAth["X"] = transform.Matrix.OffsetX.ToString("0.00");
-//                            mapAth["Y"] = transform.Matrix.OffsetY.ToString("0.00");
-//                            mapAth["W"] = athCtl.HisTB.Width.ToString("0.00");
-//                            dtAth.Rows.Add(mapAth);
-//                        }
-//                        #endregion
-//                    }
-//                    else if (ctl is BPAttachmentM)
-//                    {
-//                        #region
-//                        BPAttachmentM athM = ctl as BPAttachmentM;
-//                        if (athM != null)
-//                        {
-//                            DataRow mapAth = dtAth.NewRow();
-//                            mapAth["MYPK"] = Glo.FK_MapData + "_" + athM.Name;
-//                            mapAth["FK_MAPDATA"] = Glo.FK_MapData;
-//                            mapAth["NOOFOBJ"] = athM.Name;
-//                            mapAth["UPLOADTYPE"] = "1";
-
-//                            MatrixTransform transform = athM.TransformToVisual(this.workSpace) as MatrixTransform;
-//                            mapAth["X"] = transform.Matrix.OffsetX.ToString("0.00");
-//                            mapAth["Y"] = transform.Matrix.OffsetY.ToString("0.00");
-
-//                            mapAth["W"] = athM.Width.ToString("0.00");
-//                            mapAth["H"] = athM.Height.ToString("0.00");
-//                            dtAth.Rows.Add(mapAth);
-//                        }
-//                        #endregion
-//                    }
-//                    else if (ctl is BPDtl)
-//                    {
-//                        #region
-//                        BPDtl dtlCtl = ctl as BPDtl;
-//                        if (dtlCtl != null)
-//                        {
-//                            DataRow mapDtl = dtlDT.NewRow();
-//                            mapDtl["NO"] = dtlCtl.Name;
-//                            mapDtl["FK_MAPDATA"] = Glo.FK_MapData;
-
-//                            MatrixTransform transform = dtlCtl.TransformToVisual(this.workSpace) as MatrixTransform;
-
-//                            mapDtl["X"] = transform.Matrix.OffsetX.ToString("0.00");
-//                            mapDtl["Y"] = transform.Matrix.OffsetY.ToString("0.00");
-//                            mapDtl["W"] = dtlCtl.Width.ToString("0.00");
-//                            mapDtl["H"] = dtlCtl.Height.ToString("0.00");
-//                            dtlDT.Rows.Add(mapDtl);
-
-//                        }
-//                        #endregion
-//                    }
-//                    else if (ctl is BPWorkCheck)
-//                    {
-//                        #region   Audit Components 
-//                        BPWorkCheck wkCheck = ctl as BPWorkCheck;
-//                        if (wkCheck != null)
-//                        {
-//                            DataRow workCheckDt = dtWorkCheck.NewRow();
-//                            workCheckDt["NODEID"] = Glo.FK_MapData.Replace("ND", "");
-
-//                            MatrixTransform transform = wkCheck.TransformToVisual(this.workSpace) as MatrixTransform;
-
-//                            workCheckDt["FWCSTA"] = wkCheck.FWC_Sta;
-//                            workCheckDt["FWCTYPE"] = wkCheck.FWC_Type;
-
-//                            workCheckDt["FWC_X"] = transform.Matrix.OffsetX.ToString("0.00");
-//                            workCheckDt["FWC_Y"] = transform.Matrix.OffsetY.ToString("0.00");
-
-//                            workCheckDt["FWC_W"] = wkCheck.Width.ToString("0.00");
-//                            workCheckDt["FWC_H"] = wkCheck.Height.ToString("0.00");
-//                            dtWorkCheck.Rows.Add(workCheckDt);
-
-//                        }
-//                        #endregion
-//                    }
-//                    else if (ctl is BPM2M)
-//                    {
-//                        #region
-//                        BPM2M m2mCtl = ctl as BPM2M;
-//                        if (m2mCtl != null)
-//                        {
-//                            DataRow rowM2M = dtM2M.NewRow();
-//                            rowM2M["NOOFOBJ"] = m2mCtl.Name;
-//                            rowM2M["FK_MAPDATA"] = Glo.FK_MapData;
-//                            rowM2M["MYPK"] = Glo.FK_MapData + "_" + m2mCtl.Name;
-
-//                            MatrixTransform transform = m2mCtl.TransformToVisual(this.workSpace) as MatrixTransform;
-
-//                            rowM2M["X"] = transform.Matrix.OffsetX.ToString("0.00");
-//                            rowM2M["Y"] = transform.Matrix.OffsetY.ToString("0.00");
-
-//                            rowM2M["W"] = m2mCtl.Width.ToString("0.00");
-//                            rowM2M["H"] = m2mCtl.Height.ToString("0.00");
-
-//                            dtM2M.Rows.Add(rowM2M);
-//                        }
-//                        #endregion
-//                    }
-//                }
-//                else if (ctl is BPDatePicker)
-//                {
-//                    #region
-//                    BPDatePicker dp = ctl as BPDatePicker;
-//                    if (dp != null)
-//                    {
-//                        DataRow mapAttrDR = dtMapAttr.NewRow();
-//                        mapAttrDR["MYPK"] = Glo.FK_MapData + "_" + dp.Name;
-//                        mapAttrDR["FK_MAPDATA"] = Glo.FK_MapData;
-//                        mapAttrDR["KEYOFEN"] = dp.Name;
-
-//                        mapAttrDR["UICONTRALTYPE"] = CtrlType.TextBox;
-//                        mapAttrDR["MYDATATYPE"] = dp.HisDateType;
-//                        mapAttrDR["LGTYPE"] = LGType.Normal;
-
-//                        mapAttrDR["X"] = dX.ToString("0.00");
-//                        mapAttrDR["Y"] = dY.ToString("0.00");
-
-//                        // mapAttrDR["UIVISIBLE"] = "1";
-//                        mapAttrDR["UIWIDTH"] = "50";
-//                        mapAttrDR["UIHEIGHT"] = "23";
-
-//                        dtMapAttr.Rows.Add(mapAttrDR);
-
-//                    }
-//                    continue;
-//                    #endregion
-//                }
-//                else if (ctl is BPBtn)
-//                {
-//                    #region
-//                    BPBtn btn = ctl as BPBtn;
-//                    if (btn != null)
-//                    {
-//                        DataRow drBtn = dtBtn.NewRow();
-//                        drBtn["MYPK"] = btn.Name;
-//                        drBtn["TEXT"] = btn.Content.ToString().Replace(" ", "&nbsp;").Replace("\n", "@");
-//                        drBtn["FK_MAPDATA"] = Glo.FK_MapData;
-
-//                        drBtn["X"] = dX.ToString("0.00");
-//                        drBtn["Y"] = dY.ToString("0.00");
-
-//                        dtBtn.Rows.Add(drBtn);
-//                    }
-//                    #endregion
-//                }
-
-//                else if (ctl is BPDDL)
-//                {
-//                    #region
-//                    BPDDL ddl = ctl as BPDDL;
-//                    if (ddl != null)
-//                    {
-
-//                        DataRow mapAttrDR = dtMapAttr.NewRow();
-//                        mapAttrDR["MYPK"] = Glo.FK_MapData + "_" + ddl.Name;
-//                        mapAttrDR["FK_MAPDATA"] = Glo.FK_MapData;
-//                        mapAttrDR["KEYOFEN"] = ddl.Name;
-
-//                        mapAttrDR["UICONTRALTYPE"] = CtrlType.DDL;
-//                        mapAttrDR["MYDATATYPE"] = ddl.HisDataType;
-//                        mapAttrDR["LGTYPE"] = ddl._HisDataType;
-
-//                        mapAttrDR["UIWIDTH"] = ddl.Width.ToString("0.00");
-//                        mapAttrDR["UIHEIGHT"] = "23";
-
-//                        mapAttrDR["X"] = dX.ToString("0.00");
-//                        mapAttrDR["Y"] = dY.ToString("0.00");
-
-//                        mapAttrDR["UIBINDKEY"] = ddl.UIBindKey;
-//                        mapAttrDR["UIREFKEY"] = "No";
-//                        mapAttrDR["UIREFKEYTEXT"] = "Name";
-//                        //     mapAttrDR["UIVISIBLE"] = "1";
-//                        dtMapAttr.Rows.Add(mapAttrDR);
-
-//                    }
-//                    #endregion
-//                }
-//                else if (ctl is BPCheckBox)
-//                {
-//                    #region
-//                    BPCheckBox cb = ctl as BPCheckBox;
-//                    if (cb != null)
-//                    {
-
-//                        DataRow mapAttrDR = dtMapAttr.NewRow();
-//                        mapAttrDR["MYPK"] = Glo.FK_MapData + "_" + cb.Name;
-//                        mapAttrDR["FK_MAPDATA"] = Glo.FK_MapData;
-//                        mapAttrDR["KEYOFEN"] = cb.Name;
-//                        mapAttrDR["UICONTRALTYPE"] = CtrlType.CheckBox;
-//                        mapAttrDR["MYDATATYPE"] = DataType.AppBoolean;
-//                        mapAttrDR["LGTYPE"] = LGType.Normal;
-//                        mapAttrDR["X"] = dX.ToString("0.00");
-//                        mapAttrDR["Y"] = dY.ToString("0.00");
-//                        mapAttrDR["UIWIDTH"] = "100";
-//                        mapAttrDR["UIHEIGHT"] = "23";
-
-
-//                        dtMapAttr.Rows.Add(mapAttrDR);
-
-//                    }
-//                    #endregion
-//                }
-//                else if (ctl is BPRadioBtn)
-//                {
-//                    #region
-//                    BPRadioBtn rb = ctl as BPRadioBtn;
-//                    if (rb != null)
-//                    {
-//                        DataRow mapAttrRB = dtRDB.NewRow();
-//                        mapAttrRB["MYPK"] = rb.Name;
-//                        mapAttrRB["FK_MAPDATA"] = Glo.FK_MapData;
-//                        mapAttrRB["KEYOFEN"] = rb.GroupName;
-//                        mapAttrRB["INTKEY"] = rb.Tag as string;
-//                        mapAttrRB["LAB"] = rb.Content as string;
-//                        mapAttrRB["ENUMKEY"] = rb.UIBindKey;
-//                        mapAttrRB["X"] = dX.ToString("0.00");
-//                        mapAttrRB["Y"] = dY.ToString("0.00");
-//                        dtRDB.Rows.Add(mapAttrRB);
-
-//                    }
-//                    #endregion
-//                }
-//            }
-//            #endregion
-
-//            #region  Deal with  RB  Enum value 
-//            string keys = "";
-//            foreach (DataRow dr in dtRDB.Rows)
-//            {
-//                string keyOfEn = dr["KEYOFEN"];
-//                if (keys.Contains("@" + keyOfEn + "@"))
-//                {
-//                    continue;
-//                }
-//                else
-//                {
-//                    keys += "@" + keyOfEn + "@";
-//                }
-
-//                string enumKey = dr["ENUMKEY"];
-//                DataRow mapAttrDR = dtMapAttr.NewRow();
-//                mapAttrDR["MYPK"] = Glo.FK_MapData + "_" + keyOfEn;
-//                mapAttrDR["FK_MAPDATA"] = Glo.FK_MapData;
-//                mapAttrDR["KEYOFEN"] = keyOfEn;
-
-//                mapAttrDR["UICONTRALTYPE"] = CtrlType.RB;
-//                mapAttrDR["MYDATATYPE"] = DataType.AppInt;
-//                mapAttrDR["LGTYPE"] = LGType.Enum;
-//                mapAttrDR["INTKEY"] = dr["INTKEY"];
-
-//                mapAttrDR["X"] = "0";
-//                mapAttrDR["Y"] = "0";
-
-//                mapAttrDR["UIBINDKEY"] = enumKey;
-//                mapAttrDR["UIREFKEY"] = "No";
-//                mapAttrDR["UIREFKEYTEXT"] = "Name";
-//                //      mapAttrDR["UIVISIBLE"] = "1";
-//                mapAttrDR["UIWIDTH"] = "30";
-//                mapAttrDR["UIHEIGHT"] = "23";
-//                dtMapAttr.Rows.Add(mapAttrDR);
-//            }
-//            #endregion  Deal with  RB  Enum value 
-
-//            #region deleted.
-//            string sqls = "";
-//            foreach (DataTable ysdt in this.dsOldest.Tables)
-//            {
-
-//                DataTable newDt = dsLatest.Tables[ysdt.TableName];
-//                if (newDt == null)
-//                    continue;
-
-//                string pk = "";
-//                #region 求pK
-//                foreach (DataColumn dc in ysdt.Columns)
-//                {
-//                    switch (dc.ColumnName.ToLower())
-//                    {
-//                        case "mypk":
-//                            pk = "MyPK";
-//                            break;
-//                        case "no":
-//                            pk = "No";
-//                            break;
-//                        case "oid":
-//                            pk = "OID";
-//                            break;
-//                        case "nodeid":
-//                            pk = "NodeID";
-//                            break;
-//                        default:
-//                            break;
-//                    }
-//                }
-//                #endregion 求pK
-
-//                foreach (DataRow dr in ysdt.Rows)
-//                {
-//                    string pkVal = dr[pk].ToString();
-//                    bool isHave = false;
-
-
-//                    #region WF_Node, Does not contain FK_MapData Temporarily placed in front .
-//                    if (ysdt.TableName == "WF_Node")
-//                    {
-//                        if (dr["NODEID"] != Glo.FK_MapData.Replace("ND", ""))
-//                            continue;
-//                        /*  If the judge is to examine the components of  .. */
-//                        foreach (DataRow newDr in newDt.Rows)
-//                        {
-//                            if (newDr[pk].ToString() == pkVal)
-//                            {
-//                                isHave = true;
-//                                break;
-//                            }
-//                        }
-//                        if (isHave == false)
-//                        {
-//                            sqls += "@UPDATE WF_Node SET FWCSta=0 WHERE " + pk + "='" + pkVal + "'";
-//                        }
-//                        break;
-//                    }
-//                    #endregion
-
-
-//                    if (ysdt.TableName == "Sys_MapData")
-//                    {
-//                        #region Sys_MapData
-//                        if (isDesignerSizeChanged)
-//                        {
-
-//                            double
-//                                heigh = double.NaN,
-//                                wid = double.NaN;
-//                            string no;
-
-//                            object tmp = newDt.Rows[0]["NO"];
-//                            no = tmp == null ? null : tmp.ToString();
-
-//                            tmp = newDt.Rows[0]["FRMW"];
-//                            if (null != tmp)
-//                                double.TryParse(tmp.ToString(), out wid);
-
-
-//                            tmp = newDt.Rows[0]["FRMH"];
-//                            if (null != tmp)
-//                                double.TryParse(tmp.ToString(), out heigh);
-//                            if (!string.IsNullOrEmpty(no) && heigh != double.NaN && wid != double.NaN)
-//                                sqls += "@UPDATE Sys_MapData SET FrmW=" + wid + ", FrmH=" + heigh + " WHERE No='" + no + "'";
-
-//                            //wid = Glo.HisMapData.FrmW;
-//                            //heigh = Glo.HisMapData.FrmH;
-//                            //no = Glo.FK_MapData;
-
-//                            //if (!string.IsNullOrEmpty(no) && heigh != double.NaN && wid != double.NaN)
-//                            //    sqls += "@UPDATE Sys_MapData SET FrmW=" + wid + ", FrmH=" + heigh + " WHERE No='" + no + "'";
-//                        }
-//                        #endregion
-//                        continue;
-//                    }
-
-//                    try
-//                    {
-//                        string id = dr["NODEID"] as string;
-//                        continue;
-//                    }
-//                    catch (Exception) { }
-
-
-//                    if ((dr["FK_MAPDATA"] as string) != Glo.FK_MapData)
-//                        continue;
-
-
-//                    if (ysdt.TableName == "Sys_MapAttr")
-//                    {
-//                        /*  If the field control  .. */
-//                        isHave = false;
-//                        foreach (DataRow newDr in newDt.Rows)
-//                        {
-//                            if (dr["FK_MAPDATA"] != Glo.FK_MapData || dr["UIVISIBLE"] == "0")
-//                            {
-//                                isHave = true;
-//                                break;
-//                            }
-//                            if (newDr[pk].ToString() == pkVal)
-//                            {
-//                                isHave = true;
-//                                break;
-//                            }
-//                        }
-
-//                        if (isHave == false)
-//                        {
-//                            if (dr["UIVISIBLE"] == "0" || dr["EDITTYPE"] != "0")
-//                                isHave = true;
-//                        }
-//                    }
-//                    else
-//                    {
-//                        foreach (DataRow newDr in newDt.Rows)
-//                        {
-//                            if (newDr[pk].ToString() == pkVal)
-//                            {
-//                                isHave = true;
-//                                break;
-//                            }
-//                        }
-//                    }
-//                    if (isHave == false)
-//                        sqls += "@DELETE FROM " + ysdt.TableName + " WHERE " + pk + "='" + pkVal + "'";
-//                }
-//            }
-//            #endregion
-
-//            #region update.
-//            string len = Glo.LEN_Function;
-//            foreach (UIElement ctl in this.workSpace.Children)
-//            {
-//                if (!(ctl is IElement)) continue;
-
-//                if (ctl is BPCheckBox)
-//                {
-//                    BPCheckBox cb = ctl as BPCheckBox;
-//                    if (null == cb || string.IsNullOrEmpty(cb.KeyName)) continue;
-
-//                    Label mylab = cb.Content as Label;
-//                    sqls += "@UPDATE Sys_MapAttr SET Name='" + mylab.Content + "'  WHERE MyPK='" + Glo.FK_MapData + "_" + cb.Name + "' AND " + len + "(Name)=0";
-//                    continue;
-
-//                }
-//                else if (ctl is BPTextBox)
-//                {
-//                    BPTextBox tb = ctl as BPTextBox;
-//                    if (tb == null || string.IsNullOrEmpty(tb.KeyName))
-//                        continue;
-
-//                    sqls += "@UPDATE Sys_MapAttr SET Name='" + tb.KeyName + "' WHERE MyPK='" + Glo.FK_MapData + "_" + tb.Name + "' AND ( " + len + "(Name)=0 OR KeyOfEn=Name )";
-//                    continue;
-
-//                }
-//                else if (ctl is BPDDL)
-//                {
-//                    BPDDL ddl = ctl as BPDDL;
-
-//                    if (ddl == null || string.IsNullOrEmpty(ddl.KeyName))
-//                        continue;
-
-//                    sqls += "@UPDATE Sys_MapAttr SET Name='" + ddl.KeyName + "' WHERE MyPK='" + Glo.FK_MapData + "_" + ddl.Name + "' AND " + len + "(Name)=0";
-//                    continue;
-
-//                }
-//                else if (ctl is BPRadioBtn)
-//                {
-//                    BPRadioBtn rb = ctl as BPRadioBtn;
-//                    if (rb == null || string.IsNullOrEmpty(rb.KeyName) || sqls.Contains("_" + rb.GroupName))
-//                        continue;
-
-//                    sqls += "@UPDATE Sys_MapAttr SET Name='" + rb.KeyName + "' WHERE MyPK='" + Glo.FK_MapData + "_" + rb.GroupName + "' AND " + len + "(Name)=0";
-//                    continue;
-
-//                }
-//                else if (ctl is BPLine)
-//                {
-//                    BPLine line = ctl as BPLine;
-//                    if (line == null || string.IsNullOrEmpty(line.Name))
-//                        continue;
-
-//                    #region line.
-
-
-//                    double
-//                        BorderWidth = double.NaN,
-
-//                        x1 = double.NaN,
-//                        x2 = double.NaN,
-//                        y1 = double.NaN,
-//                        y2 = double.NaN;
-
-
-//                    string MyPK = line.Name;
-//                    string BorderColor = line.MyLine.StrokeThickness.ToString();
-//                    string FK_MapData = Glo.FK_MapData;
-//                    string tmp = Glo.PreaseColorToName(((SolidColorBrush)line.MyLine.Stroke).Color.ToString());
-//                    if (null != tmp)
-//                        double.TryParse(tmp.ToString(), out BorderWidth);
-
-
-//                    tmp = line.MyLine.X1.ToString("0.00");
-//                    if (null != tmp)
-//                        double.TryParse(tmp.ToString(), out x1);
-
-//                    tmp = line.MyLine.X2.ToString("0.00");
-//                    if (null != tmp)
-//                        double.TryParse(tmp.ToString(), out x2);
-
-//                    tmp = line.MyLine.Y1.ToString("0.00");
-//                    if (null != tmp)
-//                        double.TryParse(tmp.ToString(), out y1);
-//                    tmp = line.MyLine.Y2.ToString("0.00");
-//                    if (null != tmp)
-//                        double.TryParse(tmp.ToString(), out y2);
-
-//                    string sqlTmp = "@UPDATE Sys_FrmLine SET  X1={1},Y1={2},X2={3},Y2={4} WHERE MyPK='{0}'";
-//                    if (!string.IsNullOrEmpty(MyPK) && x1 != double.NaN && y1 != double.NaN && x2 != double.NaN && y2 != double.NaN)
-//                        sqls += string.Format(sqlTmp, MyPK, x1, y1, x2, y2);
-
-
-//                    continue;
-//                    #endregion
-//                }
-//            }
-//            #endregion
-
-//            string xml = dsLatest.ToXml(true, false);
-//            FF.CCFormSoapClient da = Glo.GetCCFormSoapClientServiceInstance();
-//            da.SaveFrmAsync(Glo.FK_MapData, xml, sqls, null);
-//            da.SaveFrmCompleted += ((object senders, FF.SaveFrmCompletedEventArgs ee) =>
-//            {
-//                isDesignerSizeChanged = false;
-//                loadingWindow.DialogResult = true;
-//                #region
-//                if (ee.Error != null)
-//                {
-//                    BP.SL.LoggerHelper.Write(ee.Error);
-//                    MessageBox.Show(ee.Result, " Save error ", MessageBoxButton.OK);
-//                    return;
-//                }
-
-//                if (Keyboard.Modifiers == ModifierKeys.Windows)
-//                {
-//                    string url1 = null;
-//                    if (Glo.IsDtlFrm == false)
-//                        url1 = Glo.BPMHost + "/WF/CCForm/Frm.aspx?FK_MapData=" + Glo.FK_MapData + "&IsTest=1&WorkID=0&FK_Node=" + Glo.FK_Node + "&sd=s" + Glo.TimeKey;
-//                    else
-//                        url1 = Glo.BPMHost + "/WF/CCForm/FrmCard.aspx?EnsName=" + Glo.FK_MapData + "&RefPKVal=0&OID=0" + Glo.TimeKey;
-
-//                    Glo.WinOpen(url1, (int)Glo.HisMapData.FrmH, (int)Glo.HisMapData.FrmW);
-//                }
-//                else
-//                {
-//                    //  MessageBox.Show("ccform  Saved successfully .", " Saving tips ", MessageBoxButton.OK);
-//                }
-
-
-//                #endregion
-//            });
-//        }
+        //        public void SaveXml()
+        //        {
+        //            DataTable
+        //            dtLine = dsLatest.Tables[ElementTable.Sys_FrmLine],
+        //            dtBtn = dsLatest.Tables[ElementTable.Sys_FrmBtn],
+        //            dtLabel = dsLatest.Tables[ElementTable.Sys_FrmLab],
+        //            dtLikn = dsLatest.Tables[ElementTable.Sys_FrmLink],
+        //            dtImg = dsLatest.Tables[ElementTable.Sys_FrmImg],
+        //            dtEle = dsLatest.Tables[ElementTable.Sys_FrmEle],
+        //            dtImgAth = dsLatest.Tables[ElementTable.Sys_FrmImgAth],
+        //            dtMapAttr = dsLatest.Tables[ElementTable.Sys_MapAttr],
+        //            dtRDB = dsLatest.Tables[ElementTable.Sys_FrmRB],
+        //            dtlDT = dsLatest.Tables[ElementTable.Sys_MapDtl],
+        //            dtWorkCheck = dsLatest.Tables[ElementTable.WF_Node],
+        //            dtM2M = dsLatest.Tables[ElementTable.Sys_MapM2M],
+        //            dtAth = dsLatest.Tables[ElementTable.Sys_FrmAttachment];
+
+        //            #region
+        //            foreach (UIElement ctl in this.workSpace.Children)
+        //            {
+        //                if (!(ctl is IElement)) continue;
+        //                if ((ctl as IElement).ViewDeleted) continue;
+
+        //                double dX = Canvas.GetLeft(ctl);
+        //                double dY = Canvas.GetTop(ctl);
+
+
+        //                if (ctl is BPLine)
+        //                {
+        //                    #region
+        //                    BPLine line = ctl as BPLine;
+        //                    if (line != null)
+        //                    {
+        //                        DataRow drline = dtLine.NewRow();
+        //                        drline["MYPK"] = line.Name;
+        //                        drline["FK_MAPDATA"] = Glo.FK_MapData;
+
+        //                        drline["X"] = dX.ToString("0.00");
+        //                        drline["Y"] = dY.ToString("0.00");
+
+        //                        drline["X1"] = line.MyLine.X1.ToString("0.00");
+        //                        drline["X2"] = line.MyLine.X2.ToString("0.00");
+        //                        drline["Y1"] = line.MyLine.Y1.ToString("0.00");
+        //                        drline["Y2"] = line.MyLine.Y2.ToString("0.00");
+        //                        drline["BORDERWIDTH"] = line.MyLine.StrokeThickness.ToString("0.00");
+
+        //                        SolidColorBrush d = (SolidColorBrush)line.MyLine.Stroke;
+        //                        drline["BORDERCOLOR"] = Glo.PreaseColorToName(d.Color.ToString());
+        //                        dtLine.Rows.Add(drline);
+        //                    }
+        //                    #endregion
+        //                }
+        //                else if (ctl is TextBoxExt)
+        //                {
+        //                    if (ctl is BPEle)
+        //                    {
+        //                        #region
+        //                        BPEle ele = ctl as BPEle;
+        //                        if (ele != null)
+        //                        {
+        //                            DataRow drImg = dtEle.NewRow();
+        //                            drImg["MYPK"] = ele.Name;
+        //                            drImg["FK_MAPDATA"] = Glo.FK_MapData;
+
+        //                            //drImg["ELETYPE"] = ele.EleType;
+        //                            //drImg["ELENAME"] = ele.EleName;
+        //                            //drImg["ELEID"] = ele.EleID;
+
+        //                            //eleDT.Columns.Add(new DataColumn("EleType", typeof(string)));
+        //                            //eleDT.Columns.Add(new DataColumn("EleID", typeof(string)));
+        //                            //eleDT.Columns.Add(new DataColumn("EleName", typeof(string)));
+
+        //                            MatrixTransform transform = ctl.TransformToVisual(this.workSpace) as MatrixTransform;
+        //                            double x = transform.Matrix.OffsetX;
+        //                            double y = transform.Matrix.OffsetY;
+
+        //                            if (x <= 0)
+        //                                x = 0;
+        //                            if (y == 0)
+        //                                y = 0;
+        //                            if (y.ToString() == "NaN")
+        //                            {
+        //                                x = Canvas.GetLeft(ctl);
+        //                                y = Canvas.GetTop(ctl);
+        //                            }
+
+        //                            drImg["X"] = x.ToString("0.00");
+        //                            drImg["Y"] = y.ToString("0.00");
+
+        //                            drImg["W"] = ele.Width.ToString("0.00");
+        //                            drImg["H"] = ele.Height.ToString("0.00");
+
+        //                            dtEle.Rows.Add(drImg);
+
+        //                        }
+        //                        continue;
+        //                        #endregion
+        //                    }
+        //                    else if (ctl is BPTextBox)
+        //                    {
+        //                        #region
+        //                        BPTextBox tb = ctl as BPTextBox;
+        //                        if (tb != null)
+        //                        {
+        //                            DataRow mapAttrDR = dtMapAttr.NewRow();
+        //                            mapAttrDR["MYPK"] = Glo.FK_MapData + "_" + tb.Name.Trim();
+        //                            mapAttrDR["FK_MAPDATA"] = Glo.FK_MapData;
+        //                            mapAttrDR["KEYOFEN"] = tb.Name.Trim();
+
+        //                            mapAttrDR["UICONTRALTYPE"] = CtrlType.TextBox;
+        //                            mapAttrDR["MYDATATYPE"] = tb.HisDataType;
+
+        //                            mapAttrDR["UIWIDTH"] = tb.Width.ToString("0.00");
+        //                            mapAttrDR["UIHEIGHT"] = tb.Height.ToString("0.00");
+        //                            mapAttrDR["LGTYPE"] = LGType.Normal;
+
+
+        //                            MatrixTransform transform = ctl.TransformToVisual(this.workSpace) as MatrixTransform;
+        //                            double x = transform.Matrix.OffsetX;
+        //                            double y = transform.Matrix.OffsetY;
+
+        //                            if (y.ToString() == "NaN")
+        //                            {
+        //                                x = Canvas.GetLeft(ctl);
+        //                                y = Canvas.GetTop(ctl);
+        //                            }
+
+        //                            mapAttrDR["X"] = x.ToString("0.00");
+        //                            mapAttrDR["Y"] = y.ToString("0.00");
+        //                            // mapAttrDR["UIVISIBLE"] = "1";
+        //                            dtMapAttr.Rows.Add(mapAttrDR);
+
+        //                        }
+        //                        continue;
+        //                        #endregion
+        //                    }
+        //                    else if (ctl is BPImg)
+        //                    {
+        //                        #region
+        //                        BPImg img = ctl as BPImg;
+        //                        if (img != null)
+        //                        {
+        //                            DataRow drImg = dtImg.NewRow();
+        //                            drImg["MYPK"] = img.Name;
+        //                            drImg["FK_MAPDATA"] = Glo.FK_MapData;
+
+        //                            MatrixTransform transform = ctl.TransformToVisual(this.workSpace) as MatrixTransform;
+        //                            double x = transform.Matrix.OffsetX;
+        //                            double y = transform.Matrix.OffsetY;
+
+        //                            if (x <= 0)
+        //                                x = 0;
+        //                            if (y == 0)
+        //                                y = 0;
+        //                            if (y.ToString() == "NaN")
+        //                            {
+        //                                x = Canvas.GetLeft(ctl);
+        //                                y = Canvas.GetTop(ctl);
+        //                            }
+
+        //                            drImg["X"] = x.ToString("0.00"); // Canvas.GetLeft(ctl).ToString("0.00");
+        //                            drImg["Y"] = y.ToString("0.00"); // Canvas.GetTop(ctl).ToString("0.00");
+
+        //                            drImg["W"] = img.Width.ToString("0.00");
+        //                            drImg["H"] = img.Height.ToString("0.00");
+
+        //                            BitmapImage png = img.HisPng;
+
+        //                            drImg["LINKURL"] = img.LinkURL;
+        //                            drImg["LINKTARGET"] = img.LinkTarget;
+        //                            drImg["SRCTYPE"] = img.SrcType.ToString();
+
+        //                            drImg["IMGPATH"] = png.UriSource.ToString().Contains("DataUser") ? png.UriSource.ToString().Replace(Glo.BPMHost, "") : png.UriSource.ToString();
+        //                            drImg["IMGURL"] = img.ImgURL;
+
+        //                            drImg["IMGAPPTYPE"] = "0";
+        //                            drImg["ISEDIT"] = "1";
+        //                            drImg["NAME"] = img.TB_CN_Name;
+        //                            drImg["ENPK"] = img.TB_En_Name;
+        //                            dtImg.Rows.Add(drImg);
+
+        //                        }
+        //                        #endregion
+        //                    }
+        //                    else if (ctl is BPImgAth)
+        //                    {
+        //                        #region
+        //                        BPImgAth imgAth = ctl as BPImgAth;
+        //                        if (imgAth != null)
+        //                        {
+        //                            DataRow mapAth = dtImgAth.NewRow();
+        //                            mapAth["MYPK"] = imgAth.Name;
+        //                            mapAth["CTRLID"] = imgAth.CtrlID; // Accessory ID.
+        //                            mapAth["FK_MAPDATA"] = Glo.FK_MapData;
+        //                            mapAth["ISEDIT"] = imgAth.IsEdit ? "1" : "0";
+        //                            MatrixTransform transform = imgAth.TransformToVisual(this.workSpace) as MatrixTransform;
+
+        //                            mapAth["X"] = transform.Matrix.OffsetX.ToString("0.00");
+        //                            mapAth["Y"] = transform.Matrix.OffsetY.ToString("0.00");
+
+        //                            mapAth["W"] = imgAth.Width.ToString("0.00");
+        //                            mapAth["H"] = imgAth.Height.ToString("0.00");
+        //                            dtImgAth.Rows.Add(mapAth);
+
+        //                        }
+        //                        #endregion
+        //                    }
+        //                    else if (ctl is BPImgSeal)
+        //                    {
+        //                        #region
+        //                        BPImgSeal imgSeal = ctl as BPImgSeal;
+        //                        if (imgSeal != null)
+        //                        {
+        //                            DataRow drImgSeal = dtImg.NewRow();
+        //                            drImgSeal["MYPK"] = imgSeal.Name;
+        //                            drImgSeal["FK_MAPDATA"] = Glo.FK_MapData;
+        //                            drImgSeal["IMGAPPTYPE"] = "1";
+        //                            MatrixTransform transform = ctl.TransformToVisual(this.workSpace)
+        //                                as MatrixTransform;
+        //                            double x = transform.Matrix.OffsetX;
+        //                            double y = transform.Matrix.OffsetY;
+
+        //                            if (x <= 0)
+        //                                x = 0;
+        //                            if (y == 0)
+        //                                y = 0;
+        //                            if (y.ToString() == "NaN")
+        //                            {
+        //                                x = Canvas.GetLeft(ctl);
+        //                                y = Canvas.GetTop(ctl);
+        //                            }
+
+        //                            drImgSeal["X"] = x.ToString("0.00");
+        //                            drImgSeal["Y"] = y.ToString("0.00");
+
+        //                            drImgSeal["W"] = imgSeal.Width.ToString("0.00");
+        //                            drImgSeal["H"] = imgSeal.Height.ToString("0.00");
+
+        //                            BitmapImage png = imgSeal.HisPng;
+        //                            drImgSeal["IMGURL"] = png.UriSource.ToString();
+        //                            drImgSeal["TAG0"] = imgSeal.Tag0;
+        //                            drImgSeal["NAME"] = imgSeal.TB_CN_Name;
+        //                            drImgSeal["ENPK"] = imgSeal.TB_En_Name;
+        //                            drImgSeal["ISEDIT"] = imgSeal.IsEdit ? "1" : "0";
+        //                            dtImg.Rows.Add(drImgSeal);
+
+        //                        }
+        //                        #endregion
+        //                    }
+        //                }
+        //                else if (ctl is LabelExt)
+        //                {
+        //                    if (ctl is BPLabel)
+        //                    {
+        //                        #region
+        //                        BPLabel lab = ctl as BPLabel;
+        //                        if (lab != null)
+        //                        {
+        //                            DataRow drLab = dtLabel.NewRow();
+        //                            drLab["MYPK"] = lab.Name;
+        //                            drLab["TEXT"] = lab.Content.ToString().Replace(" ", "&nbsp;").Replace("\n", "@");
+        //                            drLab["FK_MAPDATA"] = Glo.FK_MapData;
+
+        //                            drLab["X"] = dX.ToString("0.00");
+        //                            drLab["Y"] = dY.ToString("0.00");
+
+        //                            // drLab["FONTCOLOR"] = lab.GetValue( lapp ).ToString();
+        //#warning  How to get the font color  ? .
+
+        //                            SolidColorBrush d = (SolidColorBrush)lab.Foreground;
+        //                            drLab["FONTCOLOR"] = d.Color.ToString();
+        //                            // Glo.PreaseColorToName(d.Color.ToString());
+        //                            drLab["FONTNAME"] = lab.FontFamily.ToString();
+        //                            drLab["FONTSTYLE"] = lab.FontStyle.ToString();
+        //                            drLab["FONTSIZE"] = lab.FontSize.ToString();
+
+        //                            if (lab.FontWeight == FontWeights.Normal)
+        //                                drLab["ISBOLD"] = "0";
+        //                            else
+        //                                drLab["ISBOLD"] = "1";
+
+        //                            if (lab.FontStyle.ToString() == "Italic")
+        //                                drLab["ISITALIC"] = "1";
+        //                            else
+        //                                drLab["ISITALIC"] = "0";
+
+        //                            dtLabel.Rows.Add(drLab);
+
+        //                        }
+        //                        #endregion
+        //                    }
+        //                    else if (ctl is BPLink)
+        //                    {
+        //                        #region
+        //                        BPLink link = ctl as BPLink;
+        //                        if (link != null)
+        //                        {
+        //                            DataRow drLink = dtLikn.NewRow();
+        //                            drLink["MYPK"] = link.Name;
+
+        //                            drLink["TEXT"] = link.Content.ToString();
+        //                            drLink["FK_MAPDATA"] = Glo.FK_MapData;
+
+        //                            drLink["X"] = dX.ToString("0.00");
+        //                            drLink["Y"] = dY.ToString("0.00");
+
+        //                            SolidColorBrush d = (SolidColorBrush)link.Foreground;
+        //                            drLink["FONTCOLOR"] = Glo.PreaseColorToName(d.Color.ToString());
+        //                            drLink["FONTNAME"] = link.FontFamily.ToString();
+        //                            drLink["FONTSTYLE"] = link.FontStyle.ToString();
+        //                            drLink["FONTSIZE"] = link.FontSize.ToString();
+        //                            drLink["URL"] = link.URL;
+        //                            drLink["TARGET"] = link.WinTarget;
+
+        //                            if (link.FontWeight == FontWeights.Normal)
+        //                                drLink["ISBOLD"] = "0";
+        //                            else
+        //                                drLink["ISBOLD"] = "1";
+
+        //                            if (link.FontStyle.ToString() == "Italic")
+        //                                drLink["ISITALIC"] = "1";
+        //                            else
+        //                                drLink["ISITALIC"] = "0";
+
+        //                            dtLikn.Rows.Add(drLink);
+
+        //                        }
+        //                        #endregion
+        //                    }
+        //                }
+        //                else if (ctl is UCExt)
+        //                {
+        //                    if (ctl is BPAttachment)
+        //                    {
+        //                        #region
+        //                        BPAttachment athCtl = ctl as BPAttachment;
+        //                        if (athCtl != null)
+        //                        {
+
+        //                            DataRow mapAth = dtAth.NewRow();
+        //                            mapAth["MYPK"] = Glo.FK_MapData + "_" + athCtl.Name;
+        //                            mapAth["FK_MAPDATA"] = Glo.FK_MapData;
+        //                            mapAth["NOOFOBJ"] = athCtl.Name;
+        //                            mapAth["UPLOADTYPE"] = "0";
+
+        //                            MatrixTransform transform = athCtl.TransformToVisual(this.workSpace) as MatrixTransform;
+        //                            mapAth["X"] = transform.Matrix.OffsetX.ToString("0.00");
+        //                            mapAth["Y"] = transform.Matrix.OffsetY.ToString("0.00");
+        //                            mapAth["W"] = athCtl.HisTB.Width.ToString("0.00");
+        //                            dtAth.Rows.Add(mapAth);
+        //                        }
+        //                        #endregion
+        //                    }
+        //                    else if (ctl is BPAttachmentM)
+        //                    {
+        //                        #region
+        //                        BPAttachmentM athM = ctl as BPAttachmentM;
+        //                        if (athM != null)
+        //                        {
+        //                            DataRow mapAth = dtAth.NewRow();
+        //                            mapAth["MYPK"] = Glo.FK_MapData + "_" + athM.Name;
+        //                            mapAth["FK_MAPDATA"] = Glo.FK_MapData;
+        //                            mapAth["NOOFOBJ"] = athM.Name;
+        //                            mapAth["UPLOADTYPE"] = "1";
+
+        //                            MatrixTransform transform = athM.TransformToVisual(this.workSpace) as MatrixTransform;
+        //                            mapAth["X"] = transform.Matrix.OffsetX.ToString("0.00");
+        //                            mapAth["Y"] = transform.Matrix.OffsetY.ToString("0.00");
+
+        //                            mapAth["W"] = athM.Width.ToString("0.00");
+        //                            mapAth["H"] = athM.Height.ToString("0.00");
+        //                            dtAth.Rows.Add(mapAth);
+        //                        }
+        //                        #endregion
+        //                    }
+        //                    else if (ctl is BPDtl)
+        //                    {
+        //                        #region
+        //                        BPDtl dtlCtl = ctl as BPDtl;
+        //                        if (dtlCtl != null)
+        //                        {
+        //                            DataRow mapDtl = dtlDT.NewRow();
+        //                            mapDtl["NO"] = dtlCtl.Name;
+        //                            mapDtl["FK_MAPDATA"] = Glo.FK_MapData;
+
+        //                            MatrixTransform transform = dtlCtl.TransformToVisual(this.workSpace) as MatrixTransform;
+
+        //                            mapDtl["X"] = transform.Matrix.OffsetX.ToString("0.00");
+        //                            mapDtl["Y"] = transform.Matrix.OffsetY.ToString("0.00");
+        //                            mapDtl["W"] = dtlCtl.Width.ToString("0.00");
+        //                            mapDtl["H"] = dtlCtl.Height.ToString("0.00");
+        //                            dtlDT.Rows.Add(mapDtl);
+
+        //                        }
+        //                        #endregion
+        //                    }
+        //                    else if (ctl is BPWorkCheck)
+        //                    {
+        //                        #region   Audit Components 
+        //                        BPWorkCheck wkCheck = ctl as BPWorkCheck;
+        //                        if (wkCheck != null)
+        //                        {
+        //                            DataRow workCheckDt = dtWorkCheck.NewRow();
+        //                            workCheckDt["NODEID"] = Glo.FK_MapData.Replace("ND", "");
+
+        //                            MatrixTransform transform = wkCheck.TransformToVisual(this.workSpace) as MatrixTransform;
+
+        //                            workCheckDt["FWCSTA"] = wkCheck.FWC_Sta;
+        //                            workCheckDt["FWCTYPE"] = wkCheck.FWC_Type;
+
+        //                            workCheckDt["FWC_X"] = transform.Matrix.OffsetX.ToString("0.00");
+        //                            workCheckDt["FWC_Y"] = transform.Matrix.OffsetY.ToString("0.00");
+
+        //                            workCheckDt["FWC_W"] = wkCheck.Width.ToString("0.00");
+        //                            workCheckDt["FWC_H"] = wkCheck.Height.ToString("0.00");
+        //                            dtWorkCheck.Rows.Add(workCheckDt);
+
+        //                        }
+        //                        #endregion
+        //                    }
+        //                    else if (ctl is BPM2M)
+        //                    {
+        //                        #region
+        //                        BPM2M m2mCtl = ctl as BPM2M;
+        //                        if (m2mCtl != null)
+        //                        {
+        //                            DataRow rowM2M = dtM2M.NewRow();
+        //                            rowM2M["NOOFOBJ"] = m2mCtl.Name;
+        //                            rowM2M["FK_MAPDATA"] = Glo.FK_MapData;
+        //                            rowM2M["MYPK"] = Glo.FK_MapData + "_" + m2mCtl.Name;
+
+        //                            MatrixTransform transform = m2mCtl.TransformToVisual(this.workSpace) as MatrixTransform;
+
+        //                            rowM2M["X"] = transform.Matrix.OffsetX.ToString("0.00");
+        //                            rowM2M["Y"] = transform.Matrix.OffsetY.ToString("0.00");
+
+        //                            rowM2M["W"] = m2mCtl.Width.ToString("0.00");
+        //                            rowM2M["H"] = m2mCtl.Height.ToString("0.00");
+
+        //                            dtM2M.Rows.Add(rowM2M);
+        //                        }
+        //                        #endregion
+        //                    }
+        //                }
+        //                else if (ctl is BPDatePicker)
+        //                {
+        //                    #region
+        //                    BPDatePicker dp = ctl as BPDatePicker;
+        //                    if (dp != null)
+        //                    {
+        //                        DataRow mapAttrDR = dtMapAttr.NewRow();
+        //                        mapAttrDR["MYPK"] = Glo.FK_MapData + "_" + dp.Name;
+        //                        mapAttrDR["FK_MAPDATA"] = Glo.FK_MapData;
+        //                        mapAttrDR["KEYOFEN"] = dp.Name;
+
+        //                        mapAttrDR["UICONTRALTYPE"] = CtrlType.TextBox;
+        //                        mapAttrDR["MYDATATYPE"] = dp.HisDateType;
+        //                        mapAttrDR["LGTYPE"] = LGType.Normal;
+
+        //                        mapAttrDR["X"] = dX.ToString("0.00");
+        //                        mapAttrDR["Y"] = dY.ToString("0.00");
+
+        //                        // mapAttrDR["UIVISIBLE"] = "1";
+        //                        mapAttrDR["UIWIDTH"] = "50";
+        //                        mapAttrDR["UIHEIGHT"] = "23";
+
+        //                        dtMapAttr.Rows.Add(mapAttrDR);
+
+        //                    }
+        //                    continue;
+        //                    #endregion
+        //                }
+        //                else if (ctl is BPBtn)
+        //                {
+        //                    #region
+        //                    BPBtn btn = ctl as BPBtn;
+        //                    if (btn != null)
+        //                    {
+        //                        DataRow drBtn = dtBtn.NewRow();
+        //                        drBtn["MYPK"] = btn.Name;
+        //                        drBtn["TEXT"] = btn.Content.ToString().Replace(" ", "&nbsp;").Replace("\n", "@");
+        //                        drBtn["FK_MAPDATA"] = Glo.FK_MapData;
+
+        //                        drBtn["X"] = dX.ToString("0.00");
+        //                        drBtn["Y"] = dY.ToString("0.00");
+
+        //                        dtBtn.Rows.Add(drBtn);
+        //                    }
+        //                    #endregion
+        //                }
+
+        //                else if (ctl is BPDDL)
+        //                {
+        //                    #region
+        //                    BPDDL ddl = ctl as BPDDL;
+        //                    if (ddl != null)
+        //                    {
+
+        //                        DataRow mapAttrDR = dtMapAttr.NewRow();
+        //                        mapAttrDR["MYPK"] = Glo.FK_MapData + "_" + ddl.Name;
+        //                        mapAttrDR["FK_MAPDATA"] = Glo.FK_MapData;
+        //                        mapAttrDR["KEYOFEN"] = ddl.Name;
+
+        //                        mapAttrDR["UICONTRALTYPE"] = CtrlType.DDL;
+        //                        mapAttrDR["MYDATATYPE"] = ddl.HisDataType;
+        //                        mapAttrDR["LGTYPE"] = ddl._HisDataType;
+
+        //                        mapAttrDR["UIWIDTH"] = ddl.Width.ToString("0.00");
+        //                        mapAttrDR["UIHEIGHT"] = "23";
+
+        //                        mapAttrDR["X"] = dX.ToString("0.00");
+        //                        mapAttrDR["Y"] = dY.ToString("0.00");
+
+        //                        mapAttrDR["UIBINDKEY"] = ddl.UIBindKey;
+        //                        mapAttrDR["UIREFKEY"] = "No";
+        //                        mapAttrDR["UIREFKEYTEXT"] = "Name";
+        //                        //     mapAttrDR["UIVISIBLE"] = "1";
+        //                        dtMapAttr.Rows.Add(mapAttrDR);
+
+        //                    }
+        //                    #endregion
+        //                }
+        //                else if (ctl is BPCheckBox)
+        //                {
+        //                    #region
+        //                    BPCheckBox cb = ctl as BPCheckBox;
+        //                    if (cb != null)
+        //                    {
+
+        //                        DataRow mapAttrDR = dtMapAttr.NewRow();
+        //                        mapAttrDR["MYPK"] = Glo.FK_MapData + "_" + cb.Name;
+        //                        mapAttrDR["FK_MAPDATA"] = Glo.FK_MapData;
+        //                        mapAttrDR["KEYOFEN"] = cb.Name;
+        //                        mapAttrDR["UICONTRALTYPE"] = CtrlType.CheckBox;
+        //                        mapAttrDR["MYDATATYPE"] = DataType.AppBoolean;
+        //                        mapAttrDR["LGTYPE"] = LGType.Normal;
+        //                        mapAttrDR["X"] = dX.ToString("0.00");
+        //                        mapAttrDR["Y"] = dY.ToString("0.00");
+        //                        mapAttrDR["UIWIDTH"] = "100";
+        //                        mapAttrDR["UIHEIGHT"] = "23";
+
+
+        //                        dtMapAttr.Rows.Add(mapAttrDR);
+
+        //                    }
+        //                    #endregion
+        //                }
+        //                else if (ctl is BPRadioBtn)
+        //                {
+        //                    #region
+        //                    BPRadioBtn rb = ctl as BPRadioBtn;
+        //                    if (rb != null)
+        //                    {
+        //                        DataRow mapAttrRB = dtRDB.NewRow();
+        //                        mapAttrRB["MYPK"] = rb.Name;
+        //                        mapAttrRB["FK_MAPDATA"] = Glo.FK_MapData;
+        //                        mapAttrRB["KEYOFEN"] = rb.GroupName;
+        //                        mapAttrRB["INTKEY"] = rb.Tag as string;
+        //                        mapAttrRB["LAB"] = rb.Content as string;
+        //                        mapAttrRB["ENUMKEY"] = rb.UIBindKey;
+        //                        mapAttrRB["X"] = dX.ToString("0.00");
+        //                        mapAttrRB["Y"] = dY.ToString("0.00");
+        //                        dtRDB.Rows.Add(mapAttrRB);
+
+        //                    }
+        //                    #endregion
+        //                }
+        //            }
+        //            #endregion
+
+        //            #region  Deal with  RB  Enum value 
+        //            string keys = "";
+        //            foreach (DataRow dr in dtRDB.Rows)
+        //            {
+        //                string keyOfEn = dr["KEYOFEN"];
+        //                if (keys.Contains("@" + keyOfEn + "@"))
+        //                {
+        //                    continue;
+        //                }
+        //                else
+        //                {
+        //                    keys += "@" + keyOfEn + "@";
+        //                }
+
+        //                string enumKey = dr["ENUMKEY"];
+        //                DataRow mapAttrDR = dtMapAttr.NewRow();
+        //                mapAttrDR["MYPK"] = Glo.FK_MapData + "_" + keyOfEn;
+        //                mapAttrDR["FK_MAPDATA"] = Glo.FK_MapData;
+        //                mapAttrDR["KEYOFEN"] = keyOfEn;
+
+        //                mapAttrDR["UICONTRALTYPE"] = CtrlType.RB;
+        //                mapAttrDR["MYDATATYPE"] = DataType.AppInt;
+        //                mapAttrDR["LGTYPE"] = LGType.Enum;
+        //                mapAttrDR["INTKEY"] = dr["INTKEY"];
+
+        //                mapAttrDR["X"] = "0";
+        //                mapAttrDR["Y"] = "0";
+
+        //                mapAttrDR["UIBINDKEY"] = enumKey;
+        //                mapAttrDR["UIREFKEY"] = "No";
+        //                mapAttrDR["UIREFKEYTEXT"] = "Name";
+        //                //      mapAttrDR["UIVISIBLE"] = "1";
+        //                mapAttrDR["UIWIDTH"] = "30";
+        //                mapAttrDR["UIHEIGHT"] = "23";
+        //                dtMapAttr.Rows.Add(mapAttrDR);
+        //            }
+        //            #endregion  Deal with  RB  Enum value 
+
+        //            #region deleted.
+        //            string sqls = "";
+        //            foreach (DataTable ysdt in this.dsOldest.Tables)
+        //            {
+
+        //                DataTable newDt = dsLatest.Tables[ysdt.TableName];
+        //                if (newDt == null)
+        //                    continue;
+
+        //                string pk = "";
+        //                #region 求pK
+        //                foreach (DataColumn dc in ysdt.Columns)
+        //                {
+        //                    switch (dc.ColumnName.ToLower())
+        //                    {
+        //                        case "mypk":
+        //                            pk = "MyPK";
+        //                            break;
+        //                        case "no":
+        //                            pk = "No";
+        //                            break;
+        //                        case "oid":
+        //                            pk = "OID";
+        //                            break;
+        //                        case "nodeid":
+        //                            pk = "NodeID";
+        //                            break;
+        //                        default:
+        //                            break;
+        //                    }
+        //                }
+        //                #endregion 求pK
+
+        //                foreach (DataRow dr in ysdt.Rows)
+        //                {
+        //                    string pkVal = dr[pk].ToString();
+        //                    bool isHave = false;
+
+
+        //                    #region WF_Node, Does not contain FK_MapData Temporarily placed in front .
+        //                    if (ysdt.TableName == "WF_Node")
+        //                    {
+        //                        if (dr["NODEID"] != Glo.FK_MapData.Replace("ND", ""))
+        //                            continue;
+        //                        /*  If the judge is to examine the components of  .. */
+        //                        foreach (DataRow newDr in newDt.Rows)
+        //                        {
+        //                            if (newDr[pk].ToString() == pkVal)
+        //                            {
+        //                                isHave = true;
+        //                                break;
+        //                            }
+        //                        }
+        //                        if (isHave == false)
+        //                        {
+        //                            sqls += "@UPDATE WF_Node SET FWCSta=0 WHERE " + pk + "='" + pkVal + "'";
+        //                        }
+        //                        break;
+        //                    }
+        //                    #endregion
+
+
+        //                    if (ysdt.TableName == "Sys_MapData")
+        //                    {
+        //                        #region Sys_MapData
+        //                        if (isDesignerSizeChanged)
+        //                        {
+
+        //                            double
+        //                                heigh = double.NaN,
+        //                                wid = double.NaN;
+        //                            string no;
+
+        //                            object tmp = newDt.Rows[0]["NO"];
+        //                            no = tmp == null ? null : tmp.ToString();
+
+        //                            tmp = newDt.Rows[0]["FRMW"];
+        //                            if (null != tmp)
+        //                                double.TryParse(tmp.ToString(), out wid);
+
+
+        //                            tmp = newDt.Rows[0]["FRMH"];
+        //                            if (null != tmp)
+        //                                double.TryParse(tmp.ToString(), out heigh);
+        //                            if (!string.IsNullOrEmpty(no) && heigh != double.NaN && wid != double.NaN)
+        //                                sqls += "@UPDATE Sys_MapData SET FrmW=" + wid + ", FrmH=" + heigh + " WHERE No='" + no + "'";
+
+        //                            //wid = Glo.HisMapData.FrmW;
+        //                            //heigh = Glo.HisMapData.FrmH;
+        //                            //no = Glo.FK_MapData;
+
+        //                            //if (!string.IsNullOrEmpty(no) && heigh != double.NaN && wid != double.NaN)
+        //                            //    sqls += "@UPDATE Sys_MapData SET FrmW=" + wid + ", FrmH=" + heigh + " WHERE No='" + no + "'";
+        //                        }
+        //                        #endregion
+        //                        continue;
+        //                    }
+
+        //                    try
+        //                    {
+        //                        string id = dr["NODEID"] as string;
+        //                        continue;
+        //                    }
+        //                    catch (Exception) { }
+
+
+        //                    if ((dr["FK_MAPDATA"] as string) != Glo.FK_MapData)
+        //                        continue;
+
+
+        //                    if (ysdt.TableName == "Sys_MapAttr")
+        //                    {
+        //                        /*  If the field control  .. */
+        //                        isHave = false;
+        //                        foreach (DataRow newDr in newDt.Rows)
+        //                        {
+        //                            if (dr["FK_MAPDATA"] != Glo.FK_MapData || dr["UIVISIBLE"] == "0")
+        //                            {
+        //                                isHave = true;
+        //                                break;
+        //                            }
+        //                            if (newDr[pk].ToString() == pkVal)
+        //                            {
+        //                                isHave = true;
+        //                                break;
+        //                            }
+        //                        }
+
+        //                        if (isHave == false)
+        //                        {
+        //                            if (dr["UIVISIBLE"] == "0" || dr["EDITTYPE"] != "0")
+        //                                isHave = true;
+        //                        }
+        //                    }
+        //                    else
+        //                    {
+        //                        foreach (DataRow newDr in newDt.Rows)
+        //                        {
+        //                            if (newDr[pk].ToString() == pkVal)
+        //                            {
+        //                                isHave = true;
+        //                                break;
+        //                            }
+        //                        }
+        //                    }
+        //                    if (isHave == false)
+        //                        sqls += "@DELETE FROM " + ysdt.TableName + " WHERE " + pk + "='" + pkVal + "'";
+        //                }
+        //            }
+        //            #endregion
+
+        //            #region update.
+        //            string len = Glo.LEN_Function;
+        //            foreach (UIElement ctl in this.workSpace.Children)
+        //            {
+        //                if (!(ctl is IElement)) continue;
+
+        //                if (ctl is BPCheckBox)
+        //                {
+        //                    BPCheckBox cb = ctl as BPCheckBox;
+        //                    if (null == cb || string.IsNullOrEmpty(cb.KeyName)) continue;
+
+        //                    Label mylab = cb.Content as Label;
+        //                    sqls += "@UPDATE Sys_MapAttr SET Name='" + mylab.Content + "'  WHERE MyPK='" + Glo.FK_MapData + "_" + cb.Name + "' AND " + len + "(Name)=0";
+        //                    continue;
+
+        //                }
+        //                else if (ctl is BPTextBox)
+        //                {
+        //                    BPTextBox tb = ctl as BPTextBox;
+        //                    if (tb == null || string.IsNullOrEmpty(tb.KeyName))
+        //                        continue;
+
+        //                    sqls += "@UPDATE Sys_MapAttr SET Name='" + tb.KeyName + "' WHERE MyPK='" + Glo.FK_MapData + "_" + tb.Name + "' AND ( " + len + "(Name)=0 OR KeyOfEn=Name )";
+        //                    continue;
+
+        //                }
+        //                else if (ctl is BPDDL)
+        //                {
+        //                    BPDDL ddl = ctl as BPDDL;
+
+        //                    if (ddl == null || string.IsNullOrEmpty(ddl.KeyName))
+        //                        continue;
+
+        //                    sqls += "@UPDATE Sys_MapAttr SET Name='" + ddl.KeyName + "' WHERE MyPK='" + Glo.FK_MapData + "_" + ddl.Name + "' AND " + len + "(Name)=0";
+        //                    continue;
+
+        //                }
+        //                else if (ctl is BPRadioBtn)
+        //                {
+        //                    BPRadioBtn rb = ctl as BPRadioBtn;
+        //                    if (rb == null || string.IsNullOrEmpty(rb.KeyName) || sqls.Contains("_" + rb.GroupName))
+        //                        continue;
+
+        //                    sqls += "@UPDATE Sys_MapAttr SET Name='" + rb.KeyName + "' WHERE MyPK='" + Glo.FK_MapData + "_" + rb.GroupName + "' AND " + len + "(Name)=0";
+        //                    continue;
+
+        //                }
+        //                else if (ctl is BPLine)
+        //                {
+        //                    BPLine line = ctl as BPLine;
+        //                    if (line == null || string.IsNullOrEmpty(line.Name))
+        //                        continue;
+
+        //                    #region line.
+
+
+        //                    double
+        //                        BorderWidth = double.NaN,
+
+        //                        x1 = double.NaN,
+        //                        x2 = double.NaN,
+        //                        y1 = double.NaN,
+        //                        y2 = double.NaN;
+
+
+        //                    string MyPK = line.Name;
+        //                    string BorderColor = line.MyLine.StrokeThickness.ToString();
+        //                    string FK_MapData = Glo.FK_MapData;
+        //                    string tmp = Glo.PreaseColorToName(((SolidColorBrush)line.MyLine.Stroke).Color.ToString());
+        //                    if (null != tmp)
+        //                        double.TryParse(tmp.ToString(), out BorderWidth);
+
+
+        //                    tmp = line.MyLine.X1.ToString("0.00");
+        //                    if (null != tmp)
+        //                        double.TryParse(tmp.ToString(), out x1);
+
+        //                    tmp = line.MyLine.X2.ToString("0.00");
+        //                    if (null != tmp)
+        //                        double.TryParse(tmp.ToString(), out x2);
+
+        //                    tmp = line.MyLine.Y1.ToString("0.00");
+        //                    if (null != tmp)
+        //                        double.TryParse(tmp.ToString(), out y1);
+        //                    tmp = line.MyLine.Y2.ToString("0.00");
+        //                    if (null != tmp)
+        //                        double.TryParse(tmp.ToString(), out y2);
+
+        //                    string sqlTmp = "@UPDATE Sys_FrmLine SET  X1={1},Y1={2},X2={3},Y2={4} WHERE MyPK='{0}'";
+        //                    if (!string.IsNullOrEmpty(MyPK) && x1 != double.NaN && y1 != double.NaN && x2 != double.NaN && y2 != double.NaN)
+        //                        sqls += string.Format(sqlTmp, MyPK, x1, y1, x2, y2);
+
+
+        //                    continue;
+        //                    #endregion
+        //                }
+        //            }
+        //            #endregion
+
+        //            string xml = dsLatest.ToXml(true, false);
+        //            FF.CCFormSoapClient da = Glo.GetCCFormSoapClientServiceInstance();
+        //            da.SaveFrmAsync(Glo.FK_MapData, xml, sqls, null);
+        //            da.SaveFrmCompleted += ((object senders, FF.SaveFrmCompletedEventArgs ee) =>
+        //            {
+        //                isDesignerSizeChanged = false;
+        //                loadingWindow.DialogResult = true;
+        //                #region
+        //                if (ee.Error != null)
+        //                {
+        //                    BP.SL.LoggerHelper.Write(ee.Error);
+        //                    MessageBox.Show(ee.Result, " Save error ", MessageBoxButton.OK);
+        //                    return;
+        //                }
+
+        //                if (Keyboard.Modifiers == ModifierKeys.Windows)
+        //                {
+        //                    string url1 = null;
+        //                    if (Glo.IsDtlFrm == false)
+        //                        url1 = Glo.BPMHost + "/WF/CCForm/Frm.aspx?FK_MapData=" + Glo.FK_MapData + "&IsTest=1&WorkID=0&FK_Node=" + Glo.FK_Node + "&sd=s" + Glo.TimeKey;
+        //                    else
+        //                        url1 = Glo.BPMHost + "/WF/CCForm/FrmCard.aspx?EnsName=" + Glo.FK_MapData + "&RefPKVal=0&OID=0" + Glo.TimeKey;
+
+        //                    Glo.WinOpen(url1, (int)Glo.HisMapData.FrmH, (int)Glo.HisMapData.FrmW);
+        //                }
+        //                else
+        //                {
+        //                    //  MessageBox.Show("ccform  Saved successfully .", " Saving tips ", MessageBoxButton.OK);
+        //                }
+
+
+        //                #endregion
+        //            });
+        //        }
         #endregion
 
         #region UnUsed
@@ -6740,6 +6742,6 @@ namespace CCForm
         //    }
         //}
 
-        #endregion 
+        #endregion
     }
 }

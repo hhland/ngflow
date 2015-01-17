@@ -138,7 +138,7 @@ namespace CCFlow.WF.MapDef
                 cb.Attributes["onclick"] = "CheckAll(this.checked)";
 
                 Pub1.AddTDGroupTitle("style='width:40px;text-align:center'", cb);
-                Pub1.AddTDGroupTitle("style='width:50px;text-align:center'", "序");
+                Pub1.AddTDGroupTitle("style='width:50px;text-align:center'", "No.");
                 Pub1.AddTDGroupTitle(" Field name ");
                 Pub1.AddTDGroupTitle(" Chinese description ");
                 Pub1.AddTDGroupTitle("style='width:80px;text-align:center'", " Type ");
@@ -191,10 +191,10 @@ namespace CCFlow.WF.MapDef
 
                 Pub1.AddTable("id='maintable' class='Table' cellSpacing='0' cellPadding='0' border='0' style='width:100%'");
                 Pub1.AddTR();
-                Pub1.AddTDGroupTitle("colspan='7'", "第3步: Importing ");
+                Pub1.AddTDGroupTitle("colspan='7'", "Step 3: Importing ");
                 Pub1.AddTREnd();
 
-                Pub1.AddTDGroupTitle("style='width:50px;text-align:center'", "序");
+                Pub1.AddTDGroupTitle("style='width:50px;text-align:center'", "No.");
                 Pub1.AddTDGroupTitle(" Field name ");
                 Pub1.AddTDGroupTitle(" Chinese description ");
                 Pub1.AddTDGroupTitle("style='width:80px;text-align:center'", " Type ");

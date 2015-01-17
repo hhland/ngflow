@@ -71,7 +71,7 @@ namespace CCFlow.WF.SDKComponents
 
             this.AddTable();
             this.AddTR();
-            this.AddTDTitle("序");
+            this.AddTDTitle("No.");
             this.AddTDTitle(" Title ");
             this.AddTDTitle(" Stay node ");
             this.AddTDTitle(" Status ");

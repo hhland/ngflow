@@ -11,6 +11,8 @@ using BP.WF;
 using BP.Sys;
 using BP.Port;
 using BP;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace CCFlow.AppDemoLigerUI
 {
@@ -94,7 +96,7 @@ namespace CCFlow.AppDemoLigerUI
                     WebUser.Exit();
 
                 BP.Port.Emp em = new BP.Port.Emp(user);
-                if (em.CheckPass(pass))
+                if (em.CheckPass(Encrypt(pass)))
                 {
                     bool bl = this.IsRemember.Checked;
 
@@ -127,5 +129,26 @@ namespace CCFlow.AppDemoLigerUI
                 this.Page.ClientScript.RegisterStartupScript(this.GetType(), "kesy", "<script language=JavaScript>alert('@ Username Password error !@ Check if pressed CapsLock.@ More information :" + ex.Message + "');</script>");
             }
         }
+
+
+        public string Encrypt(string Text)
+        {
+            string sKey = "zhangweilong";
+            DESCryptoServiceProvider des = new DESCryptoServiceProvider();
+            byte[] inputByteArray;
+            inputByteArray = Encoding.Default.GetBytes(Text);
+            des.Key = ASCIIEncoding.ASCII.GetBytes(System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(sKey, "md5").Substring(0, 8));
+            des.IV = ASCIIEncoding.ASCII.GetBytes(System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(sKey, "md5").Substring(0, 8));
+            System.IO.MemoryStream ms = new System.IO.MemoryStream();
+            CryptoStream cs = new CryptoStream(ms, des.CreateEncryptor(), CryptoStreamMode.Write);
+            cs.Write(inputByteArray, 0, inputByteArray.Length);
+            cs.FlushFinalBlock();
+            StringBuilder ret = new StringBuilder();
+            foreach (byte b in ms.ToArray())
+            {
+                ret.AppendFormat("{0:X2}", b);
+            }
+            return ret.ToString();
+        } 
     }
 }

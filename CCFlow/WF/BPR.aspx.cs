@@ -128,12 +128,12 @@ namespace CCFlow.WF
             this.Pub1.AddTDTitle(" Step ");
             this.Pub1.AddTDTitle(" Node ");
             this.Pub1.AddTDTitle(" Hours of Work ");
-            this.Pub1.AddTDTitle(" The average time (天)");
+            this.Pub1.AddTDTitle(" The average time (days)");
             this.Pub1.AddTDTitle(" Number of staff ");
 
 
             this.Pub1.AddTDTitle(" Warning period (0 Without warning )");
-            this.Pub1.AddTDTitle(" Deadline (天)");
+            this.Pub1.AddTDTitle(" Deadline (days)");
 
 
             this.Pub1.AddTDTitle(" Overdue trips ");
@@ -194,7 +194,7 @@ namespace CCFlow.WF
             this.Pub1.AddTDTitle(" Step ");
             this.Pub1.AddTDTitle(" Node ");
             this.Pub1.AddTDTitle(" Hours of Work ");
-            this.Pub1.AddTDTitle(" The average time (天)");
+            this.Pub1.AddTDTitle(" The average time (days)");
             this.Pub1.AddTDTitle(" Number of staff ");
             this.Pub1.AddTDTitle(" Post ");
             this.Pub1.AddTREnd();

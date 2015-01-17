@@ -53,12 +53,20 @@
             if (xamlObject != null)
             { }
         }
+
+        var h = window.screen.height;
     </script>
 </head>
 <body>
     <div id="silverlightControlHost" style="height: 100%; width: 100%; text-align: center;">
-        <object data="data:application/x-silverlight-2," type="application/x-silverlight-2"
-            width="100%" height="450">
+<!--
+    <object data="data:application/x-silverlight-2," type="application/x-silverlight-2"
+            width="100%" height="800px">
+        -->
+        <script type="text/javascript">
+            //动态计算sl的高度
+            document.write("<object data='data:application/x-silverlight-2,' type='application/x-silverlight-2' width='100%' height='"+h+"' >");
+        </script> 
             <param name="source" value="../../../ClientBin/CCFlowDesigner.xap" />
             <param name="onLoad" value="appLoad" />
             <param name="onerror" value="onSilverlightError" />
@@ -68,7 +76,7 @@
             <param name="autoUpgrade" value="true" />
             <a href="http://go.microsoft.com/fwlink/?LinkID=124807" style="text-decoration: none;">
                 <img src="http://go.microsoft.com/fwlink/?LinkId=108181" alt="Get Microsoft Silverlight"
-                    style="border-style: none" />
+                     style="border-style: none" />
             </a>
         </object>
     </div>

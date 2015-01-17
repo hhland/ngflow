@@ -254,7 +254,7 @@ namespace CCFlow.WF.Rpt
 
             #region   Generate a table title 
             this.UCSys1.AddTR();
-            this.UCSys1.AddTDGroupTitle("style='text-align:center'","序");
+            this.UCSys1.AddTDGroupTitle("style='text-align:center'","No.");
             this.UCSys1.AddTDGroupTitle(" Title ");
 
             foreach (Attr attr in attrs)

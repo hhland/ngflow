@@ -274,7 +274,7 @@ public partial class CCFlow_Comm_Sys_EnumList : BP.Web.WebPageAdmin
         this.UCSys1.AddTable();
         this.UCSys1.AddCaptionLeftTX("<img src='./../../Img/Btn/Home.gif' border=0/> List  - <a href='EnumList.aspx?DoType=New' ><img border=0 src='./../../Img/Btn/New.gif' > New </a>");
         this.UCSys1.AddTR();
-        this.UCSys1.AddTDTitle("序");
+        this.UCSys1.AddTDTitle("No.");
         this.UCSys1.AddTDTitle(" Serial number ");
         this.UCSys1.AddTDTitle(" Name ");
         this.UCSys1.AddTDTitle(" Information ");

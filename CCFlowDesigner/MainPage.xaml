@@ -42,7 +42,7 @@
             <sdk:TabControl  Name="tbcLeft" Width="280" >
                 
                 <sdk:TabItem 
-                    Header=" Process tree " 
+                    Header="Workflow" 
                     Name="tbiFlowLibrary" 
                     Background="white" 
                     BorderThickness="0">
@@ -81,7 +81,7 @@
                 </sdk:TabItem>
 
                 <sdk:TabItem 
-                    Header=" Form Library " 
+                    Header="Form" 
                     Name="tbiFormLibrary" 
                     Background="white" 
                     BorderThickness="0">
@@ -137,7 +137,7 @@
 
 
                 <sdk:TabItem  
-                    Header=" Organizational Structure " 
+                    Header="Organization" 
                     Name="tbiOrg" 
                     Background="white" 
                     BorderThickness="0">
@@ -179,7 +179,7 @@
                 </sdk:TabItem>
                 
                 <sdk:TabItem 
-                    Header=" System Maintenance " 
+                    Header="System" 
                     Name="tbiSysManger" 
                     Background="white"   >
                     <liquidTreeView:Tree 

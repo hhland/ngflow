@@ -13,7 +13,7 @@
     <RootNamespace>CCFlow</RootNamespace>
     <AssemblyName>CCFlow</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <SilverlightApplicationList>{83D53118-9A8D-4970-9A88-A2909B13FF64}|..\CCFormDesigner\CCFormDesigner.csproj|ClientBin|False,{F55B885C-F362-4F08-BCAA-9CDEFE4A42AC}|..\CCFlowDesigner\CCFlowDesigner.csproj|ClientBin|False</SilverlightApplicationList>
+    <SilverlightApplicationList>{F55B885C-F362-4F08-BCAA-9CDEFE4A42AC}|..\CCFlowDesigner\CCFlowDesigner.csproj|ClientBin|False,{83D53118-9A8D-4970-9A88-A2909B13FF64}|..\CCFormDesigner\CCFormDesigner.csproj|ClientBin|False</SilverlightApplicationList>
     <UseIISExpress>false</UseIISExpress>
     <SccProjectName>SAK</SccProjectName>
     <SccLocalPath>SAK</SccLocalPath>
@@ -570,9 +570,63 @@
     <Content Include="AppDemoLigerUI\StartTree.aspx" />
     <Content Include="AppDemoLigerUI\UC\pub.ascx" />
     <Content Include="AppDemoLigerUI\Welcome.aspx" />
+    <Content Include="CCFlowDesignerTestPage.aspx" />
+    <Content Include="CCFlowDesignerTestPage.html" />
+    <Content Include="CCFormDesignerTestPage.aspx" />
+    <Content Include="CCFormDesignerTestPage.html" />
     <Content Include="clientaccesspolicy.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="ClientBin\CCFlowDesigner.xap" />
+    <Content Include="ClientBin\CCFormDesigner.xap" />
+    <Content Include="ClientBin\NodeIcon\CEO.png" />
+    <Content Include="ClientBin\NodeIcon\CFO.png" />
+    <Content Include="ClientBin\NodeIcon\CIO.png" />
+    <Content Include="ClientBin\NodeIcon\COO.png" />
+    <Content Include="ClientBin\NodeIcon\Default.jpg" />
+    <Content Include="ClientBin\NodeIcon\产品.png" />
+    <Content Include="ClientBin\NodeIcon\人-半身.png" />
+    <Content Include="ClientBin\NodeIcon\人.png" />
+    <Content Include="ClientBin\NodeIcon\人力资源.png" />
+    <Content Include="ClientBin\NodeIcon\仓库.png" />
+    <Content Include="ClientBin\NodeIcon\会计合算.png" />
+    <Content Include="ClientBin\NodeIcon\供应商.png" />
+    <Content Include="ClientBin\NodeIcon\供应商1.png" />
+    <Content Include="ClientBin\NodeIcon\保安.png" />
+    <Content Include="ClientBin\NodeIcon\信息服务.png" />
+    <Content Include="ClientBin\NodeIcon\出纳.png" />
+    <Content Include="ClientBin\NodeIcon\制造.png" />
+    <Content Include="ClientBin\NodeIcon\前台.png" />
+    <Content Include="ClientBin\NodeIcon\包装.png" />
+    <Content Include="ClientBin\NodeIcon\印刷品.png" />
+    <Content Include="ClientBin\NodeIcon\发货.png" />
+    <Content Include="ClientBin\NodeIcon\多人处理.png" />
+    <Content Include="ClientBin\NodeIcon\多人审核.png" />
+    <Content Include="ClientBin\NodeIcon\子公司.png" />
+    <Content Include="ClientBin\NodeIcon\实施.png" />
+    <Content Include="ClientBin\NodeIcon\审核.png" />
+    <Content Include="ClientBin\NodeIcon\客户服务.png" />
+    <Content Include="ClientBin\NodeIcon\工程.png" />
+    <Content Include="ClientBin\NodeIcon\归档.png" />
+    <Content Include="ClientBin\NodeIcon\打印.png" />
+    <Content Include="ClientBin\NodeIcon\接货.png" />
+    <Content Include="ClientBin\NodeIcon\操作.png" />
+    <Content Include="ClientBin\NodeIcon\文档.png" />
+    <Content Include="ClientBin\NodeIcon\文档集.png" />
+    <Content Include="ClientBin\NodeIcon\法律部门.png" />
+    <Content Include="ClientBin\NodeIcon\演示文稿.png" />
+    <Content Include="ClientBin\NodeIcon\申请.png" />
+    <Content Include="ClientBin\NodeIcon\电子表格.png" />
+    <Content Include="ClientBin\NodeIcon\研发.png" />
+    <Content Include="ClientBin\NodeIcon\网页.png" />
+    <Content Include="ClientBin\NodeIcon\设计.png" />
+    <Content Include="ClientBin\NodeIcon\财务.png" />
+    <Content Include="ClientBin\NodeIcon\质保.png" />
+    <Content Include="ClientBin\NodeIcon\车队.png" />
+    <Content Include="ClientBin\NodeIcon\邮件服务.png" />
+    <Content Include="ClientBin\NodeIcon\采购.png" />
+    <Content Include="ClientBin\NodeIcon\销售.png" />
+    <Content Include="ClientBin\NodeIcon\顾客.png" />
     <Content Include="crossdomain.xml">
       <SubType>Designer</SubType>
     </Content>
@@ -598,9 +652,11 @@
     <Content Include="DataUser\ICON\SQ\LogBig.png" />
     <Content Include="DataUser\ICON\SQ\LogBiger.png" />
     <Content Include="DataUser\ImgAth\Def.jpg" />
+    <Content Include="DataUser\JSLibData\MT3_Self.js" />
     <Content Include="DataUser\JSLibData\ND10001.js" />
     <Content Include="DataUser\JSLibData\ND101_Self.js" />
     <Content Include="DataUser\JSLibData\Demo_JS_Self.js" />
+    <Content Include="DataUser\JSLibData\ND1101_Self.js" />
     <Content Include="DataUser\JSLibData\ND12401_Self.js" />
     <Content Include="DataUser\JSLib\onblur\01.校验手机号码：必须以数字开头，除数字外，可含有“-” .js" />
     <Content Include="DataUser\JSLib\onblur\02.校验用户姓名：只能输入1-30个以字母开头的字串.js" />
@@ -7048,6 +7104,9 @@
   <ItemGroup>
     <None Include="AppDemoLigerUI\jquery\lib\ligerUI\skins\icons\新建 Microsoft Office Excel 工作表.xlsx" />
     <None Include="AppDemoLigerUI\jquery\lib\user.json" />
+    <Content Include="App_Browsers\IE.browser">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="DataUser\CyclostyleFile\单据打印样本.rtf" />
     <None Include="DataUser\grf\4a.grf" />
     <None Include="DataUser\grf\a.grf" />
@@ -7134,8 +7193,6 @@
     <Content Include="WF\WebOffice\OfficeServices.ashx" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Bin\" />
-    <Folder Include="ClientBin\NodeIcon\" />
     <Folder Include="DataUser\AthTemplete\" />
     <Folder Include="DataUser\BatchStartFlowTemplete\" />
     <Folder Include="DataUser\Bill\FlowFrm\" />
@@ -7215,7 +7272,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>2127</DevelopmentServerPort>
+          <DevelopmentServerPort>20567</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

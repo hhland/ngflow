@@ -53,8 +53,8 @@
                     <RadioButton Content=" Control by post " Height="16" HorizontalAlignment="Left" IsChecked="False" Margin="10,54,0,0" Name="radioButton1" VerticalAlignment="Top" />
                     <RadioButton Content=" Control by sector " Height="16" HorizontalAlignment="Left" Margin="10,0,0,94" Name="radioButton2" VerticalAlignment="Bottom" />
                     <RadioButton Content=" Control by staff " HorizontalAlignment="Left" Margin="10,33,0,136" Name="radioButton3" />
-                    <RadioButton Content="按sql Control ." Height="16" HorizontalAlignment="Left" Margin="10,0,0,72" Name="radioButton4" VerticalAlignment="Bottom" />
-                    <ListBox Height="169" HorizontalAlignment="Left" Margin="101,10,0,0" Name="listBox1" VerticalAlignment="Top" Width="258" />
+                    <RadioButton Content=" Control by sql." Height="16" HorizontalAlignment="Left" Margin="10,0,0,72" Name="radioButton4" VerticalAlignment="Bottom" />
+                    <ListBox Height="169" HorizontalAlignment="Left" Margin="136,10,0,0" Name="listBox1" VerticalAlignment="Top" Width="223" />
                 </Grid>
             </sdk:TabItem>
         </sdk:TabControl>

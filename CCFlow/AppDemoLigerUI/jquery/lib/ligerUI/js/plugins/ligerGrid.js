@@ -2105,7 +2105,7 @@
             }
             if (column.isrownumber) {
                 jcell.addClass("l-grid-hd-cell-rownumbers");
-                jcell.html("<div class='l-grid-hd-cell-inner'>序</div>");
+                jcell.html("<div class='l-grid-hd-cell-inner'>No.</div>");
             }
             if (column.ischeckbox) {
                 jcell.addClass("l-grid-hd-cell-checkbox");

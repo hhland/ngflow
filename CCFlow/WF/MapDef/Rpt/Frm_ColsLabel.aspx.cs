@@ -32,7 +32,7 @@ namespace CCFlow.WF.MapDef.Rpt
             this.Pub1.AddCaptionLeft(" Modify the report column properties ");
 
             this.Pub1.AddTR();
-            this.Pub1.AddTDTitle("序");
+            this.Pub1.AddTDTitle("No.");
             this.Pub1.AddTDTitle(" Field ");
             this.Pub1.AddTDTitle(" Label ");
             this.Pub1.AddTDTitle(" Display width ");

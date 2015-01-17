@@ -73,7 +73,7 @@ namespace CCFlow.WF.UC
             this.AddTREnd();
 
             this.AddTR();
-            this.AddTDTitle("序");
+            this.AddTDTitle("No.");
             this.AddTDTitle("width=80%", " Name ");
             this.AddTDTitle(" Flow chart ");
             this.AddTDTitle(" Batch launched ");

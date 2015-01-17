@@ -264,7 +264,7 @@ namespace CCForm
         /// </summary>
         public void DeleteIt()
         {
-            if (MessageBox.Show(" Are you sure you want to delete the audit component [" + this.Name + "]吗?", " Delete Tip ", MessageBoxButton.OKCancel)
+            if (MessageBox.Show(" Are you sure you want to delete the audit component [" + this.Name + "]?", " Delete Tip ", MessageBoxButton.OKCancel)
                 == MessageBoxResult.Cancel)
                 return;
 

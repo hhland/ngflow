@@ -101,7 +101,7 @@ namespace CCForm
 
                 new Func(){ No=Func.Property,  Name=" Property ", Tooltip=" Modify the form of basic information ", Img=new BitmapImage(new Uri("/CCFormDesigner;component/Img/"+Func.Property+".png",UriKind.RelativeOrAbsolute))},
                 new Func(){ No=Func.MapExt,  Name=" Extended Settings ", Tooltip=" Forms business logic configuration ", Img=new BitmapImage(new Uri("/CCFormDesigner;component/Img/"+Func.Property+".png",UriKind.RelativeOrAbsolute))},
-                new Func(){ No=Func.View,  Name=" Preview ",Tooltip="在asp Effects preview mode operation ",Img=new BitmapImage(new Uri("/CCFormDesigner;component/Img/"+Func.View+".png",UriKind.RelativeOrAbsolute))},
+                new Func(){ No=Func.View,  Name=" Preview ",Tooltip="in asp Effects preview mode operation ",Img=new BitmapImage(new Uri("/CCFormDesigner;component/Img/"+Func.View+".png",UriKind.RelativeOrAbsolute))},
                 //new Func(){ No=Func.Event,  Name=" Event ",Tooltip=" Form events ",Img=new BitmapImage(new Uri("/CCFormDesigner;component/Img/"+Func.Event+".png",UriKind.RelativeOrAbsolute))},
                 //new Func(){ No=Func.Copy,  Name=" Copy ",Img=new BitmapImage(new Uri("/CCFormDesigner;component/Img/"+Func.Copy+".png",UriKind.RelativeOrAbsolute))},
                 new Func(){ No=Func.Exp, Name=" Export ",Tooltip=" To export the current design to xml Stencil ",Img=new BitmapImage(new Uri("/CCFormDesigner;component/Img/"+Func.Exp+".png",UriKind.RelativeOrAbsolute))},

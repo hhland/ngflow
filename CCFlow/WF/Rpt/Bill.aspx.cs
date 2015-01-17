@@ -301,7 +301,7 @@ namespace CCFlow.WF.Rpt
             #region   Generation title 
             this.UCSys1.Add("<Table border='1' align=left width='20%' cellpadding='0' cellspacing='0' style='border-collapse: collapse' bordercolor='#C0C0C0'>");
             this.UCSys1.AddTR();
-            this.UCSys1.AddTDTitle("序");
+            this.UCSys1.AddTDTitle("No.");
             foreach (Attr attr in attrs)
             {
                 if (attr.IsRefAttr || attr.UIVisible == false || attr.Key == "MyNum")

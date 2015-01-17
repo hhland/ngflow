@@ -253,7 +253,7 @@ namespace CCFlow.WF.Rpt
             this.Pub1.AddTDGroupTitle("colspan=" + (attrCount + 2), myen.EnMap.EnDesc + "  Record :" + ens.Count + "Ìõ");
             this.Pub1.AddTREnd();
             this.Pub1.AddTR();
-            this.Pub1.AddTDGroupTitle("style='text-align:center'", "Ðò");
+            this.Pub1.AddTDGroupTitle("style='text-align:center'", "No.");
             this.Pub1.AddTDGroupTitle(" Title ");
 
             visibleAttrs.ForEach(attr => Pub1.AddTDGroupTitle(attr.Desc));

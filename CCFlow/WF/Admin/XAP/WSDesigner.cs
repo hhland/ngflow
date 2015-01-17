@@ -12,6 +12,8 @@ using BP.WF;
 using BP.WF.Template;
 using FtpSupport;
 using Silverlight.DataSetConnector;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace CCFlow.WF.Admin.XAP
 {
@@ -1800,5 +1802,32 @@ namespace CCFlow.WF.Admin.XAP
 
             return tmp;
         }
+
+        /// <summary> 
+        /// Encrypted data 
+        /// </summary> 
+        /// <param name="Text"></param> 
+        /// <param name="sKey"></param> 
+        /// <returns></returns> 
+        [WebMethod]
+        public string Encrypt(string Text)
+        {
+            string sKey = "zhangweilong";
+            DESCryptoServiceProvider des = new DESCryptoServiceProvider();
+            byte[] inputByteArray;
+            inputByteArray = Encoding.Default.GetBytes(Text);
+            des.Key = ASCIIEncoding.ASCII.GetBytes(System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(sKey, "md5").Substring(0, 8));
+            des.IV = ASCIIEncoding.ASCII.GetBytes(System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(sKey, "md5").Substring(0, 8));
+            System.IO.MemoryStream ms = new System.IO.MemoryStream();
+            CryptoStream cs = new CryptoStream(ms, des.CreateEncryptor(), CryptoStreamMode.Write);
+            cs.Write(inputByteArray, 0, inputByteArray.Length);
+            cs.FlushFinalBlock();
+            StringBuilder ret = new StringBuilder();
+            foreach (byte b in ms.ToArray())
+            {
+                ret.AppendFormat("{0:X2}", b);
+            }
+            return ret.ToString();
+        } 
     }
 }

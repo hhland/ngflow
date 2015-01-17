@@ -616,7 +616,7 @@ namespace CCFlow.WF.UC
 
             this.Pub1.AddTable("width='80%' align=left");
             this.Pub1.AddTR();
-            this.Pub1.AddTDTitle("nowarp=true", "序");
+            this.Pub1.AddTDTitle("nowarp=true", "No.");
             this.Pub1.AddTDTitle("nowarp=true", " Name ");
             this.Pub1.AddTDTitle("nowarp=true", " The current node ");
             this.Pub1.AddTDTitle("nowarp=true", " Launch date ");

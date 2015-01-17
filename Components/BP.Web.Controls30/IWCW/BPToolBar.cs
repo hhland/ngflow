@@ -1161,7 +1161,7 @@ namespace BP.Web.Controls
                     ddl.Items.Add(new ListItem("1", "1"));
 
                 Label lab = (Label)this.Page.FindControl("Lab_End");
-                lab.Text = "共[" + ddl.Items.Count + "]页,[" + recordConut + "] Records .";
+                lab.Text = "Total [" + ddl.Items.Count + "] pages,[" + recordConut + "] Records .";
 
 
                 if (page == 1)
@@ -1208,7 +1208,7 @@ namespace BP.Web.Controls
                     ddl.Items.Add(new ListItem("1", "1"));
 
                 Label lab = (Label)this.Page.FindControl("Lab_End");
-                lab.Text = "共[" + ddl.Items.Count + "]页,[" + recordConut + "] Records .";
+                lab.Text = "Total [" + ddl.Items.Count + "] pages,[" + recordConut + "] Records .";
 
                 if (page == 1 && en.EnMap.EnDBUrl.DBType == DBType.MSSQL)
                 {
@@ -1271,7 +1271,7 @@ namespace BP.Web.Controls
                     ddl.Items.Add(new ListItem("1", "1"));
 
                 Label lab = (Label)this.Page.FindControl("Lab_End");
-                lab.Text = "共[" + ddl.Items.Count + "]页,[" + recordConut + "] Records .";
+                lab.Text = "Total [" + ddl.Items.Count + "] pages,[" + recordConut + "] Records .";
 
                 if (page == 1)
                 {
@@ -1321,7 +1321,7 @@ namespace BP.Web.Controls
                     ddl.Items.Add(new ListItem("1", "1"));
 
                 Label lab = (Label)this.Page.FindControl("Lab_End");
-                lab.Text = "共[" + ddl.Items.Count + "]页,[" + recordConut + "] Records .";
+                lab.Text = "Total [" + ddl.Items.Count + "] pages,[" + recordConut + "] Records .";
 
 
                 if (page == 1)

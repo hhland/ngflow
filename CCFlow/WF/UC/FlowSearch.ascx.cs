@@ -164,7 +164,7 @@ namespace CCFlow.WF.UC
             this.Pub1.AddTREnd();
 
             this.Pub1.AddTR();
-            this.Pub1.AddTDTitle("序");
+            this.Pub1.AddTDTitle("No.");
             foreach (Attr attr in attrs)
             {
                 if (attr.UIVisible == false)
@@ -490,7 +490,7 @@ namespace CCFlow.WF.UC
             this.Pub1.AddTREnd();
 
             this.Pub1.AddTR();
-            this.Pub1.AddTDTitle("序");
+            this.Pub1.AddTDTitle("No.");
             foreach (Attr attr in attrs)
             {
                 if (attr.UIVisible == false)
@@ -680,7 +680,7 @@ namespace CCFlow.WF.UC
                 this.Pub1.AddCaption("<img src='" + BP.WF.Glo.CCFlowAppPath + "WF/Img/Search.gif' > Process Query / Analysis <span style='float:right'><a href=\"javascript:WinOpen('KeySearch.aspx',900,900); \"> Keyword Search </a>|<a href=\"javascript:WinOpenBP.WF.('" + BP.WF.Glo.CCFlowAppPath + "WF/Comm/Search.aspx?EnsName=BP.WF.FlowDatas',900,900); \"> Integrated Query </a>|<a href=\"javascript:WinOpen('" + BP.WF.Glo.CCFlowAppPath + "WF/Comm/Group.aspx?EnsName=BP.WF.FlowDatas',900,900); \"> Comprehensive analysis </a>|<a href=\"javascript:WinOpen('" + BP.WF.Glo.CCFlowAppPath + "WF/Comm/Search.aspx?EnsName=BP.WF.WorkFlowDeleteLogs',900,900); \"> Delete Logs </a>");
 
             this.Pub1.AddTR();
-            this.Pub1.AddTDTitle("序");
+            this.Pub1.AddTDTitle("No.");
             this.Pub1.AddTDTitle("width='70%'", " Process Name ");
             this.Pub1.AddTDTitle(" Invoice ");
             this.Pub1.AddTDTitle(" Process Query - Analysis ");

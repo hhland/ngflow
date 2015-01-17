@@ -132,7 +132,7 @@ namespace CCFlow.WF.UC
             this.Pub1.AddTREnd();
 
             this.Pub1.AddTR();
-            this.Pub1.AddTDTitle("序");
+            this.Pub1.AddTDTitle("No.");
             foreach (Attr attr in attrs)
             {
                 if (attr.UIVisible == false)

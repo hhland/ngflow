@@ -16,18 +16,18 @@
 
         <Button x:Name="CancelButton" Content=" Cancel " Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" Grid.Column="1" />
         <Button x:Name="OKButton" Content=" Determine " Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" Grid.ColumnSpan="2" />
-        <RadioButton Content=" Does not control " HorizontalAlignment="Left" Margin="21,29,0,181" Name="radioButto666n1" IsChecked="True" />
-        <RadioButton Content=" Control by post " Height="16" HorizontalAlignment="Left" Margin="20,72,0,0" Name="radioButton1" VerticalAlignment="Top" IsChecked="True" />
-        <RadioButton Content=" Control by sector " Height="16" HorizontalAlignment="Left" Margin="20,0,0,117" Name="radioButton2" VerticalAlignment="Bottom" />
-        <RadioButton Content=" Control by staff " HorizontalAlignment="Left" Margin="20,51,0,159" Name="radioButton3" />
-        <RadioButton Content="按sql Control ." Height="16" HorizontalAlignment="Left" Margin="20,0,0,95" Name="radioButton4" VerticalAlignment="Bottom" />
-        <ListBox Height="198" HorizontalAlignment="Left" Margin="111,28,0,0" Name="listBox1" VerticalAlignment="Top" Width="259" Grid.ColumnSpan="2" />
-        <ComboBox Height="23" HorizontalAlignment="Left" Name="comboBox1" VerticalAlignment="Top" Width="75" Margin="176,2,0,0" SelectedIndex="1">
+        <RadioButton Content=" Does not control " HorizontalAlignment="Left" Margin="3,29,0,181" Name="radioButto666n1" IsChecked="True" />
+        <RadioButton Content=" Control by post " Height="16" HorizontalAlignment="Left" Margin="2,72,0,0" Name="radioButton1" VerticalAlignment="Top" IsChecked="True" />
+        <RadioButton Content=" Control by sector " Height="16" HorizontalAlignment="Left" Margin="2,0,0,117" Name="radioButton2" VerticalAlignment="Bottom" />
+        <RadioButton Content=" Control by staff " HorizontalAlignment="Left" Margin="2,51,0,159" Name="radioButton3" />
+        <RadioButton Content=" Control by sql" Height="16" HorizontalAlignment="Left" Margin="2,0,0,95" Name="radioButton4" VerticalAlignment="Bottom" />
+        <ListBox Height="198" HorizontalAlignment="Left" Margin="122,28,0,0" Name="listBox1" VerticalAlignment="Top" Width="248" Grid.ColumnSpan="2" />
+        <ComboBox Height="23" HorizontalAlignment="Right" Name="comboBox1" VerticalAlignment="Top" Width="75" Margin="0,1,70,0" SelectedIndex="1" Grid.ColumnSpan="2">
             <ComboBoxItem Content=" Check out " />
             <ComboBoxItem Content=" Increase " />
             <ComboBoxItem Content=" Delete " />
             <ComboBoxItem Content=" Modification " />
         </ComboBox>
-        <sdk:Label Height="19"   Content=" Permissions content " HorizontalAlignment="Left" Margin="115,5,0,0" Name="label1" VerticalAlignment="Top" Width="63" />
+        <sdk:Label Height="19"   Content=" Permissions content " HorizontalAlignment="Left" Margin="115,5,0,0" Name="label1" VerticalAlignment="Top" Width="120" />
     </Grid>
 </controls:ChildWindow>

@@ -1089,7 +1089,7 @@ namespace CCFlow.Web.Comm.UC
 
             // Increase tab Toolbar 
             this.Add("<div id='tab-tools'>");
-            this.Add("<a href='javascript:void(0)' class='easyui-menubutton' data-options=\"plain:true,menu:'#tab-menu'\">ѡ</a>");
+            this.Add("<a href='javascript:void(0)' class='easyui-menubutton' data-options=\"plain:true,menu:'#tab-menu'\">Select</a>");
             this.Add("</div>");
 
             // Generate tab Navigation menu 

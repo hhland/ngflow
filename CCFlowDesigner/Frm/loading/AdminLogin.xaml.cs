@@ -61,21 +61,34 @@ namespace WF
             string pass = this.passwordBox1.Password.Trim();
 
             var da = BP.Glo.GetDesignerServiceInstance();
-            //da.DoTypeAsync("AdminLogin", "admin", "pub", null, null, null);
+
+            da.EncryptAsync(pass);
+            da.EncryptCompleted += new EventHandler<WS.EncryptCompletedEventArgs>(api_EncryptCompleted);
+        }
+
+        void api_EncryptCompleted(object sender, WS.EncryptCompletedEventArgs e)
+        {
+            string user = this.textBox1.Text.Trim();
+            string pass = e.Result;
+
+            var da = BP.Glo.GetDesignerServiceInstance();
             da.DoTypeAsync("AdminLogin", user, pass, null, null, null);
-            da.DoTypeCompleted += new EventHandler<WS.DoTypeCompletedEventArgs>((object senders, WS.DoTypeCompletedEventArgs ee) =>
+            da.DoTypeCompleted += new EventHandler<WS.DoTypeCompletedEventArgs>(da_DoTypeCompleted);
+        }
+
+        void da_DoTypeCompleted(object sender, WS.DoTypeCompletedEventArgs ee)
+        {
+            if (null != ee.Error)
             {
-                if( null !=ee.Error){
-                    BP.Glo.ShowException(ee.Error," Log error ");
-                    return;
-                }
-                if (ee.Result != null)
-                {
-                    MessageBox.Show(ee.Result, "Error", MessageBoxButton.OK);
-                    return;
-                }
-                this.DialogResult = true;
-            });
+                BP.Glo.ShowException(ee.Error, " Log error ");
+                return;
+            }
+            if (ee.Result != null)
+            {
+                MessageBox.Show(ee.Result, "Error", MessageBoxButton.OK);
+                return;
+            }
+            this.DialogResult = true;
         }
     }
 }

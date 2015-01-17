@@ -422,9 +422,11 @@
     <Resource Include="Images\FormNew.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Images\all.png" />
     <Content Include="Images\arrow.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Images\MenuItem\Back.png" />
     <Content Include="Images\people.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

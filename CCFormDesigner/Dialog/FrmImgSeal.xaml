@@ -9,11 +9,11 @@
             <RowDefinition />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <sdk:Label Content=" Chinese Name :" Height="16" HorizontalAlignment="Left" Margin="22,8,0,0" Name="label2" VerticalAlignment="Top" Width="71" />
+        <sdk:Label Content=" Chinese Name :" Height="16" HorizontalAlignment="Left" Margin="-1,9,0,0" Name="label2" VerticalAlignment="Top" Width="83" />
         <TextBox Height="23" HorizontalAlignment="Left" Margin="78,5,0,0" Name="TB_CN_Seal" VerticalAlignment="Top" Width="227" LostFocus="TB_CN_Seal_LostFocus" />
-        <sdk:Label Content=" English name :" Height="16" HorizontalAlignment="Left" Margin="21,34,0,0" Name="label5" VerticalAlignment="Top" Width="71" />
+        <sdk:Label Content=" English name :" Height="16" HorizontalAlignment="Left" Margin="0,38,0,0" Name="label5" VerticalAlignment="Top" Width="82" />
         <TextBox Height="23" HorizontalAlignment="Left" IsReadOnly="true" Margin="78,34,0,0" Name="TB_En_Seal" VerticalAlignment="Top" Width="227" />
-        <sdk:Label Height="16" HorizontalAlignment="Left" Margin="21,62,0,0" Name="label1" VerticalAlignment="Top" Width="62" Content="类      型:" />
+        <sdk:Label Height="16" HorizontalAlignment="Left" Margin="33,64,0,0" Name="label1" VerticalAlignment="Top" Width="37" Content="Type:" />
         <RadioButton Content=" Stamp " Height="16" HorizontalAlignment="Left" Margin="86,63,0,0" Name="rdBtnEnable" VerticalAlignment="Top" />
         <RadioButton Content=" Check out " Height="16" HorizontalAlignment="Left" Margin="135,63,0,0" Name="rdBtnDisable" VerticalAlignment="Top" />        
         <sdk:Label Content=" Sector jobs have stamped permission （ View does not need to set up departments and jobs ）" Height="16" HorizontalAlignment="Left" Margin="201,64,0,0" Name="label3" VerticalAlignment="Top" Width="276" />        
@@ -21,9 +21,9 @@
         <Button x:Name="CancelButton" Content=" Cancel " Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
         <Button x:Name="OKButton" Content=" Determine " Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" />
         <ComboBox Height="23" HorizontalAlignment="Left" Margin="78,89,0,0" Name="DDL_Dept" VerticalAlignment="Top" Width="229" SelectionChanged="CB_Dept_SelectionChanged" />
-        <sdk:Label Content=" Select Sector :" Height="16" HorizontalAlignment="Left" Margin="22,93,0,0" Name="label4" VerticalAlignment="Top" Width="71" />
+        <sdk:Label Content=" Select Sector :" Height="16" HorizontalAlignment="Left" Margin="-1,93,0,0" Name="label4" VerticalAlignment="Top" Width="71" />
         <sdk:Label Content=" Job list " Height="16" HorizontalAlignment="Left" Margin="20,191,0,0" Name="label6" VerticalAlignment="Top" Width="50" />
-        <sdk:Label Content=" Sector sources :" Height="16" HorizontalAlignment="Left" Margin="20,128,0,0" Name="label7" VerticalAlignment="Top" Width="62" />
+        <sdk:Label Content=" Sector sources :" Height="16" HorizontalAlignment="Left" Margin="8,128,0,0" Name="label7" VerticalAlignment="Top" Width="62" />
         <ComboBox Height="23" HorizontalAlignment="Left" Margin="78,124,0,0" Name="DDL_SealType" VerticalAlignment="Top" Width="154" SelectedIndex="0">
             <ComboBoxItem Tag="0"> People currently logged department </ComboBoxItem>
             <ComboBoxItem Tag="1"> Sponsor department </ComboBoxItem>

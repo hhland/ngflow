@@ -1240,7 +1240,7 @@ namespace CCFlow.WF.Rpt
             #region   Generate a table title 
             this.UCSys1.AddTable("class='Table' cellspacing='0' cellpadding='0' border='0' style='width: 100%'");
             this.UCSys1.AddTR();
-            this.UCSys1.AddTDTitleGroup("序");
+            this.UCSys1.AddTDTitleGroup("No.");
             this.UCSys1.AddTDTitleGroup(" Title ");
             foreach (Attr attr in attrs)
             {

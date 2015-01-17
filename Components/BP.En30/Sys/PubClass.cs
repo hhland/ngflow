@@ -1515,10 +1515,17 @@ namespace BP.Sys
             title = title.Replace("<", "[");
             title = title.Replace(">", "]");
             title = title.Replace("\"", "[");
-            if (top == 0 && left == 0)
-                System.Web.HttpContext.Current.Response.Write("<script language='JavaScript'> var newWindow =window.open('" + url + "','" + winName + "','width=" + width + ",top=" + top + ",scrollbars=yes,resizable=yes,toolbar=false,location=false') ; </script> ");
+            HttpContext hcontext = System.Web.HttpContext.Current;
+            string flag = hcontext.Request.Params["flag"];
+            if (flag.Contains("frame"))
+            {
+                hcontext.Response.Redirect(url);
+                //hcontext.Response.Write("<script language='JavaScript'> window.location.hre' + url +'; </script> ");
+            }
+            else if (top == 0 && left == 0)
+                hcontext.Response.Write("<script language='JavaScript'> var newWindow =window.open('" + url + "','" + winName + "','width=" + width + ",top=" + top + ",scrollbars=yes,resizable=yes,toolbar=false,location=false') ; </script> ");
             else
-                System.Web.HttpContext.Current.Response.Write("<script language='JavaScript'> var newWindow =window.open('" + url + "','" + winName + "','width=" + width + ",top=" + top + ",left=" + left + ",height=" + height + ",scrollbars=yes,resizable=yes,toolbar=false,location=false');</script>");
+                hcontext.Response.Write("<script language='JavaScript'> var newWindow =window.open('" + url + "','" + winName + "','width=" + width + ",top=" + top + ",left=" + left + ",height=" + height + ",scrollbars=yes,resizable=yes,toolbar=false,location=false');</script>");
         }
 		/// <summary>
 		///  Output to the red warning page .

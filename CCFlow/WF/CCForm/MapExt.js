@@ -300,7 +300,7 @@ function DDLAnsc(e, ddlChild, fk_mapExt) {
 
             //alert(oldVal);
 
-            $("#" + ddlChild).empty();
+            $("#" + ddlChild).html("");
 
             if (data == "")
                 return;
@@ -494,7 +494,7 @@ function FullCtrlDDLDB(e, ddlID, ctrlIdBefore, endID, fk_mapExt) {
             var id = ctrlIdBefore + "DDL_" + ddlID + "" + endID;
             // alert('FullCtrlDDLDB:' + id);
 
-            $("#" + id).empty();
+            $("#" + id).html("");
             var dataObj = eval("(" + data + ")"); // Converted to json Object  
             //alert(data);
             //alert( $("#" + id) );

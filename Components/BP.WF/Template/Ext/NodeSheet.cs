@@ -262,24 +262,24 @@ namespace BP.WF.Template.Ext
                 map.AddTBString(NodeAttr.Name, null, " Name ", true, true, 0, 200, 10, true);
 
                 string str = "";
-                str += "@0=01. According to the current operator organization structure step by step to find jobs ";
-                str += "@1=02. Computing node bound by sector ";
-                str += "@2=03. By setting SQL Get recipient computing ";
-                str += "@3=04. Computing node bound by staff ";
-                str += "@4=05. On a node by sending people through [ Personnel selector ] Select recipient ";
-                str += "@5=06. Field value is specified by the form of a node as the recipient of this step ";
-                str += "@6=07. On a node with the same personnel ";
-                str += "@7=08. And began to deal with people the same node ";
-                str += "@8=09. The same person with the specified node processing ";
-                str += "@9=10. Job with the department is bound by the intersection of computing ";
-                str += "@10=11. Calculated according to the binding posts and sector-bound set of latitude ";
-                str += "@11=12. Press staff positions specified node computing ";
-                str += "@12=13.按SQL Determine the child thread to accept people with a data source ";
-                str += "@13=14. From the list on a node to determine the recipient of the child thread ";
-                str += "@14=15. Only by calculating the binding posts ";
-                str += "@15=16.由FEE To decide ";
+                str += "@0=01.According to current user's organization to search Post";
+                str += "@1=02.By Node binding department";
+                str += "@2=03.By sSQL Calculation";
+                str += "@3=04.By node binding users";
+                str += "@4=05.Decided by last Sender selected users";
+                str += "@5=06.By selected users in field in last form";
+                str += "@6=07.Same as previous noed user";
+                str += "@7=08.Same as previous noed user";
+                str += "@8=09.Same the specified node users";
+                str += "@9=10.User in both Post and departments";
+                str += "@10=11.Binding posts and sector set of latitude ";
+                str += "@11=12.Specified node user post";
+                str += "@12=13.SQL deside the child to accept user with a data source";
+                str += "@13=14.From the list on a node to determine child flow access";
+                str += "@14=15.Only Post";
+                str += "@15=16.By Fee";
+                str += "@100=16.BPM Mode";
 
-                str += "@100=16.按ccflow的BPM Mode processing ";
                 map.AddDDLSysEnum(NodeAttr.DeliveryWay, 0, " Node access rules ", true, true, NodeAttr.DeliveryWay,str);
 
                 map.AddTBString(NodeAttr.DeliveryParas, null, " Access Rules set content ", true, false, 0, 500, 10, true);
@@ -493,7 +493,7 @@ namespace BP.WF.Template.Ext
                 #region  Property assessment 
                 //  Property assessment 
                 map.AddTBFloat(NodeAttr.WarningDays, 0, " Warning period (0 Without warning )", true, false); // " Warning period (0 Without warning )"
-                map.AddTBFloat(NodeAttr.DeductDays, 1, " Deadline (天)", true, false); //" Deadline (天)"
+                map.AddTBFloat(NodeAttr.DeductDays, 1, " Deadline (days)", true, false); //" Deadline (天)"
                 map.AddTBFloat(NodeAttr.DeductCent, 2, " Deduction ( Each extension 1 Days buckle )", true, false); //" Deduction ( Each extension 1 Days buckle )"
 
                 map.AddTBFloat(NodeAttr.MaxDeductCent, 0, " Maximum deduction ", true, false);   //" Maximum deduction "

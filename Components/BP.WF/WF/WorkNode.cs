@@ -829,7 +829,7 @@ namespace BP.WF
             }
             else
             {
-                string info = "¹²(" + this.HisWorkerLists.Count + ") People receive \t\n";
+                string info = "Total(" + this.HisWorkerLists.Count + ") People receive \t\n";
                 foreach (GenerWorkerList wl in this.HisWorkerLists)
                 {
                     info += BP.WF.Glo.DealUserInfoShowModel(wl.FK_DeptT, wl.FK_EmpText) + "\t\n";

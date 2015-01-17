@@ -2300,7 +2300,7 @@ namespace BP.WF
                     _AttrsOfRpt.AddTBString(GERptAttr.FlowEnder, null, " End people ", true, false, 0, 10, 10);
                     _AttrsOfRpt.AddTBString(GERptAttr.FlowEnderRDT, null, " End Time ", true, false, 0, 10, 10);
                     _AttrsOfRpt.AddTBDecimal(GERptAttr.FlowEndNode, 0, " End node ", true, false);
-                    _AttrsOfRpt.AddTBDecimal(GERptAttr.FlowDaySpan, 0, " Span (Ìì)", true, false);
+                    _AttrsOfRpt.AddTBDecimal(GERptAttr.FlowDaySpan, 0, " Span (days)", true, false);
                     //_AttrsOfRpt.AddTBString(GERptAttr.FK_NY, null, " Membership Month ", true, false, 0, 10, 10);
                 }
                 return _AttrsOfRpt;

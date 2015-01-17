@@ -72,7 +72,7 @@ namespace CCFlow.WF.UC
                 this.Pub1.AddCaption(" Working in transit ");
 
             this.Pub1.AddTR();
-            this.Pub1.AddTDTitle("nowarp=true", "序");
+            this.Pub1.AddTDTitle("nowarp=true", "No.");
             this.Pub1.AddTDTitle("nowarp=true width='40%'", " Title ");
 
             if (this.GroupBy != "FlowName")

@@ -77,7 +77,7 @@ namespace CCFlow.WF.MapDef.Rpt
             this.Pub2.AddTable("align=left");
             this.Pub2.AddCaptionLeft(" List field display order -  Move the arrow to change the order ");
             this.Pub2.AddTR();
-            this.Pub2.AddTDTitle("序");
+            this.Pub2.AddTDTitle("No.");
 
             int idx = -1;
             string tKey = DateTime.Now.ToString("HHmmddss");

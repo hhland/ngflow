@@ -133,7 +133,7 @@ namespace CCForm
         /// </summary>
         public void DeleteIt()
         {
-            if (MessageBox.Show(" Are you sure you want to delete the list [" + this.Name + "]吗? If it is determined that the relevant fields and settings will also be deleted , Physical table will also be deleted .", " Delete Tip ", MessageBoxButton.OKCancel)
+            if (MessageBox.Show(" Are you sure you want to delete the list [" + this.Name + "]? If it is determined that the relevant fields and settings will also be deleted , Physical table will also be deleted .", " Delete Tip ", MessageBoxButton.OKCancel)
                 == MessageBoxResult.Cancel)
                 return;
         

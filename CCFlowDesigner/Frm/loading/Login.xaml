@@ -318,7 +318,7 @@ Margin="108,17,0,22"  FontSize="13" Canvas.Top="210" Canvas.Left="109" />
         <Button x:Name="OKButton" Content=" Landed " Width="80" Height="30" HorizontalAlignment="Right"  
 Margin="0,17,100,22" FontSize="13" Canvas.Top="210" Canvas.Left="109" />
         <TextBlock Height="23" HorizontalAlignment="Left"  Name="TextBlock1" Text=" Username :" 
-VerticalAlignment="Top" Canvas.Left="80" Canvas.Top="112" />
+VerticalAlignment="Top" Canvas.Left="75" Canvas.Top="115" />
         <TextBox 
             Height="23" 
             Text="admin" 
@@ -331,8 +331,8 @@ VerticalAlignment="Top" Canvas.Left="80" Canvas.Top="112" />
             Grid.Row="1" 
             Canvas.Top="112" 
             Canvas.Left="148" />
-        <TextBlock Height="23" HorizontalAlignment="Left"  Name="TextBlock2" Text="密    码:" 
-VerticalAlignment="Top" Canvas.Left="80" Canvas.Top="146" />
+        <TextBlock Height="23" HorizontalAlignment="Left"  Name="TextBlock2" Text="Password:" 
+VerticalAlignment="Top" Canvas.Left="86" Canvas.Top="147" Width="64" />
         <PasswordBox Height="23" HorizontalAlignment="Left"  Name="tbPwd" VerticalAlignment="Top" 
 Width="167" Padding="5,1,0,0" FontSize="12" Canvas.Top="145" Canvas.Left="148" Password="pub" />
         <TextBlock Height="23" HorizontalAlignment="Left"  Name="TextBlock3" Text=" " VerticalAlignment="Top" 

@@ -81,7 +81,7 @@ namespace CCFlow.WF.MapDef.Rpt
             this.Pub2.AddTable("class='Table' border='1' cellspacing='0' cellpadding='0' style='width:100%'");
 
             this.Pub2.AddTR();
-            this.Pub2.AddTDGroupTitle("style='text-align:center;width:50px'", "序");
+            this.Pub2.AddTDGroupTitle("style='text-align:center;width:50px'", "No.");
             this.Pub2.AddTDGroupTitle(" Field ");
             this.Pub2.AddTDGroupTitle(" Label ");
             this.Pub2.AddTDGroupTitle(" Shows the sequence number ");

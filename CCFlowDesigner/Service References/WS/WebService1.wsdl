@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s1="http://tempuri.org/AbstractTypes" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://tempuri.org/AbstractTypes" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
     <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
       <s:element name="Emp_Edit">
@@ -670,6 +670,20 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="Encrypt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Text" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EncryptResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EncryptResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="string" nillable="true" type="s:string" />
       <s:element name="FtpFile" nillable="true" type="tns:FtpFile" />
       <s:element name="base64Binary" nillable="true" type="s:base64Binary" />
@@ -948,6 +962,12 @@
   </wsdl:message>
   <wsdl:message name="GetConfigSoapOut">
     <wsdl:part name="parameters" element="tns:GetConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="EncryptSoapIn">
+    <wsdl:part name="parameters" element="tns:Encrypt" />
+  </wsdl:message>
+  <wsdl:message name="EncryptSoapOut">
+    <wsdl:part name="parameters" element="tns:EncryptResponse" />
   </wsdl:message>
   <wsdl:message name="Emp_EditHttpGetIn">
     <wsdl:part name="empNo" type="s:string" />
@@ -1252,6 +1272,12 @@
     <wsdl:part name="key" type="s:string" />
   </wsdl:message>
   <wsdl:message name="GetConfigHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="EncryptHttpGetIn">
+    <wsdl:part name="Text" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EncryptHttpGetOut">
     <wsdl:part name="Body" element="tns:string" />
   </wsdl:message>
   <wsdl:message name="Emp_EditHttpPostIn">
@@ -1559,6 +1585,12 @@
   <wsdl:message name="GetConfigHttpPostOut">
     <wsdl:part name="Body" element="tns:string" />
   </wsdl:message>
+  <wsdl:message name="EncryptHttpPostIn">
+    <wsdl:part name="Text" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EncryptHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
   <wsdl:portType name="WSDesignerSoap">
     <wsdl:operation name="Emp_Edit">
       <wsdl:input message="tns:Emp_EditSoapIn" />
@@ -1731,6 +1763,10 @@
     <wsdl:operation name="GetConfig">
       <wsdl:input message="tns:GetConfigSoapIn" />
       <wsdl:output message="tns:GetConfigSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Encrypt">
+      <wsdl:input message="tns:EncryptSoapIn" />
+      <wsdl:output message="tns:EncryptSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:portType name="WSDesignerHttpGet">
@@ -1906,6 +1942,10 @@
       <wsdl:input message="tns:GetConfigHttpGetIn" />
       <wsdl:output message="tns:GetConfigHttpGetOut" />
     </wsdl:operation>
+    <wsdl:operation name="Encrypt">
+      <wsdl:input message="tns:EncryptHttpGetIn" />
+      <wsdl:output message="tns:EncryptHttpGetOut" />
+    </wsdl:operation>
   </wsdl:portType>
   <wsdl:portType name="WSDesignerHttpPost">
     <wsdl:operation name="Emp_Edit">
@@ -2079,6 +2119,10 @@
     <wsdl:operation name="GetConfig">
       <wsdl:input message="tns:GetConfigHttpPostIn" />
       <wsdl:output message="tns:GetConfigHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Encrypt">
+      <wsdl:input message="tns:EncryptHttpPostIn" />
+      <wsdl:output message="tns:EncryptHttpPostOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="WSDesignerSoap" type="tns:WSDesignerSoap">
@@ -2463,6 +2507,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetConfig">
       <soap:operation soapAction="http://tempuri.org/GetConfig" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Encrypt">
+      <soap:operation soapAction="http://tempuri.org/Encrypt" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -2860,6 +2913,15 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="Encrypt">
+      <soap12:operation soapAction="http://tempuri.org/Encrypt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="WSDesignerHttpGet" type="tns:WSDesignerHttpGet">
     <http:binding verb="GET" />
@@ -3241,6 +3303,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetConfig">
       <http:operation location="/GetConfig" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Encrypt">
+      <http:operation location="/Encrypt" />
       <wsdl:input>
         <http:urlEncoded />
       </wsdl:input>
@@ -3636,19 +3707,28 @@
         <mime:mimeXml part="Body" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="Encrypt">
+      <http:operation location="/Encrypt" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="WSDesigner">
     <wsdl:port name="WSDesignerSoap" binding="tns:WSDesignerSoap">
-      <soap:address location="http://localhost:1106/WF/Admin/XAP/WebService.asmx" />
+      <soap:address location="http://localhost:8020/WF/Admin/XAP/WebService.asmx" />
     </wsdl:port>
     <wsdl:port name="WSDesignerSoap12" binding="tns:WSDesignerSoap12">
-      <soap12:address location="http://localhost:1106/WF/Admin/XAP/WebService.asmx" />
+      <soap12:address location="http://localhost:8020/WF/Admin/XAP/WebService.asmx" />
     </wsdl:port>
     <wsdl:port name="WSDesignerHttpGet" binding="tns:WSDesignerHttpGet">
-      <http:address location="http://localhost:1106/WF/Admin/XAP/WebService.asmx" />
+      <http:address location="http://localhost:8020/WF/Admin/XAP/WebService.asmx" />
     </wsdl:port>
     <wsdl:port name="WSDesignerHttpPost" binding="tns:WSDesignerHttpPost">
-      <http:address location="http://localhost:1106/WF/Admin/XAP/WebService.asmx" />
+      <http:address location="http://localhost:8020/WF/Admin/XAP/WebService.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

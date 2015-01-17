@@ -30,6 +30,6 @@
         </ListBox>
         <Button x:Name="CancelButton" Content=" Cancel " Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
         <Button x:Name="OKButton" Content=" Determine " Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" />
-        <sdk:Label Height="18" HorizontalAlignment="Left" Margin="390,11,0,0" Name="label2" Content=" Before each load 200条" VerticalAlignment="Top" Width="120" Foreground="#FFF30000" />
+        <sdk:Label Height="18" HorizontalAlignment="Left" Margin="390,11,0,0" Name="label2" Content=" less than 200 characters" VerticalAlignment="Top" Width="188" Foreground="#FFF30000" />
     </Grid>
 </controls:ChildWindow>
