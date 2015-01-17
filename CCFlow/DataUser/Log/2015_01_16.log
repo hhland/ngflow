@@ -1,0 +1,15 @@
+-----------------------------------------------------------------------------------------------------
+16日10时27分08秒Info:System');" Success [BP.Port.Emp-13] Placed in the cache .
+-----------------------------------------------------------------------------------------------------
+16日10时35分04秒Info:System');" Success [BP.Port.Emp-13] Placed in the cache .
+-----------------------------------------------------------------------------------------------------
+16日20时43分46秒Info:System');"@ Run queries (RunSQLReturnTable_200705_Ora with paras) Error  sql=SELECT  232*232+(23+323) NUM from DUAL  @ Exception Information :ORA-12541: TNS: 无监听程序
+@Para Num= 0SELECT  232*232+(23+323) NUM from DUAL 
+16日20时45分00秒Info:System');"@ Run queries (RunSQLReturnTable_200705_Ora with paras) Error  sql=SELECT  232*232+(23+323) NUM from DUAL  @ Exception Information :ORA-12541: TNS: 无监听程序
+@Para Num= 0SELECT  232*232+(23+323) NUM from DUAL 
+-----------------------------------------------------------------------------------------------------
+16日20时48分46秒Info:System');" Success [BP.Port.Emp-13] Placed in the cache .
+-----------------------------------------------------------------------------------------------------
+16日20时50分49秒Info:System');" Success [BP.Port.Emp-13] Placed in the cache .
+-----------------------------------------------------------------------------------------------------
+16日21时11分38秒Info:System');" Success [BP.Port.Emp-13] Placed in the cache .
