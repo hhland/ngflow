@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <!-- ccflow  Main menu configuration :  Explanation : If you encounter &  Output number , Please  &amp;  Replace . -->
+  <Item1ssss No="Home" CH=" Home " EN="Home" JP="ホーム" RU="Дома" OnClick="" Url="Home.aspx" Img="./Img/Home.gif"  Enable="1" Title=" Personal Work Home ." />
+  
+   <Item No="Start" CH=" Launch " B5=" Launch " EN="Launch" JP="打ち上げ" RU="Запуск"  Url="Start.aspx" Img="./Img/Start.gif" Enable="1" Title=" I was able to initiate the process initiated " />
+   <Item No="EmpWorks" CH=" Upcoming " B5=" Upcoming " EN="Pending"  JP=" Reservation " RU="В ожидании"  Url="EmpWorks.aspx" Img="./Img/MyWork.gif" Enable="1" Title=" Waiting for work I deal with ." />
+   <Item No="CC" CH=" Cc " B5=" Cc " EN="Pending"  JP=" Reservation " RU="В ожидании"   Url="CC.aspx" Img="./Img/MyWork.gif" Enable="1" Title=" Waiting for work I deal with ." />
+   <Item No="HungUpList" CH=" Pending " B5=" Pending " EN="HungUpList"  JP="HungUpList" RU="HungUpList"    Url="HungUpList.aspx" Img="./Img/MyWork.gif" Enable="1" Title=" Waiting for work I deal with ." />
+   <Item No="Runing" CH=" Has to do " B5=" Has to do " EN="In transit"  JP="トランジットで" RU="В пути"  Url="Runing.aspx" Img="./Img/Runing.gif" Enable="1" Title=" I was involved in the work , Not completed ." />
+   <Item No="Calendar" CH=" Calendar " B5=" Calendar " EN="In transit"  JP="トランジットで" RU="В пути"  
+        OnClick="" Url="Calendar.aspx" Img="./Img/Runing.gif" Enable="1" Title=" Check yourself every day what to do " />
+   <Item No="FlowSearch" CH=" Inquiry "  B5=" Inquiry "  EN="Report"  JP="お問い合わせ" RU="Запрос"
+        OnClick="" Url="FlowSearch.aspx"  Img="./Img/Search.gif" Enable="0" Title=" Process Query ." />
+  <Item No="Tools" CH=" Set up "  B5=" Set up "  EN="Tools"  JP="ツールバー" RU="Создавать" Url="Tools.aspx" Img="./Img/Tools.gif" Enable="0" Title=" Toolbar " />
+  <Item No="Emps"  CH=" Member "  B5=" Member "  EN="Employers"  JP=" Member " RU="Член" Url="Emps.aspx" Img="./Img/Emps.gif" Enable="0" Title=" Staff Contacts ." />
+  <Item No="Login" CH=" Switching "  B5=" Switching "  EN="Switch User"  JP="スイッチ" RU="Переключатель" Url="Login.aspx" Img="./Img/Login.gif" Enable="0" Title=" Switch User ." />
+    
+  <Item1 No="Msg" CH=" News "  B5=" News "  EN="Messages"  JP=" News " RU="Новости" Url="Msg.aspx" Img="./Img/Msg.gif" Enable="0" Title=" Process Query ." />
+  <Item1 No="Calendar" CH=" Calendar "  B5=" Calendar "  EN="Calendar"  JP="お問い合わせ" RU="Запрос" Url="Calendar.aspx" Img="./Img/Calendar.gif" Enable="1" Title=" Work Calendar ." />
+  <Item1 No="Link" CH=" Connection "  B5=" Connection "  EN="Link"  JP=" Connection " RU="Link" Url="Link.aspx" Img="./Img/Link.gif" Enable="0" Title=" Useful Links " />
+  <Item11s No="Calendar" CH="Calendar"  B5="Calendar"  EN="Calendar"  JP="Calendar" RU="Calendar" Url="Calendar.aspx" Img="./Img/Login.gif" Enable="0" Title="Calendar." />
+  <Item1 No="WF" CH=" Report form " EN="Rpt" RU="Заявления" Url="SelfWFRpt.aspx" Img="./Img/Runing.gif" Enable="0" Title=" Custom Reports ." />
+  <Item1 No="Warning" CH=" Warning " EN="Waring" RU="Предупреждение" Url="Warning.aspx" Img="./Img/Warning.gif" Enable="1" Title=" My job working condition warnings ." />
+  <Item1 No="Home" CH=" Invoice " EN="Bill" RU="Инструменты" Url="../Bill/Home.aspx" Img="./Img/Bill.gif" Enable="1" Title="" />
+  <Item1 No="Help" CH=" Help " EN="Help" RU="Помощь" Url="./Help/Default.aspx" Img="./Img/Help.gif" Enable="1" />
+  <Item1 No="CS" CH=" Switching System " EN="Cheange" RU="Включение системы" Url="../../Comm/Port/ChangeSystem.aspx" Img="./Img/ChangeSys.gif" Enable="1" />
+</NewDataSet>

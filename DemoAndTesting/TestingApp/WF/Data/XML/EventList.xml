@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" standalone="yes" ?>
+<NewDataSet>
+  
+  <!--  Event Type  -->
+  <Source No="Frm"  CH=" Form events "  EN=""/>
+  <Source No="Node" CH=" Node event "  EN=""/>
+  <Source No="Flow" CH=" Process events "  EN=""/>
+  
+  <!--  Form events  -->
+  <Item No="FrmLoadBefore"  CH=" Nodes form before loading " EN="When the node before saving" EventType="Frm" 
+        EventDesc=" Before loading , You can pre-initialized to perform some form of data ." />
+  <Item No="FrmLoadAfter"   CH=" After loading the nodes form " EN="When the node saved" EventType="Frm" 
+        EventDesc=" After loading , Perform security processing ." />
+    
+  <Item No="SaveBefore"  CH=" When the former node holds " EN="When the node before saving"  EventType="Frm"
+         EventDesc=" You can perform some data integrity checks ." />
+  <Item No="SaveAfter" CH=" When the node holds " EN="When the node saved" EventType="Frm" 
+        EventDesc=" You can make the appropriate business logic processing ."/>
+
+  <!--  Node event type  -->
+  <Item No="SendWhen" CH=" When a node sends " EN="When a node is sent" EventType="Node" />
+  <Item No="SendSuccess" CH=" When a node is sent successfully " EN="Node has a successful" EventType="Node"  />
+  <Item No="SendError" CH=" When sending node failure " EN="Node fails to send"  EventType="Node" />
+  <Item No="ReturnBefore" CH=" When a node before returning " EN="When the node before returning" EventType="Node" />
+  <Item No="ReturnAfter" CH=" When the node returned " EN="When the node returned after" EventType="Node" />
+  <Item No="UndoneBefore" CH=" When withdrawn before sending node " EN="When a node before sending cancellation" EventType="Node" />
+  <Item No="UndoneAfter" CH=" When sending node revocation " EN="When the node after sending cancellation" EventType="Node" />
+
+  <!--  Process event type  -->
+	<Item No="FlowOverBefore" CH=" Before the end of the process " EN="When the node after sending cancellation" EventType="Flow" />
+	<Item No="FlowOverAfter" CH=" After the end of the process " EN="When the node after sending cancellation"  EventType="Flow" />
+	<Item No="BeforeFlowDel" CH=" Process before deleting " EN="When the node after sending cancellation" EventType="Flow"  />
+	<Item No="AfterFlowDel" CH=" Process deleted " EN="When the node after sending cancellation" EventType="Flow"  />
+
+    <!--  From table event  -->
+    <ItemDtl No="DtlSaveBefore" CH=" From the table before saving " EN="" EventType="Dtl" />
+    <ItemDtl No="DtlSaveEnd" CH=" From the table holds " EN=""  EventType="Dtl" />
+    <ItemDtl No="DtlItemSaveBefore" CH=" Before a single data save " EN="" EventType="Dtl"  />
+    <ItemDtl No="DtlItemSaveAfter" CH=" Single data saved " EN="" EventType="Dtl"  />
+    <ItemDtl No="DtlItemDelBefore" CH=" Before a single deletion " EN="" EventType="Dtl"  />
+    <ItemDtl No="DtlItemDelAfter" CH=" After a single deletion " EN="" EventType="Dtl"  />
+
+</NewDataSet>
