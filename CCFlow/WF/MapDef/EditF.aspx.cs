@@ -510,7 +510,8 @@ namespace CCFlow.WF.MapDef
                 //btn.Text =" Extended Settings ";
                 //btn.Attributes["onclick"] = "javascript:WinOpen('AutoFull.aspx?RefNo=" + this.RefNo + "&FK_MapData=" + mapAttr.FK_MapData + "',''); return false;";
 
-                this.Pub1.Add("<input type=button class=Btn value=' Extended Settings ' onclick=\"javascript:WinOpen('AutoFull.aspx?RefNo=" + this.RefNo + "&FK_MapData=" + mapAttr.FK_MapData + "',''); return false;\" />");
+                //this.Pub1.Add("<input type=button class=Btn value=' Extended Settings ' onclick=\"javascript:WinOpen('AutoFull.aspx?RefNo=" + this.RefNo + "&FK_MapData=" + mapAttr.FK_MapData + "',''); return false;\" />");
+                this.Pub1.Add("<input type=button class=Btn value=' Extended Settings ' onclick=\"javascript:EUIWinOpen('AutoFull.aspx?RefNo=" + this.RefNo + "&FK_MapData=" + mapAttr.FK_MapData + "','Extended Settings'); return false;\" />");
 
                 if (mapAttr.HisEditType == EditType.Edit)
                 {

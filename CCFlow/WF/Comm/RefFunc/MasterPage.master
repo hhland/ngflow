@@ -77,15 +77,18 @@
 </head>
 <body class="easyui-layout" leftmargin="0" topmargin="0" onkeypress="javascript:Esc();">
     <form id="aspnetForm" runat="server">
-    <div id="leftFrame" data-options="region:'west',title:' Feature List ',split:true" style="width: 200px;
+    
+        <div id="leftFrame" data-options="region:'west',title:' Feature List ',split:true" style="width: 200px;
         padding: 5px">
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
-    </div>
-    <div id="rightFrame" data-options="region:'center',noheader:true">
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
-        </asp:ContentPlaceHolder>
-    </div>
+        </div>
+        <div id="rightFrame" data-options="region:'center',noheader:true">
+         <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+         </asp:ContentPlaceHolder>
+        </div>
+   
+    
     </form>
 </body>
 </html>

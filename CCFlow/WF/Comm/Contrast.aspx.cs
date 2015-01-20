@@ -500,7 +500,7 @@ namespace CCFlow.Web.Comm
 			string str="";
 			str+="<Table   style='border-collapse: collapse' bordercolor='#111111'  >";
 			str+="<TR  >";
-			str+="  <TD warp=false class='Title' nowrap >Ðò</TD>";
+			str+="  <TD warp=false class='Title' nowrap >No.</TD>";
 			str+="  <TD warp=false class='Title' nowrap >"+this.DDL_Key.SelectedItem.Text+"</TD>";
 			str+="  <TD warp=false class='Title' nowrap >"+this.DDL_M1.SelectedItem.Text+"</TD>";
 			str+="  <TD warp=false class='Title' nowrap >"+this.DDL_M2.SelectedItem.Text+"</TD>";

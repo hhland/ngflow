@@ -291,7 +291,20 @@ namespace CCFlow.WF.Comm.RefFunc
                     else
                     {
                         //this.AddLi(func.GetIcon(path) + "<a href=\"javascript:WinOpen('" + url + "','" + func.Target + "')\" ToolTip='" + func.ToolTip + "' >" + func.Title + "</a>");
-                        AddLi(string.Format("<div><a href=\"javascript:WinOpen('{0}','{1}')\" title='{2}'>{5}<span class='nav'>{3}</span></a></div>{4}", url, func.Target, func.ToolTip, func.Title, Environment.NewLine, GetIcon(func.Icon)));
+
+                        if (func.Title.Trim().ToUpper() == "NODE BIND DEPARTMENT")
+                        {
+                            sql = "SELECT COUNT(*) as NUM FROM WF_Nodedept WHERE fk_node='" + en.PKVal + "'";
+                            int j = DBAccess.RunSQLReturnValInt(sql);
+
+                            AddLi(string.Format("<div><a href=\"javascript:WinOpen('{0}','{1}')\" title='{2}'>{5}<span class='nav'>{3}[{6}]</span></a></div>{4}", url, "Node bind departmen", func.ToolTip, func.Title, Environment.NewLine, GetIcon(func.Icon), j));
+                        }
+                        else
+                        {
+                            AddLi(string.Format("<div><a href=\"javascript:WinOpen('{0}','{1}')\" title='{2}'>{5}<span class='nav'>{3}</span></a></div>{4}", url, func.Target, func.ToolTip, func.Title, Environment.NewLine, GetIcon(func.Icon)));
+                        }
+
+                        
                         ItemCount++;
                     }
                 }

@@ -9,7 +9,7 @@
     <script src="../Scripts/easyUI/jquery-1.8.0.min.js" type="text/javascript"></script>
     <script src="../Scripts/easyUI/jquery.easyui.min.js" type="text/javascript"></script>
     <script src="../Comm/JS/Calendar/WdatePicker.js" type="text/javascript"></script>
-    <script language="JavaScript" src="../Comm/JScript.js" type="text/javascript" />
+    <script language="JavaScript" src="../Comm/JScript.js" type="text/javascript" ></script>
     <script language="javascript" type="text/javascript">
         function ShowEn(url, wName, h, w) {
             h = 700;
@@ -41,6 +41,22 @@
                 ctrl.selectedIndex = 0;
             }
         }
+
+        $(document).ready(function() {
+
+            $("TD[nowrap]").each(function (index) {
+                
+                var text = $(this).text();
+                var maxlen = 50;
+                if ($(this).find("a").size()>0){}
+                else if (text != null && text.length > maxlen) {
+                    var textsub = text.substring(0, maxlen);
+                    var html = "<span title='" + text + "'>" + textsub + "...<"+"/span>";
+                    $(this).html(html);
+                }
+            });
+
+        });
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">

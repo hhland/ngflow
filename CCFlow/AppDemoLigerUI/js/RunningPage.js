@@ -44,8 +44,8 @@ function callBack(jsonData, scope) {
             columns: [[
                    { title: ' Title ', field: 'Title', width: 340, align: 'left', formatter: function (value, rec) {
 
-                       var h = "../WF/WFRpt.aspx?WorkID=" + rec.WORKID + "&FK_Flow=" + rec.FK_FLOW + "&FID=" + rec.FID + "&T=" + dateNow;
-                       return "<a href='javascript:void(0);' onclick=winOpen('" + h + "')><img align='middle' border=0 width='20' height='20' src='Img/Menu/Runing.png'/>" + rec.TITLE + "</a>";
+                       var h = "../WF/WFRpt.aspx?WorkID=" + rec.WorkID + "&FK_Flow=" + rec.FK_Flow + "&FID=" + rec.FID + "&T=" + dateNow;
+                       return "<a href='javascript:void(0);' onclick=winOpen('" + h + "')><img align='middle' border=0 width='20' height='20' src='Img/Menu/Runing.png'/>" + rec.Title + "</a>";
 
                    }
                    },
@@ -55,10 +55,9 @@ function callBack(jsonData, scope) {
                    { title: ' Operating ', field: 'opt', width: 200,
                        formatter: function (value, rec) {
 
-                           var h2 = "../WF/WorkOpt/Press.aspx?FID=" + rec.FID + '&WorkID=' + rec.WORKID + '&FK_Flow=' + rec.FK_FLOW + "&T=" + dateNow;
+                           var h2 = "../WF/WorkOpt/Press.aspx?FID=" + rec.FID + '&WorkID=' + rec.WorkID + '&FK_Flow=' + rec.FK_Flow + "&T=" + dateNow;
 
-                           return "<a href='javascript:void(0);' onclick=UnSend('" + rec.FK_FLOW + "','" + rec.WORKID + "') ><img align='middle' width='20' height='20' src='../WF/Img/Action/UnSend.png' border=0 /> Undo Send </a>&nbsp;&nbsp;&nbsp;<a href='javascript:void(0);' onclick=Press('" + h2 + "')><img width='20' height='20' align='middle' src='../WF/Img/Action/Press.png' border=0 /> Reminders </a>";
-
+                           return "<a href='javascript:void(0);' onclick=UnSend('" + rec.FK_Flow + "','" + rec.WorkID + "') ><img align='middle' width='20' height='20' src='../WF/Img/Action/UnSend.png' border=0 />Undo Send</a>&nbsp;&nbsp;&nbsp;<a href='javascript:void(0);' onclick=Press('" + h2 + "')><img width='20' height='20' align='middle' src='../WF/Img/Action/Press.png' border=0 />Reminders</a>";
                        }
                    }]]
         });

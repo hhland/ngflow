@@ -726,7 +726,7 @@ namespace CCFlow.WF.WorkOpt
                     this.Pub1.AddTDBegin();
                     this.Pub1.AddB(tk.NDFromT);
                     this.Pub1.AddBR(tk.MsgHtml);
-                    this.Pub1.AddBR("<div style='float:right'>" + BP.WF.Glo.GenerUserImgSmallerHtml(tk.EmpFrom, tk.EmpFromT) + " &nbsp;&nbsp;&nbsp; " + dtt.ToString("yy年MM月dd日HH时mm分") + "</div>");
+                    this.Pub1.AddBR("<div style='float:right'>" + BP.WF.Glo.GenerUserImgSmallerHtml(tk.EmpFrom, tk.EmpFromT) + " &nbsp;&nbsp;&nbsp; " + dtt.ToString("yyyy-MM-dd HH:mm") + "</div>");
                     this.Pub1.AddTDEnd();
                     this.Pub1.AddTREnd();
                 }
@@ -759,7 +759,7 @@ namespace CCFlow.WF.WorkOpt
 
                             this.Pub1.AddB(subtk.NDFromT);
                             this.Pub1.AddBR(subtk.MsgHtml);
-                            this.Pub1.AddBR("<div style='float:right'>" + BP.WF.Glo.GenerUserImgSmallerHtml(subtk.EmpFrom, subtk.EmpFromT) + " &nbsp;&nbsp;&nbsp; " + dtt.ToString("yy年MM月dd日HH时mm分") + "</div>");
+                            this.Pub1.AddBR("<div style='float:right'>" + BP.WF.Glo.GenerUserImgSmallerHtml(subtk.EmpFrom, subtk.EmpFromT) + " &nbsp;&nbsp;&nbsp; " + dtt.ToString("yyyy-MM-dd HH:mm") + "</div>");
 
                             this.Pub1.AddTDEnd();
                             this.Pub1.AddTREnd();
@@ -831,7 +831,7 @@ namespace CCFlow.WF.WorkOpt
                 this.Pub1.AddTR();
                 this.Pub1.AddTD(i);
                 DateTime dtt = BP.DA.DataType.ParseSysDateTime2DateTime(tk.RDT);
-                this.Pub1.AddTD(dtt.ToString("MM月dd日HH时mm分"));
+                this.Pub1.AddTD(dtt.ToString("yyyy-MM-dd HH:mm"));
                 this.Pub1.AddTD(tk.NDFromT);
                 //  this.Pub1.AddTD(tk.EmpFromT);
                 ActionType at = tk.HisActionType;

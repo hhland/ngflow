@@ -238,16 +238,24 @@ namespace CCFlow.WF.UC
 
             this.UCEn1.IsReadonly = true;
             Frms frms = nd.HisFrms;
+
+
+            MapData map = new MapData("ND" + FK_Node);
+            Width = map.FrmW + "";
+            Height = map.FrmH + "";
+            /*  Freedom Form  */
+             //= map.MaxRight + map.MaxLeft * 2 + 10 + "";
+
             if (frms.Count == 0)
             {
                 if (nd.HisFormType == NodeFormType.FreeForm)
                 {
-                    MapData map = new MapData("ND" + FK_Node);
-                    /*  Freedom Form  */
-                    Width = map.MaxRight + map.MaxLeft * 2 + 10 + "";
-                    if (float.Parse(Width) < 500)
-                        Width = "900";
-                    Height = map.MaxEnd+"";
+
+                    //MapData map = new MapData("ND" + FK_Node);
+                    ///*  Freedom Form  */
+                    //Width = map.MaxRight + map.MaxLeft * 2 + 10 + "";
+                    //if (float.Parse(Width) < 500)
+                    //    Width = "900";
                     BtnLab btnLab = new BtnLab(FK_Node);
 
                     BtnWord = btnLab.WebOfficeEnable + "";
@@ -261,13 +269,13 @@ namespace CCFlow.WF.UC
 
                 if (nd.HisFormType == NodeFormType.FixForm)
                 {
-                    MapData map = new MapData("ND" + FK_Node);
-                    if (map.TableWidth.Contains("px"))
-                        Width = map.TableWidth.Replace("px", "");
-                    else
-                        Width = map.TableWidth + "";
-                    if (map.TableWidth.Equals("100%"))
-                        Width = "900";
+                    //MapData map = new MapData("ND" + FK_Node);
+                    //if (map.TableWidth.Contains("px"))
+                    //    Width = map.TableWidth.Replace("px", "");
+                    //else
+                    //    Width = map.TableWidth + "";
+                    //if (map.TableWidth.Equals("100%"))
+                    //    Width = "900";
 
                     this.UCEn1.Add("<div id=divCCForm style='width:" + Width + "px;height:" + map.FrmH + "px;overflow-x:scroll;' >");
                     /* Fool form */
@@ -467,7 +475,7 @@ namespace CCFlow.WF.UC
                 this.AddTR();
                 this.AddTDIdx(idx++);
                 DateTime dtt = DataType.ParseSysDateTime2DateTime(dr[TrackAttr.RDT].ToString());
-                this.AddTD(dtt.ToString("MM月dd日HH:mm"));
+                this.AddTD(dtt.ToString("yyyy-MM-dd HH:mm"));
 
                 this.AddTD(dr[TrackAttr.NDFromT].ToString());
                 this.AddTD(dr[TrackAttr.EmpFromT].ToString());

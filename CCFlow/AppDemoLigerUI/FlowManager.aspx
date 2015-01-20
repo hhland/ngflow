@@ -82,8 +82,8 @@
             var month = d.getMonth() + 1; //  Remember the current month is to +1的
             var today = year + "-" + month + "-01";
 
-            $("#sh_StartDate").ligerDateEditor({ format: "yyyy-MM-dd", width: 120,  label: ' Start Time ', labelWidth: 65 });
-            $("#sh_EndDate").ligerDateEditor({ format: "yyyy-MM-dd", width: 120, label: '到' });
+            $("#sh_StartDate").ligerDateEditor({ format: "yyyy-MM-dd", width: 120,  label: 'Start Time', labelWidth: 65 });
+            $("#sh_EndDate").ligerDateEditor({ format: "yyyy-MM-dd", width: 120, label: 'End Time' });
         }
         // Load Data 
         function loadData() {

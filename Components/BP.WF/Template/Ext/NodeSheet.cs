@@ -613,13 +613,13 @@ namespace BP.WF.Template.Ext
                 {
                     map.AttrsOfOneVSM.Add(new BP.WF.Template.NodeStations(), new BP.WF.Port.Stations(),
                         NodeStationAttr.FK_Node, NodeStationAttr.FK_Station,
-                        DeptAttr.Name, DeptAttr.No, " Node binding posts ");
+                        DeptAttr.Name, DeptAttr.No, " Node bind posts ");
 
                     // Determine whether the Group uses , Group opened a new page in a tree display 
                     if (Glo.IsUnit == true)
                     {
                         RefMethod rmDept = new RefMethod();
-                        rmDept.Title = " Node binding department ";
+                        rmDept.Title = " Node bind department ";
                         rmDept.ClassMethodName = this.ToString() + ".DoDepts";
                         rmDept.Icon = BP.WF.Glo.CCFlowAppPath + "WF/Img/Btn/DTS.gif";
                         map.AddRefMethod(rmDept);
@@ -627,7 +627,7 @@ namespace BP.WF.Template.Ext
                     else
                     {
                         map.AttrsOfOneVSM.Add(new BP.WF.Template.NodeDepts(), new BP.WF.Port.Depts(), NodeDeptAttr.FK_Node, NodeDeptAttr.FK_Dept, DeptAttr.Name,
-            DeptAttr.No, " Node binding department ");
+            DeptAttr.No, " Node bind department ");
                     }
                 }
                 else
@@ -636,12 +636,12 @@ namespace BP.WF.Template.Ext
                     map.AttrsOfOneVSM.Add(new BP.WF.Template.NodeStations(),
                         new BP.GPM.Stations(),
                       NodeStationAttr.FK_Node, NodeStationAttr.FK_Station,
-                      DeptAttr.Name, DeptAttr.No, " Node binding posts ");
+                      DeptAttr.Name, DeptAttr.No, " Node bind posts ");
                     // Determine whether the Group uses , Group opened a new page in a tree display 
                     if (Glo.IsUnit == true)
                     {
                         RefMethod rmDept = new RefMethod();
-                        rmDept.Title = " Node binding department ";
+                        rmDept.Title = " Node bind department ";
                         rmDept.ClassMethodName = this.ToString() + ".DoDepts";
                         rmDept.Icon = BP.WF.Glo.CCFlowAppPath + "WF/Img/Btn/DTS.gif";
                         map.AddRefMethod(rmDept);
@@ -651,13 +651,13 @@ namespace BP.WF.Template.Ext
                         // Node department .
                         map.AttrsOfOneVSM.Add(new BP.WF.Template.NodeDepts(), new BP.GPM.Depts(),
                             NodeDeptAttr.FK_Node, NodeDeptAttr.FK_Dept, DeptAttr.Name,
-            DeptAttr.No, " Node binding department ");
+            DeptAttr.No, " Node bind department ");
                     }
                 }
 
 
                 map.AttrsOfOneVSM.Add(new BP.WF.Template.NodeEmps(), new BP.WF.Port.Emps(), NodeEmpAttr.FK_Node, EmpDeptAttr.FK_Emp, DeptAttr.Name,
-                    DeptAttr.No, " Node Binding recipient ");
+                    DeptAttr.No, " Node bind recipient ");
 
                 //  Sub-processes can be called a fool form . 2014.10.19  Remove .
                 //map.AttrsOfOneVSM.Add(new BP.WF.NodeFlows(), new Flows(), NodeFlowAttr.FK_Node, NodeFlowAttr.FK_Flow, DeptAttr.Name, DeptAttr.No,

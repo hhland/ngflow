@@ -114,8 +114,8 @@ namespace CCFlow.WF.UC
                 }
 
                 s = s.Replace("@@", "@");
-                s = s.Replace("@", "<BR><BR><img src='Img/email_start.png' align='middle' />");
-
+                s = s.Replace("@", "</span><br/><br/><img src='Img/email_start.png' align='middle' /><span class='info'>");
+                s ="<span>"+s+"</span>";
                 this.Add("<div style='width:500px;text-align:left;font-size:14px'>");
                 if (WebUser.IsWap)
                     this.AddFieldSet("<a href=Home.aspx ><img src='" + BP.WF.Glo.CCFlowAppPath + "/WF/Img/Home.gif' border=0/>Home</a> -  Operation Tips ", s);

@@ -197,55 +197,55 @@ function callBack(jsonData, scope) {
         
         var grid = $('#maingrid').treegrid({
             fitColumns: true,
-            idField: 'No',
-            treeField: 'Name',
+            idField: 'NO',
+            treeField: 'NAME',
             url: '/AppDemoLigerUI/Base/DataService.aspx?method=startflowTree',
             method: 'get',
 
             columns: [[
 
-                    { field: 'Name', title: ' Name ', width: 380, align: 'left', formatter: function (value, rec) {
-                        if (rec.FK_FlowSort == null)
+                    { field: 'NAME', title: ' Name ', width: 380, align: 'left', formatter: function (value, rec) {
+                        if (rec.FK_FLOWSORT == null)
                             return value;
                         var h = "";
-                        if (rec.StartListUrl) {
-                            h = rec.StartListUrl + "?FK_Flow=" + rec.No + "&FK_Node=" + rec.No + "01&T=" + strTimeKey;
-                            return "<a href='javascript:void(0);' onclick=StartListUrl('" + h + "')>" + rec.Name + "</a>";
+                        if (rec.STARTLISTURL) {
+                            h = rec.STARTLISTURL + "?FK_Flow=" + rec.NO + "&FK_Node=" + rec.NO + "01&T=" + strTimeKey;
+                            return "<a href='javascript:void(0);' onclick=StartListUrl('" + h + "')>" + rec.NAME + "</a>";
                         }
-                        h = "../WF/MyFlow.aspx?FK_Flow=" + rec.No + "&FK_Node=" + rec.No + "01&T=" + strTimeKey;
-                        return "<a href='javascript:void(0);' onclick=ShowEasyUiTitleDiv('" + rec.No + "','" + rec.Name + "','" + h + "')>" + rec.Name + "</a>";
+                        h = "../WF/MyFlow.aspx?FK_Flow=" + rec.NO + "&FK_Node=" + rec.NO + "01&T=" + strTimeKey;
+                        return "<a href='javascript:void(0);' onclick=ShowEasyUiTitleDiv('" + rec.NO + "','" + rec.NAME + "','" + h + "')>" + rec.NAME + "</a>";
                     }
                     },
-                    { field: 'IsBatchStart', title: ' Batch launched ', formatter: function (value, rec) {
-                        if (rec.FK_FlowSort == null)
+                    { field: 'ISBATCHSTART', title: ' Batch launched ', formatter: function (value, rec) {
+                        if (rec.FK_FLOWSORT == null)
                             return value;
                         var h = "";
-                        if (rec.IsBatchStart == "1") {
-                            h = "../WF/BatchStart.aspx?FK_Flow=" + rec.No;
+                        if (rec.ISBATCHSTART == "1") {
+                            h = "../WF/BatchStart.aspx?FK_Flow=" + rec.NO;
                             h = "<a href='javascript:void(0);' onclick=StartListUrl('" + h + "')> Batch launched </a>";
                         }
                         return h;
                     }
                     },
-                    { field: 'RoleType', title: ' Flow chart ', formatter: function (value, rec) {
-                        if (rec.FK_FlowSort == null)
+                    { field: 'ROLETYPE', title: ' Flow chart ', formatter: function (value, rec) {
+                        if (rec.FK_FLOWSORT == null)
                             return value;
-                        return "<a href='javascript:void(0);' onclick=OpenEasyUiFlowPicture('" + rec.No + "','" + rec.Name + "')> Turn on </a>";
+                        return "<a href='javascript:void(0);' onclick=OpenEasyUiFlowPicture('" + rec.NO + "','" + rec.NAME + "')> Turn on </a>";
                     }
                     },
-                    { field: 'HistoryFlow', title: ' History launched ', width: 180, formatter: function (value, rec) {
-                        if (rec.FK_FlowSort == null)
+                    { field: 'HISTORYFLOW', title: ' History launched ', width: 180, formatter: function (value, rec) {
+                        if (rec.FK_FLOWSORT == null)
                             return value;
-                        return "<a href='javascript:void(0);' onclick=ShowEasyUiHistoryData('" + rec.No + "','" + rec.Name + "')> Check out </a>";
+                        return "<a href='javascript:void(0);' onclick=ShowEasyUiHistoryData('" + rec.NO + "','" + rec.NAME + "')> Check out </a>";
                     }
                     },
-                    { field: 'Note', title: ' Description ', width: 280, formatter: function (value, rec) {
-                        if (rec.FK_FlowSort == null)
+                    { field: 'NOTE', title: ' Description ', width: 280, formatter: function (value, rec) {
+                        if (rec.FK_FLOWSORT == null)
                             return value;
-                        if (rec.Note == null || rec.Note == "") {
+                        if (rec.NAME == null || rec.NAME == "") {
                             return "Nothing";
                         }
-                        return rec.Note;
+                        return rec.NAME;
                     }
                     }
                 ]],
@@ -275,13 +275,13 @@ function LoadEasyUiHistoryGrid(flowNo) {
                 collapsible: false,
                 url: '/AppDemoLigerUI/Base/DataService.aspx?method=historystartflow&FK_Flow=' + flowNo,
                 columns: [[
-            { title: ' Title ', field: 'Title', width: 320, align: 'left', formatter: function (value, rec) {
+            { title: ' Title ', field: 'TITLE', width: 320, align: 'left', formatter: function (value, rec) {
                 var h = "../WF/WFRpt.aspx?WorkID=" + rec.OID + "&FK_Flow=" + flowNo + "&FID=" + rec.FID + "&T=" + strTimeKey;
-                return "<a href='javascript:void(0);' onclick=WinOpenWindow('" + h + "')>" + rec.Title + "</a>";
+                return "<a href='javascript:void(0);' onclick=WinOpenWindow('" + h + "')>" + rec.TITLE + "</a>";
             }
             },
-            { title: ' Start Time ', field: 'FlowStartRDT' },
-            { title: ' Participants ', field: 'FlowEmps', width: 300 }
+            { title: ' Start Time ', field: 'FLOWSTARTRDT' },
+            { title: ' Participants ', field: 'FLOWEMPS', width: 300 }
             ]],
                 rownumbers: true,
                 width: 780,

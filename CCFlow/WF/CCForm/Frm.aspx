@@ -12,7 +12,7 @@
     <script type="text/javascript" language="javascript">
 
         $(function () {
-            SetHeight();
+            //SetHeight();
         });
 
         function SetHeight() {
@@ -25,7 +25,7 @@
             }
         }
         $(window).resize(function () {
-            SetHeight();
+            //SetHeight();
         });
 
         //  Get DDL值

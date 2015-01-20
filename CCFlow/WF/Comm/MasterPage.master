@@ -7,12 +7,15 @@
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>   
 </head>
-<body class="easyui-layout">
+<body >
     <form id="aspnetForm" runat="server">
-    <div data-options="region:'center',title:'<%=this.Page.Title %>'" style="padding:5px;">
-        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
-        </asp:ContentPlaceHolder>
-    </div>
+     <div class="easyui-layout">
+        <div data-options="region:'center',title:'<%=this.Page.Title %>'" style="padding:5px;">
+          <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+          </asp:ContentPlaceHolder>
+        </div>      
+     </div>
+   
     </form>
 </body>
 </html>

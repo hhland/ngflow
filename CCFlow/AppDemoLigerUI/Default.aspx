@@ -254,12 +254,11 @@
     <div id="pageloading">
     </div>
     <div id="topmenu" class="l-topmenu">
-        <div class="l-topmenu-logo">
-             NMP Workflow Management</div>
+        <div class="l-topmenu-logo">NMP Workflow Management</div>
         <div class="l-topmenu-welcome">
             <span class="space">
                 <%=usermsg %></span>&nbsp;&nbsp;<span class="space">|</span>&nbsp;&nbsp;<a class="ce"
-                    href="Login.aspx?DoType=Logout">Log Out</a> <span class="space">|</span> <a href="http://www.google.com"
+                    href="Login.aspx?DoType=Logout">Log Out</a> <span class="space">|</span> <a href=""
                         class="l-link2" target="_blank"> Forum </a>
         </div>
     </div>
@@ -273,7 +272,8 @@
         </div>
     </div>
     <div style="height: 32px; line-height: 32px; color: #666; font-family: arial; text-align: center;">
-         NMP Workflow Copyright 2015
+         NAK
+         NMP Workflow Copyright@2014-2015
     </div>
     <div style="display: none">
     </div>

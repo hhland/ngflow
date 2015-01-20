@@ -116,16 +116,17 @@
     </style>
 </head>
 <body>
- <div style="height:99px; width:900px; margin:0 auto;">
-		<div style="float:left; width:40%; display:inline "><a><img src="Img/ccflow.jpg" alt="ccflow"/></a></div>
+ <div style="height:127px; width:900px; margin:0 auto;">
+		<div style="float:left; width:40%; display:inline "><a><img src="Img/ccflow2.jpg" alt="ccflow"/></a></div>
 		<div style="float:right; margin-right:100px; width:30%;height:56px; position:relative; display:inline;">
 		</div>
         <div style="clear:both;"></div>
 	</div>
     <form id="Form1" method="post" runat="server">
-    <section class="main" id="mainBg">
-     <div id="divMain" style="background-repeat:repeat-x; width:100%; background-position:left; display:block;margin:0;padding:0;border:none" >
-		<div class="main-inner" style="  background-repeat:repeat-x; background-position-x: center; background-position-y: top;" >
+     <div id="divMain" 
+         style="background-repeat:repeat-x; width:100%; background-position:left; display:block;margin:0;padding:0;border:none; background-color: #008000;" >
+		<div class="main-inner" 
+             style="  background-position: center top; background-repeat:repeat-x; top: 0px; left: 0px;" >
 			<div id="theme">
             <img src="Img/bgimage.jpg" style=" height:440px; width:900px;" />
             </div>
@@ -133,8 +134,8 @@
             <table  style="width:100%; background-color:#F1F3F8;  height: 120%;">
             <tr >
              <td colspan="2" class="style12">
-             &nbsp;&nbsp;<img src="Img/yaoshi.jpg"  style=" width:29px; height:12px;" /><strong style="font-size:16px;">  User Login </strong>
-
+             &nbsp;&nbsp;<img src="Img/yaoshi.jpg"  
+                     style=" width:30px; height:16px;" /><strong style="font-size:16px;">  User Login </strong>
               <hr style="width:100%; height:0.5px; color:Black" />
             </td>
             </tr>
@@ -175,14 +176,12 @@
 			</div>
 		</div>
       </div>
-	</section>
     <footer id="footer" class="footer">
 		<div class="footer-inner" id="footerInner">			
 			<nav class="footerNav">
-                <a href="http://t.qq.com/hiflow" target="_blank"> &nbsp;</a>|<span class="copyright"> 
-            NMP Workflow. All rights reserved  &copy; 2003-2015</span>&nbsp;&nbsp;&nbsp;
-			</nav>
-		</div>
+                <span class="copyright"> 
+            &nbsp;NAK 
+            NMP Workflow All rights reserved  &copy; 2014-2015</span></nav></div>
 	</footer>
     </form>
 </body>

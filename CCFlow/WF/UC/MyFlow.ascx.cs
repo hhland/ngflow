@@ -1242,7 +1242,7 @@ namespace CCFlow.WF.UC
                         string maxLeft = map.MaxLeft + "";
                         string maxRight = map.MaxRight + "";
 
-                        Height = map.MaxEnd + "";
+                        Height = map.FrmH + "";
 
                         //this.UCEn1.Add("<div id=divCCForm style='width:" + map.FrmW + "px;height:" + map.FrmH + "px' >");
                         this.UCEn1.Add("<div id=divCCForm style='width:" + Width + "px;height:" + Height + "px' >");
@@ -1265,7 +1265,7 @@ namespace CCFlow.WF.UC
                             Width = "900";
 
 
-                        Height = map.MaxEnd + "";
+                        Height = map.FrmH + "";
                         this.UCEn1.Add("<div id=divCCForm style='width:" + Width + "px;height:" + Height + "px;overflow-x:scroll;' >");
                         this.UCEn1.BindColumn4(wk, "ND" + nd.NodeID); //, false, false, null);
                         if (wk.WorkEndInfo.Length > 2)

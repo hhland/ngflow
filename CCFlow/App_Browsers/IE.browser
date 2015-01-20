@@ -1,5 +1,5 @@
 ﻿<!--
-可在 <windir>\Microsoft.NET\Framework\<ver>\CONFIG\Browsers 中找到现有的浏览器定义
+可在1 <windir>\Microsoft.NET\Framework\<ver>\CONFIG\Browsers 中找到现有的浏览器定义
 -->
 <browsers>
   <browser refID="Default">

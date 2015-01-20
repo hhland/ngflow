@@ -68,7 +68,7 @@ namespace CCFlow.WF.UC
             return;
 
             this.Pub1.AddTable("width=100%");
-            this.Pub1.AddCaptionLeft(" Work Calendar :" + dt.ToString("yyyy年MM月dd日"));
+            this.Pub1.AddCaptionLeft(" Work Calendar :" + dt.ToString("yyyy-MM-dd"));
             this.Pub1.AddTR();
             this.Pub1.AddTDTitle("IDX");
             this.Pub1.AddTDTitle(" Time ");
@@ -155,13 +155,13 @@ namespace CCFlow.WF.UC
             html += "</TR>";
 
             html += "<TR >";
-            html += " <TD class='Week' >日</TD>";
-            html += " <TD class='Week' >一</TD>";
-            html += " <TD class='Week' >二</TD>";
-            html += " <TD class='Week' >三</TD>";
-            html += " <TD class='Week' >四</TD>";
-            html += " <TD class='Week' >五</TD>";
-            html += " <TD class='Week' >六</TD>";
+            html += " <TD class='Week' >Sun</TD>";
+            html += " <TD class='Week' >Mon</TD>";
+            html += " <TD class='Week' >Tues</TD>";
+            html += " <TD class='Week' >Wed</TD>";
+            html += " <TD class='Week' >Thurs</TD>";
+            html += " <TD class='Week' >Fri</TD>";
+            html += " <TD class='Week' >Sat</TD>";
             html += "</TR>";
 
             int i = 0;

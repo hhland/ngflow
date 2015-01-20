@@ -4,7 +4,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
     <title> AutoComplete </title>
+    <link rel="stylesheet" href="../Comm/JS/EasyUI/themes/default/easyui.css" />
 	<script language="JavaScript" src="../Comm/JScript.js"></script>
+    
     <script language=javascript>
     /* ESC Key Down */
         function Esc() {
@@ -22,5 +24,7 @@
         <uc1:Pub ID="Pub1" runat="server" />
     </div>
     </form>
+    <script type="text/javascript" src="../Comm/JS/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="../Comm/JS/EasyUI/jquery.easyui.min.js"></script>
 </body>
 </html>

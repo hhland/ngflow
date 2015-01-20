@@ -251,7 +251,7 @@ namespace CCFlow.WF.CCForm
                 Width = md.MaxRight + md.MaxLeft * 2 + 10 + "";
                 if (float.Parse(Width) < 500)
                     Width = "900";
-                Height = md.MaxEnd + "";
+                Height = md.FrmH + "";
 
                 this.UCEn1.Add("<div id=divCCForm style='width:" + Width + "px;height:" + Height + "px' >");
                 if (md.HisFrmType == FrmType.AspxFrm)
@@ -393,7 +393,7 @@ namespace CCFlow.WF.CCForm
                 Width = md.MaxRight + md.MaxLeft * 2 + 10 + "";
                 if (float.Parse(Width) < 500)
                     Width = "900";
-                Height = md.MaxEnd + "";
+                Height = md.FrmH + "";
                 this.UCEn1.Add("<div id=divCCForm style='width:" + Width + "px;height:" + Height + "px' >");
                 if (nodeid != null)
                 {

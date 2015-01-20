@@ -31,7 +31,7 @@
 
         var frmHeight = "<%=Height %>";
         if (screenHeight > parseFloat(frmHeight) + allHeight) {
-            $("#divCCForm").height(screenHeight - allHeight);
+            //$("#divCCForm").height(screenHeight - allHeight);
         }
         
        

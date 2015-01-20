@@ -6,7 +6,7 @@
 <link href="../Comm/JS/Calendar/skin/WdatePicker.css" rel="stylesheet" type="text/css" />
 <script language="javascript" type="text/javascript">
     $(function () {
-        SetHegiht();
+        //SetHegiht();
     });
 
     function SetHegiht() {
@@ -31,7 +31,7 @@
     }
 
     $(window).resize(function () {
-        SetHegiht();
+        //SetHegiht();
     });
     function SysCheckFrm() {
     }

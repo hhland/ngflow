@@ -146,7 +146,7 @@ namespace ShenZhenGovOA.WF.WorkOpt.OneWork
                     continue;
 
                 DateTime dtt = DataType.ParseSysDateTime2DateTime(dr[TrackAttr.RDT].ToString());
-                string rdt = dtt.ToString("yyyy年MM月dd日HH:mm");
+                string rdt = dtt.ToString("yyyy-MM-dd HH:mm");
                 string ndName = dr[TrackAttr.NDFromT].ToString();
                 string empName = dr[TrackAttr.EmpFromT].ToString();
                 string info = dr[TrackAttr.Msg].ToString();
@@ -235,7 +235,7 @@ namespace ShenZhenGovOA.WF.WorkOpt.OneWork
                 this.Pub2.AddTR();
                 this.Pub2.AddTDIdx(idx++);
                 DateTime dtt = DataType.ParseSysDateTime2DateTime(dr[TrackAttr.RDT].ToString());
-                this.Pub2.AddTD(dtt.ToString("yyyy年MM月dd日HH:mm"));
+                this.Pub2.AddTD(dtt.ToString("yyyy-MM-dd HH:mm"));
 
                 this.Pub2.AddTD(dr[TrackAttr.NDFromT].ToString());
 

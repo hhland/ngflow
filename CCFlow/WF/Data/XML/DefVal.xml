@@ -7,8 +7,8 @@
   <Item No="CH_4" Lang="CH" Name=" Log personnel department number " Val="@WebUser.FK_Dept"  />
   <Item No="CH_5" Lang="CH" Name=" Log personnel department name " Val="@WebUser.FK_DeptName"  />
   <Item No="CH_6" Lang="CH" Name=" The full name of the landing personnel department " Val="@WebUser.FK_DeptNameOfFull"  />
-  <Item No="CH_7" Lang="CH" Name=" The current date -1" Val="@yyyy年mm月dd日"  />
-  <Item No="CH_8" Lang="CH" Name=" The current date -2" Val="@yy年mm月dd日"  />
+  <Item No="CH_7" Lang="CH" Name=" The current date -1" Val="@yyyy-mm-dd"  />
+  <Item No="CH_8" Lang="CH" Name=" The current date -2" Val="@yyyy-mm-dd"  />
   <Item No="CH_9" Lang="CH" Name=" Current year " Val="@FK_ND"  />
   <Item No="CH_10" Lang="CH" Name=" Current month " Val="@FK_YF"  />
   <Item No="CH_11" Lang="CH" Name=" The current staff can handle the work " Val="@CurrWorker"  />
@@ -18,8 +18,8 @@
   <Item No="EN_3" Lang="EN" Name="Operator Name" Val="@WebUser.Name"  />
   <Item No="EN_4" Lang="EN" Name="Department number operator" Val="@WebUser.FK_Dept"  />
   <Item No="EN_5" Lang="EN" Name="The operator name of the department" Val="@WebUser.FK_DeptName"  />
-  <Item No="EN_6" Lang="EN" Name="Current date-1" Val="@yyyy年mm月dd日"  />
-  <Item No="EN_7" Lang="EN" Name="Current date-2" Val="@yy年mm月dd日"  />
+  <Item No="EN_6" Lang="EN" Name="Current date-1" Val="@yyyy-mm-dd"  />
+  <Item No="EN_7" Lang="EN" Name="Current date-2" Val="@yyyy-mm-dd"  />
   <Item No="EN_8" Lang="EN" Name="Current year" Val="@FK_ND"  />
   <Item No="EN_9" Lang="EN" Name="Current month" Val="@FK_YF"  />
   <Item No="EN_10" Lang="EN" Name=" The current staff can handle the work " Val="@CurrWorker"  />
@@ -30,8 +30,8 @@
   <Item No="JP_3" Lang="JP" Name="Operator Name" Val="@WebUser.Name"  />
   <Item No="JP_4" Lang="JP" Name="Department number operator" Val="@WebUser.FK_Dept"  />
   <Item No="JP_5" Lang="JP" Name="The operator name of the department" Val="@WebUser.FK_DeptName"  />
-  <Item No="JP_6" Lang="JP" Name="Current date-1" Val="@yyyy年mm月dd日"  />
-  <Item No="JP_7" Lang="JP" Name="Current date-2" Val="@yy年mm月dd日"  />
+  <Item No="JP_6" Lang="JP" Name="Current date-1" Val="@yyyy-mm-dd"  />
+  <Item No="JP_7" Lang="JP" Name="Current date-2" Val="@yyyy-mm-dd"  />
   <Item No="JP_8" Lang="JP" Name="Current year" Val="@FK_ND"  />
   <Item No="JP_9" Lang="JP" Name="Current month" Val="@FK_YF"  />
     <Item No="JP_10" Lang="JP" Name=" The current staff can handle the work " Val="@CurrWorker"  />

@@ -176,7 +176,7 @@ function EUIWinOpen(url, winName) {
     url += "&flag=frame";
     var w = 700, h=400;
     var fw = w - 30, fh = h - 40;
-    var content = "<iframe src='" + url + "' width='" + fw + "' height='" + fh + "' style='border-width:0px' ><" + "/iframe>";
+    var content = "<iframe src='" + url + "' width='100%' height='100%' style='border-width:0px' ><" + "/iframe>";
     
     $div.window({
         title: winName

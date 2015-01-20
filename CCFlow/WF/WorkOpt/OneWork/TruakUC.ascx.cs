@@ -385,14 +385,14 @@ namespace CCFlow.WF.WorkOpt.OneWork
                 this.AddTR();
                 this.AddTDIdx(idx);
                 DateTime dtt = DataType.ParseSysDateTime2DateTime(dr[TrackAttr.RDT].ToString());
-                this.AddTD(dtt.ToString("yy年MM月dd日HH:mm"));
+                this.AddTD(dtt.ToString("yyyy-MM-dd HH:mm"));
 
                 if (at == ActionType.Forward
                     || at == ActionType.ForwardAskfor
                     || at == ActionType.WorkCheck
                     || at == ActionType.Order
                     || at == ActionType.FlowOver)   //added by liuxc,2014-12-3, End nodes also showed normal form 
-                    this.AddTD("<a class='easyui-linkbutton' data-options=\"iconCls:'icon-sheet'\" href=\"javascript:WinOpen('" + BP.WF.Glo.CCFlowAppPath + "WF/WFRpt.aspx?WorkID=" + dr[TrackAttr.WorkID].ToString() + "&FK_Flow=" + this.FK_Flow + "&FK_Node=" + dr[TrackAttr.NDTo].ToString() + "&DoType=View&MyPK=" + dr[TrackAttr.MyPK].ToString() + "','" + dr[TrackAttr.MyPK].ToString() + "');\"> Form </a>");
+                    this.AddTD("<a class='easyui-linkbutton' data-options=\"iconCls:'icon-sheet'\" href=\"javascript:WinOpen('" + BP.WF.Glo.CCFlowAppPath + "WF/WFRpt.aspx?WorkID=" + dr[TrackAttr.WorkID].ToString() + "&FK_Flow=" + this.FK_Flow + "&FK_Node=" + dr[TrackAttr.NDFrom].ToString() + "&DoType=View&MyPK=" + dr[TrackAttr.MyPK].ToString() + "','" + dr[TrackAttr.MyPK].ToString() + "');\"> Form </a>");
                 else
                     this.AddTD("");
 
@@ -416,7 +416,7 @@ namespace CCFlow.WF.WorkOpt.OneWork
                 if(idx > 1)
                 {
                     var toTime = Convert.ToDateTime(dv[idx - 1 - 1][TrackAttr.RDT].ToString());
-                    this.AddTD(toTime.ToString("yy年MM月dd日HH:mm"));
+                    this.AddTD(toTime.ToString("yyyy-MM-dd HH:mm"));
                     this.AddTD(DataType.GetSpanTime(toTime, dtt));
                 }
                 else

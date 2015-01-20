@@ -27,6 +27,7 @@
             padding: 5px;
             background: #A3C0E8;
             cursor: pointer;
+            height: 13px;
         }
         .content
         {
@@ -53,17 +54,12 @@
         <div id="panel1" class="panel" style="float:left">
             <div class="head">
                 <h5>
-                     Profile 1</h5>
+                     Profile</h5>
             </div>
-            <div class="content"><br />
+            <div class="content" style="font-family: 'Segoe UI'; font-size: medium">NAK NMP 
+                WORKFLOW<br />
                  <br />
             </div>
-        </div>
-        <div id="panel2" class="panel" style="width:460px;float:left; margin-left:30px;">
-            <h5 class="head">
-                 Product Line 1</h5>
-            <div class="content">
-               &nbsp;</div>
         </div>
     </div>
     </form>

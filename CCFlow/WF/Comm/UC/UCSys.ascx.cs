@@ -1496,7 +1496,18 @@ namespace CCFlow.WF.Comm.UC
                         continue;
 
                     if (attr.UIContralType == UIContralType.DDL)
-                        this.Add("<TD  nowrap >" + en.GetValRefTextByKey(attr.Key) + "&nbsp;</TD>");
+                    {
+                        int maxlenght = 160;
+                        string text = en.GetValRefTextByKey(attr.Key);
+                        //if (!string.IsNullOrWhiteSpace(text) && text.Length > maxlenght)
+                        //{
+                        //    text = string.Format("<span title='{0}'>{1}</span>"
+                        //        ,
+                        //        );
+                        //}
+                        this.Add("<TD  nowrap >" + text + "&nbsp;</TD>");
+                    }
+                        
                     else
                     {
                         string str = en.GetValStringByKey(attr.Key);

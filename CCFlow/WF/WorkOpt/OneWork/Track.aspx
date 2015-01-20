@@ -15,6 +15,30 @@
             newWindow.focus();
             return;
         }
+
+        $(document).ready(function () {
+
+            $("TD[nowrap]").each(function (index) {
+
+                var text = $(this).text();
+                var html = $(this).html();
+                var maxlen = 50;
+                if ($(this).find("a").size() > 0) { }
+                else if (text != null && text.length > maxlen) {
+
+                    var textsub = text.substring(0, maxlen);
+                    var bri = html.indexOf("<br>");
+                    if (bri >= 0) {
+                        //如果有换行符，就截取第一行
+                        textsub = html.substring(0,bri);
+                    }         
+                    var _html = "<span title='" + text + "'>" + textsub + "...<" + "/span>";
+                    $(this).html(_html);
+                }
+            });
+
+        });
+
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

@@ -4676,8 +4676,16 @@ namespace CCForm
                         string num = item.Name;
                         if (!string.IsNullOrEmpty(num) && num.Contains(prefix) && num.Length > prefix.Length)
                         {
-                            num = num.Substring(prefix.Length, num.Length - prefix.Length);
-                            if (!int.TryParse(num, out numEle))
+                            string newNum = num.Substring(prefix.Length, num.Length - prefix.Length);
+
+                            #region 2015-01-20 10:25 add by ating
+                            if (obj is BPLine || obj is BPLabel)
+                            {
+                                newNum = num.Split('_')[1].Replace(prefix, "");
+                            }
+                            #endregion
+
+                            if (!int.TryParse(newNum, out numEle))
                                 flag = false;
                         }
 
