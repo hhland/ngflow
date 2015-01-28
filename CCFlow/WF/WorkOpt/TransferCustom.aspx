@@ -217,11 +217,11 @@
             var i = $("tr[data-desc='nocalc']").length;
 
             if (objTR != undefined && objTR != null) {
-                objTR.children(":eq(0)").children(":eq(1)").text('第' + (i + $("tr[data-desc='true']").length) + '步');
+                objTR.children(":eq(0)").children(":eq(1)").text('Step ' + (i + $("tr[data-desc='true']").length) + '');
             }
             else {
                 $.each($("tr[data-desc='true']"), function (idx, tr) {
-                    $(tr).children(":eq(0)").children(":eq(1)").text('第' + (i + idx + 1) + '步');
+                    $(tr).children(":eq(0)").children(":eq(1)").text('Step ' + (i + idx + 1) + '');
                 });
             }
         }
@@ -268,7 +268,7 @@
                         <tr data-desc="nocalc" data-node='<%# Eval("FK_Node") %>'>
                             <td class="Idx">
                                 <asp:HiddenField ID="hid_idx" runat="server" Value='<%# Eval("Step") %>' />
-                                <span>第<%# Eval("Step") %>步</span>
+                                <span>Step <%# Eval("Step") %></span>
                                 <asp:HiddenField ID="hid_node" runat="server" Value='<%# Eval("FK_Node") %>' />
                             </td>
                             <td>
@@ -302,7 +302,7 @@
                 </tr>
                 <tr data-desc="nocalc">
                     <td class="Idx">
-                        第<asp:Literal ID="litCurrentStep" runat="server"></asp:Literal>步
+                        Step <asp:Literal ID="litCurrentStep" runat="server"></asp:Literal>
                     </td>
                     <td>
                         <asp:Label ID="lblFK_NodeText" runat="server" Text=""></asp:Label>
@@ -330,7 +330,7 @@
                         <tr data-desc="true" data-node='<%# Eval("FK_Node") %>'>
                             <td class="Idx">
                                 <asp:HiddenField ID="hid_idx" runat="server" Value='<%# Eval("Idx") %>' />
-                                <span>第<%# Eval("Idx") %>步</span>
+                                <span>Step <%# Eval("Idx") %></span>
                                 <asp:HiddenField ID="hid_node" runat="server" Value='<%# Eval("FK_Node") %>' />
                             </td>
                             <td>

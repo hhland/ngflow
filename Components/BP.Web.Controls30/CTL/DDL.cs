@@ -216,12 +216,12 @@ namespace BP.Web.Controls
             switch (this.SelfShowType)
             {
                 case DDLShowType.Boolean:
-                    this.Items.Add(new ListItem("是", "1"));
-                    this.Items.Add(new ListItem("否", "0"));
+                    this.Items.Add(new ListItem("Yes", "1"));
+                    this.Items.Add(new ListItem("No", "0"));
                     break;
                 case DDLShowType.Gender:
-                    this.Items.Add(new ListItem("男", "1"));
-                    this.Items.Add(new ListItem("女", "0"));
+                    this.Items.Add(new ListItem("Male", "1"));
+                    this.Items.Add(new ListItem("Female", "0"));
                     break;
                 case DDLShowType.SysEnum: ///  Enumerated type 
                     SelfBindSysEnum();
@@ -900,7 +900,7 @@ namespace BP.Web.Controls
 				str=i.ToString();
 				if (str.Length==1)
 					str="0"+str;
-				ListItem li =new ListItem( i.ToString()+"时", str ); 
+				ListItem li =new ListItem( i.ToString()+"h", str ); 
 
 				if (i==hh)
 					li.Selected=true;
@@ -934,7 +934,7 @@ namespace BP.Web.Controls
 				str=i.ToString();
 				if (str.Length==1)
 					str="0"+str;
-				ListItem li =new ListItem( i.ToString()+"分", str ); 
+				ListItem li =new ListItem( i.ToString()+"min", str ); 
 				 
 				this.Items.Add(li);
 			}
@@ -1153,7 +1153,7 @@ namespace BP.Web.Controls
             DateTime dt = System.DateTime.Now;
             for (int i = 0; i <= nearM; i++)
             {
-                this.Items.Add(new ListItem(dt.ToString("yyyy年MM月"), dt.ToString("yyyy-MM")));
+                this.Items.Add(new ListItem(dt.ToString("yyyy-MM"), dt.ToString("yyyy-MM")));
                dt= dt.AddMonths(-1);
                 i++;
             }
@@ -1170,11 +1170,11 @@ namespace BP.Web.Controls
             int i4 = i1 - 3;
             int i5 = i1 - 4;
 
-            this.Items.Add(new ListItem(i1.ToString() + "年", i1.ToString()));
-            this.Items.Add(new ListItem(i2.ToString() + "年", i2.ToString()));
-            this.Items.Add(new ListItem(i3.ToString() + "年", i3.ToString()));
-            this.Items.Add(new ListItem(i4.ToString() + "年", i4.ToString()));
-            this.Items.Add(new ListItem(i5.ToString() + "年", i5.ToString()));
+            this.Items.Add(new ListItem(i1.ToString() + "", i1.ToString()));
+            this.Items.Add(new ListItem(i2.ToString() + "", i2.ToString()));
+            this.Items.Add(new ListItem(i3.ToString() + "", i3.ToString()));
+            this.Items.Add(new ListItem(i4.ToString() + "", i4.ToString()));
+            this.Items.Add(new ListItem(i5.ToString() + "", i5.ToString()));
         }
 		
 		/// <summary>
@@ -1444,8 +1444,8 @@ namespace BP.Web.Controls
 		{
 			this.Items.Clear();
 
-			this.Items.Add(new ListItem("是", "1") );
-			this.Items.Add(new ListItem("否", "0") );
+			this.Items.Add(new ListItem("Yes", "1") );
+			this.Items.Add(new ListItem("No", "0") );
 
 			foreach(ListItem li in this.Items)
 			{

@@ -176,7 +176,7 @@
             }
             // Prompt 
             if (numOfRepeat > 0) {
-                alert(" Added successfully " + String(numOfSelect - numOfRepeat) + "个, Other " + numOfRepeat + " One has been added !");
+                alert(" Added successfully " + String(numOfSelect - numOfRepeat) + ", Other " + numOfRepeat + " One has been added !");
             }
         }
         function R2L() {
@@ -232,7 +232,7 @@
         padding: 5px">
         <div class="easyui-layout" data-options="fit:true">
             <div data-options="region:'west',noheader:true" style="width: 200px">
-                <asp:ListBox ID="lbLeft" runat="server" Height="100%" Width="100%" ToolTip="按Ctrl Select key "
+                <asp:ListBox ID="lbLeft" runat="server" Height="100%" Width="100%" ToolTip="Press Ctrl Select key "
                     CssClass="listbox" SelectionMode="Multiple" ondblclick="L2R()"></asp:ListBox>
             </div>
             <div data-options="region:'center',noheader:true,border:false" style="text-align: center">            

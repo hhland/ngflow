@@ -158,7 +158,7 @@
             this.CB_IsWriteToCCIM.Name = "CB_IsWriteToCCIM";
             this.CB_IsWriteToCCIM.Size = new System.Drawing.Size(108, 16);
             this.CB_IsWriteToCCIM.TabIndex = 8;
-            this.CB_IsWriteToCCIM.Text = "向CCIM Write messages ";
+            this.CB_IsWriteToCCIM.Text = "Write messages to CCIM";
             this.CB_IsWriteToCCIM.UseVisualStyleBackColor = true;
             this.CB_IsWriteToCCIM.CheckedChanged += new System.EventHandler(this.CB_IsWriteToCCIM_CheckedChanged);
             // 

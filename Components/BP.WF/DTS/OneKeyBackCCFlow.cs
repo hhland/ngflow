@@ -50,7 +50,7 @@ namespace BP.WF.DTS
         /// <returns> Return to the results </returns>
         public override object Do()
         {
-            string path = "C:\\CCFlowTemplete" + DateTime.Now.ToString("yy年MM月dd日HH时mm分ss秒");
+            string path = "C:\\CCFlowTemplete" + DateTime.Now.ToString("yyyyMMdd_HHmmss");
             if (System.IO.Directory.Exists(path) == false)
                 System.IO.Directory.CreateDirectory(path);
 

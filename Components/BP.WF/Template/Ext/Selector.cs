@@ -265,7 +265,7 @@ namespace BP.WF.Template
                 map.AddDDLSysEnum(SelectorAttr.SelectorDBShowWay, 0, " Data Display ", true, true,
                 SelectorAttr.SelectorDBShowWay, "@0= The table shows @1= Tree display ");
                 map.AddDDLSysEnum(SelectorAttr.SelectorModel, 0, " Window Mode ", true, true, SelectorAttr.SelectorModel,
-                    "@0= By post @1= By sector @2= By staff @3=按SQL@4= Custom Url");
+                    "@0= By post @1= By sector @2= By staff @3=By SQL@4= Custom Url");
 
 
                 //map.AddTBString(SelectorAttr.SelectorP1, null, " Parameters 1", true, false, 0, 500, 10, true);

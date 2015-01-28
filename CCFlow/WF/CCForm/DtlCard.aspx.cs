@@ -83,6 +83,7 @@ namespace CCFlow.WF.CCForm
                         qo.AddWhere(GEDtlAttr.FID, this.RefPKVal);
                         break;
                 }
+                qo.addOrderBy("oid");
                 qo.DoQuery();
             }
             catch (Exception ex)
@@ -135,7 +136,7 @@ namespace CCFlow.WF.CCForm
             MapData md = new MapData(mdtl.No);
             this.UCEn1.Clear();
 
-            this.UCEn1.Add("\t\n<div class=\"easyui-tabs\" fit=\"true\" border=\"false\" style='width:" + md.FrmW + "px;height:" + md.FrmH + "px;' data-options=\"tools:'#tab-tools'\">");  //begain.
+            this.UCEn1.Add("\t\n<div id='maintabs' class=\"easyui-tabs\" fit=\"true\" border=\"false\" style='width:" + md.FrmW + "px;height:" + md.FrmH + "px;' data-options=\"tools:'#tab-tools'\">");  //begain.
 
             #region  Output tab .
             int idx = 0;
@@ -147,7 +148,10 @@ namespace CCFlow.WF.CCForm
                 this.UCEn1.Add("\t\n<div id=" + idx + " title='Item " + idx + "' style='overflow: auto;'>");
                 string src = "";
                 src = "FrmDtl.aspx?FK_MapData=" + this.EnsName + "&WorkID=" + this.RefPKVal + "&OID=" + dtl.OID + "&IsReadonly=" + this.IsReadonly;
-                this.UCEn1.Add("\t\n<iframe id='IF" + idx + "' Onblur=\"SaveDtlData('" + idx + "');\" frameborder='0' style='width:" + md.FrmW + "px;height:" + md.FrmH + "px;' src=\"" + src + "\"></iframe>");
+                //this.UCEn1.Add("\t\n<iframe id='IF" + idx + "' Onblur=\"SaveDtlData('" + idx + "');\" frameborder='0' style='width:" + md.FrmW + "px;height:" + md.FrmH + "px;' src=\"" + src + "\"></iframe>");
+                //2015-01-24 15:30 ating 把onblur去掉
+                this.UCEn1.Add("\t\n<iframe id='IF" + idx + "' frameborder='0' style='width:" + md.FrmW + "px;height:" + md.FrmH + "px;' src=\"" + src + "\"></iframe>");
+
                 this.UCEn1.Add("\t\n</div>");
             }
             this.UCEn1.Add("\t\n </div>");
@@ -157,13 +161,39 @@ namespace CCFlow.WF.CCForm
                 int cutNum = addRowNum - 1;
 
                 this.UCEn1.Add("\t\n<div id=\"tab-tools\">");
+                string jscreatetab =string.Format("createTab('{0}',{1},{2},'{3}','{4}');"
+                    ,"Item "
+                    ,md.FrmW
+                    ,md.FrmH
+                    ,EnsName
+                    ,RefPKVal
+                    ,IsReadonly
+                    );
+                string jsdeletetab =string.Format("deleteTab('{0}','{1}');"
+                    , EnsName
+                    ,RefPKVal
+                    );
+                this.UCEn1.Add(
+                        "\t\n<a href=\"javascript:"+jsdeletetab+"\" class=\"easyui-linkbutton\" data-options=\"plain:true,iconCls:'icon-reload'\"> Remove </a>");
+
                 if (cutNum >= 0)
                 {
-                    this.UCEn1.Add("\t\n<a href='DtlCard.aspx?EnsName=" + this.EnsName + "&RefPKVal=" + this.RefPKVal + "&addRowNum=" + cutNum + "' class=\"easyui-linkbutton\" data-options=\"plain:true,iconCls:'icon-reload'\"> Remove </a>");
-                    this.UCEn1.Add("\t\n<a href='DtlCard.aspx?EnsName=" + this.EnsName + "&RefPKVal=" + this.RefPKVal + "&addRowNum=" + addNum + "' class=\"easyui-linkbutton\" data-options=\"plain:true,iconCls:'icon-reload'\"> Insert </a>");
+                    //this.UCEn1.Add(
+                    //    "\t\n<a href='DtlCard.aspx?EnsName=" + this.EnsName + "&RefPKVal=" + this.RefPKVal
+                    //    + "&addRowNum=" + cutNum
+                    //    + "' class=\"easyui-linkbutton\" data-options=\"plain:true,iconCls:'icon-reload'\"> Remove </a>");
+                    //this.UCEn1.Add("\t\n<a href='DtlCard.aspx?EnsName=" + this.EnsName + "&RefPKVal=" + this.RefPKVal + "&addRowNum=" + addNum + "' class=\"easyui-linkbutton\" data-options=\"plain:true,iconCls:'icon-reload'\"> Insert </a>");
+                    
+                  //  this.UCEn1.Add(
+                  //      "\t\n<a href='javascript:" + jscreatetab+ "' class=\"easyui-linkbutton\" data-options=\"plain:true,iconCls:'icon-reload'\"> Insert </a>");
+
                 }
-                else
-                    this.UCEn1.Add("\t\n<a href='DtlCard.aspx?EnsName=" + this.EnsName + "&RefPKVal=" + this.RefPKVal + "&addRowNum=" + addNum + "' > Insert </a>");
+               // else
+                //{
+                    this.UCEn1.Add("\t\n<a href=\"javascript:" + jscreatetab + "\" class=\"easyui-linkbutton\" data-options=\"plain:true,iconCls:'icon-reload'\"> Insert </a>");
+   
+                //}
+                    //this.UCEn1.Add("\t\n<a href='DtlCard.aspx?EnsName=" + this.EnsName + "&RefPKVal=" + this.RefPKVal + "&addRowNum=" + addNum + "' > Insert </a>");
                 this.UCEn1.Add("\t\n</div>");
             }
             #endregion  Output tab .

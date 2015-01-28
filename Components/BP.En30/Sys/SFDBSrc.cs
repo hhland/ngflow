@@ -225,7 +225,7 @@ namespace BP.Sys
                     sql += " EXEC sp_addlinkedsrvlogin '" + this.No + "','false', NULL, '" + this.UserID + "', '" + this.Password + "'";
                     BP.DA.DBAccess.RunSQL(sql);
 
-                    return " Congratulations ,该(" + this.Name + ") Connection configuration is successful .";
+                    return " Congratulations ,(" + this.Name + ") Connection configuration is successful .";
                 }
                 catch (Exception ex)
                 {
@@ -242,7 +242,7 @@ namespace BP.Sys
                     conn.ConnectionString = dsn;
                     conn.Open();
                     conn.Close();
-                    return " Congratulations ,该(" + this.Name + ") Connection configuration is successful .";
+                    return " Congratulations ,(" + this.Name + ") Connection configuration is successful .";
                 }
                 catch (Exception ex)
                 {
@@ -259,7 +259,7 @@ namespace BP.Sys
                     conn.ConnectionString = dsn;
                     conn.Open();
                     conn.Close();
-                    return " Congratulations ,该(" + this.Name + ") Connection configuration is successful .";
+                    return " Congratulations ,(" + this.Name + ") Connection configuration is successful .";
                 }
                 catch (Exception ex)
                 {
@@ -299,7 +299,7 @@ namespace BP.Sys
 
             sql.Clear();
             sql.AppendLine("SELECT NAME AS No,");
-            sql.AppendLine("       [Name] = '[' + (CASE xtype WHEN 'U' THEN '表' ELSE ' View ' END) + '] ' + ");
+            sql.AppendLine("       [Name] = '[' + (CASE xtype WHEN 'U' THEN 'Table' ELSE ' View ' END) + '] ' + ");
             sql.AppendLine("       NAME,");
             sql.AppendLine("       xtype");
             sql.AppendLine("FROM   sysobjects");

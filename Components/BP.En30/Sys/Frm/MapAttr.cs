@@ -529,9 +529,9 @@ namespace BP.Sys
                             return DataType.CurrentData;
                         else
                             return DataType.CurrentDataTime;
-                    case "@yyyy年mm月dd日":
+                    case "@yyyy-mm-dd":
                         return DataType.CurrentDataCNOfLong;
-                    case "@yy年mm月dd日":
+                    case "@yy-mm-dd":
                         return DataType.CurrentDataCNOfShort;
                     default:
                         return s;
@@ -1345,7 +1345,7 @@ namespace BP.Sys
                 MapAttrAttr.FK_MapData, this.FK_MapData))
             {
                 return false;
-                throw new Exception("@在["+this.MyPK+"] Field name already exists [" + this.Name + "] Field [" + this.KeyOfEn + "]");
+                throw new Exception("@At ["+this.MyPK+"] Field name already exists [" + this.Name + "] Field [" + this.KeyOfEn + "]");
             }
              
             this.IDX = 999; // BP.DA.DBAccess.RunSQLReturnValInt("SELECT COUNT(*) FROM Sys_MapAttr WHERE FK_MapData='" + this.FK_MapData + "'") + 1;

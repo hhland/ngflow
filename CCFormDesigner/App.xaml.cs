@@ -65,11 +65,11 @@ namespace CCForm
 
             string alert = " Please handle this error as follows .";
             alert += "\t\n1, Press F5 Refresh this page .";
-            alert += "\t\n2, Please iis Restart the ,用administrator Go to the server ,在cmd Carried out iisreset Then refresh the page .";
+            alert += "\t\n2, Please iis Restart the ,used administrator login the server ,at cmd Carried out iisreset Then refresh the page .";
             alert += "\t\n3, If this is the first time , Please open the installation file has a common problem , This file is located D:\\ccflow\\doc\\.";
-            alert += "\t\n4, Visit the official website (http://ccflow.org) Join QQ群, Get more ccflow Help lovers .";
-            alert += "\t\n5, To this screen copy A picture ( Must be full screen ), Post到 http://bbs.ccflow.org ";
-            alert += "\t\n6,请baidu Or google About  ccflow  Frequently Asked Questions , Maybe you can find the answer .";
+            alert += "\t\n4, Visit the official website (http://ccflow.org) , Get more help .";
+            alert += "\t\n5, To this screen copy A picture ( Must be full screen ), Post to http://bbs.ccflow.org ";
+            alert += "\t\n6, Please google About  ccflow  Frequently Asked Questions , Maybe you can find the answer .";
             alert += "\t\n";
             MessageBox.Show(alert+errorMsg);
             return;

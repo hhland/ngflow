@@ -336,6 +336,7 @@ namespace CCFlow.WF.UC
             {
                 if (btnLab.SendEnable && currND.HisBatchRole != BatchRole.Group && isAskFor == false)
                 {
+                    string jsbtnSend = "try{" + btnLab.SendJS + "}catch(ex){alert(ex);return;}";
                     /* If the Send button is enabled .*/
                     if (btnLab.SelectAccepterEnable == 2)
                     {
@@ -344,11 +345,11 @@ namespace CCFlow.WF.UC
                         toolbar.AddBtn(NamesOfBtn.Send, btnLab.SendLab);
                         Btn_Send.Style.Add("display", "none");
                         this.Btn_Send.UseSubmitBehavior = false;
-
+                       
                         if (this.currND.HisFormType == NodeFormType.DisableIt)
-                            this.Btn_Send.OnClientClick = btnLab.SendJS + "this.disabled=true;"; //this.disabled='disabled'; return true;";
+                            this.Btn_Send.OnClientClick = jsbtnSend + ";this.disabled=true;SaveDtlAll();"; //this.disabled='disabled'; return true;";
                         else
-                            this.Btn_Send.OnClientClick = btnLab.SendJS + "if(SysCheckFrm()==false) return false;this.disabled=true;SaveDtlAll();KindEditerSync();"; //this.disabled='disabled'; return true;";
+                            this.Btn_Send.OnClientClick = jsbtnSend + ";if(SysCheckFrm()==false) return false;this.disabled=true;SaveDtlAll();KindEditerSync();"; //this.disabled='disabled'; return true;";
                         //   this.Btn_Send.OnClientClick = "this.disabled=true;"; //this.disabled='disabled'; return true;";
                         this.Btn_Send.Click += new System.EventHandler(ToolBar1_ButtonClick);
                     }
@@ -358,13 +359,13 @@ namespace CCFlow.WF.UC
                         this.Btn_Send.UseSubmitBehavior = false;
                         if (btnLab.SendJS.Trim().Length > 2)
                         {
-                            this.Btn_Send.OnClientClick = btnLab.SendJS + ";if(SysCheckFrm()==false) return false;this.disabled=true;SaveDtlAll();KindEditerSync();"; //this.disabled='disabled'; return true;";
+                            this.Btn_Send.OnClientClick = jsbtnSend + ";if(SysCheckFrm()==false) return false;this.disabled=true;SaveDtlAll();KindEditerSync();"; //this.disabled='disabled'; return true;";
                         }
                         else
                         {
                             this.Btn_Send.UseSubmitBehavior = false;
                             if (this.currND.HisFormType == NodeFormType.DisableIt)
-                                this.Btn_Send.OnClientClick = "this.disabled=true;"; //this.disabled='disabled'; return true;";
+                                this.Btn_Send.OnClientClick = "this.disabled=true;SaveDtlAll();"; //this.disabled='disabled'; return true;";
                             else
                                 this.Btn_Send.OnClientClick = "if(SysCheckFrm()==false) return false;this.disabled=true;SaveDtlAll();KindEditerSync();"; //this.disabled='disabled'; return true;";
                         }
@@ -771,7 +772,7 @@ namespace CCFlow.WF.UC
             }
 
             string appPath = BP.WF.Glo.CCFlowAppPath; //this.Request.ApplicationPath;
-            this.Page.Title = "第" + this.currND.Step + "步:" + this.currND.Name;
+            this.Page.Title = "Step " + this.currND.Step + ":" + this.currND.Name;
             #endregion  Pre-judgment navigation 
 
             #region  Processed form type .
@@ -1392,13 +1393,32 @@ namespace CCFlow.WF.UC
 
                             #region SaveDtlAll
                             this.UCEn1.Add("\t\n function SaveDtlAll(){");
-                            this.UCEn1.Add("\t\n   var tabText = document.getElementById('HL" + frm.No + "').innerText;");
-                            this.UCEn1.Add("\t\n   var scope = document.getElementById('F" + frm.No + "');");
-                            this.UCEn1.Add("\t\n   var lastChar = tabText.substring(tabText.length - 1, tabText.length);");
-                            this.UCEn1.Add("\t\n   if (lastChar == \"*\") {");
-                            this.UCEn1.Add("\t\n   var contentWidow = scope.contentWindow;");
-                            this.UCEn1.Add("\t\n   contentWidow.SaveDtlData();");
-                            this.UCEn1.Add("\t\n   }");
+                            for (int i = 0; i < frms.Count; i++)
+                            {
+                                var f = frms[i];
+                                //this.UCEn1.Add("\t\n   var tabText = document.getElementById('HL' + currentTabId).innerText;");
+                                //this.UCEn1.Add("\t\n   var scope = document.getElementById('F' + currentTabId);");
+                                //this.UCEn1.Add("\t\n   var lastChar = tabText.substring(tabText.length - 1, tabText.length);");
+                                //this.UCEn1.Add("\t\n   if (lastChar == \"*\") {");
+                                //this.UCEn1.Add("\t\n   var contentWidow = scope.contentWindow;");
+                                string js = "\t\n var F_" + i + " = document.getElementById('F" + f.No + "');"
+                                         + "\t\n var contentWidow_" + i + " = F_" + i + ".contentWindow;"
+                                         + "$(F_" + i + ".contentDocument).find('input[type=submit]:eq(0)').click();"
+                                    // + "\t\n var contentdoc_"+i+"=F_"+i+".contentDocument;"
+                                    // + " \t\n  if(contentdoc_" + i + "&&contentdoc_" + i + ".forms[0]) contentdoc_" + i + ".forms[0].submit();"   
+                                         + "\t\n if(contentWidow_" + i + ".SaveDtlData)contentWidow_" + i + ".SaveDtlData();"
+                                    //+ "\t\n if(contentWidow_" + i + ".NoSubmit)contentWidow_" + i + ".NoSubmit({keyCode:13});"
+                                    ;
+                                this.UCEn1.Add(js);
+                            }
+                            // this.UCEn1.Add("\t\n   var tabText = document.getElementById('HL" + frm.No + "').innerText;");
+                           // this.UCEn1.Add("\t\n   var scope = document.getElementById('F" + frm.No + "');");
+                           // this.UCEn1.Add("\t\n   var lastChar = tabText.substring(tabText.length - 1, tabText.length);");
+                            //this.UCEn1.Add("\t\n   if (lastChar == \"*\") {");
+                            //hhlin 取消修改判断，全部表单都要保存一次
+                           // this.UCEn1.Add("\t\n   var contentWidow = scope.contentWindow;");
+                           // this.UCEn1.Add("\t\n   contentWidow.SaveDtlData();");
+                            //this.UCEn1.Add("\t\n   }");
                             this.UCEn1.Add("\t\n}");
                             #endregion
 
@@ -1484,13 +1504,26 @@ namespace CCFlow.WF.UC
 
                             #region SaveDtlAll
                             this.UCEn1.Add("\t\n function SaveDtlAll(){");
-                            this.UCEn1.Add("\t\n   var tabText = document.getElementById('HL' + currentTabId).innerText;");
-                            this.UCEn1.Add("\t\n   var scope = document.getElementById('F' + currentTabId);");
-                            this.UCEn1.Add("\t\n   var lastChar = tabText.substring(tabText.length - 1, tabText.length);");
-                            this.UCEn1.Add("\t\n   if (lastChar == \"*\") {");
-                            this.UCEn1.Add("\t\n   var contentWidow = scope.contentWindow;");
-                            this.UCEn1.Add("\t\n   contentWidow.SaveDtlData();");
-                            this.UCEn1.Add("\t\n   }");
+                            for (int i=0;i<frms.Count;i++)
+                            {
+                                var frm = frms[i];
+                                //this.UCEn1.Add("\t\n   var tabText = document.getElementById('HL' + currentTabId).innerText;");
+                                //this.UCEn1.Add("\t\n   var scope = document.getElementById('F' + currentTabId);");
+                                //this.UCEn1.Add("\t\n   var lastChar = tabText.substring(tabText.length - 1, tabText.length);");
+                                //this.UCEn1.Add("\t\n   if (lastChar == \"*\") {");
+                                //this.UCEn1.Add("\t\n   var contentWidow = scope.contentWindow;");
+                                string js = "\t\n var F_"+i+" = document.getElementById('F"+frm.No+"');"
+                                         + "\t\n var contentWidow_"+i+" = F_"+i+".contentWindow;" 
+                                         +"$(F_"+i+".contentDocument).find('input[type=submit]:eq(0)').click();"
+                                        // + "\t\n var contentdoc_"+i+"=F_"+i+".contentDocument;"
+                                        // + " \t\n  if(contentdoc_" + i + "&&contentdoc_" + i + ".forms[0]) contentdoc_" + i + ".forms[0].submit();"   
+                                         +"\t\n if(contentWidow_" + i + ".SaveDtlData)contentWidow_" + i + ".SaveDtlData();"
+                                         //+ "\t\n if(contentWidow_" + i + ".NoSubmit)contentWidow_" + i + ".NoSubmit({keyCode:13});"
+                                    ;
+                                this.UCEn1.Add(js);
+                            }
+                            
+                            //this.UCEn1.Add("\t\n   }");
                             this.UCEn1.Add("\t\n}");
                             #endregion
 

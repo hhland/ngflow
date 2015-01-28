@@ -179,8 +179,8 @@ namespace BP.Sys
 
                 map.AddMyPK();
                 map.AddTBString(EnsAppCfgAttr.EnsName, null, " Entity set ", true, false, 0, 100, 60);
-                map.AddTBString(EnsAppCfgAttr.CfgKey, null, "¼ü", true, false, 0, 100, 60);
-                map.AddTBString(EnsAppCfgAttr.CfgVal, null, "Öµ", true, false, 0, 200, 60);
+                map.AddTBString(EnsAppCfgAttr.CfgKey, null, "Key", true, false, 0, 100, 60);
+                map.AddTBString(EnsAppCfgAttr.CfgVal, null, "Value", true, false, 0, 200, 60);
 
 
                 this._enMap = map;

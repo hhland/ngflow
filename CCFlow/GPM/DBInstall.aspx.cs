@@ -130,14 +130,14 @@ public partial class WF_Admin_DBInstall : System.Web.UI.Page
 
         this.Pub1.AddFieldSet(" Whether you need to install CCIM.");
         rb = new RadioButton();
-        rb.Text = "是";
+        rb.Text = "Yes";
         rb.ID = "RB_CCIM_Y";
         rb.Checked = true;
         rb.GroupName = "ccim";
         this.Pub1.Add(rb);
         this.Pub1.AddBR();
         rb = new RadioButton();
-        rb.Text = "否";
+        rb.Text = "No";
         rb.ID = "RB_CCIM_N";
         rb.GroupName = "ccim";
         this.Pub1.Add(rb);

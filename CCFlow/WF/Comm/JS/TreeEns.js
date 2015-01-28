@@ -40,7 +40,7 @@ function LoadTreeNodes() {
     parentNo = getArgsFromHref("ParentNo");
     // Entity name 
     if (treeEnsName == '') {
-        $("body").html("<b style='color:red;'> Please pass the correct parameter name .如:TreeEns.aspx?TreeEnsName=BP.GPM.Depts&EnsName=BP.Port.Emps&RefPK=FK_Dept<br/> Idea : If the root node ParentNo Not 0, Need to pass the root ParentNo Value .<b>");
+        $("body").html("<b style='color:red;'> Please pass the correct parameter name .Like:TreeEns.aspx?TreeEnsName=BP.GPM.Depts&EnsName=BP.Port.Emps&RefPK=FK_Dept<br/> Idea : If the root node ParentNo Not 0, Need to pass the root ParentNo Value .<b>");
         return;
     }
     // Parent Number 
@@ -103,7 +103,7 @@ function LoadGridData() {
 
                 // System error 
                 if (js.status && js.status == 500) {
-                    $(".datagrid-view").html("<b style='color:red;'> Please pass the correct parameter name .如:TreeEns.aspx?TreeEnsName=BP.GPM.Depts&EnsName=BP.Port.Emps&RefPK=FK_Dept<br/> Idea : If the root node ParentNo Not 0, Need to pass the root ParentNo Value .<b>");
+                    $(".datagrid-view").html("<b style='color:red;'> Please pass the correct parameter name .Like:TreeEns.aspx?TreeEnsName=BP.GPM.Depts&EnsName=BP.Port.Emps&RefPK=FK_Dept<br/> Idea : If the root node ParentNo Not 0, Need to pass the root ParentNo Value .<b>");
                     return;
                 }
                 var pushData = eval('(' + js + ')');

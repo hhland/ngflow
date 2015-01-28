@@ -13,6 +13,45 @@
             iframe.contentWindow.SaveDtlData()
         }
     }
+
+    var maintabs_regex = "#maintabs";
+    
+    function createTab(title, FrmW, FrmH, EnsName, RefPKVal, IsReadonly) {
+        var url = "DtlCard.ashx?action=addRow";
+        $.getJSON(url, { EnsName: EnsName, addRowNum: 1, RefPKVal: RefPKVal}, function (json) {
+            
+            _createTab(title, FrmW, FrmH, EnsName, RefPKVal,1, IsReadonly);
+        });
+    }
+
+    function _createTab(prefix,FrmW,FrmH,EnsName,RefPKVal,OID,IsReadonly) {
+        var $maintabs = $(maintabs_regex);
+        var idx = $maintabs.tabs("tabs").length;
+        OID = idx;
+        var src="FrmDtl.aspx?FK_MapData=" + EnsName + "&WorkID=" + RefPKVal +"&OID=" + OID + "&IsReadonly=" + IsReadonly;
+        var frame = "<iframe id='IF" + idx + "' frameborder='0' style='width:" + FrmW + "px;height:" + FrmH + "px;' src=\"" + src + "\"><" + "/iframe>";
+        $maintabs.tabs('add', {
+            title: prefix+" "+(idx+1),
+            selected: true
+            ,content:frame
+        });
+    }
+
+    function deleteTab(EnsName, RefPKVal) {
+        var url = "DtlCard.ashx?action=addRow";
+        $.getJSON(url, { EnsName: EnsName, addRowNum: -1, RefPKVal: RefPKVal }, function (json) {
+
+            _deleteTab();
+        });
+    }
+
+    function _deleteTab() {
+        var $maintabs = $(maintabs_regex);
+        var selecttab = $maintabs.tabs('getSelected');
+        var selectindex = $maintabs.tabs("tabs").length-1; //$maintabs.tabs('getTabIndex', selecttab);
+        $maintabs.tabs("close",selectindex);
+    }
+
 </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">

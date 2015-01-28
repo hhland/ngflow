@@ -16,7 +16,7 @@
     </div>
     <div id="qtools">
         <a href="javascript:void(0)" class="icon-add" onclick="javascript:self.location='<%=this.NormalSearchUrl %>';"
-            title=" Default Query ( Can 【 Save Query 】到[ My query ]中)"></a>
+            title=" Default Query ( Can 【 Save Query 】To [ My query ] )"></a>
     </div>
     <div data-options="region:'center',title:'<%=this.CurrentQuery %>'" style="padding: 5px;">
         <table class='Table' cellspacing='0' cellpadding='0' border='0' style='width: 100%'>

@@ -13,7 +13,7 @@
 <script language=javascript >
 
     function DoAutoTo(fk_emp, empName) {
-        if (window.confirm(' Are you sure you want to give your work authorization [' + fk_emp + ']吗?') == false)
+        if (window.confirm(' Are you sure to authorize your work to [' + fk_emp + ']?') == false)
             return;
         var url = 'Do.aspx?DoType=AutoTo&FK_Emp=' + fk_emp;
         WinShowModalDialog(url, '');

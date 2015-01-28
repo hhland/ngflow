@@ -48,7 +48,7 @@ namespace BP.WF.DTS
         /// <returns> Return to the results </returns>
         public override object Do()
         {
-            string path = this.GetValStrByKey("Path") + "_" + DateTime.Now.ToString("yy年MM月dd日HH时mm分");
+            string path = this.GetValStrByKey("Path") + "_" + DateTime.Now.ToString("yyyy-MM-dd HH:mm");
             if (System.IO.Directory.Exists(path))
                 return " System being implemented , Please wait .";
 

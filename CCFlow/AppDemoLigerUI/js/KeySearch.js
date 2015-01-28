@@ -55,7 +55,7 @@ function LoadGrid() {
 }
 // Tools menu events 
 function itemclick(item) {
-    if (item.text == " By Job ID查") {
+    if (item.text == "Search by Job ID") {
         queryType = "workid";
     } else if (item.text == " Title field investigation process by keyword ") {
         queryType = "title";
@@ -101,7 +101,7 @@ $(function () {
     dateNow += date.getSeconds(); //SS
     // Tools Events 
     var toolBarManager = $("#toptoolbar").ligerToolBar({ items: [
-                { text: ' By Job ID查', click: itemclick, icon: 'search2' },
+                { text: 'Search by Job ID', click: itemclick, icon: 'search2' },
                 { line: true },
                 { text: ' Title field investigation process by keyword ', click: itemclick, icon: 'search2' }
 //                { line: true },

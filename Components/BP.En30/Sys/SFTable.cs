@@ -299,21 +299,21 @@ namespace BP.Sys
                         this.Insert();
                         break;
                     case "BP.Pub.YFs":
-                        this.Name = "ÔÂ";
+                        this.Name = "Months";
                       //  this.HisSFTableType = SFTableType.ClsLab;
                         this.FK_Val = "FK_YF";
                        // this.IsEdit = true;
                         this.Insert();
                         break;
                     case "BP.Pub.Days":
-                        this.Name = "Ìì";
+                        this.Name = "Days";
                      //   this.HisSFTableType = SFTableType.ClsLab;
                         this.FK_Val = "FK_Day";
                         //this.IsEdit = true;
                         this.Insert();
                         break;
                     case "BP.Pub.NDs":
-                        this.Name = "Äê";
+                        this.Name = "Years";
                      //   this.HisSFTableType = SFTableType.ClsLab;
                         this.FK_Val = "FK_ND";
                        // this.IsEdit = true;

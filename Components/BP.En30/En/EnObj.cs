@@ -531,7 +531,7 @@ namespace BP.En
         public void SetValByDesc(string attrDesc, object val)
         {
             if (val == null)
-                throw new Exception("@ You can not set property [" + attrDesc + "]null 值.");
+                throw new Exception("@ You can not set property [" + attrDesc + "] null .");
             this.Row.SetValByKey(this.EnMap.GetAttrByDesc(attrDesc).Key, val);
         }
 
@@ -793,7 +793,7 @@ namespace BP.En
                 if (SystemConfig.IsDebug == false)
                     throw new Exception("@[" + this.EnMap.GetAttrByKey(key).Desc + "] Please enter a number , You enter [" + this.GetValStrByKey(key) + "].");
                 else
-                    throw new Exception("@表[" + this.EnDesc + "] Obtaining property [" + key + "]值, Error , You can not [" + this.GetValStringByKey(key) + "] Converted to int Type . Error Messages :" + ex.Message + "@ Check to see if the store enumerated types , You are SetValbyKey There are no conversion . The correct approach is :this.SetValByKey( Key ,(int)value)  ");
+                    throw new Exception("@Table [" + this.EnDesc + "] Obtaining property [" + key + "], Error , You can not [" + this.GetValStringByKey(key) + "] Converted to int Type . Error Messages :" + ex.Message + "@ Check to see if the store enumerated types , You are SetValbyKey There are no conversion . The correct approach is :this.SetValByKey( Key ,(int)value)  ");
             }
         }
         /// <summary>
@@ -836,9 +836,9 @@ namespace BP.En
         public string GetValBoolStrByKey(string key)
         {
             if (int.Parse(this.GetValStringByKey(key)) == 0)
-                return "否";
+                return "No";
             else
-                return "是";
+                return "Yes";
         }
         /// <summary>
         ///  According to key  Get flaot val
@@ -921,7 +921,7 @@ namespace BP.En
             }
             catch (Exception ex)
             {
-                throw new Exception("@表[" + this.EnDesc + "] Obtaining property [" + key + "]值, Error , You can not [" + this.GetValStringByKey(key) + "] Converted to double Type . Error Messages :" + ex.Message);
+                throw new Exception("@Table [" + this.EnDesc + "] Obtaining property [" + key + "], Error , You can not [" + this.GetValStringByKey(key) + "] Converted to double Type . Error Messages :" + ex.Message);
             }
         }
         public string GetValAppDateByKey(string key)
@@ -935,7 +935,7 @@ namespace BP.En
             }
             catch (System.Exception ex)
             {
-                throw new Exception("@ Examples :[" + this.EnMap.EnDesc + "]   Property [" + key + "]值[" + this.GetValStringByKey(key).ToString() + "] Date format conversion error :" + ex.Message);
+                throw new Exception("@ Examples :[" + this.EnMap.EnDesc + "]   Property [" + key + "] value [" + this.GetValStringByKey(key).ToString() + "] Date format conversion error :" + ex.Message);
             }
             //return "2003-08-01";
         }

@@ -1496,18 +1496,7 @@ namespace CCFlow.WF.Comm.UC
                         continue;
 
                     if (attr.UIContralType == UIContralType.DDL)
-                    {
-                        int maxlenght = 160;
-                        string text = en.GetValRefTextByKey(attr.Key);
-                        //if (!string.IsNullOrWhiteSpace(text) && text.Length > maxlenght)
-                        //{
-                        //    text = string.Format("<span title='{0}'>{1}</span>"
-                        //        ,
-                        //        );
-                        //}
-                        this.Add("<TD  nowrap >" + text + "&nbsp;</TD>");
-                    }
-                        
+                        this.Add("<TD  nowrap >" + en.GetValRefTextByKey(attr.Key) + "&nbsp;</TD>");
                     else
                     {
                         string str = en.GetValStringByKey(attr.Key);
@@ -1515,9 +1504,9 @@ namespace CCFlow.WF.Comm.UC
                         {
                             case DataType.AppBoolean:
                                 if (str == "1")
-                                    this.AddTD("ÊÇ&nbsp;");
+                                    this.AddTD("Yes&nbsp;");
                                 else
-                                    this.AddTD("·ñ&nbsp;");
+                                    this.AddTD("No&nbsp;");
                                 break;
                             case DataType.AppDate:
                             case DataType.AppDateTime:
@@ -2516,9 +2505,9 @@ namespace CCFlow.WF.Comm.UC
                     break;
                 case DataType.AppBoolean:
                     if (str == "1")
-                        this.AddTD("ÊÇ");
+                        this.AddTD("Yes");
                     else
-                        this.AddTD("·ñ");
+                        this.AddTD("No");
                     break;
                 case DataType.AppFloat:
                 case DataType.AppInt:
@@ -3039,7 +3028,7 @@ namespace CCFlow.WF.Comm.UC
                 }
                 else
                 {
-                    this.Add("<TD>ÎÞ</TD>");
+                    this.Add("<TD>None</TD>");
                 }
                 this.AddTREnd();
             }

@@ -43,7 +43,7 @@
             <RadioButton Name="RB_Money"  Content=" Amount Type ( Cope , Accounts , Unit price )" Margin="0 5 0 5" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="s" />
             <RadioButton Name="RB_Data" Content=" Date Type ( Date of birth , Repayment date )" Margin="0 5 0 5" Height="16" HorizontalAlignment="Left"   VerticalAlignment="Top" GroupName="s" />
             <RadioButton Name="RB_DataTime" Content=" Datetime type ( Time of occurrence , Departure Time )" Margin="0 5 0 5" Height="16" HorizontalAlignment="Left"  VerticalAlignment="Top"  GroupName="s"/>
-            <RadioButton Name="RB_Boolen" Content="Boolen型( Agree , Whether settlement )" Margin="0 5 0 5"  Height="16" GroupName="s"/>
+            <RadioButton Name="RB_Boolen" Content="Boolen type( Agree , Whether settlement )" Margin="0 5 0 5"  Height="16" GroupName="s"/>
 
         </StackPanel>
         

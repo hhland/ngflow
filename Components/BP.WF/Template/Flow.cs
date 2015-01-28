@@ -867,7 +867,7 @@ namespace BP.WF
                     sa.EmpName = name;
                     sa.FK_Node = item.NodeID;
                     sa.WorkID = workid;
-                    sa.Info = "无";
+                    sa.Info = "None";
                     sa.AccType = 0;
                     sa.ResetPK();
                     if (sa.IsExits)
@@ -886,7 +886,7 @@ namespace BP.WF
                     sa.FK_Emp = WebUser.No;
                     sa.FK_Node = item.NodeID;
                     sa.WorkID = workid;
-                    sa.Info = "无";
+                    sa.Info = "None";
                     sa.AccType = 0;
                     sa.EmpName = WebUser.Name;
 
@@ -908,7 +908,7 @@ namespace BP.WF
                         sa.FK_Emp = ne.FK_Emp;
                         sa.FK_Node = item.NodeID;
                         sa.WorkID = workid;
-                        sa.Info = "无";
+                        sa.Info = "None";
                         sa.AccType = 0;
                         sa.EmpName = ne.FK_EmpT;
 
@@ -946,7 +946,7 @@ namespace BP.WF
                         sa.FK_Emp = emp.No;
                         sa.FK_Node = item.NodeID;
                         sa.WorkID = workid;
-                        sa.Info = "无";
+                        sa.Info = "None";
                         sa.AccType = 0;
                         sa.EmpName = emp.Name;
 
@@ -1006,7 +1006,7 @@ namespace BP.WF
                         sa.FK_Emp = emp.No;
                         sa.FK_Node = item.NodeID;
                         sa.WorkID = workid;
-                        sa.Info = "无";
+                        sa.Info = "None";
                         sa.AccType = 0;
                         sa.EmpName = emp.Name;
 
@@ -1076,7 +1076,7 @@ namespace BP.WF
                     {
                         /* If you can use sql  Check out .*/
                         num = rpt.RetrieveFromDBSources();
-                        msg += "@从rpt.RetrieveFromDBSources = " + num;
+                        msg += "@from rpt.RetrieveFromDBSources = " + num;
                     }
 
                     Log.DefaultLogWriteLineError(msg);
@@ -1240,10 +1240,10 @@ namespace BP.WF
             msg+="@ Queried (" + dtMain.Rows.Count + ") Article task .";
 
             if (dtMain.Columns.Contains("Starter") == false)
-                errMsg += "@ The main table with a value of no Starter列.";
+                errMsg += "@ The main table with a value of no Starter column.";
 
             if (dtMain.Columns.Contains("MainPK") == false)
-                errMsg += "@ The main table with a value of no MainPK列.";
+                errMsg += "@ The main table with a value of no MainPK column.";
 
             if (errMsg.Length > 2)
             {
@@ -1265,7 +1265,7 @@ namespace BP.WF
                 string sql = "SELECT OID FROM " + md.PTable + " WHERE MainPK='" + mainPK + "'";
                 if (DBAccess.RunSQLReturnTable(sql).Rows.Count != 0)
                 {
-                    msg+= "@" + this.Name + ",第" + idx + "条, This task has been completed before .";
+                    msg+= "@" + this.Name + ",No." + idx + ", This task has been completed before .";
                     continue; /* Description been scheduled over */
                 }
 
@@ -1277,7 +1277,7 @@ namespace BP.WF
                     emp.No = starter;
                     if (emp.RetrieveFromDBSources() == 0)
                     {
-                        msg+="@" + this.Name + ",第" + idx + "条, Sponsored personnel set :" + emp.No + " Does not exist .";
+                        msg+="@" + this.Name + ",No." + idx + ", Sponsored personnel set :" + emp.No + " Does not exist .";
                        msg+="@ Data-driven approach to initiate the process (" + this.Name + ") Sponsored personnel set :" + emp.No + " Does not exist .";
                         continue;
                     }
@@ -1330,12 +1330,12 @@ namespace BP.WF
                     WorkNode wn = new WorkNode(wk, nd);
                     string infoSend = wn.NodeSend().ToMsgOfHtml();
                     BP.DA.Log.DefaultLogWriteLineInfo(msg);
-                    msg+= "@" + this.Name + ",第" + idx + "条, Sponsored staff :" + WebUser.No + "-" + WebUser.Name + " Completed .\r\n" + infoSend;
+                    msg+= "@" + this.Name + ",No." + idx + ", Sponsored staff :" + WebUser.No + "-" + WebUser.Name + " Completed .\r\n" + infoSend;
                     //this.SetText("@第（" + idx + "） Article task ," + WebUser.No + " - " + WebUser.Name + " Has been completed .\r\n" + msg);
                 }
                 catch (Exception ex)
                 {
-                    msg+= "@" + this.Name + ",第" + idx + "条, Sponsored staff :" + WebUser.No + "-" + WebUser.Name + " An error occurred while initiating .\r\n" + ex.Message;
+                    msg+= "@" + this.Name + ",No." + idx + ", Sponsored staff :" + WebUser.No + "-" + WebUser.Name + " An error occurred while initiating .\r\n" + ex.Message;
                 }
                   msg+= "<hr>";
             }
@@ -1592,7 +1592,7 @@ namespace BP.WF
                         case DeliveryWay.BySQLAsSubThreadEmpsAndData:
                             if (nd.DeliveryParas.Trim().Length == 0)
                             {
-                                msg += "@ Error : You set access rules is based on the node SQL Inquiry , But you did not set the query node properties in sql,此sql The requirement is that the query must contain No,Name Two columns ,sql Expressions support @+ Field variables , Develop detailed reference manual .";
+                                msg += "@ Error : You set access rules is based on the node SQL Inquiry , But you did not set the query node properties in sql,this sql The requirement is that the query must contain No,Name Two columns ,sql Expressions support @+ Field variables , Develop detailed reference manual .";
                             }
                             else
                             {
@@ -1627,7 +1627,7 @@ namespace BP.WF
 
                                     if (testDB.Columns.Contains("No") == false || testDB.Columns.Contains("Name") == false)
                                     {
-                                        msg += "@ Error : You set access rules is based on the node SQL Inquiry , Set sql Does not comply with the rules ,此sql The requirement is that the query must contain No,Name Two columns ,sql Expressions support @+ Field variables , Develop detailed reference manual .";
+                                        msg += "@ Error : You set access rules is based on the node SQL Inquiry , Set sql Does not comply with the rules ,this sql The requirement is that the query must contain No,Name Two columns ,sql Expressions support @+ Field variables , Develop detailed reference manual .";
                                     }
                                 }
                                 catch (Exception ex)
@@ -2204,7 +2204,7 @@ namespace BP.WF
             DataTable dt = DBAccess.RunSQLReturnTable(sql);
             this.CheckRptData(this.HisNodes, dt);
 
-            return "@ Total :" + dt.Rows.Count + "条(" + this.Name + ") Data is loaded successfully .";
+            return "@ Total :" + dt.Rows.Count + " (" + this.Name + ") Data is loaded successfully .";
         }
         /// <summary>
         ///  Inspection and repair report data 
@@ -3554,7 +3554,7 @@ namespace BP.WF
                 string s = this.GetValStringByKey("Note");
                 if (s.Length == 0)
                 {
-                    return "无";
+                    return "None";
                 }
                 return s;
             }
@@ -3563,7 +3563,7 @@ namespace BP.WF
         {
             get
             {
-                if (this.Note == "无" || this.Note == "")
+                if (this.Note == "None" || this.Note == "")
                     return  " Process design staff did not help write this process , Open Designer -》 This process opens -》 Right-click on the design canvas -》 Process Attributes -》 Fill in the process help .";
                 else
                     return this.Note;
@@ -4085,7 +4085,7 @@ namespace BP.WF
                     case "fk_flowsort":
                         continue;
                     case "name":
-                        val = " Copy :" + val + "_" + DateTime.Now.ToString("MM月dd日HH时mm分");
+                        val = " Copy :" + val + "_" + DateTime.Now.ToString("yyyyMMdd_HHmm");
                         break;
                     default:
                         break;
@@ -5561,10 +5561,10 @@ namespace BP.WF
                     lab.Text += "@1, Change control position : ";
                     lab.Text += "@   All controls support  wasd,  As the arrow keys to position control ,  Partial control supports the direction keys . ";
                     lab.Text += "@2,  Increase textbox,  From Table , dropdownlistbox,  Width  shift+ ->  Increase the width of the arrow keys  shift + <-  Reduce the width .";
-                    lab.Text += "@3,  Save  windows键 + s.   Delete  delete.   Copy  ctrl+c    Paste : ctrl+v.";
+                    lab.Text += "@3,  Save  win+ s.   Delete  delete.   Copy  ctrl+c    Paste : ctrl+v.";
                     lab.Text += "@4,  Select Support , Batch move ,  Batch zoom font .,  Batch change the line width .";
                     lab.Text += "@5,  Change the length of the line :  Select Line , Dot green dot , Drag it ..";
-                    lab.Text += "@6,  Zoom in or out 　label  Font  ,  Select more than one label , 按 A+  Or 　A－　 Push button .";
+                    lab.Text += "@6,  Zoom in or out 　label  Font  ,  Select more than one label , Press  A+  Or 　A－　 Push button .";
                     lab.Text += "@7,  Change the color of the line or label ,  Select operation target , Palette point toolbar .";
 
                     lab.X = (float)168.24;
@@ -5909,7 +5909,7 @@ namespace BP.WF
                 Nodes nds = fl.HisNodes;
                 foreach (Node nd in nds)
                 {
-                    msg += "\r\n<li><a href='./" + fl.No + "/" + nd.NodeID + "_" + nd.FlowName + "_" + nd.Name + " Form .doc' target=_blank> Step " + nd.Step + ", - " + nd.Name + " Template </a> -<a href='./" + fl.No + "/" + nd.NodeID + "_" + nd.Name + "_ Form Template .htm' target=_blank>Html版</a></li>";
+                    msg += "\r\n<li><a href='./" + fl.No + "/" + nd.NodeID + "_" + nd.FlowName + "_" + nd.Name + " Form .doc' target=_blank> Step " + nd.Step + ", - " + nd.Name + " Template </a> -<a href='./" + fl.No + "/" + nd.NodeID + "_" + nd.Name + "_ Form Template .htm' target=_blank>Html</a></li>";
                 }
                 msg += "\r\n</UL>";
             }

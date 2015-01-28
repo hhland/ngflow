@@ -208,7 +208,7 @@ namespace BP.Demo
 
                 // Enum field 
                 map.AddDDLSysEnum(BPUserAttr.XB, 0,
-                    " Sex ", false, true, BPUserAttr.XB, "@0=Å®@1=ÄÐ");
+                    " Sex ", false, true, BPUserAttr.XB, "@0=Female@1=Male");
 
                 // Foreign key field .
                 map.AddDDLEntities(BPUserAttr.FK_NY, null, " Years of membership ", new BP.Pub.NYs(),true);

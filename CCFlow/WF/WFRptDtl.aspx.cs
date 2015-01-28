@@ -101,9 +101,9 @@ namespace CCFlow.WF
                             break;
                         case DataType.AppBoolean:
                             if (dtl.GetValIntByKey(attr.Key) == 1)
-                                this.Ucsys1.AddTD("是");
+                                this.Ucsys1.AddTD("Yes");
                             else
-                                this.Ucsys1.AddTD("否");
+                                this.Ucsys1.AddTD("No");
                             break;
                         default:
                             if (attr.IsFKorEnum)

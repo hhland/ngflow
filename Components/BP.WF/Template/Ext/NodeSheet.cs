@@ -288,7 +288,7 @@ namespace BP.WF.Template.Ext
                  true, true, NodeAttr.TurnToDeal, "@0= Prompt ccflow Default information @1= Prompted to specify the information @2= Steering specified url@3= Accordance with the conditions steering ");
                 map.AddTBString(NodeAttr.TurnToDealDoc, null, " Steering processing content ", true, false, 0, 1000, 10, true);
                 map.AddDDLSysEnum(NodeAttr.ReadReceipts, 0, " Read Receipts ", true, true, NodeAttr.ReadReceipts,
-                    "@0= No receipt @1= Automatic receipt @2= Determined by a node on a form field @3=”…SDK Developers parameter determines ");
+                    "@0= No receipt @1= Automatic receipt @2= Determined by a node on a form field @3=By SDK Developers parameter determines ");
                 map.SetHelperUrl(NodeAttr.ReadReceipts, this[SYS_CCFLOW, " Read Receipts "]);
 
                 map.AddDDLSysEnum(NodeAttr.CondModel, 0, " Conditions direction control rules ", true, true, NodeAttr.CondModel,
@@ -394,7 +394,7 @@ namespace BP.WF.Template.Ext
                
 
                 map.AddTBString(BtnAttr.SubFlowLab, " Subprocess ", " Subprocess button labels ", true, false, 0, 200, 10);
-                map.AddDDLSysEnum(BtnAttr.SubFlowCtrlRole, 0, " Control rules ", true, true, BtnAttr.SubFlowCtrlRole, "@0=Œﬁ@1= You can not delete sub-processes @2= You can delete the sub-processes ");
+                map.AddDDLSysEnum(BtnAttr.SubFlowCtrlRole, 0, " Control rules ", true, true, BtnAttr.SubFlowCtrlRole, "@0=None@1= You can not delete sub-processes @2= You can delete the sub-processes ");
 
                 map.AddTBString(BtnAttr.JumpWayLab, " Jump ", " Jump button labels ", true, false, 0, 200, 10);
                 map.AddDDLSysEnum(NodeAttr.JumpWay, 0, " Jump Rules ", true, true, NodeAttr.JumpWay);
@@ -526,7 +526,7 @@ namespace BP.WF.Template.Ext
                 map.AddDDLSysEnum(FrmWorkCheckAttr.FWCType, (int)FWCType.Check, " Audit Components ", true, true, FrmWorkCheckAttr.FWCType, "@0= Audit Components @1= Logging component ");
 
                 map.AddBoolean(FrmWorkCheckAttr.FWCTrackEnable, true, " Trajectories is displayed ?", true, true, true);
-                map.AddBoolean(FrmWorkCheckAttr.FWCListEnable, true, " Historical audit information is displayed ?(∑Ò, Historical information appears only comments box )", true, true, true);
+                map.AddBoolean(FrmWorkCheckAttr.FWCListEnable, true, " Historical audit information is displayed ?(No, Historical information appears only comments box )", true, true, true);
 
                 map.AddBoolean(FrmWorkCheckAttr.FWCIsShowAllStep, false, " All the steps in the track list is displayed ?", true, true);
 

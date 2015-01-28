@@ -99,7 +99,7 @@ namespace CCFlow.WF.MapDef
 
             MapAttr mattr = new MapAttr(this.RefNo);
             Attr attr = mattr.HisAttr;
-            this.Title = "为[" + mattr.KeyOfEn + "][" + mattr.Name + "] AutoComplete Settings "; // this.ToE("GuideNewField");
+            this.Title = "Set [" + mattr.KeyOfEn + "][" + mattr.Name + "] AutoComplete Settings "; // this.ToE("GuideNewField");
 
             switch (attr.MyDataType)
             {

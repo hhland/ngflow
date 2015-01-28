@@ -120,7 +120,7 @@ namespace CCFlow.WF.Admin.UC
 
             this.AddTable("class='Table' cellSpacing='1' cellPadding='1'  border='1' style='width:100%'");
             this.AddTR();
-            this.AddTD("class='GroupTitle'", " Setting a URL,此Url Returns a value , Used to determine the direction and whether through ");
+            this.AddTD("class='GroupTitle'", " Setting a URL,this Url Returns a value , Used to determine the direction and whether through ");
             this.AddTREnd();
 
             AddTR();

@@ -16,6 +16,21 @@
             return;
         }
 
+        function showEmpWindow(depemps) {
+            //
+            var url = "DeptEmpInfoList.ashx";
+            var arrdepems = depemps.split("<br>");
+            var p_depmes = "";
+            for (var i = 0; i < arrdepems.length; i++) {
+                var depemp = $.trim(arrdepems[i]);
+                if (depemp == "") continue;
+                p_depmes += depemp + "@";
+            }
+            $("#dd").load(url, { depemps: p_depmes }, function (str) {   
+                $("#win_emp").window("open");
+            });
+        }
+
         $(document).ready(function () {
 
             $("TD[nowrap]").each(function (index) {
@@ -23,16 +38,20 @@
                 var text = $(this).text();
                 var html = $(this).html();
                 var maxlen = 50;
+                var bri = html.indexOf("<br>");
                 if ($(this).find("a").size() > 0) { }
+                else if (bri >= 0) {
+                    textsub = html.substring(0, bri);
+                    var depemps = html.substring(bri);
+                    var _html = "<a  title='" + text + "' href=\"javascript:showEmpWindow('"+depemps+"');\" >" + textsub + "...<" + "/a>";
+                    $(this).html(_html);
+                }
                 else if (text != null && text.length > maxlen) {
 
                     var textsub = text.substring(0, maxlen);
-                    var bri = html.indexOf("<br>");
-                    if (bri >= 0) {
-                        //如果有换行符，就截取第一行
-                        textsub = html.substring(0,bri);
-                    }         
-                    var _html = "<span title='" + text + "'>" + textsub + "...<" + "/span>";
+                    
+                    
+                    var _html = "<span title='" + text + "' >" + textsub + "...<" + "/span>";
                     $(this).html(_html);
                 }
             });
@@ -40,11 +59,17 @@
         });
 
     </script>
+    
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="easyui-layout" data-options="fit:true">
         <div data-options="region:'center',title:'<%=this.Title %>'" style="padding: 5px">
             <uc1:TruakUC ID="TruakUC1" runat="server" />
         </div>
+    </div>
+    
+    <div id="win_emp" class="easyui-window" title="Emp info" style="width:600px;height:400px"
+        data-options="iconCls:'icon-search',modal:true,closed:true">
+       <div id="dd"></div>
     </div>
 </asp:Content>

@@ -350,12 +350,12 @@ namespace BP.Web.Controls
 			switch ( this.SelfShowType )
 			{				 
 				case DDLShowType.Boolean:
-					this.Items.Add(new ListItem("ÊÇ","1" )) ;
-					this.Items.Add(new ListItem("·ñ","0" )) ;					 
+					this.Items.Add(new ListItem("Yes","1" )) ;
+					this.Items.Add(new ListItem("No","0" )) ;					 
 					break;
 				case DDLShowType.Gender:
-					this.Items.Add(new ListItem("ÄÐ","1" )) ;
-					this.Items.Add(new ListItem("Å®","0" )) ;
+					this.Items.Add(new ListItem("Male","1" )) ;
+					this.Items.Add(new ListItem("Female","0" )) ;
 					break;
 //				case DDLShowType.Year:
 //					this.BindYear();

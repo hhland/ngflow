@@ -151,7 +151,7 @@ namespace CCFlow.WF.Admin.UC
             AddBR();
             AddBR();
 
-            AddEasyUiPanelInfo(" Explanation ", " Expression format : Parameters + Blank + Operator + Blank +值, Supports only one expression . Format is as follows :<br />" + Environment.NewLine
+            AddEasyUiPanelInfo(" Explanation ", " Expression format : Parameters + Blank + Operator + Blank +Value, Supports only one expression . Format is as follows :<br />" + Environment.NewLine
                 + "<ul>" + Environment.NewLine
                 + "<li>Emp = zhangsan</li>" + Environment.NewLine
                 + "<li>JinE = 30</li>" + Environment.NewLine

@@ -354,7 +354,7 @@ namespace CCFlow.WF.WorkOpt
                                             this.Pub1.AddTD("style='color:Red;'", " Carried out ");
                                         else
                                             this.Pub1.AddTD("style='color:Red;'", " Cc ");
-                                        this.Pub1.AddTD("style='color:Red;'", "无");
+                                        this.Pub1.AddTD("style='color:Red;'", "None");
                                         this.Pub1.AddTD("style='color:Red;'", BP.WF.Glo.GenerUserImgSmallerHtml(accper.FK_Emp, accper.EmpName));
                                         this.Pub1.AddTD("style='color:Red;'", accper.Info);
                                         this.Pub1.AddTREnd();
@@ -455,7 +455,7 @@ namespace CCFlow.WF.WorkOpt
                         this.Pub1.AddTD("style='color:Red;'", " Carried out ");
                         //else
                         //this.Pub1.AddTD("style='color:Red;'", " Cc ");
-                        this.Pub1.AddTD("style='color:Red;'", "无");
+                        this.Pub1.AddTD("style='color:Red;'", "None");
 
                         //  Show staff to perform .
                         this.Pub1.AddTD("style='color:Red;'", BP.WF.Glo.GenerUserImgSmallerHtml(item.FK_Emp, item.EmpName));
@@ -476,7 +476,7 @@ namespace CCFlow.WF.WorkOpt
                         {
                             this.Pub1.AddTR();
                             this.Pub1.AddTD("style='color:Red;'", " Cc ");
-                            this.Pub1.AddTD("style='color:Red;'", "无");
+                            this.Pub1.AddTD("style='color:Red;'", "None");
                             //  Show staff to perform .
                             this.Pub1.AddTD("style='color:Red;'", BP.WF.Glo.GenerUserImgSmallerHtml(item.FK_Emp, item.EmpName));
 
@@ -527,9 +527,9 @@ namespace CCFlow.WF.WorkOpt
                                         this.Pub1.AddTD("<img src='../Img/Mail_UnRead.png' border=0/> CC did not read ");
                                     }
 
-                                    this.Pub1.AddTD("无");
+                                    this.Pub1.AddTD("None");
                                     this.Pub1.AddTD(BP.WF.Glo.GenerUserImgSmallerHtml(cc.CCTo, cc.CCToName));
-                                    this.Pub1.AddTD("无");
+                                    this.Pub1.AddTD("None");
                                 }
                                 this.Pub1.AddTREnd();
                             }
@@ -579,7 +579,7 @@ namespace CCFlow.WF.WorkOpt
                         this.Pub1.AddTD("style='color:Red;'", " Carried out ");
                         //else
                         //this.Pub1.AddTD("style='color:Red;'", " Cc ");
-                        this.Pub1.AddTD("style='color:Red;'", "无");
+                        this.Pub1.AddTD("style='color:Red;'", "None");
 
                         //  Show staff to perform .
                         this.Pub1.AddTD("style='color:Red;'", BP.WF.Glo.GenerUserImgSmallerHtml(item.FK_Emp, item.EmpName));
@@ -601,7 +601,7 @@ namespace CCFlow.WF.WorkOpt
                         {
                             this.Pub1.AddTR();
                             this.Pub1.AddTD("style='color:Red;'", " Cc ");
-                            this.Pub1.AddTD("style='color:Red;'", "无");
+                            this.Pub1.AddTD("style='color:Red;'", "None");
                             //  Show staff to perform .
                             this.Pub1.AddTD("style='color:Red;'", BP.WF.Glo.GenerUserImgSmallerHtml(item.FK_Emp, item.EmpName));
 
@@ -653,9 +653,9 @@ namespace CCFlow.WF.WorkOpt
                                         this.Pub1.AddTD("<img src='../Img/Mail_UnRead.png' border=0/> CC did not read ");
                                     }
 
-                                    this.Pub1.AddTD("无");
+                                    this.Pub1.AddTD("None");
                                     this.Pub1.AddTD(BP.WF.Glo.GenerUserImgSmallerHtml(cc.CCTo, cc.CCToName));
-                                    this.Pub1.AddTD("无");
+                                    this.Pub1.AddTD("None");
                                 }
                                 this.Pub1.AddTREnd();
                             }

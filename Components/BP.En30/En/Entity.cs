@@ -848,26 +848,26 @@ namespace BP.En
                         switch (this.PK)
                         {
                             case "OID":
-                                msg += "[  Primary key =OID 值=" + this.GetValStrByKey("OID") + " ]";
+                                msg += "[  Primary key =OID Value=" + this.GetValStrByKey("OID") + " ]";
                                 break;
                             case "No":
-                                msg += "[  Primary key =No 值=" + this.GetValStrByKey("No") + " ]";
+                                msg += "[  Primary key =No Value=" + this.GetValStrByKey("No") + " ]";
                                 break;
                             case "MyPK":
-                                msg += "[  Primary key =MyPK 值=" + this.GetValStrByKey("MyPK") + " ]";
+                                msg += "[  Primary key =MyPK Value=" + this.GetValStrByKey("MyPK") + " ]";
                                 break;
                             case "ID":
-                                msg += "[  Primary key =ID 值=" + this.GetValStrByKey("ID") + " ]";
+                                msg += "[  Primary key =ID Value=" + this.GetValStrByKey("ID") + " ]";
                                 break;
                             default:
                                 Hashtable ht = this.PKVals;
                                 foreach (string key in ht.Keys)
-                                    msg += "[  Primary key =" + key + " 值=" + ht[key] + " ]";
+                                    msg += "[  Primary key =" + key + " Value=" + ht[key] + " ]";
                                 break;
                         }
-                        Log.DefaultLogWriteLine(LogType.Error, "@ No [" + this.EnMap.EnDesc + "  " + this.EnMap.PhysicsTable + ", 类[" + this.ToString() + "],  Physical table [" + this.EnMap.PhysicsTable + "]  Examples .PK = " + this.GetValByKey(this.PK));
+                        Log.DefaultLogWriteLine(LogType.Error, "@ No [" + this.EnMap.EnDesc + "  " + this.EnMap.PhysicsTable + ", Class [" + this.ToString() + "],  Physical table [" + this.EnMap.PhysicsTable + "]  Examples .PK = " + this.GetValByKey(this.PK));
                         if (SystemConfig.IsDebug)
-                            throw new Exception("@ No [" + this.EnMap.EnDesc + "  " + this.EnMap.PhysicsTable + ", 类[" + this.ToString() + "],  Physical table [" + this.EnMap.PhysicsTable + "]  Examples ." + msg);
+                            throw new Exception("@ No [" + this.EnMap.EnDesc + "  " + this.EnMap.PhysicsTable + ", Class [" + this.ToString() + "],  Physical table [" + this.EnMap.PhysicsTable + "]  Examples ." + msg);
                         else
                             throw new Exception("@ No Records Found [" + this.EnMap.EnDesc + "  " + this.EnMap.PhysicsTable + ", " + msg + " Record does not exist , Please contact your administrator ,  Or confirm input errors .");
                     }
@@ -3177,8 +3177,8 @@ namespace BP.En
                 }
                 catch (Exception ex)
                 {
-                    Log.DefaultLogWriteLineError("@(" + this.ToString() + ") Automatic calculation processing {" + this.EnDesc + "}:" + this.PK + "=" + this.PKVal + "时, Property [" + attr.Key + "], Computing content [" + doc + "], Error :" + ex.Message);
-                    throw new Exception("@(" + this.ToString() + ") Automatic calculation processing {" + this.EnDesc + "}:" + this.PK + "=" + this.PKVal + "时, Property [" + attr.Key + "], Computing content [" + doc + "], Error :" + ex.Message);
+                    Log.DefaultLogWriteLineError("@(" + this.ToString() + ") Automatic calculation processing {" + this.EnDesc + "}:" + this.PK + "=" + this.PKVal + ", Property [" + attr.Key + "], Computing content [" + doc + "], Error :" + ex.Message);
+                    throw new Exception("@(" + this.ToString() + ") Automatic calculation processing {" + this.EnDesc + "}:" + this.PK + "=" + this.PKVal + ", Property [" + attr.Key + "], Computing content [" + doc + "], Error :" + ex.Message);
                 }
             }
 
@@ -4657,9 +4657,9 @@ namespace BP.En
                     if (attr.MyDataType == DataType.AppBoolean)
                     {
                         if (myen.GetValBooleanByKey(attr.Key))
-                            dr[attr.Desc] = "是";
+                            dr[attr.Desc] = "Yes";
                         else
-                            dr[attr.Desc] = "否";
+                            dr[attr.Desc] = "No";
                         continue;
                     }
                     dr[attr.Desc] = myen.GetValByKey(attr.Key);
@@ -4741,9 +4741,9 @@ namespace BP.En
                     if (attr.MyDataType == DataType.AppBoolean)
                     {
                         if (myen.GetValBooleanByKey(attr.Key))
-                            dr[attr.Desc.Trim() + attr.Key] = "是";
+                            dr[attr.Desc.Trim() + attr.Key] = "Yes";
                         else
-                            dr[attr.Desc.Trim() + attr.Key] = "否";
+                            dr[attr.Desc.Trim() + attr.Key] = "No";
                         continue;
                     }
                     dr[attr.Desc.Trim() + attr.Key] = myen.GetValByKey(attr.Key);

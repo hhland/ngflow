@@ -6,7 +6,7 @@
   <Item No="Float" Name=" Float " Desc="" />
   <Item No="Date" Name=" Date type " Desc="" />
   <Item No="DateTime" Name=" Datetime type " Desc="" />
-  <Item No="Bool" Name="Boole型(是/否)" Desc="" />
+  <Item No="Bool" Name="Boole type(Yes/No)" Desc="" />
   <Item No="Enum" Name=" Enumerated " Desc="" />
   <Item No="FK" Name=" Foreign key type " Desc="" />
 

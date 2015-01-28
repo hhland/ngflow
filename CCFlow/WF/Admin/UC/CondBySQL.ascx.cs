@@ -156,7 +156,7 @@ namespace CCFlow.WF.Admin.UC
             string help = "";
             help += "<ul>";
             help += "<li> Set up a query in the text box SQL, It returns a row . Such as : SELECT COUNT(*) AS Num FROM MyTable WHERE NAME='@MyFieldName'. </li>";
-            help += "<li>该SQL Expression argument support system , What is ccflow See instructions expression .</li>";
+            help += "<li> This SQL Expression argument support system , What is ccflow See instructions expression .</li>";
             help += "<li> The system will get the value of the return of put it into decimal Type </li>";
             help += "<li> If the value is greater than zero , The condition is established or not the establishment .</li>";
             help += "</ul>";

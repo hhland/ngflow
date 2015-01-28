@@ -7,6 +7,7 @@ using BP.WF;
 using BP.DA;
 using BP.En;
 using BP.Sys;
+using System.Data;
 
 namespace CCFlow.WF.MapDef
 {
@@ -78,6 +79,45 @@ namespace CCFlow.WF.MapDef
 
             //this.Pub1.AddTableEnd();
 
+            dtl = new MapDtl();
+            dtl.No = this.FK_MapDtl;
+
+            if (dtl.RetrieveFromDBSources() == 0)
+            {
+                dtl.FK_MapData = this.FK_MapData;
+                dtl.Name = this.FK_MapData;
+                dtl.Insert();
+                dtl.IntMapAttrs();
+            }
+
+            if (!IsPostBack)
+            {
+                bindDrp();    
+            }
+        }
+        protected MapDtl dtl;
+
+        private void bindDrp()
+        {
+            string sql = "select no,name from sys_formtree where no<>'0' order by no";
+            DataTable dt = BP.DA.DBAccess.RunSQLReturnTable(sql);
+            drpFormGroup.DataSource = dt;
+            drpFormGroup.DataTextField = "NAME";
+            drpFormGroup.DataValueField = "NO";
+            drpFormGroup.DataBind();
+        }
+
+        protected void btnSaveFormDesigner_Click(object sender, EventArgs e)
+        {
+            string sql = string.Format("update sys_mapdata set frmtype=1,fk_frmsort='{0}',FK_FORMTREE='{0}',APPTYPE=0 where no='{1}'", drpFormGroup.SelectedValue, dtl.No);
+            if (BP.DA.DBAccess.RunSQL(sql) == 1)
+            {
+                System.Web.HttpContext.Current.Response.Write("<script language=JavaScript>alert('Save success,please refresh form list!');</script>");
+            }
+            else
+            {
+                System.Web.HttpContext.Current.Response.Write("<script language=JavaScript>alert('Save faild!');</script>");
+            }
         }
     }
 }

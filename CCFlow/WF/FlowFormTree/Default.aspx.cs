@@ -150,7 +150,7 @@ namespace CCFlow.WF.SheetTree
         protected void Page_Load(object sender, EventArgs e)
         {
             this.currND = new BP.WF.Node(this.FK_Node);
-            this.Page.Title = "第" + this.currND.Step + "步:" + this.currND.Name;
+            this.Page.Title = "Step " + this.currND.Step + ":" + this.currND.Name;
             if (!IsPostBack)
             {
                 InitToolsBar();

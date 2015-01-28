@@ -45,12 +45,12 @@
 
             if (errorType == "ParserError") {
                 errMsg += " File : " + args.xamlFile + "     \n";
-                errMsg += "行: " + args.lineNumber + "     \n";
+                errMsg += "Line: " + args.lineNumber + "     \n";
                 errMsg += " Location : " + args.charPosition + "     \n";
             }
             else if (errorType == "RuntimeError") {           
                 if (args.lineNumber != 0) {
-                    errMsg += "行: " + args.lineNumber + "     \n";
+                    errMsg += "Line: " + args.lineNumber + "     \n";
                     errMsg += " Location : " +  args.charPosition + "     \n";
                 }
                 errMsg += " Method name : " + args.methodName + "     \n";

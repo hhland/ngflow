@@ -23,7 +23,7 @@
         objVal += "  \t\n ";
         objVal += "  \t\n ";
         objVal += "    You are dealing with  [" + nodeName + "]  Working with errors , You need to re-apply ． ";
-        objVal += "\t\n   \t\n 礼! ";
+        objVal += "\t\n   \t\n BR, ";
         objVal += "  \t\n ";
 
         try {

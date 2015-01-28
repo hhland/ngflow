@@ -82,8 +82,8 @@
             var month = d.getMonth() + 1; //  Remember the current month is to +1的
             var today = year + "-" + month + "-01";
 
-            $("#sh_StartDate").ligerDateEditor({ format: "yyyy-MM-dd", width: 120,  label: 'Start Time', labelWidth: 65 });
-            $("#sh_EndDate").ligerDateEditor({ format: "yyyy-MM-dd", width: 120, label: 'End Time' });
+            $("#sh_StartDate").ligerDateEditor({ format: "yyyy-MM-dd", width: 130,  label: 'Start Time', labelWidth: 65 });
+            $("#sh_EndDate").ligerDateEditor({ format: "yyyy-MM-dd", width: 130, label: 'End Time', labelWidth: 65 });
         }
         // Load Data 
         function loadData() {
@@ -253,6 +253,13 @@
 
         }
     </script>
+    
+    <style>
+        #search input.l-text-field,#search div.l-text-label {
+            margin-top: 3px;
+        }
+    </style>
+
 </head>
 <body>
     <form id="form1" runat="server">
@@ -261,24 +268,11 @@
     <div id="search">
         <table width="90%" cellpadding="0" cellspacing="0">
             <tr>
-                 <td >
-                     Type :
-                </td>
-                 <td>
-                     <input type="text" id="sh_FlowName" />
-                 </td>
-                <td>
-                     Keyword :<input type="text" id="sh_Title" />
-                </td>
-                <td>
-                    <input type="text" id="sh_StartDate" />
-                </td>
-                <td style="width: 125px">
-                    <input type="text" id="sh_EndDate" />
-                </td>
-                <td style="width: 35px">
-                     Status :
-                </td>
+                 <td >Type :</td><td><input type="text" id="sh_FlowName" /></td>
+                <td>Keyword <input type="text" id="sh_Title" /></td>
+                <td><input type="text" id="sh_StartDate" /></td>
+                <td><input type="text" id="sh_EndDate" /></td>
+                <td style="width: 35px"> Status </td>
                 <td style="width: 75px">
                     <select name="sh_State" id="sh_State">
                         <option value="0"> Whole </option>
@@ -293,8 +287,8 @@
                         <option value="9"> Freeze </option>
                     </select>
                 </td>
-                <td style="width: 30px">
-                    <input type="button" id="btnReturn" runat="server" value=" Inquiry " onclick="loadData()" />
+                <td style="width: 30px;padding-left: 10px">
+                    <input type="button" id="btnReturn" runat="server" value=" Search" onclick="loadData()" />
                 </td>
             </tr>
         </table>

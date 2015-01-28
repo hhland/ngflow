@@ -375,7 +375,7 @@ namespace BP.Web
                 }
                 catch
                 {
-                    return "нч";
+                    return "None";
                 }
             }
             set

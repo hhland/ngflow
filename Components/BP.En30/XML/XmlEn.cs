@@ -150,7 +150,7 @@ namespace BP.XML
             if (i > 1)
             {
                // BP.Sys.SystemConfig.DoClearCash();
-                throw new Exception("@XML = " + this.ToString() + " 中 PK=" + val + " Not only ....");
+                throw new Exception("@XML = " + this.ToString() + "  PK=" + val + " Not only ....");
             }
             return 0;
         }
@@ -553,7 +553,7 @@ namespace BP.XML
             this.Clear(); // Clear all information 
             DataTable dt = this.GetTable();
             if (dt == null)
-                throw new Exception("@ Error :类" + this.GetNewEntity.ToString() + " File= " + this.File + " Table=" + this.TableName + " , Did not get to the data .");
+                throw new Exception("@ Error :Class " + this.GetNewEntity.ToString() + " File= " + this.File + " Table=" + this.TableName + " , Did not get to the data .");
 
             int i = 0;
             try
@@ -590,7 +590,7 @@ namespace BP.XML
             this.Clear(); // Clear all information 
 			DataTable dt = this.GetTable();
             if (dt == null)
-                throw new Exception("@ Error :类"+this.GetNewEntity.ToString()+" File= "+this.File +" Table="+this.TableName  +" , Did not get to the data .");
+                throw new Exception("@ Error :Class "+this.GetNewEntity.ToString()+" File= "+this.File +" Table="+this.TableName  +" , Did not get to the data .");
 
 			int i=0;
 			foreach(DataRow dr in dt.Rows)
@@ -685,7 +685,7 @@ namespace BP.XML
 					if (en.GetValStringByKey(key)==val)
 						return en;
 				}
-				throw new Exception("在["+this.TableName+","+this.File+","+this.ToString()+"] Not found key="+key+", val="+val+" Examples .");
+				throw new Exception("at ["+this.TableName+","+this.File+","+this.ToString()+"] Not found key="+key+", val="+val+" Examples .");
 			}
 		}
 		/// <summary>
@@ -821,7 +821,7 @@ namespace BP.XML
 	{
 		public DTSXml()
 		{
-			this.Title="把xml Dispatch to the physical data table ";
+            this.Title = "Dispatch xml to the physical data table ";
 			//this.HisDoType =BP.DTS.DoType.
 			//this.d
 		}

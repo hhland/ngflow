@@ -173,7 +173,7 @@ public partial class WF_MapDef_UC_MExt : BP.Web.UC.UCBase3
             this.Pub2.AddBR(" Values related content is changed from time to time automatically populate checkbox.");
             this.Pub2.AddBR(" Watch out :");
             this.Pub2.AddBR("1,@Key  Is passed over the main table field variables .");
-            this.Pub2.AddBR("2, Must and only 3 Column  M1ID,M2ID,M2Name, Do not reverse the order .第1 Column ID Corresponding list ID,第2,3 Column corresponds to the list of data sources ID With name .");
+            this.Pub2.AddBR("2, Must and only 3 Column  M1ID,M2ID,M2Name, Do not reverse the order .1 Column ID Corresponding list ID,2,3 Column corresponds to the list of data sources ID With name .");
             this.Pub2.AddFieldSetEnd();
         }
     }
@@ -397,7 +397,7 @@ public partial class WF_MapDef_UC_MExt : BP.Web.UC.UCBase3
         if (this.ExtType == null)
         {
             this.Pub2.AddFieldSet("Help");
-            this.Pub2.AddH3(" All technical data are finishing in ,《 Gallop workflow engine - Process development manual .doc》与《 Gallop workflow engine - Operating Instructions Form Designer .doc》 Two files .");
+            this.Pub2.AddH3(" All technical data are finishing in ,《 Gallop workflow engine - Process development manual .doc》and《 Gallop workflow engine - Operating Instructions Form Designer .doc》 Two files .");
             this.Pub2.AddH3("<br> These two files are located :D:\\ccflow\\Documents Below .");
             this.Pub2.AddH3("<a href='http://ccflow.org/Help.aspx' target=_blank> Official website Help ..</a>");
             this.Pub2.AddFieldSetEnd();
@@ -1361,7 +1361,7 @@ public partial class WF_MapDef_UC_MExt : BP.Web.UC.UCBase3
             Button btn = new Button();
             btn.ID = "Btn_Save_AutoFullDLL";
             btn.CssClass = "Btn";
-            btn.Text = " 保 存 ";
+            btn.Text = "Save ";
             btn.Click += new EventHandler(btn_Save_AutoFullDLL_Click);
             this.Pub2.Add(btn);
             this.Pub2.Add("<br> Case :SELECT No,Name FROM Port_Emp WHERE FK_Dept LIKE '@WebUser.FK_Dept%' <br> You can use @ Symbols take the form of field variables , Or global variables , For more information, please refer to the instructions .");
@@ -1494,9 +1494,9 @@ public partial class WF_MapDef_UC_MExt : BP.Web.UC.UCBase3
                 DataTable dt = BP.DA.DBAccess.RunSQLReturnTable(tb.Text);
                 string err = "";
                 if (dt.Columns[0].ColumnName != "No")
-                    err += "第1 Column is not No.";
+                    err += "Column1 is not No.";
                 if (dt.Columns[1].ColumnName != "Name")
-                    err += "第2 Column is not Name.";
+                    err += "Column2 is not Name.";
 
                 if (err != "")
                 {
@@ -2181,7 +2181,7 @@ public partial class WF_MapDef_UC_MExt : BP.Web.UC.UCBase3
         tb.TextMode = TextBoxMode.MultiLine;
         tb.Rows = 7;
         this.Pub2.Add(tb);
-        this.Pub2.Add(" Explanation :@Key是ccflow Conventions keywords , Is passed over the main drop-down box value ");
+        this.Pub2.Add(" Explanation :@Key is ccflow Conventions keywords , Is passed over the main drop-down box value ");
         this.Pub2.AddFieldSetEnd();
 
         rb = new RadioButton();
@@ -2481,9 +2481,9 @@ public partial class WF_MapDef_UC_MExt : BP.Web.UC.UCBase3
             {
                 this.Pub2.AddTRTX();
                 this.Pub2.AddTD(attr.KeyOfEn + "-" + attr.Name);
-                this.Pub2.AddTD("无");
-                this.Pub2.AddTD("无");
-                this.Pub2.AddTD("无");
+                this.Pub2.AddTD("None");
+                this.Pub2.AddTD("None");
+                this.Pub2.AddTD("None");
                 this.Pub2.AddTDA("MapExt.aspx?FK_MapData=" + this.FK_MapData + "&ExtType=" + this.ExtType + "&RefNo=" + attr.MyPK + "&OperAttrKey=" + attr.KeyOfEn + "&DoType=New", "<img src='/WF/Img/Btn/Edit.gif' border=0/> Editor ");
                 this.Pub2.AddTREnd();
             }

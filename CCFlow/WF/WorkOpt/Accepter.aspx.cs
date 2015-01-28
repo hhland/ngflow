@@ -190,7 +190,7 @@ namespace CCFlow.WF
         public DataTable GetTable()
         {
             if (this.ToNode == 0)
-                throw new Exception("@ Process design errors , Node does not turn . Illustration :  Currently A Node . If you are A Attribute points in enabled [ Recipient ] Push button , Then he turned to the node-set ( Is A For example, you can go to the set of nodes :A到B,A到C,  Then B,C Node is turned to a set of nodes ), There must be a node is the node attributes [ Access Rules ] Set [ Select from the previous step to send staff ]");
+                throw new Exception("@ Process design errors , Node does not turn . Illustration :  Currently A Node . If you are A Attribute points in enabled [ Recipient ] Push button , Then he turned to the node-set ( Is A For example, you can go to the set of nodes :A to B,A to C,  Then B,C Node is turned to a set of nodes ), There must be a node is the node attributes [ Access Rules ] Set [ Select from the previous step to send staff ]");
 
             NodeStations stas = new NodeStations(this.ToNode);
             if (stas.Count == 0)

@@ -131,7 +131,7 @@ namespace CCFlow.Plug_in.CCFlow.WF.WorkOpt
             this.Pub1.AddHR();
             Button btn = new Button();
             btn.ID = "To";
-            btn.Text = "  执 行  ";
+            btn.Text = "  Execute  ";
             this.Pub1.Add(btn);
             btn.Click += new EventHandler(btn_Click);
 

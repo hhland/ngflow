@@ -426,12 +426,12 @@ namespace CCFlow.WF.Rpt.UC
             if (string.IsNullOrEmpty(tb.Text))
                 tb.Text = "500";
 
-            this.Left.Add("宽:");
+            this.Left.Add("width:");
             this.Left.Add(tb);
             this.Left.AddTDEnd();
 
             this.Left.AddTDBegin();
-            this.Left.Add("高:");
+            this.Left.Add("height:");
             tb = new TextBox();
             tb.Width = 40;
             tb.ID = "TB_H";

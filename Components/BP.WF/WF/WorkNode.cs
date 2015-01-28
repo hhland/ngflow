@@ -11,6 +11,8 @@ using BP.WF.Data;
 
 namespace BP.WF
 {
+    using System.Threading;
+
     /// <summary>
     /// WF  The summary .
     ///  Workflow . 
@@ -1099,7 +1101,7 @@ namespace BP.WF
                     if (1 == 2)
                     {
 
-#warning 被 zhoupeng  Delete  2014-06-20,  Should not exist here .
+#warning zhoupeng  Delete  2014-06-20,  Should not exist here .
                         if (this.HisWork.EnMap.PhysicsTable == nd.HisWork.EnMap.PhysicsTable)
                         {
                             /* This is the data consolidation mode ,  Not executed copy*/
@@ -1225,7 +1227,7 @@ namespace BP.WF
                             if (dtls.Count > 0)
                             {
                                 Sys.MapDtls toDtls = nd.MapData.MapDtls;
-                                recDtlLog += "@ To list the number of nodes is :" + dtls.Count + "个";
+                                recDtlLog += "@ To list the number of nodes is :" + dtls.Count + "";
 
                                 Sys.MapDtls startDtls = null;
                                 bool isEnablePass = false; /* Is there a list of approvals .*/
@@ -1295,7 +1297,7 @@ namespace BP.WF
                                     }
                                     qo.DoQuery();
 
-                                    recDtlLog += "@ Check out the schedule :" + dtl.No + ", Detail :" + gedtls.Count + "条.";
+                                    recDtlLog += "@ Check out the schedule :" + dtl.No + ", Detail :" + gedtls.Count + " records.";
 
                                     int unPass = 0;
                                     //  Whether audit mechanism to enable .
@@ -1388,7 +1390,7 @@ namespace BP.WF
 #warning  Logging .
                                     if (gedtls.Count != deBugNumCopy)
                                     {
-                                        recDtlLog += "@ From the list :" + dtl.No + ", Detail :" + gedtls.Count + "条.";
+                                        recDtlLog += "@ From the list :" + dtl.No + ", Detail :" + gedtls.Count + " records.";
                                         // Logging .
                                         Log.DefaultLogWriteLineInfo(recDtlLog);
                                         throw new Exception("@ System error , Keep the following information back to the administrator , Thank you .:  Technical Information :" + recDtlLog);
@@ -1681,7 +1683,7 @@ namespace BP.WF
 
             //  If you do not find .
             if (myNodes.Count == 0)
-                throw new Exception("@ Current users (" + this.ExecerName + "), Direction of the error condition is defined nodes :从{" + currNode.NodeID + currNode.Name + "} Node to the other nodes , All turned defined conditions are not set up .");
+                throw new Exception("@ Current users (" + this.ExecerName + "), Direction of the error condition is defined nodes :From {" + currNode.NodeID + currNode.Name + "} Node to the other nodes , All turned defined conditions are not set up .");
 
             // If you find 1个.
             if (myNodes.Count == 1)
@@ -3019,7 +3021,7 @@ namespace BP.WF
                             // This judgment guid  The file is uploaded by other threads copy Later ?
                             if (athDB_N.IsExit(FrmAttachmentDBAttr.UploadGUID, athDB_N.UploadGUID,
                                 FrmAttachmentDBAttr.FK_MapData, athDB_N.FK_MapData) == true)
-                                continue; /* If you do not copy了.*/
+                                continue; /* If you do not copy.*/
 
                             athDB_N.MyPK = athDB_N.UploadGUID + "_" + athDB_N.FK_MapData;
                             athDB_N.Insert();
@@ -3554,7 +3556,7 @@ namespace BP.WF
             if (dtls.Count > 0)
             {
                 Sys.MapDtls toDtls = toND.MapData.MapDtls;
-                recDtlLog += "@ To list the number of nodes is :" + dtls.Count + "个";
+                recDtlLog += "@ To list the number of nodes is :" + dtls.Count + "";
 
                 Sys.MapDtls startDtls = null;
                 bool isEnablePass = false; /* Is there a list of approvals .*/
@@ -3636,7 +3638,7 @@ namespace BP.WF
                     }
                     qo.DoQuery();
 
-                    recDtlLog += "@ Check out the schedule :" + dtl.No + ", Detail :" + gedtls.Count + "条.";
+                    recDtlLog += "@ Check out the schedule :" + dtl.No + ", Detail :" + gedtls.Count + " records.";
 
                     int unPass = 0;
                     //  Whether audit mechanism to enable .
@@ -3729,7 +3731,7 @@ namespace BP.WF
 #warning  Logging .
                     if (gedtls.Count != deBugNumCopy)
                     {
-                        recDtlLog += "@ From the list :" + dtl.No + ", Detail :" + gedtls.Count + "条.";
+                        recDtlLog += "@ From the list :" + dtl.No + ", Detail :" + gedtls.Count + " records.";
                         // Logging .
                         Log.DefaultLogWriteLineInfo(recDtlLog);
                         throw new Exception("@ System error , Keep the following information back to the administrator , Thank you .:  Technical Information :" + recDtlLog);
@@ -5134,6 +5136,34 @@ namespace BP.WF
         #endregion
 
         /// <summary>
+        /// 追加绑定表单的值,优先进行解析 变量格式为:@表名[字段]
+        /// </summary>
+        /// <param name="wk"></param>
+        /// <param name="titleRole"></param>
+        /// <returns></returns>
+        public static string FormatTitleWithBindingFrm(Work wk, string titleRole)
+        {
+            var frms = wk.HisNode.HisFrms;
+            
+            foreach (Frm frm in frms)
+            {
+                string datasql = string.Format("select * from {0} where OID ={1}", frm.PTable, wk.OID);
+                DataTable dt = DBAccess.RunSQLReturnTable(datasql);
+                if (dt.Rows.Count <= 0) break;
+
+                foreach (DataColumn col in dt.Columns)
+                {
+                    string key = col.ColumnName;
+                    string regex = string.Format("@{0}[{1}]", frm.No.ToUpper(), key.ToUpper());
+                    object val = dt.Rows[0][key];
+                    string strval = val == null ? "[null]" : val.ToString();
+                    titleRole = titleRole.Replace(regex, strval);
+                }
+            }
+            return titleRole;
+        }
+
+        /// <summary>
         ///  Generation title 
         /// </summary>
         /// <param name="wk"></param>
@@ -5154,7 +5184,7 @@ namespace BP.WF
                     titleRole = myattr.DefaultVal.ToString();
 
                 if (string.IsNullOrEmpty(titleRole) || titleRole.Contains("@") == false)
-                    titleRole = "@WebUser.FK_DeptName-@WebUser.No,@WebUser.Name在@RDT Launch .";
+                    titleRole = "@WebUser.FK_DeptName-@WebUser.No,@WebUser.Name Launch at @RDT.";
             }
 
 
@@ -5165,13 +5195,15 @@ namespace BP.WF
             titleRole = titleRole.Replace("@RDT", rdt);
             if (titleRole.Contains("@"))
             {
+                Thread.Sleep(1000);
+                titleRole = FormatTitleWithBindingFrm(wk, titleRole);
+
                 Attrs attrs = wk.EnMap.Attrs;
 
                 //  Replace foreign key priority .
                 foreach (Attr attr in attrs)
                 {
-                    if (titleRole.Contains("@") == false)
-                        break;
+                    
                     if (attr.IsRefAttr == false)
                         continue;
                     titleRole = titleRole.Replace("@" + attr.Key, wk.GetValStrByKey(attr.Key));
@@ -5180,8 +5212,7 @@ namespace BP.WF
                 // In considering the replacement of other fields .
                 foreach (Attr attr in attrs)
                 {
-                    if (titleRole.Contains("@") == false)
-                        break;
+                    
 
                     if (attr.IsRefAttr == true)
                         continue;
@@ -5208,6 +5239,7 @@ namespace BP.WF
         {
 
             string titleRole = fl.TitleRole.Clone() as string;
+            
             if (string.IsNullOrEmpty(titleRole))
             {
                 //  In order to maintain ccflow4.5 Compatible , Obtained from the starting node properties in .
@@ -5219,11 +5251,11 @@ namespace BP.WF
                     titleRole = myattr.DefaultVal.ToString();
 
                 if (string.IsNullOrEmpty(titleRole) || titleRole.Contains("@") == false)
-                    titleRole = "@WebUser.FK_DeptName-@WebUser.No,@WebUser.Name在@RDT Launch .";
+                    titleRole = "@WebUser.FK_DeptName-@WebUser.No,@WebUser.Name Launch at @RDT.";
             }
 
             if (titleRole == "@OutPara")
-                titleRole = "@WebUser.FK_DeptName-@WebUser.No,@WebUser.Name在@RDT Launch .";
+                titleRole = "@WebUser.FK_DeptName-@WebUser.No,@WebUser.Name Launch at @RDT.";
 
 
             titleRole = titleRole.Replace("@WebUser.No", wk.Rec);
@@ -5233,8 +5265,11 @@ namespace BP.WF
             titleRole = titleRole.Replace("@RDT", wk.RDT);
             if (titleRole.Contains("@"))
             {
-                Attrs attrs = wk.EnMap.Attrs;
+                Thread.Sleep(1000);
+                titleRole = FormatTitleWithBindingFrm(wk, titleRole);
 
+                Attrs attrs = wk.EnMap.Attrs;
+               
                 //  Replace foreign key priority , Because the length of the field in the foreign key of the text is relatively long .
                 foreach (Attr attr in attrs)
                 {
@@ -5255,6 +5290,9 @@ namespace BP.WF
                         continue;
                     titleRole = titleRole.Replace("@" + attr.Key, wk.GetValStrByKey(attr.Key));
                 }
+
+                
+                
             }
             titleRole = titleRole.Replace('~', '-');
             titleRole = titleRole.Replace("'", "]");
@@ -5283,11 +5321,11 @@ namespace BP.WF
                     titleRole = myattr.DefaultVal.ToString();
 
                 if (string.IsNullOrEmpty(titleRole) || titleRole.Contains("@") == false)
-                    titleRole = "@WebUser.FK_DeptName-@WebUser.No,@WebUser.Name在@RDT Launch .";
+                    titleRole = "@WebUser.FK_DeptName-@WebUser.No,@WebUser.Name Launch at @RDT.";
             }
 
             if (titleRole == "@OutPara")
-                titleRole = "@WebUser.FK_DeptName-@WebUser.No,@WebUser.Name在@RDT Launch .";
+                titleRole = "@WebUser.FK_DeptName-@WebUser.No,@WebUser.Name Launch at @RDT.";
 
 
             titleRole = titleRole.Replace("@WebUser.No", wk.FlowStarter);
@@ -5297,6 +5335,9 @@ namespace BP.WF
             titleRole = titleRole.Replace("@RDT", wk.FlowStartRDT);
             if (titleRole.Contains("@"))
             {
+
+
+
                 Attrs attrs = wk.EnMap.Attrs;
 
                 //  Replace foreign key priority , Because the length of the field in the foreign key of the text is relatively long .
@@ -5339,7 +5380,7 @@ namespace BP.WF
                 titleRole = myattr.DefaultVal.ToString();
 
             if (string.IsNullOrEmpty(titleRole) || titleRole.Contains("@") == false)
-                titleRole = "@WebUser.FK_DeptName-@WebUser.No,@WebUser.Name在@RDT Launch .";
+                titleRole = "@WebUser.FK_DeptName-@WebUser.No,@WebUser.Name Launch at @RDT.";
 
             titleRole = titleRole.Replace("@WebUser.No", wk.Rec);
             titleRole = titleRole.Replace("@WebUser.Name", wk.RecText);
@@ -5398,7 +5439,7 @@ namespace BP.WF
 
                     // Records from the parent process is transferred .
                     BP.WF.Dev2Interface.WriteTrack(this.HisFlow.No, this.HisNode.NodeID, this.WorkID, 0,
-                        "被{" + ndFrom.FlowName + "} Launch , Sponsor :" + this.ExecerName, ActionType.CallChildenFlow,
+                        " Launch by {" + ndFrom.FlowName + "}  , Sponsor :" + this.ExecerName, ActionType.CallChildenFlow,
                         "@PWorkID=" + PWorkID + "@PFlowNo=" + ndFrom.HisFlow.No, " Sponsored sub-processes :" + this.HisFlow.Name, null);
                 }
             }
@@ -5427,7 +5468,7 @@ namespace BP.WF
                     /* If the external parameters ,*/
                     gwf.Title = DBAccess.RunSQLReturnString("SELECT Title FROM " + this.HisFlow.PTable + " WHERE OID=" + this.WorkID);
                     if (string.IsNullOrEmpty(gwf.Title))
-                        gwf.Title = this.Execer + "," + this.ExecerName + "在:" + DataType.CurrentDataTimeCN + " Launch .";
+                        gwf.Title = this.Execer + "," + this.ExecerName + " Launch at:" + DataType.CurrentDataTimeCN + ".";
                     //throw new Exception(" You set the rules for the external flow generated title came parameters , But you 岋 material when creating a blank , Process is an empty title .");
                 }
                 else

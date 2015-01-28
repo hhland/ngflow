@@ -1113,7 +1113,7 @@ namespace BP.Web
             objStreamWriter.WriteLine(Convert.ToChar(9) + " System entities [" + classbaseName + "]" + Convert.ToChar(9));
             objStreamWriter.WriteLine();
             //objStreamWriter.WriteLine(Convert.ToChar(9)+" Thank you for using automatic generator system entity structure "+Convert.ToChar(9)+" Call date "+Convert.ToChar(9)+DateTime.Now.ToString("yyyy年MM月dd日"));
-            objStreamWriter.WriteLine(Convert.ToChar(9) + "从" + classbaseName + " Inherited entities [" + als.Count + "]个");
+            objStreamWriter.WriteLine(Convert.ToChar(9) + " Inherited from " + classbaseName + " , entities [" + als.Count + "]");
 
 
             #region  Processing directory 
@@ -1150,7 +1150,7 @@ namespace BP.Web
                     objStreamWriter.WriteLine(Convert.ToChar(9) + " Entity Name " + Convert.ToChar(9) + map.EnDesc + Convert.ToChar(9) + " Physical table / View " + Convert.ToChar(9) + map.PhysicsTable + Convert.ToChar(9) + " Entity Type " + Convert.ToChar(9) + map.EnType);
                     if (map.CodeStruct == null)
                     {
-                        objStreamWriter.WriteLine(Convert.ToChar(9) + " Coding structure information :无");
+                        objStreamWriter.WriteLine(Convert.ToChar(9) + " Coding structure information :None");
                     }
                     else
                     {
@@ -1175,7 +1175,7 @@ namespace BP.Web
                     }
                     else
                     {
-                        objStreamWriter.WriteLine(Convert.ToChar(9) + " Details / Information from the table :无");
+                        objStreamWriter.WriteLine(Convert.ToChar(9) + " Details / Information from the table :None");
                     }
 
                     if (map.AttrsOfOneVSM.Count > 0)
@@ -1195,10 +1195,10 @@ namespace BP.Web
                     }
                     else
                     {
-                        objStreamWriter.WriteLine(Convert.ToChar(9) + " Many relationship :无");
+                        objStreamWriter.WriteLine(Convert.ToChar(9) + " Many relationship :No");
                     }
 
-                    objStreamWriter.WriteLine(Convert.ToChar(9) + "表/ View structure ");
+                    objStreamWriter.WriteLine(Convert.ToChar(9) + "Table/ View structure ");
                     int iii = 0;
                     objStreamWriter.WriteLine(Convert.ToChar(9) + " " + Convert.ToChar(9) + " Properties No. " + Convert.ToChar(9) + " Property Description " + Convert.ToChar(9) + " Property " + Convert.ToChar(9) + " Physical field " + Convert.ToChar(9) + " Data Types " + Convert.ToChar(9) + " Defaults " + Convert.ToChar(9) + " Relationship Type " + Convert.ToChar(9) + " Remark ");
 

@@ -6,7 +6,7 @@
 */
 function checkLength(tb, minLen, maxLen) {
     if (tb.value.length < minLen || tb.value.length > maxLen) {
-        alert(' Error : Length of the input must be ' + minLen + ' µ½ ' + maxLen + ' Between .');
+        alert(' Error : Length of the input must be between' + minLen + ' to ' + maxLen + '  .');
     }
 }
 

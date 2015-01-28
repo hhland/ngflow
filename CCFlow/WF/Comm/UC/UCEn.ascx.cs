@@ -617,9 +617,9 @@ namespace CCFlow.Web.Comm.UC
                 else if (attr.UIContralType == UIContralType.CheckBok)
                 {
                     if (en.GetValBooleanByKey(attr.Key))
-                        this.AddContral(attr.Desc, "是");
+                        this.AddContral(attr.Desc, "Yes");
                     else
-                        this.AddContral(attr.Desc, "否");
+                        this.AddContral(attr.Desc, "No");
                 }
                 else if (attr.UIContralType == UIContralType.DDL)
                 {
@@ -953,7 +953,7 @@ namespace CCFlow.Web.Comm.UC
             {
                 btn = new Button();
                 btn.ID = "Btn_New";
-                btn.Text = "  新 建  ";
+                btn.Text = " New ";
                 btn.CssClass = "Btn";
                 btn.Attributes.Add("class", "Btn1");
 
@@ -966,7 +966,7 @@ namespace CCFlow.Web.Comm.UC
                 btn = new Button();
                 btn.ID = "Btn_Save";
                 btn.CssClass = "Btn";
-                btn.Text = "  保  存  ";
+                btn.Text = " Save";
                 btn.Attributes.Add("class", "Btn1");
 
                 this.Add(btn);
@@ -979,7 +979,7 @@ namespace CCFlow.Web.Comm.UC
                 btn = new Button();
                 btn.ID = "Btn_Del";
                 btn.CssClass = "Btn";
-                btn.Text = "  删  除  ";
+                btn.Text = " Delete";
                 btn.Attributes.Add("class", "Btn1");
 
                 btn.Attributes["onclick"] = " return confirm(' Are you sure you want to delete it ?');";
@@ -987,7 +987,7 @@ namespace CCFlow.Web.Comm.UC
                 this.Add("&nbsp;");
             }
 
-            this.Add("&nbsp;<input class='Btn' type=button onclick='javascript:window.close()' value='  关  闭  ' />");
+            this.Add("&nbsp;<input class='Btn' type=button onclick='javascript:window.close()' value=' Close ' />");
 
             this.Add("</TD>");
             this.AddTREnd();

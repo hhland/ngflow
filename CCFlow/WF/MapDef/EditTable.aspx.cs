@@ -80,7 +80,7 @@ namespace CCFlow.WF.MapDef
             this.Pub1.AddTR();
             this.Pub1.AddTDTitle("ID");
             this.Pub1.AddTDTitle(" Project ");
-            this.Pub1.AddTDTitle("值");
+            this.Pub1.AddTDTitle("Value");
             this.Pub1.AddTDTitle(" Description ");
             this.Pub1.AddTREnd();
 

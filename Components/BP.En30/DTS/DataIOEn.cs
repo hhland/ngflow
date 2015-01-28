@@ -186,7 +186,7 @@ namespace BP.DTS
 		/// <summary>
 		///  Remark 
 		/// </summary>
-		public string Note="нч";
+		public string Note="None";
 
 		public string DefaultEveryMonth="99";
 		public string DefaultEveryDay="99";

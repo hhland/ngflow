@@ -569,7 +569,7 @@ namespace BP.WF
                     catch (Exception ex)
                     {
                         if (BP.WF.Glo.OSModel == WF.OSModel.WorkFlow)
-                            throw new Exception("@  Carried out sql Failure : There may be reasons , You installed on GPM, Also installed ccflow, But web.config The model is not BPM Mode , You need to web.configµÄOSModel=1");
+                            throw new Exception("@  Carried out sql Failure : There may be reasons , You installed on GPM, Also installed ccflow, But web.config The model is not BPM Mode , You need to modify web.config OSModel=1");
                         throw ex;
                     }
                     sqlscript = BP.Sys.SystemConfig.CCFlowAppPath + "\\WF\\Data\\Install\\SQLScript\\Port_Inc_CH_WorkFlow.sql";

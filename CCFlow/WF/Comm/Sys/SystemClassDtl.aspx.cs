@@ -69,7 +69,7 @@ namespace CCFlow.Web.CT.Comm.Sys
                     if (dt.Rows.Count == 0)
                         continue;
                     else
-                        msg += "<BR>:有" + dt.Rows.Count + " Errors ." + attr.Desc + " sql= " + sql;
+                        msg += "<BR>:there are " + dt.Rows.Count + " Errors ." + attr.Desc + " sql= " + sql;
                 }
                 if (attr.MyFieldType == FieldType.PKEnum || attr.MyFieldType == FieldType.Enum)
                 {
@@ -78,7 +78,7 @@ namespace CCFlow.Web.CT.Comm.Sys
                     if (dt.Rows.Count == 0)
                         continue;
                     else
-                        msg += "<BR>:有" + dt.Rows.Count + " Errors ." + attr.Desc + " sql= " + sql;
+                        msg += "<BR>:there are " + dt.Rows.Count + " Errors ." + attr.Desc + " sql= " + sql;
                 }
             }
 
@@ -195,7 +195,7 @@ namespace CCFlow.Web.CT.Comm.Sys
                     || attr.MyDataType == DataType.AppMoney
                     || attr.MyDataType == DataType.AppRate
                     )
-                    this.UCSys1.AddTD("无");
+                    this.UCSys1.AddTD("None");
                 else
                     this.UCSys1.AddTD(attr.MaxLength);
 
@@ -222,10 +222,10 @@ namespace CCFlow.Web.CT.Comm.Sys
                     case FieldType.FK:
                     case FieldType.PKFK:
                         Entities ens = ClassFactory.GetEns(attr.UIBindKey);
-                        this.UCSys1.AddTD("表/ View :"+ens.GetNewEntity.EnMap.PhysicsTable+"  Associated field :"+attr.UIRefKeyValue+","+attr.UIRefKeyText);
+                        this.UCSys1.AddTD("Table/ View :"+ens.GetNewEntity.EnMap.PhysicsTable+"  Associated field :"+attr.UIRefKeyValue+","+attr.UIRefKeyText);
                         break;
                     default:
-                        this.UCSys1.AddTD("无");
+                        this.UCSys1.AddTD("No");
                         break;
                 }
 

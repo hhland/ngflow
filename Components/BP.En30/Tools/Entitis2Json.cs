@@ -294,7 +294,7 @@ namespace BP.Tools
         {
             EntityTree root = ens.GetEntityByKey(EntityTreeAttr.ParentNo, rootNo) as EntityTree;
             if (root == null)
-                throw new Exception("@ Not found rootNo=" + rootNo + "的entity.");
+                throw new Exception("@ Not found rootNo=" + rootNo + " entity.");
             appendMenus.Append("[{");
             appendMenus.Append("'id':'" + rootNo + "'");
             appendMenus.Append(",'text':'" + root.Name + "'");

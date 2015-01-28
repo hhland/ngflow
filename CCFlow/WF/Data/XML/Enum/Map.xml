@@ -19,7 +19,7 @@
  RU="@0= Not enabled @1= By date @2= By date and time " />
     
     <Item Key="CtrlWay"
-  CH="@0= By post @1= By sector @2= By staff @3=按SQL"
+  CH="@0= By post @1= By sector @2= By staff @3=By SQL"
   EN="@0=Disable@1=SQL/Produces@2=URL@3=WebServices@4=exe file"
   JP="@0=Disable@1=SQL/Produces@2=URL@3=WebServices@4=exe file"
   RU="@0=Disable@1=SQL/Produces@2=URL@3=WebServices@4=exe file" />

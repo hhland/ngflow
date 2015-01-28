@@ -1133,21 +1133,21 @@ namespace BP.DA
         {
             get
             {
-                return DateTime.Now.ToString("yy年MM月dd日 HH时mm分");
+                return DateTime.Now.ToString("yyyy-MM-dd HH:mm");
             }
         }
         public static string CurrentDataCNOfShort
         {
             get
             {
-                return DateTime.Now.ToString("yy年MM月dd日");
+                return DateTime.Now.ToString("yyyy-MM-dd");
             }
         }
         public static string CurrentDataCNOfLong
         {
             get
             {
-                return DateTime.Now.ToString("yyyy年MM月dd日");
+                return DateTime.Now.ToString("yyyy-MM-dd");
             }
         }
         /// <summary>
@@ -1294,16 +1294,16 @@ namespace BP.DA
             var spanStr = string.Empty;
 
             if (days > 0)
-                spanStr += days + "天";
+                spanStr += days + "days";
 
             if (hours > 0)
-                spanStr += hours + "时";
+                spanStr += hours + "h";
 
             if (minutes > 0)
-                spanStr += minutes + "分";
+                spanStr += minutes + "min";
 
             if (spanStr.Length == 0)
-                spanStr = "0分";
+                spanStr = "0min";
 
             return spanStr;
         }
@@ -1355,14 +1355,14 @@ namespace BP.DA
         {
             get
             {
-                return "yyyy年MM月dd日";
+                return "yyyy-MM-dd";
             }
         }
         public static string SysDatatimeFormatCN
         {
             get
             {
-                return "yyyy年MM月dd日 HH时mm分";
+                return "yyyy-MM-dd HH:mm";
             }
         }
         public static DBUrlType GetDBUrlByString(string strDBUrl)
@@ -1656,9 +1656,9 @@ namespace BP.DA
                     return true;
 
             }
-            else if (str == "是" || str == "否")
+            else if (str == "Yes" || str == "No")
             {
-                if (str == "否")
+                if (str == "No")
                     return false;
                 else
                     return true;

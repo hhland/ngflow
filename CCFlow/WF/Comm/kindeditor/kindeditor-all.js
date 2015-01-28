@@ -5887,7 +5887,7 @@ KindEditor.lang({
 	copy : ' Copy (Ctrl+C)',
 	paste : ' Stick (Ctrl+V)',
 	plainpaste : ' Paste unformatted text ',
-	wordpaste : '从Word Stick ',
+	wordpaste : 'From Word Stick ',
 	selectall : ' Select (Ctrl+A)',
 	justifyleft : ' Left ',
 	justifycenter : ' Center ',

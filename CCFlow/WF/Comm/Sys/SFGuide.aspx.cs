@@ -58,7 +58,7 @@ namespace CCFlow.WF.Comm.Sys
 
                 Pub1.AddTable("class='Table' cellSpacing='1' cellPadding='1'  border='1' style='width:100%'");
                 Pub1.AddTR();
-                Pub1.AddTDGroupTitle("", "第1步: Please select the data source ");
+                Pub1.AddTDGroupTitle("", "Step 1: Please select the data source ");
                 Pub1.AddTREnd();
 
                 Pub1.AddTR();
@@ -86,7 +86,7 @@ namespace CCFlow.WF.Comm.Sys
                 SFDBSrc src = new SFDBSrc(this.FK_SFDBSrc);
 
                 Pub1.Add("<div class='easyui-layout' data-options=\"fit:true\">");
-                Pub1.Add(string.Format("<div data-options=\"region:'west',split:true,title:' Choose  {0} 表/ View '\" style='width:200px;'>",
+                Pub1.Add(string.Format("<div data-options=\"region:'west',split:true,title:' Choose  {0} Table/ View '\" style='width:200px;'>",
                                        src.No));
 
                 var lb = new LB();
@@ -100,13 +100,13 @@ namespace CCFlow.WF.Comm.Sys
 
                 Pub1.AddDivEnd();
 
-                Pub1.Add("<div data-options=\"region:'center',title:'第2步: Please fill in the basic information '\" style='padding:5px;'>");
+                Pub1.Add("<div data-options=\"region:'center',title:'Step 2: Please fill in the basic information '\" style='padding:5px;'>");
                 Pub1.AddTable("class='Table' cellSpacing='1' cellPadding='1'  border='1' style='width:100%'");
 
                 var islocal = (src.DBSrcType == DBSrcType.Localhost).ToString().ToLower();
 
                 Pub1.AddTR();
-                Pub1.AddTDGroupTitle("style='width:100px'", "值( Serial number ):");
+                Pub1.AddTDGroupTitle("style='width:100px'", "Value( Serial number ):");
                 var ddl = new DDL();
                 ddl.ID = "DDL_ColValue";
                 ddl.Attributes.Add("onchange", string.Format("generateSQL('{0}','{1}',{2})", src.No, src.DBName, islocal));
@@ -191,7 +191,7 @@ namespace CCFlow.WF.Comm.Sys
             {
                 Pub1.AddTable("class='Table' cellSpacing='1' cellPadding='1'  border='1' style='width:100%'");
                 Pub1.AddTR();
-                Pub1.AddTDGroupTitle("colspan='2'", "第2步: Create ");
+                Pub1.AddTDGroupTitle("colspan='2'", "Step 2: Create ");
                 Pub1.AddTREnd();
 
                 TextBox tb = new TextBox();
@@ -244,7 +244,7 @@ namespace CCFlow.WF.Comm.Sys
             {
                 Pub1.AddTable("class='Table' cellSpacing='1' cellPadding='1'  border='1' style='width:100%'");
                 Pub1.AddTR();
-                Pub1.AddTDGroupTitle("colspan='2'", "第3步: Create ");
+                Pub1.AddTDGroupTitle("colspan='2'", "Step 3: Create ");
                 Pub1.AddTREnd();
 
                 TextBox tb = new TextBox();

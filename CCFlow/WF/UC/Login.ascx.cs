@@ -86,7 +86,7 @@ namespace CCFlow.WF.UC
             this.AddTREnd();
 
             this.AddTR();
-            this.AddTD( "密&nbsp;&nbsp;码:" );
+            this.AddTD( "Password:" );
             tb = new TextBox();
             tb.ID = "TB_Pass";
             tb.TextMode = TextBoxMode.Password;
@@ -98,7 +98,7 @@ namespace CCFlow.WF.UC
             this.AddTDBegin("colspan=3 align=center");
             Button btn = new Button();
             btn.CssClass = "Btn";
-            btn.Text = "登 陆";
+            btn.Text = "Login";
 
             btn.Click += new EventHandler(btn_Click);
             this.Add(btn);

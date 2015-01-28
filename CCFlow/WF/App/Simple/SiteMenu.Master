@@ -18,15 +18,15 @@
            /*如果登录信息失效，就不要显示菜单。 */
            %>
            <br>
-  [登录信息：<%=BP.Web.WebUser.No%>,<%=BP.Web.WebUser.Name%>]
-  <a href="Start.aspx">发起</a> 
-  - <a href="Todolist.aspx">待办(<%=BP.WF.Dev2Interface.Todolist_EmpWorks%>)</a>
-    - <a href="Runing.aspx">在途(<%=BP.WF.Dev2Interface.Todolist_Runing%>)</a>
-    - <a href="CC.aspx">抄送(<%=BP.WF.Dev2Interface.Todolist_CCWorks%>)</a>
-    - <a href="Complete.aspx">已完成(<%=BP.WF.Dev2Interface.Todolist_Complete%>)</a>
+  User Information：<%=BP.Web.WebUser.No%>,<%=BP.Web.WebUser.Name%>]
+  <a href="Start.aspx">Start</a> 
+  - <a href="Todolist.aspx">To Do list(<%=BP.WF.Dev2Interface.Todolist_EmpWorks%>)</a>
+    - <a href="Runing.aspx">Upcomming(<%=BP.WF.Dev2Interface.Todolist_Runing%>)</a>
+    - <a href="CC.aspx">Cc(<%=BP.WF.Dev2Interface.Todolist_CCWorks%>)</a>
+    - <a href="Complete.aspx">Complete(<%=BP.WF.Dev2Interface.Todolist_Complete%>)</a>
 
    <%} %>
-   <div style="float:right">[<a href="Login.aspx">登陆</a>] [<a href='/WF/Admin/Xap/Designer.aspx' target="_blank"  >进入流程设计器</a>]</div> 
+   <div style="float:right">[<a href="Login.aspx">login</a>] [<a href='/WF/Admin/Xap/Designer.aspx' target="_blank"  >Process Designer</a>]</div> 
     </td>
     </tr>
 

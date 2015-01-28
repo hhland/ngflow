@@ -315,8 +315,8 @@ namespace CCFlow.WF.Rpt
                                 ddl = new DDL();
                                 ddl.ID = "DDL_Val_" + condIdx;
                                 ddl.Items.Add(new ListItem("", ""));
-                                ddl.Items.Add(new ListItem("是", "1"));
-                                ddl.Items.Add(new ListItem("否", "0"));
+                                ddl.Items.Add(new ListItem("Yes", "1"));
+                                ddl.Items.Add(new ListItem("No", "0"));
                                 ddl.SetSelectItem(ap.GetValStrByKey("Val"));
                                 Pub2.AddTD(ddl);
                                 break;
@@ -1340,9 +1340,9 @@ namespace CCFlow.WF.Rpt
                             break;
                         case DataType.AppBoolean:
                             if (str == "1")
-                                this.UCSys1.AddTD("是");
+                                this.UCSys1.AddTD("Yes");
                             else
-                                this.UCSys1.AddTD("否");
+                                this.UCSys1.AddTD("No");
                             break;
                         case DataType.AppFloat:
                         case DataType.AppInt:

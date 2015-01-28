@@ -434,7 +434,7 @@ namespace BP.En
                 throw new Exception("@[" + this.EnDesc + "," + this.PhysicsTable + "]  Not found  key=[" + key + "] Properties , Please check Map File . One reason for this problem is wrong , Associated attributes in an entity set up systems of this entity , You did not follow the rules at the time of writing information to an entity set reftext, refvalue. Please verify .");
             else
             {
-                throw new Exception("@[" + this.EnDesc + "," + this.PhysicsTable + "]  Not found  key=[" + key + "] Properties , Please check Sys_MapAttr Whether the data table ,用SQL Carried out : SELECT * FROM Sys_MapAttr WHERE FK_MapData='" + this.ToString() + "' AND KeyOfEn='" + key + "'  Can query the data , If there is no possibility of the field attribute is missing .");
+                throw new Exception("@[" + this.EnDesc + "," + this.PhysicsTable + "]  Not found  key=[" + key + "] Properties , Please check Sys_MapAttr Whether the data table ,SQL Carried out : SELECT * FROM Sys_MapAttr WHERE FK_MapData='" + this.ToString() + "' AND KeyOfEn='" + key + "'  Can query the data , If there is no possibility of the field attribute is missing .");
             }
         }
         /// <summary>
@@ -457,7 +457,7 @@ namespace BP.En
             if (this.ToString().Contains("."))
                 throw new Exception("@[" + this.EnDesc + "," + this.ToString() + "]  Not found  key=[" + key + "] Properties , Please check Map File . One reason for this problem is wrong , Associated attributes in an entity set up systems of this entity , You did not follow the rules at the time of writing information to an entity set reftext, refvalue. Please verify .");
             else
-                throw new Exception("@[" + this.EnDesc + "," + this.ToString() + "]  Not found  key=[" + key + "] Properties , Please check Sys_MapAttr Whether the data table ,用SQL Carried out : SELECT * FROM Sys_MapAttr WHERE FK_MapData='"+this.ToString()+"' AND KeyOfEn='"+key+"'  Can query the data , If there is no possibility of the field attribute is missing .");
+                throw new Exception("@[" + this.EnDesc + "," + this.ToString() + "]  Not found  key=[" + key + "] Properties , Please check Sys_MapAttr Whether the data table ,SQL Carried out : SELECT * FROM Sys_MapAttr WHERE FK_MapData='"+this.ToString()+"' AND KeyOfEn='"+key+"'  Can query the data , If there is no possibility of the field attribute is missing .");
         }
         /// <summary>
         ///  Through a key  Get its property values .
@@ -699,7 +699,7 @@ namespace BP.En
                         this._HisCfgAttrs.AddTBInt("WinCardW", 820, " Pop-up window width ", true, false);
                         this._HisCfgAttrs.AddTBInt("WinCardH", 480, " Pop-up height ", true, false);
                         this._HisCfgAttrs.AddDDLSysEnum("EditerType", 0,  " Chunks of text editors ", 
-                            true, false, "EditerType", "@0=无@1=sina Editor @2=FKCEditer@3=KindEditor@4=UEditor");
+                            true, false, "EditerType", "@0=None@1=sina Editor @2=FKCEditer@3=KindEditor@4=UEditor");
 
                       //  this._HisCfgAttrs.AddDDLSysEnum("UIRowStyleGlo", 2, " Table row style ( Application Global )", true, false, "UIRowStyleGlo", "@0= No style @1= Alternate style @2= Mouse movement @3= Alternately and mouse movement ");
                     }
@@ -1902,7 +1902,7 @@ namespace BP.En
         public void AddAttrsFromMapData()
         {
             if (string.IsNullOrEmpty(this.FK_MapData))
-                throw new Exception("@ You do not have to map的 FK_MapData  Assignment .");
+                throw new Exception("@ You do not have to map FK_MapData  Assignment .");
 
             MapData md = null;
             md = new MapData();

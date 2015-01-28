@@ -111,7 +111,7 @@ namespace BP.Sys
                 mdtl.No = fk_mapdata;
                 if (mdtl.RetrieveFromDBSources() == 0)
                 {
-                    throw new Exception("@¶Ô:" + fk_mapdata+" Mapping information does not exist .");
+                    throw new Exception("@:" + fk_mapdata+" Mapping information does not exist .");
                 }
                 else
                 {

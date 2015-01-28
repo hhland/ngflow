@@ -536,7 +536,7 @@ namespace CCFlow.WF.UC
             }
 
             string appPath = BP.WF.Glo.CCFlowAppPath; //this.Request.ApplicationPath;
-            this.Page.Title = "第" + this.currND.Step + "步:" + this.currND.Name;
+            this.Page.Title = "Step " + this.currND.Step + ":" + this.currND.Name;
             #endregion  Pre-judgment navigation 
 
             #region  Processed form type .

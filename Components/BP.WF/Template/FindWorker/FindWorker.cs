@@ -750,7 +750,7 @@ namespace BP.WF.Template
                            return mydtTemp;
                     }
 
-                    continue; /* If the same level nor ,就continue.*/
+                    continue; /* If the same level nor ,then continue.*/
                 }
                 else
                     return mydtTemp;

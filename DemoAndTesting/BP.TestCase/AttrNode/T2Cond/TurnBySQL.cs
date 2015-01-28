@@ -22,7 +22,7 @@ namespace BP.CT.T2Cond
         /// </summary>
         public TurnBySQL()
         {
-            this.Title = " Test  按SQL  As the steering condition ";
+            this.Title = " Test  by SQL  As the steering condition ";
             this.DescIt = " In the test case -030 Process to make a test case .";
             this.EditState = EditState.Passed;
         }

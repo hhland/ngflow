@@ -29,8 +29,8 @@
 					</TR>
 					<TR align="right">
 						<TD colspan="2">
-							<asp:Button id="Btn_Save"  CssClass=Btn runat="server" Text="  确 定  " onclick="Button1_Click"></asp:Button>&nbsp;&nbsp;
-							<asp:Button id="Btn_Cancel" CssClass=Btn runat="server" Text="  取 消  " onclick="Button2_Click"></asp:Button>&nbsp;&nbsp;</TD>
+							<asp:Button id="Btn_Save"  CssClass=Btn runat="server" Text="  Save  " onclick="Button1_Click"></asp:Button>&nbsp;&nbsp;
+							<asp:Button id="Btn_Cancel" CssClass=Btn runat="server" Text="  Cancel  " onclick="Button2_Click"></asp:Button>&nbsp;&nbsp;</TD>
 					</TR>
 				</TABLE>
 			</FONT>

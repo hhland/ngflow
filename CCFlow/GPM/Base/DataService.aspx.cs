@@ -2402,7 +2402,7 @@ namespace GMP2.GPM
         {
             EntityTree root = ens.GetEntityByKey(rootNo) as EntityTree;
             if (root == null)
-                throw new Exception("@ Not found rootNo=" + rootNo + "的entity.");
+                throw new Exception("@ Not found rootNo=" + rootNo + " entity.");
             appendMenus.Append("[{");
             appendMenus.Append("\"id\":\"" + rootNo + "\"");
             appendMenus.Append(",\"text\":\"" + root.Name + "\"");

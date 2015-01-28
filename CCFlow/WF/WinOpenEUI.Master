@@ -69,7 +69,7 @@
                 color: #000;
                 line-height: 25px;
                 width: 100%;
-                font-family: 宋体;
+                font-family: Calibri;
                 font-size: 12px;
                 background-color: #ADADAD;
             }
@@ -94,7 +94,7 @@
         <% if (IsTab)
            { %>
         <div id="tabPanel" class="easyui-tabs" fit="true">
-            <div title="表单" id="freeForm">
+            <div title="Form" id="freeForm">
                 <% } %>
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>

@@ -1,7 +1,7 @@
 ﻿if ($.fn.pagination){
-	$.fn.pagination.defaults.beforePageText = '第';
-	$.fn.pagination.defaults.afterPageText = '共{pages}页';
-	$.fn.pagination.defaults.displayMsg = ' Show {from}到{to},共{total} Record ';
+	$.fn.pagination.defaults.beforePageText = 'Page';
+	$.fn.pagination.defaults.afterPageText = 'Total {pages}';
+	$.fn.pagination.defaults.displayMsg = ' Show {from} To {to},Total {total} Records ';
 }
 if ($.fn.datagrid){
 	$.fn.datagrid.defaults.loadMsg = ' Being processed , Please wait ...';

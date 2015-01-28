@@ -43,9 +43,9 @@ namespace BP.Sys
                 map.DepositaryOfMap = Depositary.Application;
 
                 map.AddMyPK();
-                map.AddTBString(DataRptAttr.ColCount, null, "ÁÐ", true, true, 0, 200, 20);
-                map.AddTBString(DataRptAttr.RowCount, null, "ÐÐ", true, true, 0, 200, 20);
-                map.AddTBDecimal(DataRptAttr.Val, 0, "Öµ", true, false);
+                map.AddTBString(DataRptAttr.ColCount, null, "col", true, true, 0, 200, 20);
+                map.AddTBString(DataRptAttr.RowCount, null, "row", true, true, 0, 200, 20);
+                map.AddTBDecimal(DataRptAttr.Val, 0, "Value", true, false);
                 map.AddTBDecimal(DataRptAttr.RefOID, 0, " Value associated ", true, false);
 
                 this._enMap = map;

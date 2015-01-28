@@ -15,10 +15,10 @@
 />
   
   <Item Key="SaveModel"
-    CH="@0= Only node table @1= Node table and Rpt表"
-    EN="@0= Only node table @1= Node table and Rpt表"
-    JP="@0= Only node table @1= Node table and Rpt表"
-    RU="@0= Only node table @1= Node table and Rpt表"  />
+    CH="@0= Only node table @1= Node table and Rpt table"
+    EN="@0= Only node table @1= Node table and Rpt table"
+    JP="@0= Only node table @1= Node table and Rpt talbe"
+    RU="@0= Only node table @1= Node table and Rpt table"  />
 
   <Item Key="AuthorWay"
   CH="@0= Not authorized @1= All authorization process @2= Specifies the authorization process "
@@ -27,10 +27,10 @@
   RU="@0= Not authorized @1= All authorization process @2= Specifies the authorization process "  />
     
     <Item Key="PRI"
-  CH="@0=低@1=中@2=高"
-  EN="@0=低@1=中@2=高"
-  JP="@0=低@1=中@2=高"
-  RU="@0=低@1=中@2=高"  />
+  CH="@0=Low@1=Medium@2=High"
+  EN="@0=Low@1=Medium@2=High"
+  JP="@0=Low@1=Medium@2=High"
+  RU="@0=Low@1=Medium@2=High"  />
     
   <Item Key="SelectAccepterEnable"
     CH="@0= Not enabled @1= Individually enabled @2= Before sending open "
@@ -47,7 +47,7 @@
         />
   
     <Item Key="DeliveryWay"
-    CH="@0= According to the current operator organization structure step by step to find jobs @1= By department @2=按SQL Calculate @3= Press officers set computing @4= Select from the previous step Sender @5= Press a node form SysSendEmps Field calculations @6= Previous press operator @7= Previous press operator and automatically jump @8= By the staff of the specified node computing @9= By computing the intersection of jobs and departments @10= Calculation by post ( Sectoral set latitude )@11= Press staff positions specified node computing @12=按SQL Determine the child thread to accept people with a data source @13= From the list on a node to determine the recipient of the child thread @14= Only post by computing @100=按ccflow的BPM Mode processing "
+    CH="@0= According to the current operator organization structure step by step to find jobs @1= By department @2=By SQL Calculate @3= Press officers set computing @4= Select from the previous step Sender @5= Press a node form SysSendEmps Field calculations @6= Previous press operator @7= Previous press operator and automatically jump @8= By the staff of the specified node computing @9= By computing the intersection of jobs and departments @10= Calculation by post ( Sectoral set latitude )@11= Press staff positions specified node computing @12=By SQL Determine the child thread to accept people with a data source @13= From the list on a node to determine the recipient of the child thread @14= Only post by computing @100=By ccflow BPM Mode processing "
     EN=""
     JP=""
     RU=""
@@ -84,10 +84,10 @@
   
     
 	<Item Key="EventDoType" 
-        CH="@0= Disable @1= Execute a stored procedure @2= Carried out SQL Statement @3= Carried out URL@4=WebServices( Unfinished )@5=exe File ( Unfinished )@6=EventBase类"
-        EN="@0= Disable @1= Execute a stored procedure @2= Carried out SQL Statement @3= Carried out URL@4=WebServices( Unfinished )@5=exe File ( Unfinished )@6=EventBase类"
-        JP="@0= Disable @1= Execute a stored procedure @2= Carried out SQL Statement @3= Carried out URL@4=WebServices( Unfinished )@5=exe File ( Unfinished )@6=EventBase类"
-        RU="@0= Disable @1= Execute a stored procedure @2= Carried out SQL Statement @3= Carried out URL@4=WebServices( Unfinished )@5=exe File ( Unfinished )@6=EventBase类"   />
+        CH="@0= Disable @1= Execute a stored procedure @2= Carried out SQL Statement @3= Carried out URL@4=WebServices( Unfinished )@5=exe File ( Unfinished )@6=EventBase Class"
+        EN="@0= Disable @1= Execute a stored procedure @2= Carried out SQL Statement @3= Carried out URL@4=WebServices( Unfinished )@5=exe File ( Unfinished )@6=EventBase Class"
+        JP="@0= Disable @1= Execute a stored procedure @2= Carried out SQL Statement @3= Carried out URL@4=WebServices( Unfinished )@5=exe File ( Unfinished )@6=EventBase Class"
+        RU="@0= Disable @1= Execute a stored procedure @2= Carried out SQL Statement @3= Carried out URL@4=WebServices( Unfinished )@5=exe File ( Unfinished )@6=EventBase Class"   />
 
   <Item Key="WFState"
         CH="@0= Blank @1= Draft @2= Run @3= Completed @4= Pending @5= Return @6= Forwarding @7= Delete @8= Plus sign @9= Freeze @10= Batch "

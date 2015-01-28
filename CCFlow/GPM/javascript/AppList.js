@@ -54,9 +54,9 @@ function LoadGrid() {
                        { field: 'Idx', title: ' Display Order ', width: 60 },
                        { field: 'MyFilePath', title: ' Whether to enable ', width: 60, formatter: function (value, rec) {
                            if (value == 1)
-                               return "是";
+                               return "Yes";
                            else
-                               return "否";
+                               return "No";
                        }
                        },
                        { field: 'RefMenuNo', title: ' Context Menu No. ', width: 90 },

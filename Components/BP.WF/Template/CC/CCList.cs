@@ -178,7 +178,7 @@ namespace BP.WF.Template
             {
                 string s = this.GetValStringByKey(CCListAttr.CheckNote);
                 if (string.IsNullOrEmpty(s))
-                    return "нч";
+                    return "None";
                 return s;
             }
             set
@@ -195,7 +195,7 @@ namespace BP.WF.Template
             {
                 string s = this.GetValStringByKey(CCListAttr.CheckNote);
                 if (string.IsNullOrEmpty(s))
-                    return "нч";
+                    return "None";
                 return DataType.ParseText2Html(s);
             }
         }

@@ -146,6 +146,7 @@ function LoadEasyUiHistoryGrid(flowNo) {
                 autoRowHeight: false,
                 striped: true,
                 collapsible: false,
+                fit:true,
                 url: '/AppDemoLigerUI/Base/DataService.aspx?method=historystartflow&FK_Flow=' + flowNo,
                 columns: [[
             { title: ' Title ', field: 'Title', width: 320, align: 'left', formatter: function (value, rec) {

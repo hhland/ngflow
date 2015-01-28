@@ -38,7 +38,7 @@ function LoadTreeNodes() {
     parentNo = getArgsFromHref("ParentNo");
     // Entity name 
     if (ensName == '') {
-        $("body").html("<b style='color:red;'> Please pass the correct parameter name .如:Tree.aspx?EnsName=BP.GPM.Depts<br/> Idea : If the root node ParentNo Not 0, Need to pass the root ParentNo Value .<b>");
+        $("body").html("<b style='color:red;'> Please pass the correct parameter name .Like:Tree.aspx?EnsName=BP.GPM.Depts<br/> Idea : If the root node ParentNo Not 0, Need to pass the root ParentNo Value .<b>");
         return;
     }
     // Parent Number 

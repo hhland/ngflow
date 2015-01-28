@@ -2,7 +2,7 @@
 <%@ Import Namespace="BP.Sys" %>
  <%@ Register src="../Pub.ascx" tagname="Pub" tagprefix="uc1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-<base target="_self" />
+    <base target="_self" />
 <script language="javascript">
 	function HelpGroup()
 	{
@@ -237,17 +237,14 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <uc1:Pub ID="Pub1" runat="server"  />
     <%
-        MapDtl dtl = new MapDtl();
-        dtl.No = this.FK_MapDtl;
-
-        if (dtl.RetrieveFromDBSources() == 0)
-        {
-            dtl.FK_MapData = this.FK_MapData;
-            dtl.Name = this.FK_MapData;
-            dtl.Insert();
-            dtl.IntMapAttrs();
-        }
+        
          %>
+         <div  style='width:100%;text-align:right;'>
+                <asp:DropDownList ID="drpFormGroup" runat="server">
+                </asp:DropDownList>
+                <asp:Button ID="btnSaveFormDesigner" runat="server" 
+                    Text="Save in form designer" onclick="btnSaveFormDesigner_Click" OnClientClick="return confirm('Are you sure to save this Dtl to Form Designer?');"/>
+            </div>
     <div class='easyui-layout' data-options='fit:true'>
         <div data-options="region:'north',noheader:true,split:false,border:false" style='height:30px;overflow-y:hidden'>
             <div style='float:left'>

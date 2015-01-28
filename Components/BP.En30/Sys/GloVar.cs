@@ -163,9 +163,9 @@ namespace BP.Sys
                 map.EnDesc = " Global Variables ";
                 map.EnType = EnType.Sys;
 
-                map.AddTBStringPK(GloVarAttr.No, null, "¼ü", true, false, 1, 30, 20);
+                map.AddTBStringPK(GloVarAttr.No, null, "Key", true, false, 1, 30, 20);
                 map.AddTBString(GloVarAttr.Name, null, " Name ", true, false, 0, 120, 20);
-                map.AddTBString(GloVarAttr.Val, null, "Öµ", true, false, 0, 120, 20,true);
+                map.AddTBString(GloVarAttr.Val, null, "Name", true, false, 0, 120, 20,true);
                 map.AddTBString(GloVarAttr.GroupKey, null, " Grouping values ", true, false, 0, 120, 20, true);
                 map.AddTBStringDoc(GloVarAttr.Note, null, " Explanation ", true, false,true);
                 this._enMap = map;

@@ -290,7 +290,7 @@ namespace CCFlow.WF.CCForm
                                 }
                                 if (isHavel == false)
                                 {
-                                    errMsg += "@ Non-standard data formats ,第(" + i + ")行,列(" + attr.Desc + "), Data (" + val + ") Do not conform to the format , Do not change the value in the enumeration list .";
+                                    errMsg += "@ Non-standard data formats ,Line(" + i + "),Column(" + attr.Desc + "), Data (" + val + ") Do not conform to the format , Do not change the value in the enumeration list .";
                                     val = attr.DefaultVal.ToString();
                                 }
                                 break;
@@ -314,7 +314,7 @@ namespace CCFlow.WF.CCForm
                                     }
                                 }
                                 if (isHavelIt == false)
-                                    errMsg += "@ Non-standard data formats ,第(" + i + ")行,列(" + attr.Desc + "), Data (" + val + ") Do not conform to the format , Do not change the value of the foreign key data list .";
+                                    errMsg += "@ Non-standard data formats ,Line(" + i + "),Column(" + attr.Desc + "), Data (" + val + ") Do not conform to the format , Do not change the value of the foreign key data list .";
                                 break;
                             default:
                                 break;
@@ -322,10 +322,10 @@ namespace CCFlow.WF.CCForm
 
                         if (attr.MyDataType == BP.DA.DataType.AppBoolean)
                         {
-                            if (val.Trim() == "是" || val.Trim().ToLower() == "yes")
+                            if (val.Trim() == "Yes" || val.Trim().ToLower() == "yes")
                                 val = "1";
 
-                            if (val.Trim() == "否" || val.Trim().ToLower() == "no")
+                            if (val.Trim() == "No" || val.Trim().ToLower() == "no")
                                 val = "0";
                         }
 

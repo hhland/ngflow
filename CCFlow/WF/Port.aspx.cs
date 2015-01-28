@@ -139,7 +139,7 @@ namespace BP.Web.Port
             {
                 if (this.IsCanLogin() == false)
                 {
-                    this.ShowMsg("<fieldset><legend> Security validation error </legend>  The system can not perform your request , May be your landing time is too long , Please re-login .<br> If you want to cancel, modify security verification web.config 中IsDebug  Set of values 1.</fieldset>");
+                    this.ShowMsg("<fieldset><legend> Security validation error </legend>  The system can not perform your request , May be your landing time is too long , Please re-login .<br> If you want to cancel, modify security verification web.config  IsDebug  Set of values 1.</fieldset>");
                     return;
                 }
 
@@ -151,7 +151,7 @@ namespace BP.Web.Port
                 {
                     case DoWhatList.OneWork: //  Work processor calls .
                         if (this.FK_Flow == null || this.WorkID == null)
-                            throw new Exception("@ Parameters  FK_Flow  Or  WorkID 为Null .");
+                            throw new Exception("@ Parameters  FK_Flow  Or  WorkID is null .");
                         this.Response.Redirect("/WF/WFRpt.aspx?FK_Flow=" + this.FK_Flow + "&WorkID=" + this.WorkID + "&o2=1" + paras, true);
                         break;
                     case DoWhatList.JiSu: //  Way speed mode of initiating work 
@@ -240,12 +240,12 @@ namespace BP.Web.Port
                         break;
                     case DoWhatList.DealWork:
                         if (this.FK_Flow == null || this.WorkID == null)
-                            throw new Exception("@ Parameters  FK_Flow  Or  WorkID 为Null .");
+                            throw new Exception("@ Parameters  FK_Flow  Or  WorkID is Null .");
                         this.Response.Redirect("MyFlow.aspx?FK_Flow=" + this.FK_Flow + "&WorkID=" + this.WorkID + "&o2=1" + paras, true);
                         break;
                     case DoWhatList.DealWorkInSmall:
                         if (this.FK_Flow == null || this.WorkID == null)
-                            throw new Exception("@ Parameters  FK_Flow  Or  WorkID 为Null .");
+                            throw new Exception("@ Parameters  FK_Flow  Or  WorkID is Null .");
 
                         this.Response.Redirect("MyFlow.aspx?FK_Flow=" + this.FK_Flow + "&WorkID=" + this.WorkID + "&o2=1" + paras, true);
                         break;

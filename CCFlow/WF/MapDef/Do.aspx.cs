@@ -516,19 +516,19 @@ namespace CCFlow.WF.MapDef
 
             this.Pub1.AddFieldSet(" New general field ");
             this.Pub1.AddUL();
-            this.Pub1.AddLi("<a href='EditF.aspx?DoType=Add&MyPK=" + this.MyPK + "&FType=" + BP.DA.DataType.AppString + "&IDX=" + this.IDX + "&GroupField=" + this.GroupField + "'><b> Character </b></a> - <font color=Note>如: Full name , Address , Zip Code , Phone </font>");
-            this.Pub1.AddLi("<a href='EditF.aspx?DoType=Add&MyPK=" + this.MyPK + "&FType=" + BP.DA.DataType.AppInt + "&IDX=" + this.IDX + "&GroupField=" + this.GroupField + "'><b> Integer </b></a> - <font color=Note>如: Age , The number of .</font>");
-            this.Pub1.AddLi("<a href='EditF.aspx?DoType=Add&MyPK=" + this.MyPK + "&FType=" + BP.DA.DataType.AppMoney + "&IDX=" + this.IDX + "&GroupField=" + this.GroupField + "'><b> Amount Type </b></a> - <font color=Note>如: Unit price , Salary .</font>");
-            this.Pub1.AddLi("<a href='EditF.aspx?DoType=Add&MyPK=" + this.MyPK + "&FType=" + BP.DA.DataType.AppFloat + "&IDX=" + this.IDX + "&GroupField=" + this.GroupField + "'><b> Float </b></a> - <font color=Note>如: Height , Weight , Length .</font>");
-            this.Pub1.AddLi("<a href='EditF.aspx?DoType=Add&MyPK=" + this.MyPK + "&FType=" + BP.DA.DataType.AppDate + "&IDX=" + this.IDX + "&GroupField=" + this.GroupField + "'><b> Date type </b></a> - <font color=Note>如: Date of birth , Date of occurrence .</font>");
-            this.Pub1.AddLi("<a href='EditF.aspx?DoType=Add&MyPK=" + this.MyPK + "&FType=" + BP.DA.DataType.AppDateTime + "&IDX=" + this.IDX + "&GroupField=" + this.GroupField + "'><b> Datetime type </b></a> - <font color=Note>如: Occurrence date and time </font>");
-            this.Pub1.AddLi("<a href='EditF.aspx?DoType=Add&MyPK=" + this.MyPK + "&FType=" + BP.DA.DataType.AppBoolean + "&IDX=" + this.IDX + "&GroupField=" + this.GroupField + "'><b>Boole型(是/否)</b></a> - <font color=Note>如: Completion , Whether the target </font>");
+            this.Pub1.AddLi("<a href='EditF.aspx?DoType=Add&MyPK=" + this.MyPK + "&FType=" + BP.DA.DataType.AppString + "&IDX=" + this.IDX + "&GroupField=" + this.GroupField + "'><b> Character </b></a> - <font color=Note>Like: Full name , Address , Zip Code , Phone </font>");
+            this.Pub1.AddLi("<a href='EditF.aspx?DoType=Add&MyPK=" + this.MyPK + "&FType=" + BP.DA.DataType.AppInt + "&IDX=" + this.IDX + "&GroupField=" + this.GroupField + "'><b> Integer </b></a> - <font color=Note>Like: Age , The number of .</font>");
+            this.Pub1.AddLi("<a href='EditF.aspx?DoType=Add&MyPK=" + this.MyPK + "&FType=" + BP.DA.DataType.AppMoney + "&IDX=" + this.IDX + "&GroupField=" + this.GroupField + "'><b> Amount Type </b></a> - <font color=Note>Like: Unit price , Salary .</font>");
+            this.Pub1.AddLi("<a href='EditF.aspx?DoType=Add&MyPK=" + this.MyPK + "&FType=" + BP.DA.DataType.AppFloat + "&IDX=" + this.IDX + "&GroupField=" + this.GroupField + "'><b> Float </b></a> - <font color=Note>Like: Height , Weight , Length .</font>");
+            this.Pub1.AddLi("<a href='EditF.aspx?DoType=Add&MyPK=" + this.MyPK + "&FType=" + BP.DA.DataType.AppDate + "&IDX=" + this.IDX + "&GroupField=" + this.GroupField + "'><b> Date type </b></a> - <font color=Note>Like: Date of birth , Date of occurrence .</font>");
+            this.Pub1.AddLi("<a href='EditF.aspx?DoType=Add&MyPK=" + this.MyPK + "&FType=" + BP.DA.DataType.AppDateTime + "&IDX=" + this.IDX + "&GroupField=" + this.GroupField + "'><b> Datetime type </b></a> - <font color=Note>Like: Occurrence date and time </font>");
+            this.Pub1.AddLi("<a href='EditF.aspx?DoType=Add&MyPK=" + this.MyPK + "&FType=" + BP.DA.DataType.AppBoolean + "&IDX=" + this.IDX + "&GroupField=" + this.GroupField + "'><b>Boole type(Yes/No)</b></a> - <font color=Note>Like: Completion , Whether the target </font>");
             this.Pub1.AddULEnd();
             this.Pub1.AddFieldSetEnd();
 
             this.Pub1.AddFieldSet(" New enumeration field ( Used to represent , Status , Type ... Data .)");
             this.Pub1.AddUL();
-            this.Pub1.AddLi("<a href='Do.aspx?DoType=AddSysEnum&MyPK=" + this.MyPK + "&IDX=" + this.IDX + "&GroupField=" + this.GroupField + "'><b> Enumerated </b></a> -   Such as : Sex :男/女. Leave type : Leave / Sick leave / Marriage / Maternity leave / Other .");
+            this.Pub1.AddLi("<a href='Do.aspx?DoType=AddSysEnum&MyPK=" + this.MyPK + "&IDX=" + this.IDX + "&GroupField=" + this.GroupField + "'><b> Enumerated </b></a> -   Such as : Sex :Male/Female. Leave type : Leave / Sick leave / Marriage / Maternity leave / Other .");
             this.Pub1.AddULEnd();
             this.Pub1.AddFieldSetEnd();
 

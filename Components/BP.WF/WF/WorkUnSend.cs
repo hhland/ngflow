@@ -302,7 +302,7 @@ namespace BP.WF
 
 
             //  Logging ..
-            wn.AddToTrack(ActionType.UnSend, WebUser.No, WebUser.Name, cancelToNode.NodeID, cancelToNode.Name, "无");
+            wn.AddToTrack(ActionType.UnSend, WebUser.No, WebUser.Name, cancelToNode.NodeID, cancelToNode.Name, "None");
 
             //  Deleting Data .
             if (wn.HisNode.IsStartNode)
@@ -516,7 +516,7 @@ namespace BP.WF
             WorkNode wnPri = new WorkNode(this.WorkID, priFLNode.NodeID);
 
             //  Logging ..
-            wnPri.AddToTrack(ActionType.UnSend, WebUser.No, WebUser.Name, wnPri.HisNode.NodeID, wnPri.HisNode.Name, "无");
+            wnPri.AddToTrack(ActionType.UnSend, WebUser.No, WebUser.Name, wnPri.HisNode.NodeID, wnPri.HisNode.Name, "None");
 
             GenerWorkerLists wls = new GenerWorkerLists();
             wls.Delete(GenerWorkerListAttr.WorkID, this.WorkID, GenerWorkerListAttr.FK_Node, gwf.FK_Node.ToString());
@@ -645,7 +645,7 @@ namespace BP.WF
             msg += wn.HisFlow.DoFlowEventEntity(EventListOfNode.UndoneAfter, wn.HisNode, wn.HisWork, null);
 
             //  Logging ..
-            wn.AddToTrack(ActionType.UnSend, WebUser.No, WebUser.Name, wn.HisNode.NodeID, wn.HisNode.Name, "无");
+            wn.AddToTrack(ActionType.UnSend, WebUser.No, WebUser.Name, wn.HisNode.NodeID, wn.HisNode.Name, "None");
 
             if (wnPri.HisNode.IsStartNode)
             {

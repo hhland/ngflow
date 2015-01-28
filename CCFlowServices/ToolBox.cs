@@ -38,7 +38,7 @@ namespace CCFlowServices
         private void Btn_DTSNDxxxRpt_Click(object sender, EventArgs e)
         {
             this.Btn_DTSNDxxxRpt.Enabled = false;
-            this.statusStrip1.Text = " Being executed , Please wait , Execution time :"+System.DateTime.Now.ToString("dd日HH时mm分");
+            this.statusStrip1.Text = " Being executed , Please wait , Execution time :"+System.DateTime.Now.ToString("yyyy-MM-dd HH:mm");
             BP.WF.DTS.ReLoadNDxxxxxxRpt rpt = new BP.WF.DTS.ReLoadNDxxxxxxRpt();
             string msg= rpt.Do() as string;
             this.Btn_DTSNDxxxRpt.Enabled = true;
@@ -48,7 +48,7 @@ namespace CCFlowServices
         private void Btn_ChOfNode_Click(object sender, EventArgs e)
         {
             this.Btn_ChOfNode.Enabled = false;
-            this.statusStrip1.Text = " Being executed , Please wait , Execution time :" + System.DateTime.Now.ToString("dd日HH时mm分");
+            this.statusStrip1.Text = " Being executed , Please wait , Execution time :" + System.DateTime.Now.ToString("yyyy-MM-dd HH:mm");
             ////BP.WF.DTS.ReLoadCHOfNode rpt = new BP.WF.DTS.ReLoadCHOfNode();
             //string msg = rpt.Do() as string;
             //this.Btn_ChOfNode.Enabled = true;

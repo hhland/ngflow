@@ -387,7 +387,7 @@ namespace BP.En
 					{
 						if (this.MyDataType==DataType.AppBoolean)
 						{
-							return "ÊÇ/·ñ";
+							return "Yes/No";
 						}
 						else
 						{

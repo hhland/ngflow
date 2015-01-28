@@ -882,10 +882,10 @@ namespace BP.Web.UC
                     this.AddTD("<B>" + attr.Desc + "</b>");
 
                     if (en.GetValBooleanByKey(attr.Key))
-                        this.AddTD("是");
+                        this.AddTD("Yes");
 
                     else
-                        this.AddTD("否");
+                        this.AddTD("No");
                 }
                 else if (attr.UIContralType == UIContralType.DDL)
                 {
@@ -1120,11 +1120,11 @@ namespace BP.Web.UC
             {
                 myidx = PageIdx + 1;
                 // this.Add("&nbsp;<a href='" + url + "&PageIdx=" + myidx + "'><img src='/WF/Img/Page_Down.gif' border=0 /></a>&nbsp;第" + PageIdx + "/" + pageNum + "页");
-                this.Add("<li><a href='" + url + "&PageIdx=" + myidx + "'> Next </a></li> <li>第" + PageIdx + "/<a href='" + url + "&PageIdx=" + pageNum + "'>" + pageNum + "</a>页</li> <li><a href='" + url + "&PageIdx=" + pageNum + "'> Last Page </a>, " + recNum + "条.</li></div>");
+                this.Add("<li><a href='" + url + "&PageIdx=" + myidx + "'> Next </a></li> <li>Page " + PageIdx + "/<a href='" + url + "&PageIdx=" + pageNum + "'>" + pageNum + "</a>,</li> <li><a href='" + url + "&PageIdx=" + pageNum + "'> Last Page </a>, " + recNum + ".</li></div>");
             }
             else
             {
-                this.Add("<li> Next </li> <li>第" + PageIdx + "/" + pageNum + "页</li> <li><a href='" + url + "&PageIdx=" + pageNum + "'> Last Page </a></li>,<li>Total " + recNum + " records.</li></div>");
+                this.Add("<li> Next </li> <li>Page " + PageIdx + "/" + pageNum + ",</li> <li><a href='" + url + "&PageIdx=" + pageNum + "'> Last Page </a></li>,<li>Total " + recNum + " records.</li></div>");
                 // this.Add("<img src='/WF/Img/Page_Down.gif' border=1 />");
             }
             return pageNum;
@@ -1766,9 +1766,9 @@ namespace BP.Web.UC
         public void AddTD(bool val)
         {
             if (val)
-                this.Add("\n<TD >是</TD>");
+                this.Add("\n<TD >Yes</TD>");
             else
-                this.Add("\n<TD >否</TD>");
+                this.Add("\n<TD >No</TD>");
         }
         public void AddTDBegin(string attr)
         {

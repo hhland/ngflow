@@ -20,7 +20,7 @@ namespace CCFlow.WF.UC
 
             DataTable dt = BP.WF.Dev2Interface.DB_GenerCanStartFlowsOfDataTable(BP.Web.WebUser.No);
 
-            int cols = 3; // Define the number of columns displayed  从0 Begin .
+            int cols = 3; // Define the number of columns displayed  From 0 Begin .
             decimal widthCell = 100 / cols;
             this.AddTable("width=100% border=0");
             this.AddCaption(" Initiate the process -( Explanation : The process is not the point you do not have permission to initiate .)");
@@ -60,9 +60,9 @@ namespace CCFlow.WF.UC
 
                     string extUrl = "";
                     if (fl.IsBatchStart)
-                        extUrl = "<a href='/WF/BatchStart.aspx?FK_Flow="+fl.No+"' > Batch launched </a>|<a href='/WF/Rpt/Search.aspx?RptNo=ND" + int.Parse(fl.No) + "MyRpt&FK_Flow=" + fl.No + "'> Inquiry </a>|<a href=\"javascript:WinOpen('/WF/Chart.aspx?FK_Flow=" + fl.No + "&DoType=Chart&T=" + timeKey + "','sd');\"  >图</a>";
+                        extUrl = "<a href='/WF/BatchStart.aspx?FK_Flow="+fl.No+"' > Batch launched </a>|<a href='/WF/Rpt/Search.aspx?RptNo=ND" + int.Parse(fl.No) + "MyRpt&FK_Flow=" + fl.No + "'> Inquiry </a>|<a href=\"javascript:WinOpen('/WF/Chart.aspx?FK_Flow=" + fl.No + "&DoType=Chart&T=" + timeKey + "','sd');\"  >Chart</a>";
                     else
-                        extUrl = "<a href='/WF/Rpt/Search.aspx?RptNo=ND" + int.Parse(fl.No) + "MyRpt&FK_Flow=" + fl.No + "'> Inquiry </a>|<a href=\"javascript:WinOpen('/WF/Chart.aspx?FK_Flow=" + fl.No + "&DoType=Chart&T=" + timeKey + "','sd');\"  >图</a>";
+                        extUrl = "<a href='/WF/Rpt/Search.aspx?RptNo=ND" + int.Parse(fl.No) + "MyRpt&FK_Flow=" + fl.No + "'> Inquiry </a>|<a href=\"javascript:WinOpen('/WF/Chart.aspx?FK_Flow=" + fl.No + "&DoType=Chart&T=" + timeKey + "','sd');\"  >Chart</a>";
 
                     if (isHaveIt)
                     {

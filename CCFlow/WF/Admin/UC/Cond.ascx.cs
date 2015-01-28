@@ -308,7 +308,7 @@ namespace CCFlow.WF.Admin
             {
                 case BP.En.FieldTypeS.Enum:
                     this.AddTR();
-                    this.AddTD("值");
+                    this.AddTD("Value");
                     ddl = new DDL();
                     ddl.ID = "DDL_Val";
                     ddl.BindSysEnum(attrS.UIBindKey);
@@ -328,7 +328,7 @@ namespace CCFlow.WF.Admin
                     break;
                 case BP.En.FieldTypeS.FK:
                     this.AddTR();
-                    this.AddTD("值");
+                    this.AddTD("Value");
 
                     ddl = new DDL();
                     ddl.ID = "DDL_Val";
@@ -351,7 +351,7 @@ namespace CCFlow.WF.Admin
                     if (attrS.MyDataType == BP.DA.DataType.AppBoolean)
                     {
                         this.AddTR();
-                        this.AddTD("值");
+                        this.AddTD("Value");
                         ddl = new DDL();
                         ddl.ID = "DDL_Val";
                         ddl.BindAppYesOrNo(0);
@@ -372,7 +372,7 @@ namespace CCFlow.WF.Admin
                     else
                     {
                         this.AddTR();
-                        this.AddTD("值");
+                        this.AddTD("Value");
                         TB tb = new TB();
                         tb.ID = "TB_Val";
                         if (cond != null)

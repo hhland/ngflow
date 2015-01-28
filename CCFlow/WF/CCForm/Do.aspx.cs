@@ -218,7 +218,7 @@ namespace CCFlow.WF.CCForm
                         string u = "MyFlow.aspx?FK_Flow=" + wl.FK_Flow + "&WorkID=" + wl.WorkID;
                         if (this.Request.QueryString["IsWap"] != null)
                             u = "./.../WAP/" + u;
-                        this.Response.Write("<script> window.location.href='" + u + "'</script> *^_^*  <br><br> Are entering the system. Please wait , If nothing happens for a long time ,Çë<a href='" + u + "'> Click here to enter .</a>");
+                        this.Response.Write("<script> window.location.href='" + u + "'</script> *^_^*  <br><br> Are entering the system. Please wait , If nothing happens for a long time ,please <a href='" + u + "'> Click here to enter .</a>");
                         return;
                     case "ExitAuth":
                         BP.Port.Emp emp = new BP.Port.Emp(this.FK_Emp);

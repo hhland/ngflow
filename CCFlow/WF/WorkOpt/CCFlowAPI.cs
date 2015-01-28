@@ -1218,7 +1218,7 @@ public class CCFlowAPI : CCForm
                 {
                     string myPK = dr["MyPK"].ToString();
                     /* If it is empty */
-                    throw new Exception("@ Attribute field data is incomplete , Process :" + fl.No + fl.Name + ", Node :" + nd.NodeID + nd.Name + ", Property :" + myPK + ",的UIBindKey IsNull ");
+                    throw new Exception("@ Attribute field data is incomplete , Process :" + fl.No + fl.Name + ", Node :" + nd.NodeID + nd.Name + ", Property :" + myPK + ", UIBindKey IsNull ");
                 }
 
                 //  Determine whether there .
@@ -1484,7 +1484,7 @@ public class CCFlowAPI : CCForm
                 {
                     string myPK = dr["MyPK"].ToString();
                     /* If it is empty */
-                    throw new Exception("@ Attribute field data is incomplete , Process :" + fk_flow + ", Node :" + nd.NodeID + nd.Name + ", Property :" + myPK + ",的UIBindKey IsNull ");
+                    throw new Exception("@ Attribute field data is incomplete , Process :" + fk_flow + ", Node :" + nd.NodeID + nd.Name + ", Property :" + myPK + ", UIBindKey IsNull ");
                 }
 
                 //  Determine whether there .
@@ -1920,7 +1920,7 @@ public class CCFlowAPI : CCForm
                 {
                     string myPK = dr["MyPK"].ToString();
                     /* If it is empty */
-                    throw new Exception("@ Attribute field data is incomplete , Process :" + nd.FK_Flow + nd.FlowName + ", Node :" + nd.NodeID + nd.Name + ", Property :" + myPK + ",的UIBindKey IsNull ");
+                    throw new Exception("@ Attribute field data is incomplete , Process :" + nd.FK_Flow + nd.FlowName + ", Node :" + nd.NodeID + nd.Name + ", Property :" + myPK + ", UIBindKey IsNull ");
                 }
 
                 //  Determine whether there .

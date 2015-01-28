@@ -174,9 +174,9 @@ namespace CCFlow.WF.Admin
                 Pub2.Add("</div>" + Environment.NewLine);
             }
 
-            BP.WF.Dev2Interface.Port_Login("zhoupeng");
+           // BP.WF.Dev2Interface.Port_Login("zhoupeng");
 
-            BP.WF.Dev2Interface.Port_SigOut();
+            //BP.WF.Dev2Interface.Port_SigOut();
 
             Pub2.Add("</div>");
         }

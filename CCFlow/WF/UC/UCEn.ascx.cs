@@ -2538,7 +2538,15 @@ namespace CCFlow.WF.UC
                 if (attr.LGType == FieldTypeS.Enum || attr.LGType == FieldTypeS.FK)
                     this.Add("<DIV id='F" + attr.KeyOfEn + "' style='position:absolute; left:" + x + "px; top:" + attr.Y + "px;  height:16px;text-align: left;word-break: keep-all;' >");
                 else
-                    this.Add("<DIV id='F" + attr.KeyOfEn + "' style='position:absolute; left:" + x + "px; top:" + attr.Y + "px; width:" + attr.UIWidth + "px; height:16px;text-align: left;word-break: keep-all;' >");
+                    if (attr.MyDataType == BP.DA.DataType.AppBoolean)
+                    {
+                        this.Add("<DIV id='F" + attr.KeyOfEn + "' style='position:absolute; left:" + x + "px; top:" + attr.Y + "px; width:" + attr.UIWidth + "px; height:16px;text-align: left;word-break: keep-all;white-space:nowrap' >");
+                    }
+                    else
+                    {
+                        this.Add("<DIV id='F" + attr.KeyOfEn + "' style='position:absolute; left:" + x + "px; top:" + attr.Y + "px; width:" + attr.UIWidth + "px; height:16px;text-align: left;word-break: keep-all;' >");    
+                    }
+                    
 
                 this.Add("<span>");
 
@@ -3212,12 +3220,38 @@ namespace CCFlow.WF.UC
                     this.Add(lab);
                     if (athDB != null)
                     {
-                        //  lab.Text = "<img src='" + appPath + "WF/Img/FileType/" + athDB.FileExts + ".gif' border=0/>" + athDB.FileName;
-                        if (ath.IsWoEnableWF)
-                            lab.Text = "<a  href=\"javascript:OpenOfiice('" + athDB.FK_FrmAttachment + "','" + this.HisEn.GetValStrByKey("OID") + "','" + athDB.MyPK + "','" + this.FK_MapData + "','" + ath.NoOfObj + "','" + this.HisEn.GetValStrByKey("FK_Node") + "')\"><img src='" + BP.WF.Glo.CCFlowAppPath + "WF/Img/FileType/" + athDB.FileExts + ".gif' border=0/>" + athDB.FileName + "</a>";
-                        else
-                            lab.Text = "<img src='" + BP.WF.Glo.CCFlowAppPath + "WF/Img/FileType/" + athDB.FileExts + ".gif' border=0/>" + athDB.FileName;
-                        // lab.Text = "<a href='" + this.Request.ApplicationPath + "DataUser/UploadFile/" + athDB.FilePathName + "' target=_blank ><img src='/WF/Img/FileType/" + athDB.FileExts + ".gif' border=0/>" + athDB.FileName + "</a>";
+                        try
+                        {
+                            //  lab.Text = "<img src='" + appPath + "WF/Img/FileType/" + athDB.FileExts + ".gif' border=0/>" + athDB.FileName;
+                            if (ath.IsWoEnableWF)
+                            {
+                                string OID = this.HisEn.GetValStrByKey("OID",string.Empty),
+                                FK_Node = this.HisEn.GetValStrByKey("FK_Node", Request.Params["FK_Node"]);
+                                   
+                                if (string.IsNullOrWhiteSpace(OID))
+                                {
+                                    //in preview mode,attach don't use the open office function
+                                    lab.Text = string.Format("<span >{0}</span>", athDB.FileName);
+                                }
+                                else
+                                {
+                                    lab.Text = "<a  href=\"javascript:OpenOfiice('" + athDB.FK_FrmAttachment + "','"
+                                               + OID + "','" + athDB.MyPK + "','"
+                                               + this.FK_MapData + "','" + ath.NoOfObj + "','"
+                                               + FK_Node + "')\"><img src='"
+                                               + BP.WF.Glo.CCFlowAppPath + "WF/Img/FileType/" + athDB.FileExts
+                                               + ".gif' border=0/>" + athDB.FileName + "</a>";
+                                }
+                            }
+                            else
+                                lab.Text = "<img src='" + BP.WF.Glo.CCFlowAppPath + "WF/Img/FileType/" + athDB.FileExts
+                                           + ".gif' border=0/>" + athDB.FileName;
+                            // lab.Text = "<a href='" + this.Request.ApplicationPath + "DataUser/UploadFile/" + athDB.FilePathName + "' target=_blank ><img src='/WF/Img/FileType/" + athDB.FileExts + ".gif' border=0/>" + athDB.FileName + "</a>";
+                        }
+                        catch (Exception ex)
+                        {
+                            lab.Text = string.Format("<span title='{0}' style='color:red'>{1}</span>",ex.Message,"error");
+                        }
                     }
                     this.Add("</DIV>");
                     this.Add("<DIV>");
@@ -3237,11 +3271,11 @@ namespace CCFlow.WF.UC
                         fu.ID = ath.MyPK;
                         fu.Attributes["Width"] = ath.W.ToString();
                         string uploadName = "";
-                        if (this.PageID == "Frm")
+                        if (this.PageID == "Frm" || this.PageID == "FrmDtl")//ating 2015-01-23 old: if (this.PageID == "Frm")
                             uploadName = "ContentPlaceHolder1_UCEn1_" + mybtn.ID;
                         else
                             uploadName = "ContentPlaceHolder1_MyFlowUC1_MyFlow1_UCEn1_" + mybtn.ID;
-                        fu.Attributes["onchange"] = "UploadChange('" + uploadName + "');";
+                        fu.Attributes["onchange"] = "UploadChange('" + mybtn.ClientID + "');";//ating
                         this.Add(fu);
                     }
                     if (ath.IsDownload)
@@ -4047,9 +4081,9 @@ namespace CCFlow.WF.UC
                 else if (attr.UIContralType == UIContralType.CheckBok)
                 {
                     if (en.GetValBooleanByKey(attr.Key))
-                        this.AddContral(attr.Desc, "是");
+                        this.AddContral(attr.Desc, "Yes");
                     else
-                        this.AddContral(attr.Desc, "否");
+                        this.AddContral(attr.Desc, "No");
                 }
                 else if (attr.UIContralType == UIContralType.DDL)
                 {

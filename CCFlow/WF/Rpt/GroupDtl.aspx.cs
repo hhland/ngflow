@@ -250,7 +250,7 @@ namespace CCFlow.WF.Rpt
 
             this.Pub1.AddTable("class='Table' cellSpacing='0' cellPadding='0'  border='0' style='width:100%'");
             this.Pub1.AddTR();
-            this.Pub1.AddTDGroupTitle("colspan=" + (attrCount + 2), myen.EnMap.EnDesc + "  Record :" + ens.Count + "Ìõ");
+            this.Pub1.AddTDGroupTitle("colspan=" + (attrCount + 2), myen.EnMap.EnDesc + "  Record(s) :" + ens.Count + "");
             this.Pub1.AddTREnd();
             this.Pub1.AddTR();
             this.Pub1.AddTDGroupTitle("style='text-align:center'", "No.");
@@ -309,9 +309,9 @@ namespace CCFlow.WF.Rpt
                             break;
                         case DataType.AppBoolean:
                             if (str == "1")
-                                this.Pub1.AddTD("ÊÇ");
+                                this.Pub1.AddTD("Yes");
                             else
-                                this.Pub1.AddTD("·ñ");
+                                this.Pub1.AddTD("No");
                             break;
                         case DataType.AppFloat:
                         case DataType.AppInt:
@@ -462,9 +462,9 @@ namespace CCFlow.WF.Rpt
                     break;
                 case DataType.AppBoolean:
                     if (str == "1")
-                        this.Pub1.AddTD("ÊÇ");
+                        this.Pub1.AddTD("Yes");
                     else
-                        this.Pub1.AddTD("·ñ");
+                        this.Pub1.AddTD("No");
                     break;
                 case DataType.AppFloat:
                 case DataType.AppInt:

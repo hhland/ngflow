@@ -4221,6 +4221,9 @@
     <Compile Include="WF\App\Simple\Complete.aspx.designer.cs">
       <DependentUpon>Complete.aspx</DependentUpon>
     </Compile>
+    <Compile Include="WF\CCForm\DtlCard.ashx.cs">
+      <DependentUpon>DtlCard.ashx</DependentUpon>
+    </Compile>
     <Compile Include="WF\CCForm\DtlOpSelectItems.aspx.cs">
       <DependentUpon>DtlOpSelectItems.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -6966,6 +6969,9 @@
     <Compile Include="WF\WorkOpt\OneWork\CheckTrack.aspx.designer.cs">
       <DependentUpon>CheckTrack.aspx</DependentUpon>
     </Compile>
+    <Compile Include="WF\WorkOpt\OneWork\DeptEmpInfoList.ashx.cs">
+      <DependentUpon>DeptEmpInfoList.ashx</DependentUpon>
+    </Compile>
     <Compile Include="WF\WorkOpt\OneWork\NDRpt.aspx.cs">
       <DependentUpon>NDRpt.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -7156,6 +7162,7 @@
     <Content Include="SDKFlowDemo\TeleCom\2DiShi\Site.Master" />
     <Content Include="SDKFlowDemo\TeleCom\3SheBei\Site.Master" />
     <Content Include="SDKFlowDemo\WinOpen.master" />
+    <Content Include="WF\CCForm\DtlCard.ashx" />
     <None Include="WF\CCForm\ImgAth\css\images\Thumbs.db" />
     <Content Include="WF\CCForm\WinOpen.master" />
     <Content Include="WF\Comm\RefFunc\MasterPage.master" />
@@ -7201,6 +7208,7 @@
     <Content Include="WF\WorkOpt\GridData.ashx" />
     <Content Include="WF\WinOpenEUI.Master" />
     <Content Include="WF\WebOffice\OfficeServices.ashx" />
+    <Content Include="WF\WorkOpt\OneWork\DeptEmpInfoList.ashx" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DataUser\AthTemplete\" />
@@ -7237,6 +7245,7 @@
     <Folder Include="WF\Data\JSLib\onchange\" />
     <Folder Include="WF\Data\JSLib\ondblclick\" />
     <Folder Include="WF\Data\JSLib\onkeyup\" />
+    <Folder Include="WF\OneFlow\" />
     <Folder Include="WF\WorkOpt\OneWork\Img\" />
   </ItemGroup>
   <ItemGroup>

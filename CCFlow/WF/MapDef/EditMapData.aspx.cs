@@ -110,7 +110,7 @@ namespace CCFlow.WF.MapDef
             //this.Pub1.AddTREnd();
 
             this.Pub1.AddTR();
-            this.Pub1.AddTD("colspan=3", " Program description : Format :@0= Default @1=第1 Sets of programs @2=第2 Sets of programs @3=第3 Sets of programs ");
+            this.Pub1.AddTD("colspan=3", " Program description : Format :@0= Default @1=Step1 Sets of programs @2=Step2 Sets of programs @3=Step3 Sets of programs ");
             this.Pub1.AddTREnd();
 
             this.Pub1.AddTableEnd();

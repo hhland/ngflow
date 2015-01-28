@@ -387,9 +387,9 @@ namespace CCFlow.WF.Rpt
                             break;
                         case DataType.AppBoolean:
                             if (str == "1")
-                                this.UCSys1.AddTD("是");
+                                this.UCSys1.AddTD("Yes");
                             else
-                                this.UCSys1.AddTD("否");
+                                this.UCSys1.AddTD("No");
                             break;
                         case DataType.AppFloat:
                         case DataType.AppInt:

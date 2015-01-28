@@ -148,7 +148,7 @@ namespace CCFlow.WF.MapDef
             this.Pub1.AddTableEnd();
 
             this.Pub1.AddFieldSet(" Shared Description ");
-            this.Pub1.Add(" If you want to share the bulk of the form , Go to Process Designer - Function execution - Export process and form templates , Send e-mail to template@ccflow.org中.");
+            this.Pub1.Add(" If you want to share the bulk of the form , Go to Process Designer - Function execution - Export process and form templates , Send e-mail to template@ccflow.org.");
             this.Pub1.AddFieldSetEnd();
         }
         void btn_ShareIt_Click(object sender, EventArgs e)

@@ -569,9 +569,9 @@ namespace CCFlow.WF.CCForm
                     if (attrG.UIContralType == UIContralType.CheckBok)
                     {
                         if (str == "0")
-                            this.Pub1.AddTD("colspan=" + numOfCol, attrG.Name + ":是");
+                            this.Pub1.AddTD("colspan=" + numOfCol, attrG.Name + ":Yes");
                         else
-                            this.Pub1.AddTD("colspan=" + numOfCol, attrG.Name + ":否");
+                            this.Pub1.AddTD("colspan=" + numOfCol, attrG.Name + ":No");
                     }
                     else
                     {

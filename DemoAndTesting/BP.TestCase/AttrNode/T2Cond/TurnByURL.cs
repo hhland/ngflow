@@ -22,7 +22,7 @@ namespace BP.CT.T2Cond
         /// </summary>
         public TurnByURL()
         {
-            this.Title = " Test  按URL  As the steering condition ";
+            this.Title = " Test  by URL  As the steering condition ";
             this.DescIt = " In the test case -075 Process to make a test case .";
             this.EditState = EditState.Passed;
         }

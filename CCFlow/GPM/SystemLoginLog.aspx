@@ -85,7 +85,7 @@
                 <input type="text" name="mdate" size="20" id="editDate2" class="easyui-datetimebox" data-options="required:true" />
             </div>
             <div style="float: left;">
-                <input type="button" id="btnSearch" value="查  询" onclick="btnSearch_onclick();" style="float: left;
+                <input type="button" id="btnSearch" value="Inquiry" onclick="btnSearch_onclick();" style="float: left;
                     display: inline;" />
             </div>
             <div style="float: right; font-family:arial, Times New Roman ,sans-serif; font-size:12px; color:Red;">&nbsp;&nbsp;<span id="rowCount"></span></div>

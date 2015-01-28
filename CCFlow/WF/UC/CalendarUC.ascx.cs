@@ -151,7 +151,7 @@ namespace CCFlow.WF.UC
 
             html += "<Table border=1 width=100% height=100% class='CTable' alt=' Double-click on the content of the day date appears ' style='border-collapse: collapse' bordercolor='#111111' valign=top  >";
             html += "<TR>";
-            html += " <TD align=center colspan=7 class=Sum ><a href='" + this.PageID + ".aspx?FK_NY=" + dt.AddMonths(-1).ToString("yyyy-MM") + "&CalendarType=1'  > <img src='/WF/Img/Arr/Arrowhead_Previous_S.gif' border=0 /> </a>" + year + "年" + month + "月<a href='" + this.PageID + ".aspx?CalendarType=1&FK_NY=" + dt.AddMonths(+1).ToString("yyyy-MM") + "'  ><img src='/WF/Img/Arr/Arrowhead_Next_S.gif' border=0 /></a></TD>";
+            html += " <TD align=center colspan=7 class=Sum ><a href='" + this.PageID + ".aspx?FK_NY=" + dt.AddMonths(-1).ToString("yyyy-MM") + "&CalendarType=1'  > <img src='/WF/Img/Arr/Arrowhead_Previous_S.gif' border=0 /> </a>" + year + "-" + month + "<a href='" + this.PageID + ".aspx?CalendarType=1&FK_NY=" + dt.AddMonths(+1).ToString("yyyy-MM") + "'  ><img src='/WF/Img/Arr/Arrowhead_Next_S.gif' border=0 /></a></TD>";
             html += "</TR>";
 
             html += "<TR >";

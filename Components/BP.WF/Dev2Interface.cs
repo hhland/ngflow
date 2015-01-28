@@ -367,10 +367,10 @@ namespace BP.WF
             //  Get the main table data .
             DataTable dtMain = BP.DA.DBAccess.RunSQLReturnTable(me.Tag);
             if (dtMain.Columns.Contains("Starter") == false)
-                errMsg += "@ The main table with a value of no Starter列.";
+                errMsg += "@ The main table with a value of no Starter column.";
 
             if (dtMain.Columns.Contains("MainPK") == false)
-                errMsg += "@ The main table with a value of no MainPK列.";
+                errMsg += "@ The main table with a value of no MainPK column.";
 
             if (errMsg.Length > 2)
             {
@@ -2448,7 +2448,7 @@ namespace BP.WF
         {
             if (at == ActionType.CallChildenFlow)
                 if (string.IsNullOrEmpty(cFlowInfo) == true)
-                    throw new Exception("@ Must enter a message cFlowInfo Information ,在 CallChildenFlow  Mode .");
+                    throw new Exception("@ Must enter a message cFlowInfo Information ,at CallChildenFlow  Mode .");
 
             if (string.IsNullOrEmpty(optionMsg))
                 optionMsg = Track.GetActionTypeT(at);
@@ -2835,7 +2835,7 @@ namespace BP.WF
             ps.Add("OID", workID);
             BP.DA.DBAccess.RunSQL(ps);
 
-            BP.DA.Log.DefaultLogWriteLineInfo(WebUser.Name + " Removed FlowNo 为'" + flowNo + "',workID为'" + workID + "' Data ");
+            BP.DA.Log.DefaultLogWriteLineInfo(WebUser.Name + " Removed FlowNo:'" + flowNo + "',workID:'" + workID + "' Data ");
 
             return " Deleted successfully ";
         }
@@ -5405,7 +5405,7 @@ namespace BP.WF
             {
                 /* Description Start node data transfer form .*/
                 gwf.WorkID = workID;
-                gwf.Title = "由" + WebUser.No + " ; " + WebUser.Name + ", 在(" + DataType.CurrentDataCNOfShort + ") Transfer to work ";
+                gwf.Title = "By " + WebUser.No + " ; " + WebUser.Name + ", at (" + DataType.CurrentDataCNOfShort + ") Transfer to work ";
                 gwf.FK_Dept = WebUser.FK_Dept;
                 gwf.FK_Flow = flowNo;
 
@@ -5740,7 +5740,7 @@ namespace BP.WF
 
                 // Send Read Receipts .
                 BP.WF.Dev2Interface.Port_SendMsg(sender, " Read Receipts :" + title,
-                    " Send your work has been " + WebUser.Name + "在" + DataType.CurrentDataTimeCNOfShort + "  Turn on .",
+                    " Send your work has been " + WebUser.Name + " at " + DataType.CurrentDataTimeCNOfShort + "  Turn on .",
                     "RP" + workid + "_" + nodeID, BP.WF.SMSMsgType.Self, nd.FK_Flow, nd.NodeID, workid, 0);
             }
         }
@@ -5811,6 +5811,7 @@ namespace BP.WF
             ButtonState bs = new ButtonState(fk_flow, fk_node, workid);
             return bs;
         }
+
         /// <summary>
         ///  Open the window to return 
         /// </summary>
@@ -5822,10 +5823,18 @@ namespace BP.WF
         {
             //  Converted into numbers .
             fk_flow = TurnFlowMarkToFlowNo(fk_flow);
-            string url = Glo.CCFlowAppPath + "WF/WorkOpt/ReturnWork.aspx?FK_Flow=" + fk_flow + "&FK_Node=" + fk_node + "&WorkID=" + workid + "&FID=" + fid;
+            string url = URL_Window_Return(fk_flow, fk_node, workid, fid);
             System.Web.HttpContext.Current.Response.Redirect(url, true);
             return;
         }
+        public static string URL_Window_Return(string fk_flow, int fk_node, Int64 workid, Int64 fid)
+        {
+            // 转化成编号.
+            fk_flow = TurnFlowMarkToFlowNo(fk_flow);
+
+            return Glo.CCFlowAppPath + "WF/WorkOpt/ReturnWork.aspx?FK_Flow=" + fk_flow + "&FK_Node=" + fk_node + "&WorkID=" + workid + "&FID=" + fid;
+        }
+
         /// <summary>
         ///  Cc window open 
         /// </summary>
@@ -5838,8 +5847,15 @@ namespace BP.WF
             //  Converted into numbers .
             fk_flow = TurnFlowMarkToFlowNo(fk_flow);
 
-            PubClass.WinOpen(Glo.CCFlowAppPath + "WF/WorkOpt/CC.aspx?FK_Flow=" + fk_flow + "&FK_Node=" + fk_node + "&WorkID=" + workid + "&FID=" + fid,
+            PubClass.WinOpen(URL_Window_CC(fk_flow,fk_node,workid,fid),
                 800, 600);
+        }
+        public static string URL_Window_CC(string fk_flow, int fk_node, Int64 workid, Int64 fid)
+        {
+            //  Converted into numbers .
+            fk_flow = TurnFlowMarkToFlowNo(fk_flow);
+
+            return Glo.CCFlowAppPath + "WF/WorkOpt/CC.aspx?FK_Flow=" + fk_flow + "&FK_Node=" + fk_node + "&WorkID=" + workid + "&FID=" + fid;
         }
         /// <summary>
         ///  Open the window for endorsement 
@@ -5854,8 +5870,17 @@ namespace BP.WF
             fk_flow = TurnFlowMarkToFlowNo(fk_flow);
 
             string tKey = DateTime.Now.ToString("MMddhhmmss");
-            string urlr3 = Glo.CCFlowAppPath + "WF/WorkOpt/Askfor.aspx?FK_Node=" + fk_node + "&FID=" + fid + "&WorkID=" + workid + "&FK_Flow=" + fk_flow + "&s=" + tKey;
-            PubClass.WinOpen(urlr3, 800, 600);
+            
+            PubClass.WinOpen(URL_Window_AskForHelp(fk_flow,fk_node,workid,fid), 800, 600);
+        }
+        public static string URL_Window_AskForHelp(string fk_flow, int fk_node, Int64 workid, Int64 fid)
+        {
+            //  Converted into numbers .
+            fk_flow = TurnFlowMarkToFlowNo(fk_flow);
+
+            string tKey = DateTime.Now.ToString("MMddhhmmss");
+            return Glo.CCFlowAppPath + "WF/WorkOpt/Askfor.aspx?FK_Node=" + fk_node + "&FID=" + fid + "&WorkID=" + workid + "&FK_Flow=" + fk_flow + "&s=" + tKey;
+            
         }
         /// <summary>
         ///  Open the window hangs 
@@ -5869,8 +5894,17 @@ namespace BP.WF
             //  Converted into numbers .
             fk_flow = TurnFlowMarkToFlowNo(fk_flow);
 
-            PubClass.WinOpen(Glo.CCFlowAppPath + "WF/WorkOpt/HungUp.aspx?FK_Flow=" + fk_flow + "&FK_Node=" + fk_node + "&WorkID=" + workid + "&FID=" + fid,
+            PubClass.WinOpen(URL_Window_HungUp(fk_flow,fk_node,workid,fid),
                 500, 400);
+        }
+        public static string URL_Window_HungUp(string fk_flow, int fk_node, Int64 workid, Int64 fid)
+        {
+            //  Converted into numbers .
+            fk_flow = TurnFlowMarkToFlowNo(fk_flow);
+
+            return Glo.CCFlowAppPath + "WF/WorkOpt/HungUp.aspx?FK_Flow=" + fk_flow + "&FK_Node=" + fk_node + "&WorkID="
+                   + workid + "&FID=" + fid;
+
         }
         /// <summary>
         ///  Open reminders window 
@@ -5884,8 +5918,17 @@ namespace BP.WF
             //  Converted into numbers .
             fk_flow = TurnFlowMarkToFlowNo(fk_flow);
 
-            PubClass.WinOpen(Glo.CCFlowAppPath + "WF/Hurry.aspx?FK_Flow=" + fk_flow + "&FK_Node=" + fk_node + "&WorkID=" + workid + "&FID=" + fid,
+            PubClass.WinOpen(URL_Window_Hurry(fk_flow,fk_node,workid,fid),
                 500, 400);
+        }
+        public static string URL_Window_Hurry(string fk_flow, int fk_node, Int64 workid, Int64 fid)
+        {
+            //  Converted into numbers .
+            fk_flow = TurnFlowMarkToFlowNo(fk_flow);
+
+            return Glo.CCFlowAppPath + "WF/Hurry.aspx?FK_Flow=" + fk_flow + "&FK_Node=" + fk_node + "&WorkID=" + workid
+                   + "&FID=" + fid;
+
         }
         /// <summary>
         ///  Jump window open 
@@ -5899,8 +5942,17 @@ namespace BP.WF
             //  Converted into numbers .
             fk_flow = TurnFlowMarkToFlowNo(fk_flow);
 
-            PubClass.WinOpen(Glo.CCFlowAppPath + "WF/JumpWaySmallSingle.aspx?FK_Flow=" + fk_flow + "&FK_Node=" + fk_node + "&WorkID=" + workid + "&FID=" + fid,
+            PubClass.WinOpen(URL_Window_JumpWay(fk_flow,fk_node,workid,fid),
                 500, 400);
+        }
+        public static string URL_Window_JumpWay(string fk_flow, int fk_node, Int64 workid, Int64 fid)
+        {
+            //  Converted into numbers .
+            fk_flow = TurnFlowMarkToFlowNo(fk_flow);
+
+            return Glo.CCFlowAppPath + "WF/JumpWaySmallSingle.aspx?FK_Flow=" + fk_flow + "&FK_Node=" + fk_node
+                   + "&WorkID=" + workid + "&FID=" + fid;
+
         }
         /// <summary>
         ///  Open the process trajectory window 
@@ -5913,8 +5965,14 @@ namespace BP.WF
         {
             //  Converted into numbers .
             fk_flow = TurnFlowMarkToFlowNo(fk_flow);
-            PubClass.WinOpen(Glo.CCFlowAppPath + "WF/Chart.aspx?FK_Flow=" + fk_flow + "&WorkID=" + workid + "&FID=" + fid,
+            PubClass.WinOpen(URL_Window_FlowChartTruck(fk_flow,nodeID,workid,fid),
                 500, 400);
+        }
+        public static string URL_Window_FlowChartTruck(string fk_flow, int nodeID, Int64 workid, Int64 fid)
+        {
+            //  Converted into numbers .
+            fk_flow = TurnFlowMarkToFlowNo(fk_flow);
+            return Glo.CCFlowAppPath + "WF/Chart.aspx?FK_Flow=" + fk_flow + "&WorkID=" + workid + "&FID=" + fid;
         }
         /// <summary>
         ///  The next step of the recipient 
@@ -5928,8 +5986,15 @@ namespace BP.WF
             //  Converted into numbers .
             fk_flow = TurnFlowMarkToFlowNo(fk_flow);
 
-            PubClass.WinOpen(Glo.CCFlowAppPath + "WF/WorkOpt/Accepter.aspx?FK_Flow=" + fk_flow + "&FK_Node=" + fk_node + "&WorkID=" + workid + "&FID=" + fid,
+            PubClass.WinOpen(URL_Window_Accepter(fk_flow,fk_node,workid,fid),
                 500, 400);
+        }
+        public static string URL_Window_Accepter(string fk_flow, int fk_node, Int64 workid, Int64 fid)
+        {
+            //  Converted into numbers .
+            fk_flow = TurnFlowMarkToFlowNo(fk_flow);
+
+            return Glo.CCFlowAppPath + "WF/WorkOpt/Accepter.aspx?FK_Flow=" + fk_flow + "&FK_Node=" + fk_node + "&WorkID=" + workid + "&FID=" + fid;
         }
         /// <summary>
         ///  Open flowchart window 
@@ -5942,9 +6007,16 @@ namespace BP.WF
         {
             //  Converted into numbers .
             fk_flow = TurnFlowMarkToFlowNo(fk_flow);
-            PubClass.WinOpen(Glo.CCFlowAppPath + "WF/Chart.aspx?FK_Flow=" + fk_flow,
+            PubClass.WinOpen(URL_Window_FlowChart(fk_flow),
                 500, 400);
         }
+        public static string URL_Window_FlowChart(string fk_flow)
+        {
+            //  Converted into numbers .
+            fk_flow = TurnFlowMarkToFlowNo(fk_flow);
+            return Glo.CCFlowAppPath + "WF/Chart.aspx?FK_Flow=" + fk_flow;
+        }
+
         /// <summary>
         ///  Turn on OneWork
         /// </summary>
@@ -5955,9 +6027,19 @@ namespace BP.WF
         {
             //  Converted into numbers .
             fk_flow = TurnFlowMarkToFlowNo(fk_flow);
-            PubClass.WinOpen(Glo.CCFlowAppPath + "WF/WorkOpt/OneWork/Track.aspx?FK_Flow=" + fk_flow + "&WorkID=" + workid + "&FID=" + fid,
+            PubClass.WinOpen(URL_Window_OneWork(fk_flow,workid,fid),
                 500, 400);
         }
+        public static string URL_Window_OneWork(string fk_flow, Int64 workid, Int64 fid)
+        {
+            //  Converted into numbers .
+            fk_flow = TurnFlowMarkToFlowNo(fk_flow);
+            return Glo.CCFlowAppPath + "WF/WorkOpt/OneWork/Track.aspx?FK_Flow=" + fk_flow + "&WorkID=" + workid
+                   + "&FID=" + fid;
+
+        }
+
+
         /// <summary>
         ///  View information about the child thread 
         /// </summary>
@@ -5969,9 +6051,17 @@ namespace BP.WF
         {
             //  Converted into numbers .
             fk_flow = TurnFlowMarkToFlowNo(fk_flow);
-            string key = DateTime.Now.ToString("yyyyMMddhhmmss");
-            string url = Glo.CCFlowAppPath + "WF/ThreadDtl.aspx?FK_Node=" + fk_node + "&FID=" + fid + "&WorkID=" + workid + "&FK_Flow=" + fk_flow + "&s=" + key;
+            string url = URL_Window_ThreadInfo(fk_flow, fk_node, workid, fid);
             PubClass.WinOpen(url, 500, 400);
+        }
+
+        public static string URL_Window_ThreadInfo(string fk_flow, int fk_node, Int64 workid, Int64 fid)
+        {
+            //  Converted into numbers .
+            fk_flow = TurnFlowMarkToFlowNo(fk_flow);
+            string key = DateTime.Now.ToString("yyyyMMddhhmmss");
+            return Glo.CCFlowAppPath + "WF/ThreadDtl.aspx?FK_Node=" + fk_node + "&FID=" + fid + "&WorkID=" + workid + "&FK_Flow=" + fk_flow + "&s=" + key;
+            
         }
         #endregion UI  Interface 
 
@@ -6138,7 +6228,7 @@ namespace BP.WF
         public static DataTable WorkOpt_Accepter_ByStation(int ToNode)
         {
             if (ToNode == 0)
-                throw new Exception("@ Process design errors , Node does not turn . Illustration :  Currently A Node . If you are A Attribute points in enabled [ Recipient ] Push button , Then he turned to the node-set ( Is A For example, you can go to the set of nodes :A到B,A到C,  Then B,C Node is turned to a set of nodes ), There must be a node is the node attributes [ Access Rules ] Set [ Select from the previous step to send staff ]");
+                throw new Exception("@ Process design errors , Node does not turn . Illustration :  Currently A Node . If you are A Attribute points in enabled [ Recipient ] Push button , Then he turned to the node-set ( Is A For example, you can go to the set of nodes :A to B,A to C,  Then B,C Node is turned to a set of nodes ), There must be a node is the node attributes [ Access Rules ] Set [ Select from the previous step to send staff ]");
 
             NodeStations stas = new NodeStations(ToNode);
             if (stas.Count == 0)

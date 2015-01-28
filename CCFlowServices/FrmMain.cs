@@ -456,7 +456,7 @@ namespace SMSServices
                     this.SendMail(sm);
 
                     idx++;
-                    this.SetText(" Completed  , 第:" + idx + " 个.");
+                    this.SetText(" Completed  , No.:" + idx + " .");
                     this.SetText("--------------------------------");
 
                     if (this.checkBox1.Checked)
@@ -890,10 +890,10 @@ namespace SMSServices
             this.SetText("@ Queried (" + dtMain.Rows.Count + ") Article task .");
 
             if (dtMain.Columns.Contains("Starter") == false)
-                errMsg += "@ The main table with a value of no Starter列.";
+                errMsg += "@ The main table with a value of no Starter column.";
 
             if (dtMain.Columns.Contains("MainPK") == false)
-                errMsg += "@ The main table with a value of no MainPK列.";
+                errMsg += "@ The main table with a value of no MainPK column.";
 
             if (errMsg.Length > 2)
             {
@@ -914,7 +914,7 @@ namespace SMSServices
                 string sql = "SELECT OID FROM " + nodeTable + " WHERE MainPK='" + mainPK + "'";
                 if (DBAccess.RunSQLReturnTable(sql).Rows.Count != 0)
                 {
-                    this.SetText("@" + fl.Name + ",第" + idx + "条, This task has been completed before .");
+                    this.SetText("@" + fl.Name + ",No." + idx + ", This task has been completed before .");
                     continue; /* Description been scheduled over */
                 }
 
@@ -926,7 +926,7 @@ namespace SMSServices
                     emp.No = starter;
                     if (emp.RetrieveFromDBSources() == 0)
                     {
-                        this.SetText("@" + fl.Name + ",第" + idx + "条, Sponsored personnel set :" + emp.No + " Does not exist .");
+                        this.SetText("@" + fl.Name + ",No." + idx + ", Sponsored personnel set :" + emp.No + " Does not exist .");
                         BP.DA.Log.DefaultLogWriteLineInfo("@ Data-driven approach to initiate the process (" + fl.Name + ") Sponsored personnel set :" + emp.No + " Does not exist .");
                         continue;
                     }
@@ -1043,11 +1043,11 @@ namespace SMSServices
                     }
 
                     BP.DA.Log.DefaultLogWriteLineInfo(msg);
-                    this.SetText("@" + fl.Name + ",第" + idx + "条, Sponsored staff :" + WebUser.No + "-" + WebUser.Name + " Completed .\r\n" + msg);
+                    this.SetText("@" + fl.Name + ",No." + idx + ", Sponsored staff :" + WebUser.No + "-" + WebUser.Name + " Completed .\r\n" + msg);
                 }
                 catch (Exception ex)
                 {
-                    this.SetText("@" + fl.Name + ",第" + idx + "条, Sponsored staff :" + WebUser.No + "-" + WebUser.Name + " An error occurred while initiating .\r\n" + ex.Message);
+                    this.SetText("@" + fl.Name + ",No." + idx + ", Sponsored staff :" + WebUser.No + "-" + WebUser.Name + " An error occurred while initiating .\r\n" + ex.Message);
                     BP.DA.Log.DefaultLogWriteLineWarning(ex.Message);
                 }
             }

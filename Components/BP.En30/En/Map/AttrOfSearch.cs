@@ -344,11 +344,11 @@ namespace BP.En
 		/// <param name="tbWidth"> Width </param>
 		public void AddFromTo(string lab,string refKey,string defaultvalueOfFrom, string defaultvalueOfTo, int tbWidth)
 		{
-			AttrOfSearch aos= new AttrOfSearch( "Form_"+refKey,lab+"´Ó",refKey,">=", defaultvalueOfFrom,tbWidth,false);
+			AttrOfSearch aos= new AttrOfSearch( "Form_"+refKey,lab+" from ",refKey,">=", defaultvalueOfFrom,tbWidth,false);
 			aos.SymbolEnable=false;
 			this.InnerList.Add(aos);
 
-			AttrOfSearch aos1= new AttrOfSearch( "To_"+refKey,"µ½",refKey,  "<=" , defaultvalueOfTo,tbWidth,false);
+			AttrOfSearch aos1= new AttrOfSearch( "To_"+refKey," to ",refKey,  "<=" , defaultvalueOfTo,tbWidth,false);
 			aos1.SymbolEnable=false;
 			this.InnerList.Add(aos1);
 

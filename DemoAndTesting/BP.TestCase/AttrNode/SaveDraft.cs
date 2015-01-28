@@ -31,7 +31,7 @@ namespace BP.CT.NodeAttr
         public override void Do()
         {
             if (BP.WF.Glo.IsEnableDraft == false)
-                throw new Exception("@ This test requires the Web.config 的 IsEnableDraft = 1  Under the state to test it .");
+                throw new Exception("@ This test requires the Web.config IsEnableDraft = 1  Under the state to test it .");
 
             string fk_flow = "032";
             string userNo = "zhanghaicheng";

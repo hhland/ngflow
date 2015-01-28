@@ -341,7 +341,7 @@ namespace CCFlow.WF.UC
                     FrmNode fn = frm.HisFrmNode;
                     string src = "";
                     src = fn.FrmUrl + ".aspx?FK_MapData=" + frm.No + "&FID=" + fid + "&IsEdit=0&IsPrint=0&FK_Node=" + nd.NodeID + "&WorkID=" + tk.WorkID + "&CWorkID=" + this.CWorkID;
-                    this.UCEn1.Add("\t\n <DIV id='" + frm.No + "' style='width:" + frm.FrmW + "px; height:" + frm.FrmH + "px;text-align: left; background-color:white;margin:0;padding:0;' >");
+                    this.UCEn1.Add("\t\n <DIV id='" + frm.No + "' style='width:" + frm.FrmW + "px; height:" + frm.FrmH + "px;text-align: left; background-color:white;margin:0 auto;padding:0;' >");
                     this.UCEn1.Add("\t\n <iframe ID='F" + frm.No + "' src='" + src + "' frameborder=0  style='margin:0;padding:0;width:" + frm.FrmW + "px; height:" + frm.FrmH + "px;text-align: left;'  leftMargin='0'  topMargin='0'  /></iframe>");
                     this.UCEn1.Add("\t\n </DIV>");
                 }

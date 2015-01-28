@@ -78,14 +78,14 @@ public partial class CCFlow_Comm_SearchAdv : BP.Web.WebPage
 
         this.Ucsys1.AddTR();
         Btn btn = new Btn();
-        btn.Text = "  确  定  ";
+        btn.Text = "  Define  ";
         btn.ID = "Btn_OK";
 
         btn.Click += new EventHandler(btn_Click_OK);
         this.Ucsys1.AddTD(btn);
 
         btn = new Btn();
-        btn.Text = "  取  消  ";
+        btn.Text = "  Cancel  ";
         btn.ID = "Btn_Cancel";
         btn.Click += new EventHandler(btn_Click);
         this.Ucsys1.AddTD(btn);

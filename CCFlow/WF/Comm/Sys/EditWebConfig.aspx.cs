@@ -22,7 +22,7 @@ public partial class CCFlow_Comm_Sys_EditWebconfig : BP.Web.WebPageAdmin
         this.UCSys1.AddTDTitle("IDX");
         this.UCSys1.AddTDTitle(" Project Key");
         this.UCSys1.AddTDTitle(" Name ");
-        this.UCSys1.AddTDTitle("值");
+        this.UCSys1.AddTDTitle(" Value");
         this.UCSys1.AddTDTitle(" Description ");
         this.UCSys1.AddTREnd();
 
@@ -53,13 +53,13 @@ public partial class CCFlow_Comm_Sys_EditWebconfig : BP.Web.WebPageAdmin
                 case "Boolen":
 
                     RadioButton rb1 = new RadioButton();
-                    rb1.Text = "是";
+                    rb1.Text = "Yes";
                     rb1.GroupName = en.No;
                     rb1.ID = "rb1" + en.No;
                     rb1.Enabled = en.IsEnable;
 
                     RadioButton rb0 = new RadioButton();
-                    rb0.Text = "否";
+                    rb0.Text = "No";
                     rb0.GroupName = en.No;
                     rb0.ID = "rb0" + en.No;
                     rb0.Enabled = en.IsEnable;

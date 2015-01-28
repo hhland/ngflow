@@ -70,7 +70,7 @@
                     document.getElementById('ContentPlaceHolder1_newImgUrl').value = newSrc;
                 },
                 rotateAngle: 90,
-                lang: { clockwise: ' Clockwise rotation {0}度.' }
+                lang: { clockwise: ' Clockwise rotation {0} degrees.' }
             });
         }
         function imageSave() {
@@ -92,8 +92,8 @@
                 <div style="font-size: 12px; margin-left: 0px; margin-right: 0px;">
                     &nbsp&nbsp&nbsp;  Upload Photos :<%--<input id="fileToUpload" name="fileToUpload" type="file" runat="server" onchange="ajaxFileUpload();" />--%>
                     <asp:FileUpload ID="fileToUpload" runat="server" onchange="imageSave()" />
-                    <asp:Button ID="btnSubmit" class="Btn" runat="server" Text="保 存" OnClick="btnSubmit_Click" />
-                    <asp:Button ID="btnImageSave" class="Btn" runat="server" Text="保 存" style="display:none;" OnClick="btnImaeSave_Click" />
+                    <asp:Button ID="btnSubmit" class="Btn" runat="server" Text="Save" OnClick="btnSubmit_Click" />
+                    <asp:Button ID="btnImageSave" class="Btn" runat="server" Text="Save" style="display:none;" OnClick="btnImaeSave_Click" />
                     &nbsp;&nbsp;
                     <input type="button" class="Btn" value=" Shut down " onclick="closeWin()" />
                     <asp:Button ID="refresh" Text=" Refresh " class="Btn" Width="0" Height="0" runat="server"

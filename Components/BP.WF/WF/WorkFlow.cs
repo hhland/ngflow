@@ -1144,7 +1144,7 @@ namespace BP.WF
                 throw new Exception("@ The current state is already frozen, you can not perform a re-freeze .");
 
             if (string.IsNullOrEmpty(fixMsg))
-                fixMsg = "无";
+                fixMsg = "None";
 
 
             ///*  Get its workers , Send a message to them .*/
@@ -1198,7 +1198,7 @@ namespace BP.WF
                 throw new Exception("@ The current non-frozen state, you can not perform unfrozen .");
 
             if (string.IsNullOrEmpty(unFixMsg))
-                unFixMsg = "无";
+                unFixMsg = "None";
 
 
             ///*  Get its workers , Send a message to them .*/
@@ -1508,9 +1508,9 @@ namespace BP.WF
             get
             {
                 if (this.IsComplete)
-                    return "已";
+                    return "Finished";
                 else
-                    return "未";
+                    return "Unfinished";
             }
         }
         #endregion
@@ -1656,7 +1656,7 @@ namespace BP.WF
                 throw new Exception("@ The current state is already pending, you can not suspend execution .");
 
             if (string.IsNullOrEmpty(hungNote))
-                hungNote = "无";
+                hungNote = "None";
 
             if (way == HungUpWay.SpecDataRel)
                 if (relData.Length < 10)
@@ -1679,7 +1679,7 @@ namespace BP.WF
             GenerWorkerLists wls = new GenerWorkerLists(this.WorkID, this.HisFlow.No);
             string url = Glo.ServerIP + "/" + this.VirPath + this.AppType + "/WorkOpt/OneWork/Track.aspx?FK_Flow=" + this.HisFlow.No + "&WorkID=" + this.WorkID + "&FID=" + this.HisGenerWorkFlow.FID + "&FK_Node=" + this.HisGenerWorkFlow.FK_Node;
             string mailDoc = " Details :<A href='" + url + "'> Open process track </A>.";
-            string title = " The work :" + this.HisGenerWorkFlow.Title + " 被" + WebUser.Name + " Pending " + hungNote;
+            string title = " The work :" + this.HisGenerWorkFlow.Title + " is pending by" + WebUser.Name + "  " + hungNote;
             string emps = "";
             foreach (GenerWorkerList wl in wls)
             {
@@ -1780,7 +1780,7 @@ namespace BP.WF
             GenerWorkerLists wls = new GenerWorkerLists(this.WorkID, this.HisFlow.No);
             string url = Glo.ServerIP + "/" + this.VirPath + this.AppType + "/WorkOpt/OneWork/Track.aspx?FK_Flow=" + this.HisFlow.No + "&WorkID=" + this.WorkID + "&FID=" + this.HisGenerWorkFlow.FID + "&FK_Node=" + this.HisGenerWorkFlow.FK_Node;
             string mailDoc = " Details :<A href='" + url + "'> Open process track </A>.";
-            string title = " The work :" + this.HisGenerWorkFlow.Title + " 被" + WebUser.Name + " Lifted pending .";
+            string title = " The work :" + this.HisGenerWorkFlow.Title + " is pending by " + WebUser.Name + " .";
             string emps = "";
             foreach (GenerWorkerList wl in wls)
             {

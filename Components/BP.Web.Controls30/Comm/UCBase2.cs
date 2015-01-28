@@ -327,9 +327,9 @@ namespace BP.Web.UC
                     if (attr.MyDataType == DataType.AppBoolean)
                     {
                         if (val.ToString() == "1")
-                            this.AddAttrDescVal("", "<b>ÊÇ</b> " + attr.Desc, 3);
+                            this.AddAttrDescVal("", "<b>Yes</b> " + attr.Desc, 3);
                         else
-                            this.AddAttrDescVal("", "<b>·ñ</b> " + attr.Desc, 3);
+                            this.AddAttrDescVal("", "<b>No</b> " + attr.Desc, 3);
                     }
                     else
                         this.AddAttrDescVal(attr.Desc, val.ToString(), 3);
@@ -365,9 +365,9 @@ namespace BP.Web.UC
                         break;
                     case UIContralType.CheckBok:
                         if (en.GetValBooleanByKey(attr.Key))
-                            this.AddAttrDescVal(attr.Desc, "ÊÇ", 1);
+                            this.AddAttrDescVal(attr.Desc, "Yes", 1);
                         else
-                            this.AddAttrDescVal(attr.Desc, "·ñ", 1);
+                            this.AddAttrDescVal(attr.Desc, "No", 1);
                         break;
                     default:
                         break;

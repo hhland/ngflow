@@ -110,7 +110,7 @@ namespace CCFlow.Web.Comm.UI
                     if (attr.MyFieldType == FieldType.FK || attr.MyFieldType == FieldType.Enum)
                         this.DropDownList1.Items.Add(new ListItem(attr.Desc, attr.Key));
                 }
-                this.DropDownList1.Items.Add(new ListItem("нч", "None"));
+                this.DropDownList1.Items.Add(new ListItem("None", "None"));
             }
 
             try

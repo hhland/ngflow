@@ -196,7 +196,7 @@ namespace BP.Sys
                 Map map = new Map("Sys_FrmLine");
                 map.DepositaryOfEntity = Depositary.None;
                 map.DepositaryOfMap = Depositary.Application;
-                map.EnDesc = "Ïß";
+                map.EnDesc = "Line";
                 map.EnType = EnType.Sys;
 
                 map.AddMyPK();

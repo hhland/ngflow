@@ -367,7 +367,7 @@ public partial class WF_MapDef_WFRptDtl : BP.Web.WebPage
                 attrFlow.FK_MapData = md.No;
                 attrFlow.HisEditType = EditType.UnDel;
                 attrFlow.KeyOfEn = "MyNum";
-                attrFlow.Name = "条"; //  
+                attrFlow.Name = " records"; //  
                 attrFlow.MyDataType = BP.DA.DataType.AppInt;
                 attrFlow.DefVal = "1";
                 attrFlow.UIContralType = UIContralType.TB;

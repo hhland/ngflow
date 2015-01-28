@@ -3225,9 +3225,11 @@
     <Content Include="WF\WorkOpt\PrintDoc.aspx" />
     <Content Include="WF\WorkOpt\ReturnWork.aspx" />
     <Content Include="WF\WorkOpt\SelectEmps.aspx" />
+    <Content Include="WF\WorkOpt\SelectNode.aspx" />
     <Content Include="WF\WorkOpt\SelectUser.aspx" />
     <Content Include="WF\WorkOpt\SilverlightUploadService.asmx" />
     <Content Include="WF\WorkOpt\StopFlow.aspx" />
+    <Content Include="WF\WorkOpt\SubFlow.aspx" />
     <Content Include="WF\WorkOpt\ThreadDtl.aspx" />
     <Content Include="WF\WorkOpt\ToNodes.aspx" />
     <Content Include="WF\WorkOpt\TrackChart.aspx" />
@@ -3828,6 +3830,9 @@
     </Compile>
     <Compile Include="WF\App\Simple\Complete.aspx.designer.cs">
       <DependentUpon>Complete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WF\CCForm\DtlCard.ashx.cs">
+      <DependentUpon>DtlCard.ashx</DependentUpon>
     </Compile>
     <Compile Include="WF\CCForm\DtlOpSelectItems.aspx.cs">
       <DependentUpon>DtlOpSelectItems.aspx</DependentUpon>
@@ -6903,6 +6908,9 @@
     <Compile Include="WF\WorkOpt\OneWork\CheckTrack.aspx.designer.cs">
       <DependentUpon>CheckTrack.aspx</DependentUpon>
     </Compile>
+    <Compile Include="WF\WorkOpt\OneWork\DeptEmpInfoList.ashx.cs">
+      <DependentUpon>DeptEmpInfoList.ashx</DependentUpon>
+    </Compile>
     <Compile Include="WF\WorkOpt\OneWork\NDRpt.aspx.cs">
       <DependentUpon>NDRpt.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -6973,12 +6981,22 @@
     <Compile Include="WF\WorkOpt\SelectEmps.aspx.designer.cs">
       <DependentUpon>SelectEmps.aspx</DependentUpon>
     </Compile>
+    <Compile Include="WF\WorkOpt\SelectNode.aspx.cs">
+      <DependentUpon>SelectNode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF\WorkOpt\SelectNode.aspx.designer.cs">
+      <DependentUpon>SelectNode.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WF\WorkOpt\SelectUser.aspx.cs">
       <DependentUpon>SelectUser.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="WF\WorkOpt\SelectUser.aspx.designer.cs">
       <DependentUpon>SelectUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WF\WorkOpt\ServAccepter.ashx.cs">
+      <DependentUpon>ServAccepter.ashx</DependentUpon>
     </Compile>
     <Compile Include="WF\WorkOpt\SilverlightUploadService.asmx.cs">
       <DependentUpon>SilverlightUploadService.asmx</DependentUpon>
@@ -6990,6 +7008,13 @@
     </Compile>
     <Compile Include="WF\WorkOpt\StopFlow.aspx.designer.cs">
       <DependentUpon>StopFlow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WF\WorkOpt\SubFlow.aspx.cs">
+      <DependentUpon>SubFlow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF\WorkOpt\SubFlow.aspx.designer.cs">
+      <DependentUpon>SubFlow.aspx</DependentUpon>
     </Compile>
     <Compile Include="WF\WorkOpt\ThreadDtl.aspx.cs">
       <DependentUpon>ThreadDtl.aspx</DependentUpon>
@@ -7090,6 +7115,7 @@
     <Content Include="web.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="WF\CCForm\DtlCard.ashx" />
     <None Include="WF\CCForm\ImgAth\css\images\Thumbs.db" />
     <Content Include="WF\CCForm\WinOpen.master" />
     <Content Include="WF\Comm\RefFunc\MasterPage.master" />
@@ -7135,6 +7161,8 @@
     <Content Include="WF\WorkOpt\GridData.ashx" />
     <Content Include="WF\WinOpenEUI.Master" />
     <Content Include="WF\WebOffice\OfficeServices.ashx" />
+    <Content Include="WF\WorkOpt\ServAccepter.ashx" />
+    <Content Include="WF\WorkOpt\OneWork\DeptEmpInfoList.ashx" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Bin\" />

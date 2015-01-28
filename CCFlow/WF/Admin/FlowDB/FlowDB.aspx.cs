@@ -164,7 +164,7 @@ namespace CCFlow.WF.Admin
             Pub3.Add(tb);
 
             Pub3.AddSpace(1);
-            Pub3.Add("到");
+            Pub3.Add("To");
             Pub3.AddSpace(1);
 
             tb = new TB();

@@ -30,7 +30,7 @@
 <asp:CheckBox ID="CheckBox1" runat="server" Font-Bold="True" 
     ForeColor="#0033CC" Text=" I participated in the inquiry process only " />
         <br />
-    &nbsp;<asp:Button ID="Btn_ByWorkID" runat="server" Text=" By Job ID查"   
+    &nbsp;<asp:Button ID="Btn_ByWorkID" runat="server" Text="Search by Job ID"   
          onclick="Button1_Click"  />
         <asp:Button ID="Btn_ByTitle" runat="server" Text=" Title field investigation process by keyword "  
           onclick="Button1_Click"/>

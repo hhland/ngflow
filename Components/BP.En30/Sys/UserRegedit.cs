@@ -364,8 +364,8 @@ namespace BP.Sys
                 map.EnType = EnType.Sys;
                 map.AddMyPK();
                 map.AddTBString(UserRegeditAttr.FK_Emp, null, " User ", false, false, 1, 30, 20);
-                map.AddTBString(UserRegeditAttr.CfgKey, null, "¼ü", true, false, 1, 200, 20);
-                map.AddTBString(UserRegeditAttr.Vals, null, "Öµ", true, false, 0, 2000, 20);
+                map.AddTBString(UserRegeditAttr.CfgKey, null, "Key", true, false, 1, 200, 20);
+                map.AddTBString(UserRegeditAttr.Vals, null, "Value", true, false, 0, 2000, 20);
                 map.AddTBString(UserRegeditAttr.GenerSQL, null, "GenerSQL", true, false, 0, 2000, 20);
                 map.AddTBString(UserRegeditAttr.Paras, null, "Paras", true, false, 0, 2000, 20);
                 map.AddTBString(UserRegeditAttr.NumKey, null, " Analysis Key", true, false, 0, 300, 20);
@@ -376,7 +376,7 @@ namespace BP.Sys
                 map.AddBoolean(UserRegeditAttr.IsPic, false, " Are Pictures ", true, false);
 
                 map.AddTBString(UserRegeditAttr.DTFrom, null, " Query time from ", true, false, 0, 20, 20);
-                map.AddTBString(UserRegeditAttr.DTTo, null, "µ½", true, false, 0, 20, 20);
+                map.AddTBString(UserRegeditAttr.DTTo, null, " to ", true, false, 0, 20, 20);
                 
                 this._enMap = map;
                 return this._enMap;

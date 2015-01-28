@@ -25,10 +25,10 @@
            Note=" Copy fields from other forms " />--> 
     
   <MapMenu No="DTable" CH=" New from the table " JS="javascript:MapDtl(@MyPK);" Img="./Img/MapExt/Dtl.png"
-           Note=" Also known from the table ,如: Reimbursement list ."  /> 
+           Note=" Also known from the table ,Like: Reimbursement list ."  /> 
            
   <MapMenu No="DM" CH=" Increase many "   JS="javascript:MapM2M(@MyPK);" Img="./../Img/Btn/ChoseCol.gif" 
-           Note="如: Project staff , Elective ." />
+           Note="Like: Project staff , Elective ." />
 
     <MapMenu No="DMM" CH=" Increase for many more "   JS="javascript:MapM2MM(@MyPK);" Img="./../Img/Btn/ChoseCol.gif"
            Note=" Such as setting job for everyone who sets " />

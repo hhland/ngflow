@@ -458,35 +458,35 @@ namespace BP.Sys
                     case EventListOfNode.SendSuccess:
                         str += "\t\n Hello :";
                         str += "\t\n     There are new job {{Title}} You need to deal with ,  Click here to open the work {Url} .";
-                        str += "\t\nÖÂ! ";
+                        str += "\t\nBR, ";
                         str += "\t\n    @WebUser.No, @WebUser.Name";
                         str += "\t\n    @RDT";
                         break;
                     case EventListOfNode.ReturnAfter:
                         str += "\t\n Hello :";
                         str += "\t\n     The work {{Title}} Be returned to the ,  Click here to open the work {Url} .";
-                        str += "\t\n ÖÂ! ";
+                        str += "\t\n BR, ";
                         str += "\t\n    @WebUser.No,@WebUser.Name";
                         str += "\t\n    @RDT";
                         break;
                     case EventListOfNode.ShitAfter:
                         str += "\t\n Hello :";
                         str += "\t\n     Transferred to your work {{Title}},  Click here to open the work {Url} .";
-                        str += "\t\n ÖÂ! ";
+                        str += "\t\n BR, ";
                         str += "\t\n    @WebUser.No,@WebUser.Name";
                         str += "\t\n    @RDT";
                         break;
                     case EventListOfNode.UndoneAfter:
                          str += "\t\n Hello :";
                          str += "\t\n     Transferred to your work {{Title}},  Click here to open the work {Url} .";
-                        str += "\t\n ÖÂ! ";
+                        str += "\t\n BR, ";
                         str += "\t\n    @WebUser.No,@WebUser.Name";
                         str += "\t\n    @RDT";
                         break;
                     case EventListOfNode.AskerReAfter: // Plus sign .
                         str += "\t\n Hello :";
                         str += "\t\n     Transferred to your work {{Title}},  Click here to open the work {Url} .";
-                        str += "\t\n ÖÂ! ";
+                        str += "\t\n BR, ";
                         str += "\t\n    @WebUser.No,@WebUser.Name";
                         str += "\t\n    @RDT";
                         break;
@@ -613,7 +613,7 @@ namespace BP.Sys
 
                 #region  Message Settings .
                 map.AddDDLSysEnum(FrmEventAttr.MsgCtrl, 0, " Messaging control ", true, true, FrmEventAttr.MsgCtrl,
-                    "@0= Do not send @1= Automatic by sending the set range @2= The nodes form system by field (IsSendEmail,IsSendSMS) To decide @3=ÓÉSDK Developers parameters (IsSendEmail,IsSendSMS) To decide ", true);
+                    "@0= Do not send @1= Automatic by sending the set range @2= The nodes form system by field (IsSendEmail,IsSendSMS) To decide @3=By SDK Developers parameters (IsSendEmail,IsSendSMS) To decide ", true);
 
                 map.AddBoolean(FrmEventAttr.MsgMailEnable, true, " Whether sending mail enabled ?( If you must set up a mail-enabled template , Stand by ccflow Expression .)", true, true, true);
                 map.AddTBString(FrmEventAttr.MailTitle, null, " Mail headline templates ", true, false, 0, 200, 20, true);
@@ -623,7 +623,7 @@ namespace BP.Sys
                 map.AddBoolean(FrmEventAttr.SMSEnable, false, " Whether SMS enabled ?( If you enable necessary to set SMS templates , Stand by ccflow Expression .)", true, true, true);
                 map.AddTBStringDoc(FrmEventAttr.SMSDoc, null, " SMS content templates ", true, false, true);
 
-                map.AddBoolean(FrmEventAttr.MobilePushEnable, true, " If pushed to your phone ,pad¶Ë.", true, true, true);
+                map.AddBoolean(FrmEventAttr.MobilePushEnable, true, " If pushed to your phone ,pad.", true, true, true);
 
                 #endregion  Message Settings .
 

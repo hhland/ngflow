@@ -43,7 +43,7 @@ namespace CCFlow.WF.Admin
             }
 
             this.Pub1.AddTable("width='100%'");
-            this.Pub1.AddCaptionLeft("为[" + mynd.Name + "],  Set revocable node .");
+            this.Pub1.AddCaptionLeft("[" + mynd.Name + "],  Set revocable node .");
 
             BP.WF.NodeCancels rnds = new NodeCancels();
             rnds.Retrieve(BP.WF.NodeCancelAttr.FK_Node, this.FK_Node);
@@ -63,7 +63,7 @@ namespace CCFlow.WF.Admin
 
                 this.Pub1.AddTR();
                 this.Pub1.AddTDIdx(idx++);
-                this.Pub1.AddTD("第" + nd.Step + "步");
+                this.Pub1.AddTD("Step" + nd.Step + "");
                 this.Pub1.AddTD(cb);
                 this.Pub1.AddTREnd();
             }

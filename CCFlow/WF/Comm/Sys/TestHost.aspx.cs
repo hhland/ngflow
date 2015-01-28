@@ -65,8 +65,8 @@ namespace CCFlow.Web.Comm.Sys
 
 			DateTime dtE = DateTime.Now;
 			TimeSpan ts  =dtE  - dtS;
-			this.UCSys1.AddMsgOfInfo(" Execution record ( Millisecond ):"," Execution time :"+ts.TotalMilliseconds+" Millisecond "+ts.TotalMilliseconds/time+" ¥Œ/ Millisecond .");
-			this.UCSys1.AddMsgOfInfo(" Execution record (√Î):"," Execution time :"+ts.TotalSeconds+"√Î"+ts.TotalSeconds/time+" ¥Œ/ Millisecond .");
+			this.UCSys1.AddMsgOfInfo(" Execution record ( Millisecond ):"," Execution time :"+ts.TotalMilliseconds+" Millisecond "+ts.TotalMilliseconds/time+" times .");
+			this.UCSys1.AddMsgOfInfo(" Execution record (Second):"," Execution time :"+ts.TotalSeconds+" Seconde "+ts.TotalSeconds/time+" times .");
 		}
 
 		public void BindRunSqlRVal()

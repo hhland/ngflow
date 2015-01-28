@@ -280,7 +280,7 @@ namespace CCFlow.WF.Comm
 
                             btn.ID = "Btn_Move_" + se.IntKey;
                             btn.Text = " Set up " + ":" + se.Lab;
-                            btn.Attributes["onclick"] = "return confirm(' Are you sure you want to perform settings [" + se.Lab + "]吗?');";
+                            btn.Attributes["onclick"] = "return confirm(' Are you sure you want to perform settings [" + se.Lab + "]?');";
                             btn.Click += new EventHandler(btn_Move_Click);
                             this.UCSys3.Add(btn);
                             this.UCSys3.Add("&nbsp;&nbsp;");
@@ -296,7 +296,7 @@ namespace CCFlow.WF.Comm
                             btn.CssClass = "Btn";
                             btn.ID = "Btn_Move_" + en1.No;
                             btn.Text = " Set up :" + en1.Name;
-                            btn.Attributes["onclick"] = "return confirm(' Are you sure you want to set [" + en1.Name + "]吗?');";
+                            btn.Attributes["onclick"] = "return confirm(' Are you sure you want to set [" + en1.Name + "]?');";
                             btn.Click += new EventHandler(btn_Move_Click);
                             this.UCSys3.Add(btn);
                             this.UCSys3.Add("&nbsp;&nbsp;");

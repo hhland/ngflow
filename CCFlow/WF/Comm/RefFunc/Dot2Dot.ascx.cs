@@ -259,7 +259,7 @@ namespace CCFlow.WF.Comm.RefFunc
                 this.DDL_Group.Items.Add(new ListItem(attr.Desc, attr.Key));
             }
 
-            this.DDL_Group.Items.Add(new ListItem("无", "None"));
+            this.DDL_Group.Items.Add(new ListItem("None", "None"));
             foreach (ListItem li in ddl.Items)
             {
                 if (li.Value == this.ShowWay)

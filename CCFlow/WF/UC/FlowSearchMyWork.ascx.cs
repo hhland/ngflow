@@ -96,7 +96,7 @@ namespace CCFlow.WF.UC
             this.Pub1.AddCaptionLeft(" Process Query :" + fl.Name);
 
             this.Pub1.AddTRSum();
-            this.Pub1.Add("<TD colspan=" + colspan + " class=ToolBar><b> Date of occurrence &nbsp;从:</b>");
+            this.Pub1.Add("<TD colspan=" + colspan + " class=ToolBar><b> Date of occurrence &nbsp;From:</b>");
 
             TextBox tb = new TextBox();
             tb.ID = "TB_F";
@@ -105,7 +105,7 @@ namespace CCFlow.WF.UC
             tb.Attributes["onfocus"] = "WdatePicker();";
             this.Pub1.Add(tb);
 
-            this.Pub1.AddB("&nbsp;到:");
+            this.Pub1.AddB("&nbsp;To:");
             tb = new TextBox();
             tb.ID = "TB_T";
             tb.Text = this.DT_T;

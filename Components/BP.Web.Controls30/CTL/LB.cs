@@ -84,7 +84,7 @@ namespace BP.Web.Controls
 			DataTable dt = DBAccess.RunSQLReturnTable(sql);
 			foreach (DataRow dr in dt.Rows)
 			{
-				this.Items.Add( new ListItem(dr["FromYear"].ToString()+"年"+dr["ToMonth"].ToString()+"月 -- "+dr["ToYear"].ToString()+"年"+dr["ToMonth"].ToString()+"月;  Set Date :"+dr["CreateDate"].ToString(),dr["PSID"].ToString() ));
+				this.Items.Add( new ListItem(dr["FromYear"].ToString()+"-"+dr["ToMonth"].ToString()+" to "+dr["ToYear"].ToString()+"-"+dr["ToMonth"].ToString()+";  Set Date :"+dr["CreateDate"].ToString(),dr["PSID"].ToString() ));
 			}
 		}
 		#region  Remove the selected value 

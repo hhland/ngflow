@@ -151,7 +151,7 @@ namespace CCFlow.WF
                 idx++;
                 is1 = this.Pub1.AddTR(is1);
                 this.Pub1.AddTDIdx(idx);
-                this.Pub1.AddTD("第:" + nd.Step + "步");
+                this.Pub1.AddTD("Step:" + nd.Step + "");
                 this.Pub1.AddTD(nd.Name);
 
                 val = DBAccess.RunSQLReturnValFloat("SELECT COUNT(*) FROM ND" + nd.NodeID + " ");

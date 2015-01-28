@@ -17,7 +17,7 @@
     </div>
     <div data-options="region:'center'" border="false" style="margin: 0; padding: 0;
         overflow: hidden;">
-        <div id="maingrid" fit="true" fitcolumns="true" style="margin: 0; padding: 0;" class="easyui-datagrid">
+        <div id="maingrid" data-options="fit:true" style="margin: 0; padding: 0;" >
         </div>
     </div>
 </body>

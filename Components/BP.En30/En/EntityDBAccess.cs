@@ -333,7 +333,7 @@ namespace BP.En
             catch (System.Exception ex)
             {
                 // ens.GetNewEntity.CheckPhysicsTable();
-                throw new Exception("@дк[" + ens.GetNewEntity.EnDesc + "] An error occurred while inquiries :" + ex.Message);
+                throw new Exception("@At [" + ens.GetNewEntity.EnDesc + "] An error occurred while inquiries :" + ex.Message);
             }
         }
         public static int Retrieve(Entities ens, string sql, Paras paras, string[] fullAttrs)

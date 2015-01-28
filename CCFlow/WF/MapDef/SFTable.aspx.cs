@@ -277,7 +277,7 @@ namespace CCFlow.WF.MapDef
 
                 string msg = " Error : The following data has been quoted a foreign key, you can not delete it .";
                 foreach (MapAttr attr in attrs)
-                    msg += "\t\n" + attr.Field + "" + attr.Name + " 表" + attr.FK_MapData;
+                    msg += "\t\n" + attr.Field + "" + attr.Name + "  table " + attr.FK_MapData;
 
                 throw new Exception(msg);
             }

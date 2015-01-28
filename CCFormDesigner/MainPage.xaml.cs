@@ -4679,9 +4679,16 @@ namespace CCForm
                             string newNum = num.Substring(prefix.Length, num.Length - prefix.Length);
 
                             #region 2015-01-20 10:25 add by ating
-                            if (obj is BPLine || obj is BPLabel)
+                            if ((obj is BPLine || obj is BPLabel) )
                             {
-                                newNum = num.Split('_')[1].Replace(prefix, "");
+                                if (Glo.FK_Flow != Glo.FK_MapData)
+                                {//node
+                                    newNum = num.Split('_')[1].Replace(prefix, "");
+                                }
+                                else
+                                {//form
+                                    newNum = newNum.Substring(Glo.FK_MapData.Length);
+                                }
                             }
                             #endregion
 

@@ -2252,7 +2252,7 @@ namespace BP.WF
             attr = new BP.Sys.MapAttr();
             attr.FK_MapData = md.No;
             attr.KeyOfEn = "DW_BS";
-            attr.Name = " Main News (หอ) Unit ";
+            attr.Name = " Main News Unit ";
             attr.MyDataType = BP.DA.DataType.AppString;
             attr.UIContralType = UIContralType.TB;
             attr.LGType = FieldTypeS.Normal;
@@ -2269,7 +2269,7 @@ namespace BP.WF
             attr = new BP.Sys.MapAttr();
             attr.FK_MapData = md.No;
             attr.KeyOfEn = "DW_CS";
-            attr.Name = " Send a copy (หอ) Unit ";
+            attr.Name = " Send a copy Unit ";
             attr.MyDataType = BP.DA.DataType.AppString;
             attr.UIContralType = UIContralType.TB;
             attr.LGType = FieldTypeS.Normal;

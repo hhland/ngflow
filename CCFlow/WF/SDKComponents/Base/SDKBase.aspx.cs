@@ -476,7 +476,7 @@ namespace CCFlow.WF.SDKComponents.Base
                 }
 
                 resultMsg = resultMsg.Replace(" Specify a particular officers dealing ", " Designated officer ");
-                resultMsg = resultMsg.Replace(" Send SMS to remind him (们)", " SMS notification ");
+                resultMsg = resultMsg.Replace(" Send SMS to remind him(them)", " SMS notification ");
                 resultMsg = resultMsg.Replace(" Revocation of this transmission ", " Revocation cases ");
                 resultMsg = resultMsg.Replace(" New Process ", " Initiate cases ");
                 resultMsg = resultMsg.Replace(".", "");
@@ -554,7 +554,7 @@ namespace CCFlow.WF.SDKComponents.Base
                 }
 
                 resultMsg = resultMsg.Replace(" Specify a particular officers dealing ", " Designated officer ");
-                resultMsg = resultMsg.Replace(" Send SMS to remind him (们)", " SMS notification ");
+                resultMsg = resultMsg.Replace(" Send SMS to remind him (them)", " SMS notification ");
                 resultMsg = resultMsg.Replace(" Revocation of this transmission ", " Revocation cases ");
                 resultMsg = resultMsg.Replace(" New Process ", " Initiate cases ");
                 resultMsg = resultMsg.Replace(".", "");
@@ -955,7 +955,7 @@ namespace CCFlow.WF.SDKComponents.Base
         {
             EntityMultiTree root = ens.GetEntityByKey(rootNo) as EntityMultiTree;
             if (root == null)
-                throw new Exception("@ Not found rootNo=" + rootNo + "的entity.");
+                throw new Exception("@ Not found rootNo=" + rootNo + " entity.");
             appendMenus.Append("[{");
             appendMenus.Append("\"id\":\"" + rootNo + "\"");
             appendMenus.Append(",\"text\":\"" + root.Name + "\"");

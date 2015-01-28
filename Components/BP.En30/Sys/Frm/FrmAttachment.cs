@@ -884,7 +884,7 @@ namespace BP.Sys
 
                 map.AddTBString(FrmAttachmentAttr.FK_MapData, null," Form ID", true, false, 1, 30, 20);
                 map.AddTBString(FrmAttachmentAttr.NoOfObj, null, " Annex No. ", true, false, 0, 200, 20);
-                map.AddTBInt(FrmAttachmentAttr.FK_Node, 0, " Node Control (¶Ôsln Effective )", false, false);
+                map.AddTBInt(FrmAttachmentAttr.FK_Node, 0, " Node Control (sln Effective )", false, false);
 
                 map.AddTBString(FrmAttachmentAttr.Name, null," Name ", true, false, 0, 200, 20);
                 map.AddTBString(FrmAttachmentAttr.Exts, null, " The format required to upload ", true, false, 0, 200, 20);

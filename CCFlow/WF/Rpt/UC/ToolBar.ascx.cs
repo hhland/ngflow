@@ -1103,7 +1103,7 @@ namespace CCFlow.WF.Rpt.UC
 
                 lab = new Label();
                 lab.ID = "Lab_To";
-                lab.Text = "到:";
+                lab.Text = "To:";
                 this.Add(lab);
 
                 tbDT = new TB();
@@ -1281,8 +1281,8 @@ namespace CCFlow.WF.Rpt.UC
                             if (attr.MyDataType == DataType.AppBoolean)
                             {
                                 ddl.Items.Add(new ListItem(">>" + attr.Desc, "all"));
-                                ddl.Items.Add(new ListItem("是", "1"));
-                                ddl.Items.Add(new ListItem("否", "0"));
+                                ddl.Items.Add(new ListItem("Yes", "1"));
+                                ddl.Items.Add(new ListItem("No", "0"));
                                 break;
                             }
                             Entities ens = attr.HisFKEns;

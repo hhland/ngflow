@@ -152,7 +152,7 @@
                <tr>
                 <td >
                   &nbsp;&nbsp;<cc1:lab ID="Lab2" runat="server">
-										<font size="2">&nbsp;&nbsp;<b>密&nbsp;&nbsp;码</b></font></cc1:lab>
+										<font size="2">&nbsp;&nbsp;<b>Password</b></font></cc1:lab>
                 </td><td>
                   <cc1:TB ID="TB_Pass" runat="server" Font-Bold="true" Font-Size="14px"
                                 Width="164px" Height="28px" BorderStyle="none" TextMode="Password" ></cc1:TB>

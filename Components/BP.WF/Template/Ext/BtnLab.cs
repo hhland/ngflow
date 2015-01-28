@@ -789,7 +789,7 @@ namespace BP.WF.Template
                 map.AddBoolean(BtnAttr.ThreadEnable, false, " Whether to enable ", true, true);
 
                 map.AddTBString(BtnAttr.SubFlowLab, " Subprocess ", " Subprocess button labels ", true, false, 0, 200, 10);
-                map.AddDDLSysEnum(BtnAttr.SubFlowCtrlRole, 0, " Control rules ", true, true, BtnAttr.SubFlowCtrlRole, "@0=无@1= You can not delete sub-processes @2= You can delete the sub-processes ");
+                map.AddDDLSysEnum(BtnAttr.SubFlowCtrlRole, 0, " Control rules ", true, true, BtnAttr.SubFlowCtrlRole, "@0=None@1= You can not delete sub-processes @2= You can delete the sub-processes ");
 
 
                 map.AddTBString(BtnAttr.ReturnLab, " Return ", " Return button labels ", true, false, 0, 200, 10);

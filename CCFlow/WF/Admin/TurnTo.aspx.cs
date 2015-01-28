@@ -199,7 +199,7 @@ namespace CCFlow.WF.Admin
             {
                 case BP.En.FieldTypeS.Enum:
                     this.Pub1.AddTR();
-                    this.Pub1.AddTD("值");
+                    this.Pub1.AddTD("Value");
                     ddl = new DDL();
                     ddl.ID = "DDL_Val";
                     ddl.BindSysEnum(attrS.KeyOfEn);
@@ -219,7 +219,7 @@ namespace CCFlow.WF.Admin
                     break;
                 case BP.En.FieldTypeS.FK:
                     this.Pub1.AddTR();
-                    this.Pub1.AddTD("值");
+                    this.Pub1.AddTD("Value");
                     ddl = new DDL();
                     ddl.ID = "DDL_Val";
                     ddl.BindEntities(attrS.HisEntitiesNoName);
@@ -241,7 +241,7 @@ namespace CCFlow.WF.Admin
                     if (attrS.MyDataType == BP.DA.DataType.AppBoolean)
                     {
                         this.Pub1.AddTR();
-                        this.Pub1.AddTD("值");
+                        this.Pub1.AddTD("Value");
                         ddl = new DDL();
                         ddl.ID = "DDL_Val";
                         ddl.BindAppYesOrNo(0);
@@ -262,7 +262,7 @@ namespace CCFlow.WF.Admin
                     else
                     {
                         this.Pub1.AddTR();
-                        this.Pub1.AddTD("值");
+                        this.Pub1.AddTD("Value");
                         TB tb = new TB();
                         tb.ID = "TB_Val";
                         if (cond != null)
@@ -288,7 +288,7 @@ namespace CCFlow.WF.Admin
             Button btn = new Button();
             btn.ID = "Btn_Save";
             btn.CssClass = "Btn";
-            btn.Text = " 保 存 ";
+            btn.Text = "Save";
             btn.Click += new EventHandler(btn_Save_Node_Click);
             this.Pub1.Add(btn);
 
@@ -297,15 +297,15 @@ namespace CCFlow.WF.Admin
                 Btn btnN = new Btn();
                 btnN.ShowType = BP.Web.Controls.BtnType.Confirm;
                 btnN.ID = "Btn_Del";
-                btnN.Text = " 删 除 ";
+                btnN.Text = "Delete";
                 btnN.Click += new EventHandler(btn_Del_Node_Click);
                 this.Pub1.Add(btnN);
             }
 
             this.Pub1.AddBR();
-            this.Pub1.AddBR(" Prompt :Url In addition to the system parameters (FromFlow,FromNode,SID,WebUser.No)外, You can also add a variable convention .");
+            this.Pub1.AddBR(" Prompt :After url In addition to the system parameters (FromFlow,FromNode,SID,WebUser.No), You can also add a variable convention .");
             this.Pub1.AddBR("&nbsp;&nbsp;&nbsp; Such as : ../EIP/aaa.aspx?Jiner=@jiner,@jiner For form fields ");
-            this.Pub1.AddBR("&nbsp;&nbsp;&nbsp; Steering system after treatment url为: <br>../EIP/aaa.aspx?Jiner=123&UserNo=abc&SID=xxxx&FromFlow=010&FromNode=108.");
+            this.Pub1.AddBR("&nbsp;&nbsp;&nbsp; Steering system after treatment url is: <br>../EIP/aaa.aspx?Jiner=123&UserNo=abc&SID=xxxx&FromFlow=010&FromNode=108.");
 
             this.Pub1.AddTDEnd();
             this.Pub1.AddTREnd();
@@ -321,7 +321,7 @@ namespace CCFlow.WF.Admin
                 this.Pub1.AddTDTitle(" Attribute key ");
                 this.Pub1.AddTDTitle(" Name ");
                 this.Pub1.AddTDTitle(" Operation Symbol ");
-                this.Pub1.AddTDTitle("值");
+                this.Pub1.AddTDTitle("Value");
                 this.Pub1.AddTDTitle(" Value Description ");
                 this.Pub1.AddTDTitle("Url");
                 this.Pub1.AddTDTitle(" Editor ");

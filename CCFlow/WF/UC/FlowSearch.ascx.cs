@@ -140,7 +140,7 @@ namespace CCFlow.WF.UC
             tb.Text = this.DT_F;
             this.Pub1.Add(tb);
 
-            this.Pub1.Add("到:");
+            this.Pub1.Add("To:");
             tb = new TextBox();
             tb.ID = "TB_T";
             tb.Text = this.DT_T;
@@ -465,7 +465,7 @@ namespace CCFlow.WF.UC
             tb.Attributes["onfocus"] = "WdatePicker();";
             this.Pub1.Add(tb);
 
-            this.Pub1.Add("到:");
+            this.Pub1.Add("To:");
             tb = new TextBox();
             tb.ID = "TB_T";
             tb.Text = this.DT_T;
@@ -725,7 +725,7 @@ namespace CCFlow.WF.UC
 
                     if (fl.NumOfBill == 0)
                     {
-                        this.Pub1.AddTD("无");
+                        this.Pub1.AddTD("None");
                     }
                     else
                     {

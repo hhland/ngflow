@@ -21,7 +21,7 @@ namespace CCFlow.WF.WorkOpt
             tb.Columns = 40;
             tb.ID = "TB_Msg";
             tb.TextMode = TextBoxMode.MultiLine;
-            tb.Text = " Hello :" + gwf.TodoEmps.Replace(";",":") + " \t\n \t\n   This job requires you to deal with as soon as possible, please .... \t\n \t\n致! \t\n \t\n   " + WebUser.Name + " " + BP.DA.DataType.CurrentDataCNOfShort;
+            tb.Text = " Hello :" + gwf.TodoEmps.Replace(";",":") + " \t\n \t\n   This job requires you to deal with as soon as possible, please .... \t\n \t\nBR, \t\n \t\n   " + WebUser.Name + " " + BP.DA.DataType.CurrentDataCNOfShort;
 
             this.Pub1.Add(tb);
             this.Pub1.AddBR();

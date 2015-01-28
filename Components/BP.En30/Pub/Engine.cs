@@ -221,9 +221,9 @@ namespace BP.Pub
                         {
                             case "Text":
                                 if (val == "0")
-                                    return "否";
+                                    return "No";
                                 else
-                                    return "是";
+                                    return "Yes";
                             case "YesNo":
                                 if (val == "1")
                                     return "[√]";
@@ -236,7 +236,7 @@ namespace BP.Pub
                             case "Day":
                                 return val.Substring(8, 2);
                             case "NYR":
-                                return DA.DataType.ParseSysDate2DateTime(val).ToString("yyyy年MM月dd日");
+                                return DA.DataType.ParseSysDate2DateTime(val).ToString("yyyy-MM-dd");
                             case "RMB":
                                 return float.Parse(val).ToString("0.00");
                             case "RMBDX":
@@ -466,9 +466,9 @@ namespace BP.Pub
                     {
                         case "Text":
                             if (val == "0")
-                                return "否";
+                                return "No";
                             else
-                                return "是";
+                                return "Yes";
                         case "Year":
                             return val.Substring(0, 4);
                         case "Month":
@@ -476,7 +476,7 @@ namespace BP.Pub
                         case "Day":
                             return val.Substring(8, 2);
                         case "NYR":
-                            return DA.DataType.ParseSysDate2DateTime(val).ToString("yyyy年MM月dd日");
+                            return DA.DataType.ParseSysDate2DateTime(val).ToString("yyyy-MM-dd");
                         case "RMB":
                             return float.Parse(val).ToString("0.00");
                         case "RMBDX":
@@ -611,9 +611,9 @@ namespace BP.Pub
 
                         case "Text":
                             if (val == "0")
-                                return "否";
+                                return "No";
                             else
-                                return "是";
+                                return "Yes";
                         case "Year":
                             return val.Substring(0, 4);
                         case "Month":
@@ -621,7 +621,7 @@ namespace BP.Pub
                         case "Day":
                             return val.Substring(8, 2);
                         case "NYR":
-                            return DA.DataType.ParseSysDate2DateTime(val).ToString("yyyy年MM月dd日");
+                            return DA.DataType.ParseSysDate2DateTime(val).ToString("yyyy-MM-dd");
                         case "RMB":
                             return float.Parse(val).ToString("0.00");
                         case "RMBDX":
@@ -817,9 +817,9 @@ namespace BP.Pub
                                             rowData = rowData.Replace("<" + shortName + "." + attr.Key + ">", dtl.GetValStrByKey(attr.Key));
                                             int v = dtl.GetValIntByKey(attr.Key);
                                             if (v == 1)
-                                                rowData = rowData.Replace("<" + shortName + "." + attr.Key + "Text>", "是");
+                                                rowData = rowData.Replace("<" + shortName + "." + attr.Key + "Text>", "Yes");
                                             else
-                                                rowData = rowData.Replace("<" + shortName + "." + attr.Key + "Text>", "否");
+                                                rowData = rowData.Replace("<" + shortName + "." + attr.Key + "Text>", "No");
                                         }
                                         else
                                         {

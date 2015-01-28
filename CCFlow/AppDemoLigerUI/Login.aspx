@@ -64,7 +64,7 @@
 			.unishadow{box-shadow:0px 1px 3px 0 rgba(0,0,0,0.2);-webkit-box-shadow:0px 1px 3px 0 rgba(0,0,0,0.2);-moz-box-shadow:0px 1px 3px 0 rgba(0,0,0,0.2);}
 					
 			/* footer */
-			.footer{height:65px;margin:0 auto;background:#f7f7f7;border-top:1px solid #fff;}
+			.footer{height:65px;margin:0 auto;background:white;border-top:1px solid #fff;}
 			.footer-inner{width:900px;height:63px;overflow:hidden;margin:0 auto;color:#848585;position:relative;background:#f7f7f7;
                 top: 0px;
                 left: 0px;
@@ -77,18 +77,20 @@
 		
 			#theme{-webkit-transition:all 1s ease;-moz-transition:all 1s ease;transition:all 1s ease;background:none;}
 			#theme.themeEffect{background:#e7ebe9;}
-			.login{width:300px;height:300px;overflow:;float:right;margin-right:70px;margin-top:35px;background:#fff;border:1px solid #afc2af;_display:inline;text-align:left;position:relative;z-index:2;border-radius:2px;}
+			.login{width:300px;height:300px;overflow:;float:right;margin-right:38px;
+margin-top:35px;background:#fff;border:1px solid #afc2af;_display:inline;text-align:left;position:relative;z-index:2;border-radius:2px;
+        }
 			.login{box-shadow:0px 1px 3px 0 rgba(0,0,0,0.2);-webkit-box-shadow:0px 1px 3px 0 rgba(0,0,0,0.2);-moz-box-shadow:0px 1px 3px 0 rgba(0,0,0,0.2);}
 		    .tab-1{background:none;}
 		    .style1
             {
-                width: 102px;
+                width: 81px;
                 height: 19px;
                 margin-left:10px;
             }
 		    .style5
             {
-                width: 102px;
+                width: 81px;
                 height: 11px;
             }
             #divMain{ display:block;margin:0;padding:0;border:none ;height:440px;margin:0 auto;background:#f7f7f7;
@@ -128,48 +130,45 @@
 		<div class="main-inner" 
              style="  background-position: center top; background-repeat:repeat-x; top: 0px; left: 0px;" >
 			<div id="theme">
-            <img src="Img/bgimage.jpg" style=" height:440px; width:900px;" />
+           <img src="Img/bgimage.jpg" style=" height:440px; width:900px;" />
             </div>
 			<div id="loginBlock" class="login tab-1">
-            <table  style="width:100%; background-color:#F1F3F8;  height: 120%;">
+            <table  style="width:100%; background-color:#FFFFFF;  height: 120%;">
             <tr >
              <td colspan="2" class="style12">
-             &nbsp;&nbsp;<img src="Img/yaoshi.jpg"  
-                     style=" width:30px; height:16px;" /><strong style="font-size:16px;">  User Login </strong>
-              <hr style="width:100%; height:0.5px; color:Black" />
+             &nbsp;&nbsp;<strong 
+                     style="font-size:16px; font-family: 'Segoe UI'; font-weight: normal;">  User Login </strong>
+              <hr style="width:100%; height:0.5px; color:#C0C0C0" />
             </td>
             </tr>
                <tr>
-                <td class="style1">
-                 &nbsp;&nbsp;&nbsp;&nbsp; Username:
-                </td>
+                <td class="style1" style="font-family: 'Segoe UI'">
+                 &nbsp;&nbsp;&nbsp; Username</td>
                   <td class="style14">
-                   <asp:TextBox ID="txtUserName" runat="server"  Font-Bold="true"  Font-Size="14"
+                   <asp:TextBox ID="txtUserName" runat="server"  Font-Bold="false"  Font-Size="12"
                             Style="line-height: 26px;
                             border: 1px solid #C8E0F8;" 
                           Width="168px"></asp:TextBox>
                 </td>
                </tr>
                <tr>
-                <td class="style5">
-                    &nbsp;&nbsp; &nbsp;&nbsp;Password: 
-                </td><td class="style15">
-                  <asp:TextBox ID="txtPassword" runat="server"  Font-Bold="true"  Font-Size="14"
+                <td class="style5" style="font-family: 'Segoe UI'">
+                    &nbsp;&nbsp;&nbsp; Password</td><td class="style15">
+                  <asp:TextBox ID="txtPassword" runat="server"  Font-Bold="false"  Font-Size="12"
                            Style="line-height: 26px;
                             border: 1px solid #C8E0F8;  "
                             TextMode="Password" Width="169px"></asp:TextBox>
                 </td>
                </tr>
               <tr>
-                <td  colspan='2' align="center" class="style13" >
-                   <asp:CheckBox ID="IsRemember" runat="server" Checked="true"/> Whether Remember password 
-                </td>
+                <td  colspan='2' align="center" class="style13" style="font-family: 'Segoe UI'" >
+                   <asp:CheckBox ID="IsRemember" runat="server" Checked="true"/> Remember password?</td>
                </tr>
                <tr  style=" text-align:center">
                 <td colspan="2" class="style10">
                    <asp:LinkButton ID="lbtnSubmit" runat="server" Text=" Landed " 
                         OnClick="btnSubmit_Click" Style="position: absolute; width: 107px;
-                height: 30px; top: 289px; left: 100px; background-image:url('Img/btlogin.png');"><strong style="font-size:16px;"></strong></asp:LinkButton>
+                height: 30px; top: 289px; left: 100px; background-image:url('Img/btlogin.png');"><strong style="font-size:12px;"></strong></asp:LinkButton>
                  </td>
                </tr>             
             </table>
@@ -177,11 +176,9 @@
 		</div>
       </div>
     <footer id="footer" class="footer">
-		<div class="footer-inner" id="footerInner">			
+		<div class="footer-inner" id="footerInner" style="font-family: 'Segoe UI'">			
 			<nav class="footerNav">
-                <span class="copyright"> 
-            &nbsp;NAK 
-            NMP Workflow All rights reserved  &copy; 2014-2015</span></nav></div>
+                <span class="copyright"> &nbsp;NAK NMP Workflow All rights reserved©2014-2015</span></nav></div>
 	</footer>
     </form>
 </body>

@@ -2586,7 +2586,7 @@ namespace BP.DA
                 foreach (DataColumn dc in dt.Columns)
                     cols += " , " + dc.ColumnName;
 
-                BP.DA.Log.DebugWriteInfo("@SQL="+sql+" . ап="+cols);
+                BP.DA.Log.DebugWriteInfo("@SQL="+sql+" . column="+cols);
                 return null;
             }
             return dt.Rows[0][0];

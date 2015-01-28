@@ -17,7 +17,7 @@ namespace CCFlow.WF.MapDef
             MapDtl dtl = new MapDtl(this.MyPK);
             this.Title = " From header ";
             this.Pub1.AddTable();
-            this.Pub1.AddCaptionLeft(" Please write html Mark ,以《TR》 Beginning ,以《/TR》 Ending .");
+            this.Pub1.AddCaptionLeft(" Please write html Mark ,start with<TR>  ,end with</TR> .");
             this.Pub1.AddTR();
             TextBox tb = new TextBox();
             tb.ID = "TB_Doc";

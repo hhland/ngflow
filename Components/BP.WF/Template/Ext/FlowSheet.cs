@@ -148,7 +148,7 @@ namespace BP.WF.Template.Ext
 
                 #region  Basic properties .
                 map.AddTBStringPK(FlowAttr.No, null, " Serial number ", true, true, 1, 10, 3);
-                map.SetHelperAlert(FlowAttr.No, " Process numbered 001 Begin ,是string Type , Node number is int Type , Plus a two-digit number is the process ID . \t\n Such as : Process number is 001, Node number is :101,102....."); // Use alert Way to display help information .
+                map.SetHelperAlert(FlowAttr.No, " Process numbered 001 Begin ,string Type , Node number is int Type , Plus a two-digit number is the process ID . \t\n Such as : Process number is 001, Node number is :101,102....."); // Use alert Way to display help information .
 
                 map.AddDDLEntities(FlowAttr.FK_FlowSort, "01", " Process Category ",new FlowSorts(), true);
                 map.AddTBString(FlowAttr.Name, null, " Name ", true, false, 0, 200, 10, true);
@@ -240,7 +240,7 @@ namespace BP.WF.Template.Ext
                 // Initiated prior to setting rules .
                 map.AddDDLSysEnum(FlowAttr.StartGuideWay, (int)StartGuideWay.None, " Pre navigation ", true, true,
                     FlowAttr.StartGuideWay,
-                    "@0=无@1= According to the system URL-( Sons Process ) Single mode @2= According to the system URL-( Child parent process ) Multiple modes @3= According to the system URL-( Entity records ) Single mode @4= According to the system URL-( Entity records ) Multiple modes @5= From the start node Copy Data @10= According to custom Url@11= According to user input parameters ",true);
+                    "@0=None@1= According to the system URL-( Sons Process ) Single mode @2= According to the system URL-( Child parent process ) Multiple modes @3= According to the system URL-( Entity records ) Single mode @4= According to the system URL-( Entity records ) Multiple modes @5= From the start node Copy Data @10= According to custom Url@11= According to user input parameters ",true);
                 map.SetHelperBaidu(FlowAttr.StartGuideWay, "ccflow  Pre navigation ");
 
                 map.AddTBStringDoc(FlowAttr.StartGuidePara1, null, " Parameters 1", true, false,true);
@@ -256,7 +256,7 @@ namespace BP.WF.Template.Ext
                 #region  Continuation of the process .
                 // Continuation of the process .
                 map.AddDDLSysEnum(FlowAttr.CFlowWay, (int)CFlowWay.None," Continuation of the process ", true, true,
-                    FlowAttr.CFlowWay,"@0=无: Non-continuation of the class Process @1= In accordance with the parameters @2= According to field configuration ");
+                    FlowAttr.CFlowWay,"@0=None: Non-continuation of the class Process @1= In accordance with the parameters @2= According to field configuration ");
                 map.AddTBStringDoc(FlowAttr.CFlowPara, null, " Continuation of the process parameters ", true, false,true);
         
                 // add 2013-03-24.
@@ -473,7 +473,7 @@ namespace BP.WF.Template.Ext
                 if (gwf.RetrieveFromDBSources() == 1)
 				{
 					isHaveGener=true;
-                    throw new Exception("@ Current work ID为:" + workid + " The process is not over , Can not use this method to recover .");
+                    throw new Exception("@ Current work ID:" + workid + " The process is not over , Can not use this method to recover .");
 				}
 
                 gwf.FK_Flow = this.No;
@@ -519,7 +519,7 @@ namespace BP.WF.Template.Ext
                string sql = "SELECT  * FROM " + ndTrack + " WHERE   ActionType IN (" + actionType + ")  and WorkID=" + workid + " ORDER BY RDT DESC, NDFrom ";
                 System.Data.DataTable dt = DBAccess.RunSQLReturnTable(sql);
                 if (dt.Rows.Count == 0)
-                    throw new Exception("@ The work ID为:" + workid + " The data does not exist .");
+                    throw new Exception("@ The work ID:" + workid + " The data does not exist .");
 
                 string starter = "";
                 bool isMeetSpecNode = false;
@@ -613,7 +613,7 @@ namespace BP.WF.Template.Ext
         public string DoGenerTitle()
         {
             if (WebUser.No != "admin")
-                return "非admin Users can not execute .";
+                return "only admin Users can execute .";
             Flow fl = new Flow(this.No);
             Node nd = fl.HisStartNode;
             Works wks = nd.HisWorks;
@@ -657,7 +657,7 @@ namespace BP.WF.Template.Ext
             Emp emp1 = new Emp("admin");
             BP.Web.WebUser.SignInOfGener(emp1);
 
-            return " All generate success , Impact data (" + wks.Count + ")条";
+            return " All generate success , Impact data (" + wks.Count + ") records";
         }
         /// <summary>
         ///  Process Monitoring 

@@ -143,7 +143,7 @@ namespace CCFlow.WF.MapDef
                     tbc.ID = "TB_Prx";
                     this.Pub1.Add(" Prefix field :");
                     this.Pub1.Add(tbc);
-                    this.Pub1.AddBR("<font color=green> Used to automatically create fields , Please enter the letters or alphanumeric combinations . The system automatically generates the field based on your input .如:XXX_Note, Audit opinion .XXX_RDT Review time .XXX_Checker Reviewer , Automatic Pinyin system is represented as empty .</font>");
+                    this.Pub1.AddBR("<font color=green> Used to automatically create fields , Please enter the letters or alphanumeric combinations . The system automatically generates the field based on your input .Like :XXX_Note, Audit opinion .XXX_RDT Review time .XXX_Checker Reviewer , Automatic Pinyin system is represented as empty .</font>");
                     this.Pub1.AddBR();
                     this.Pub1.AddHR();
                     Btn btnc = new Btn();

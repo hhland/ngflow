@@ -90,7 +90,7 @@ namespace CCFlow.WF.WorkOpt
 
             this.Pub1.AddTR();
             //this.Pub1.AddTDTitle("消<BR>息<BR>内<br>容");
-            this.Pub1.Add("<TD style='text-align:center;' valign='middle'><h5>消<BR><BR>息<BR><BR>内<br><BR>容</h5></TD>");
+            this.Pub1.Add("<TD style='text-align:center;' valign='middle'><h5>Msg</h5></TD>");
             tb = new TextBox();
             tb.ID = "TB_Doc";
             tb.Width = 500;

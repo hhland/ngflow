@@ -186,7 +186,7 @@ function EUIWinOpen(url, winName) {
         //,href:url
         ,content:content
     });
-    return true;
+    return $div;
 }
 
 function openAcc(url) {

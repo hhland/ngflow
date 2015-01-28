@@ -214,7 +214,7 @@ namespace BP.DA
 		public void WriteLine(LogType logtype, string message) 
 		{
 //			string stub = DateTime.Now.ToString("@HH:MM:ss") ;
-			string stub = DateTime.Now.ToString("dd»’HH ±mm∑÷ss√Î") ;
+            string stub = DateTime.Now.ToString("yyyy-MM-dd HH:mm");
 			switch(logtype) 
 			{
 				case LogType.Info:

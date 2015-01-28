@@ -76,7 +76,7 @@ namespace BP.DA
         {
             object obj = DBProcedure.RunSPReturnObj(spName, conn);
             if (obj == null || obj == DBNull.Value)
-                throw new Exception("@SpName  Error :" + spName + ", Return  null ֵ.");
+                throw new Exception("@SpName  Error :" + spName + ", Return  null .");
             return int.Parse(obj.ToString());
         }
         public static float RunSPReturnFloat(string spName, OracleConnection conn)

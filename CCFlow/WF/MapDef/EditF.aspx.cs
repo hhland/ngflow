@@ -446,7 +446,7 @@ namespace CCFlow.WF.MapDef
 
                 DDL ddl = new DDL();
                 ddl.ID = "DDL_SignType";
-                ddl.Items.Add(new ListItem("无", "0"));
+                ddl.Items.Add(new ListItem("None", "0"));
                 ddl.Items.Add(new ListItem(" Pictures signature ", "1"));
                 ddl.Items.Add(new ListItem("CA Signature ", "2"));
                 ddl.SetSelectItem((int)mapAttr.SignType);
@@ -511,7 +511,7 @@ namespace CCFlow.WF.MapDef
                 //btn.Attributes["onclick"] = "javascript:WinOpen('AutoFull.aspx?RefNo=" + this.RefNo + "&FK_MapData=" + mapAttr.FK_MapData + "',''); return false;";
 
                 //this.Pub1.Add("<input type=button class=Btn value=' Extended Settings ' onclick=\"javascript:WinOpen('AutoFull.aspx?RefNo=" + this.RefNo + "&FK_MapData=" + mapAttr.FK_MapData + "',''); return false;\" />");
-                this.Pub1.Add("<input type=button class=Btn value=' Extended Settings ' onclick=\"javascript:EUIWinOpen('AutoFull.aspx?RefNo=" + this.RefNo + "&FK_MapData=" + mapAttr.FK_MapData + "','Extended Settings'); return false;\" />");
+                this.Pub1.Add("<input type=button class=Btn value=' Extended Settings ' onclick=\"javascript:EUIWinOpen('AutoFull.aspx?RefNo=" + this.RefNo + "&FK_MapData=" + mapAttr.FK_MapData + "','Extended Settings').window('maximize'); return false;\" />");
 
                 if (mapAttr.HisEditType == EditType.Edit)
                 {

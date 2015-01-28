@@ -71,7 +71,7 @@ namespace CCFlow.WF.MapDef
 
                 Pub1.AddTable("class='Table' cellSpacing='0' cellPadding='0'  border='0' style='width:100%'");
                 Pub1.AddTR();
-                Pub1.AddTDGroupTitle("", "第1步: Please select the data source ");
+                Pub1.AddTDGroupTitle("", "Step 1: Please select the data source ");
                 Pub1.AddTREnd();
 
                 Pub1.AddTR();
@@ -126,7 +126,7 @@ namespace CCFlow.WF.MapDef
 
                 Pub1.AddDivEnd();
 
-                Pub1.Add("<div data-options=\"region:'center',title:'第2步: Please select the columns you want to import data '\" style='padding:5px;'>");
+                Pub1.Add("<div data-options=\"region:'center',title:'Step 2: Please select the columns you want to import data '\" style='padding:5px;'>");
 
                 // Load selected data tables / Column information view 
                 Pub1.AddTable("id='maintable' class='Table' cellSpacing='0' cellPadding='0'  border='0' style='width:100%'");

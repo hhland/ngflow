@@ -82,10 +82,10 @@ namespace CCFlow.WF.Admin
                 catch
                 {
 
-                    string msg = " Current ccflow The operating mode is integrated mode , You do not have to install or successful preparation CCGPM, ccflow的BPM Mode , Must rely on CCGPM To run , You can handle as follows .";
+                    string msg = " Current ccflow The operating mode is integrated mode , You do not have to install or successful preparation CCGPM, ccflow BPM Mode , Must rely on CCGPM To run , You can handle as follows .";
                     msg += "<ul>";
-                    msg += "<li>1, Use ccflow的 workflow  Mode , 把web.config  The OSMode  Modified  0 .</li>";
-                    msg += "<li>2, Use ccflow的 GPM  Mode ,  Installation ccgpm, Correct configuration ccflow Connection GPM Connection .</li>";
+                    msg += "<li>1, Use ccflow workflow  Mode , web.config  Modified OSMode to 0 .</li>";
+                    msg += "<li>2, Use ccflow GPM  Mode ,  Installation ccgpm, Correct configuration ccflow Connection GPM Connection .</li>";
                     msg += "</ul>";
 
                     this.Pub1.AddFieldSetRed(" Error :",
@@ -204,13 +204,13 @@ namespace CCFlow.WF.Admin
             {
                 this.Pub1.AddFieldSet(" Whether you need to install CCIM.");
                 rb = new RadioButton();
-                rb.Text = "是";
+                rb.Text = "Yes";
                 rb.ID = "RB_CCIM_Y";
                 rb.Checked = true;
                 rb.GroupName = "ccim";
                 this.Pub1.Add(rb);
                 rb = new RadioButton();
-                rb.Text = "否";
+                rb.Text = "No";
                 rb.ID = "RB_CCIM_N";
                 rb.GroupName = "ccim";
                 this.Pub1.Add(rb);
@@ -238,14 +238,14 @@ namespace CCFlow.WF.Admin
 
             this.Pub1.AddFieldSet(" Whether loading the demo process templates ?");
             rb = new RadioButton();
-            rb.Text = "是: I want to install demo Organizational structure system ,demo Process Template , Form Template , To facilitate my learning ccflow与ccform.";
+            rb.Text = "Yes: I want to install demo Organizational structure system ,demo Process Template , Form Template , To facilitate my learning ccflow and ccform.";
             rb.ID = "RB_DemoOn";
             rb.GroupName = "hjd";
             rb.Checked = true;
             this.Pub1.Add(rb);
             this.Pub1.AddBR();
             rb = new RadioButton();
-            rb.Text = "否: Not installed demo.";
+            rb.Text = "No: Not installed demo.";
             rb.ID = "RB_DemoOff";
             rb.GroupName = "hjd";
             this.Pub1.Add(rb);
@@ -254,7 +254,7 @@ namespace CCFlow.WF.Admin
 
             Button btn = new Button();
             btn.ID = "Btn_s";
-            btn.Text = " Accept CCFlow的GPL Open source software agreement and install ";
+            btn.Text = " Accept CCFlow GPL Open source software agreement and install ";
             btn.CssClass = "Btn";
             btn.UseSubmitBehavior = false;
             btn.OnClientClick = "this.disabled=true;";

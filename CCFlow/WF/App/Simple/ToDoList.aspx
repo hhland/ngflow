@@ -15,7 +15,7 @@
    <th> Start Time </th>
    <th> Sponsor </th>
    <th> Stay node </th>
-   <th>( Send / Cc )人</th>
+   <th>( Send / Cc )</th>
    <th> Type </th>
    </tr>
       <%

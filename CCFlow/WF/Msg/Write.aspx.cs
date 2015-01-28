@@ -130,7 +130,7 @@ namespace CCFlow.WF.Msg
             Button btn = new Button();
             btn.CssClass = "Btn";
             btn.ID = "Btn_Send";
-            btn.Text = "  发 送  ";
+            btn.Text = " Send  ";
             btn.Click += new EventHandler(btn_Click);
             this.Pub1.AddTD("colspan=2", btn);
             this.Pub1.AddTREnd();

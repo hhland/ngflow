@@ -72,7 +72,7 @@ public partial class CCFlow_Comm_HelperOfTBNum : BP.Web.WebPage
         if (this.IsPostBack == false)
         {
             this.Ucsys1.AddBR();
-            this.Ucsys1.AddMsgOfInfo("<img src='../Img/Btn/help.gif' border=0 /> Using Help :", "&nbsp;&nbsp;<BR><BR>1, Please enter a keyword to find , Keyword fuzzy match any field .<BR><BR>2, Organize the query .<BR><BR>3, Press the OK button , Find complete .<BR><BR>4, Double click on your choice of recording complete data selection .<BR><BR>5, In order to improve the efficiency of , The system displays ago 100个.<BR><BR>");
+            this.Ucsys1.AddMsgOfInfo("<img src='../Img/Btn/help.gif' border=0 /> Using Help :", "&nbsp;&nbsp;<BR><BR>1, Please enter a keyword to find , Keyword fuzzy match any field .<BR><BR>2, Organize the query .<BR><BR>3, Press the OK button , Find complete .<BR><BR>4, Double click on your choice of recording complete data selection .<BR><BR>5, In order to improve the efficiency of , The system displays ago 100 records.<BR><BR>");
             return  ;
         }
 

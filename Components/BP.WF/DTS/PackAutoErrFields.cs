@@ -82,7 +82,7 @@ namespace BP.WF.DTS
                     continue;
                 }
                 DBAccess.RunSQL("UPDATE sys_mapAttr set KeyOfEn='"+item.KeyOfEn+"', mypk=FK_MapData+'_'+keyofen where keyofen='"+item.KeyOfEn+"'");
-                msg += "@µÚ(" + idx + ") Bug fixes success ,Ô­£¨"+f+"£© Restored to ("+item.KeyOfEn+").";
+                msg += "@No.(" + idx + ") Bug fixes success ,old£¨"+f+"£© Restored to ("+item.KeyOfEn+").";
                 idx++;
             }
 

@@ -36,7 +36,7 @@ function LoadGridData(pageNumber, pageSize) {
     ensName = getArgsFromHref("EnsName");
     // Entity name 
     if (ensName == '') {
-        $("body").html("<b style='color:red;'> Please pass the correct parameter name .如:SearchEasyUI.aspx?EnsName=BP.GPM.Depts<b>");
+        $("body").html("<b style='color:red;'> Please pass the correct parameter name .Like:SearchEasyUI.aspx?EnsName=BP.GPM.Depts<b>");
         return;
     }
 
@@ -53,7 +53,7 @@ function LoadGridData(pageNumber, pageSize) {
 
             // System error 
             if (js.status && js.status == 500) {
-                $("body").html("<b style='color:red;'> Please pass the correct parameter name .如:SearchEasyUI.aspx?EnsName=BP.GPM.Depts<b>");
+                $("body").html("<b style='color:red;'> Please pass the correct parameter name .Like:SearchEasyUI.aspx?EnsName=BP.GPM.Depts<b>");
                 return;
             }
 

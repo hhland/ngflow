@@ -777,7 +777,7 @@ namespace BP.WF.Template
                     if (en.EnMap.Attrs.Contains(this.AttrKey) == false)
                         throw new Exception(" Determine the direction of the error condition : Entity :" + nd.EnDesc + "  Property " + this.AttrKey + " Does not exist .");
 
-                    this.MsgOfCond = "@ Direction to form value judgments ,ֵ " + en.EnDesc + "." + this.AttrKey + " (" + en.GetValStringByKey(this.AttrKey) + ")  Operator :(" + this.FK_Operator + ")  Judgment value :(" + this.OperatorValue.ToString() + ")";
+                    this.MsgOfCond = "@ Direction to form value judgments ,value  " + en.EnDesc + "." + this.AttrKey + " (" + en.GetValStringByKey(this.AttrKey) + ")  Operator :(" + this.FK_Operator + ")  Judgment value :(" + this.OperatorValue.ToString() + ")";
 
                     switch (this.FK_Operator.Trim().ToLower())
                     {

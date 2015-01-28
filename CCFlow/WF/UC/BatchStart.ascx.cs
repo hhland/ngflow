@@ -643,7 +643,7 @@ namespace CCFlow.WF.UC
 
                 string info = BP.WF.Dev2Interface.Node_SendWork(this.FK_Flow, workid, ht).ToMsgOfHtml();
 
-                infos += "<br><fieldset width='100%' ><legend>&nbsp;&nbsp;第 (" + i + ")  Work starts successfully Article &nbsp;</legend>";
+                infos += "<br><fieldset width='100%' ><legend>&nbsp;&nbsp;No. (" + i + ")  Work starts successfully Article &nbsp;</legend>";
                 infos += info;
                 infos += "</fieldset>";
 

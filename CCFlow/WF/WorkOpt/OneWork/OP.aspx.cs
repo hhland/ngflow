@@ -78,7 +78,7 @@ namespace CCFlow.WF.OneWork
                         break;
                     case "ComeBack":
                         WorkFlow wf3 = new WorkFlow(FK_Flow, WorkID);
-                        wf3.DoComeBackWorkFlow("无");
+                        wf3.DoComeBackWorkFlow("None");
                         this.WinCloseWithMsg(" The process has been enabled reply .");
                         break;
                     case "Takeback": /* Retrieve approval .*/

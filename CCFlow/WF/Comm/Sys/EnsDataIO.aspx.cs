@@ -42,7 +42,7 @@ public partial class CCFlow_Comm_Sys_EnsDataIO : BP.Web.WebPageAdmin
     {
         this.Pub1.DivInfoBlockBegin();
 
-        this.Pub1.Add("<b>第2/3步:</b> Setting field correspondence <hr>");
+        this.Pub1.Add("<b>Step 2/3:</b> Setting field correspondence <hr>");
 
         string filePath = BP.Sys.SystemConfig.PathOfWebApp + "/Temp/" + WebUser.No + "DTS.xls";
         DataTable dt = BP.DA.DBLoad.GetTableByExt(filePath, null);
@@ -97,7 +97,7 @@ public partial class CCFlow_Comm_Sys_EnsDataIO : BP.Web.WebPageAdmin
 
 
 
-        this.Pub1.AddB("&nbsp;&nbsp;&nbsp;&nbsp;以:");
+        this.Pub1.AddB("&nbsp;&nbsp;&nbsp;&nbsp;with:");
         DDL ddl1 = new DDL();
         ddl1.ID = "DDL_PK";
         foreach (Attr attr in attrs)
@@ -346,7 +346,7 @@ public partial class CCFlow_Comm_Sys_EnsDataIO : BP.Web.WebPageAdmin
         HtmlInputFile file = new HtmlInputFile();
         file.ID = "f";
         this.Pub1.DivInfoBlockBegin();
-        this.Pub1.Add("<b>第1/3步:</b> Upload Excel Data files <hr>");
+        this.Pub1.Add("<b>Step 1/3:</b> Upload Excel Data files <hr>");
         this.Pub1.Add(file);
         Button btn = new Button();
         btn.CssClass = "Btn";
@@ -424,7 +424,7 @@ public partial class CCFlow_Comm_Sys_EnsDataIO : BP.Web.WebPageAdmin
 
 
         this.Pub1.DivInfoBlockBegin();
-        this.Pub1.Add("Excel Table Style ( You can copy and copy到Excel The completion of data acquisition .)");
+        this.Pub1.Add("Excel Table Style ( You can copy and copy to Excel The completion of data acquisition .)");
         this.Pub1.Add(strLine);
         this.Pub1.DivInfoBlockEnd();
 

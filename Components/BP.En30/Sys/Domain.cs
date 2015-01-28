@@ -55,7 +55,7 @@ namespace BP.Sys
                 map.DepositaryOfEntity = Depositary.None;
                 map.DepositaryOfMap = Depositary.Application;
 
-                map.EnDesc = "”Ú";
+                map.EnDesc = "Domain";
                 map.EnType = EnType.Sys;
                 map.AddTBStringPK(DomainAttr.No, null, " Serial number ", false, false, 0, 30, 20);
                 map.AddTBString(DomainAttr.Name, null, "Name", false, false, 0, 30, 20);

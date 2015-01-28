@@ -430,7 +430,7 @@ namespace BP.Sys
                 map.AddDDLSysEnum(FrmWorkCheckAttr.FWCType, (int)FWCType.Check, " Audit Components ", true, true, FrmWorkCheckAttr.FWCType, "@0= Audit Components @1= Logging component ");
 
                 map.AddBoolean(FrmWorkCheckAttr.FWCTrackEnable, true, " Trajectories is displayed ?", true, true, true);
-                map.AddBoolean(FrmWorkCheckAttr.FWCListEnable, true, " Historical audit information is displayed ?(·ñ, Historical information appears only comments box )", true, true, true);
+                map.AddBoolean(FrmWorkCheckAttr.FWCListEnable, true, " Historical audit information is displayed ?(No, Historical information appears only comments box )", true, true, true);
                 map.AddBoolean(FrmWorkCheckAttr.FWCIsShowAllStep, false, " All the steps in the track list is displayed ?", true, true);
 
                 map.AddTBString(FrmWorkCheckAttr.FWCOpLabel, " Check ", " Operating nouns ( Check / Review / Instructions )", true, false, 0, 200, 10);

@@ -79,7 +79,7 @@ namespace CCFlow.WF.WebOffice
                     OfficeTemplate template = new OfficeTemplate();
                     template.Name = dicInfo.Name;
                     template.Type = dicInfo.Extension.TrimStart('.');
-                    template.Size = "无";
+                    template.Size = "None";
 
                     list.Add(template);
                 }

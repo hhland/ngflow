@@ -117,7 +117,7 @@ namespace CCFlow.Web.WF.Comm
            // Log.DebugWriteWarning(qo.SQL);
            // Log.DefaultLogWriteLineError(qo.SQL);
 
-            this.Label1.Text =this.GenerCaption( ens.GetNewEntity.EnMap.EnDesc +", Data :"+ num+" Ìõ");
+            this.Label1.Text =this.GenerCaption( ens.GetNewEntity.EnMap.EnDesc +", Data :"+ num+"  records");
 			this.UCSys1.DataPanelDtl(ens,null);
 
 		}
