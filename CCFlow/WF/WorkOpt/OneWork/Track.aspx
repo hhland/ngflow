@@ -26,7 +26,7 @@
                 if (depemp == "") continue;
                 p_depmes += depemp + "@";
             }
-            $("#dd").load(url, { depemps: p_depmes }, function (str) {   
+            $("#dd").load(url, { depemps: p_depmes, pformat: "depemps" }, function (str) {   
                 $("#win_emp").window("open");
             });
         }
@@ -70,6 +70,16 @@
     
     <div id="win_emp" class="easyui-window" title="Emp info" style="width:600px;height:400px"
         data-options="iconCls:'icon-search',modal:true,closed:true">
-       <div id="dd"></div>
+       <table style='width:100%'>
+            <thead><tr>
+                  <th style='width:30%'>Department Name</th>
+                  <th style='width:20%'>Name</th>
+                  <th style='width:20%'>Email</th>
+                  <th>Tel</th>
+                  </tr>
+              </thead>
+                  <tbody id="dd"></tbody>
+        </table>
+               
     </div>
 </asp:Content>

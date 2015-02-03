@@ -652,6 +652,7 @@
     <Content Include="DataUser\ICON\SQ\LogBig.png" />
     <Content Include="DataUser\ICON\SQ\LogBiger.png" />
     <Content Include="DataUser\ImgAth\Def.jpg" />
+    <Content Include="DataUser\JSLibData\location_Self.js" />
     <Content Include="DataUser\JSLibData\MT3_Self.js" />
     <Content Include="DataUser\JSLibData\ND10001.js" />
     <Content Include="DataUser\JSLibData\ND101_Self.js" />
@@ -1554,6 +1555,7 @@
     <Content Include="WF\Img\Tree\Dir.gif" />
     <Content Include="WF\Img\Tree\File.gif" />
     <Content Include="WF\Img\Tree\Root.gif" />
+    <Content Include="WF\MapDef\FrmSelfJs.aspx" />
     <Content Include="WF\MapDef\ImpTableField.aspx" />
     <Content Include="WF\Rpt\OneFlow.aspx" />
     <Content Include="WF\Rpt\SearchAdv.aspx" />
@@ -4231,6 +4233,9 @@
     <Compile Include="WF\CCForm\DtlOpSelectItems.aspx.designer.cs">
       <DependentUpon>DtlOpSelectItems.aspx</DependentUpon>
     </Compile>
+    <Compile Include="WF\CCForm\Frm.ashx.cs">
+      <DependentUpon>Frm.ashx</DependentUpon>
+    </Compile>
     <Compile Include="WF\CCForm\OfficeFrm\WordFrm.aspx.cs">
       <DependentUpon>WordFrm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -4343,6 +4348,16 @@
     </Compile>
     <Compile Include="WF\FileUploadEUI.aspx.designer.cs">
       <DependentUpon>FileUploadEUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WF\MapDef\FrmSelfJs.ashx.cs">
+      <DependentUpon>FrmSelfJs.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="WF\MapDef\FrmSelfJs.aspx.cs">
+      <DependentUpon>FrmSelfJs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF\MapDef\FrmSelfJs.aspx.designer.cs">
+      <DependentUpon>FrmSelfJs.aspx</DependentUpon>
     </Compile>
     <Compile Include="WF\MapDef\ImpTableField.aspx.cs">
       <DependentUpon>ImpTableField.aspx</DependentUpon>
@@ -7163,6 +7178,7 @@
     <Content Include="SDKFlowDemo\TeleCom\3SheBei\Site.Master" />
     <Content Include="SDKFlowDemo\WinOpen.master" />
     <Content Include="WF\CCForm\DtlCard.ashx" />
+    <Content Include="WF\CCForm\Frm.ashx" />
     <None Include="WF\CCForm\ImgAth\css\images\Thumbs.db" />
     <Content Include="WF\CCForm\WinOpen.master" />
     <Content Include="WF\Comm\RefFunc\MasterPage.master" />
@@ -7193,6 +7209,7 @@
     <Content Include="WF\Rpt\Single.Master" />
     <Content Include="WF\Rpt\SiteEUI.Master" />
     <Content Include="WF\MapDef\Rpt\RptGuide.Master" />
+    <Content Include="WF\MapDef\FrmSelfJs.ashx" />
     <None Include="WF\Scripts\easyUI\themes\default\images\Thumbs.db" />
     <None Include="WF\Scripts\easyUI\themes\gray\images\Thumbs.db" />
     <Content Include="WF\SDKComponents\Site.Master" />

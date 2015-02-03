@@ -28,6 +28,8 @@
             //SetHeight();
         });
 
+        
+
         //  Get DDL值
         function ReqDDL(ddlID) {
             var v = document.getElementById('ContentPlaceHolder1_UCEn1_DDL_' + ddlID).value;
@@ -79,6 +81,34 @@
             }
             return v;
         }
+
+        function ReqTBIsexist(tbIDs) {
+            var url = "/WF/CCForm/Frm.ashx";
+            var param = {FK_MapData:"<%=Request.Params["FK_MapData"] %>",
+            FID:"<%=Request.Params["FID"] %>"
+            ,action:"isexist"
+            };
+            for (var i = 0; i < tbIDs.length; i++) {
+                var tbID = tbIDs[i];
+                var val=ReqTB(tbID);
+                param["field_" + tbID] = val;
+            }
+            var isexist = false;
+            $.ajax({
+                type: "post",
+                url: url,
+                cache: false,
+                async: false,
+                data: param,
+                //dataType: ($.browser.msie) ? "text" : "xml",
+                success: function (str) {
+                   var json=eval("("+str+")");
+                    isexist = json["isexist"];
+                }
+            });
+            return isexist;
+        }
+
         //  Setting .
         function SetCtrlVal(ctrlID, val) {
             document.getElementById('ContentPlaceHolder1_UCEn1_TB_' + ctrlID).value = val;

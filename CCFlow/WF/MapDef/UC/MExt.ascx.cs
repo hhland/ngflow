@@ -645,6 +645,7 @@ public partial class WF_MapDef_UC_MExt : BP.Web.UC.UCBase3
         this.Pub2.AddTDTitle(" Event ");
         this.Pub2.AddTDTitle(" Event Content ");
         this.Pub2.AddTDTitle(" Message ");
+        this.Pub2.AddTDTitle(" Action ");
         this.Pub2.AddTREnd();
            
         #region  Binding events 
@@ -684,7 +685,8 @@ public partial class WF_MapDef_UC_MExt : BP.Web.UC.UCBase3
 
         TextBox tb = new TextBox();
         tb.TextMode = TextBoxMode.MultiLine;
-        tb.ID = "TB_Doc_" + myEvent;
+        string tbdocid = "TB_Doc_" + myEvent;
+        tb.ID = tbdocid;
         tb.Text = me.Doc;
         tb.Columns = 50;
         tb.Rows = 3;
@@ -696,6 +698,18 @@ public partial class WF_MapDef_UC_MExt : BP.Web.UC.UCBase3
         tb.Columns = 50;
         tb.Rows = 3;
         this.Pub2.AddTD(tb);
+
+        HyperLink hl = new HyperLink();
+        hl.ID = "HL_Tag1_" + myEvent;
+        hl.Text = "edit";
+        string FK_MapData = Request.Params["FK_MapData"],
+            OperAttrKey = Request.Params["OperAttrKey"]
+            ;
+        string src = "/WF/MapDef/FrmSelfjs.aspx?FK_MapData=" + FK_MapData + "&event=" + myEvent + "&OperAttrKey=" + OperAttrKey+"&docid="+tbdocid
+            , title = FK_MapData + ":" + OperAttrKey + ":" + myEvent;
+        hl.NavigateUrl = "javascript:EUIWinOpen('"+src+"','"+title+"').window('maximize');";
+        this.Pub2.AddTD(hl);
+
         this.Pub2.AddTREnd();
         idx = idx + 1;
         return idx;

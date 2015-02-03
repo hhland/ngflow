@@ -172,8 +172,10 @@ function WinOpen(url, winName) {
 //使用easyui打开窗口
 function EUIWinOpen(url, winName) {
     if (!$.fn.window)return false;
-    var $div = $("<div></div>");
-    url += "&flag=frame";
+    
+    var winid = "win_" + parseInt(100 * Math.random());
+    var $div = $("<div id='"+winid+"'></div>");
+    url += "&flag=frame&winid="+winid;
     var w = 700, h=400;
     var fw = w - 30, fh = h - 40;
     var content = "<iframe src='" + url + "' width='100%' height='100%' style='border-width:0px' ><" + "/iframe>";
