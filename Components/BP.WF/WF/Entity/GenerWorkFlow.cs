@@ -708,6 +708,21 @@ namespace BP.WF
                 SetValByKey(GenerWorkFlowAttr.GUID, value);
             }
         }
+
+        /// <summary>
+        /// OLD_WORKID
+        /// </summary>
+        public long OLD_WORKID
+        {
+            get
+            {
+                return this.GetValIntByKey("OLD_WORKID");
+            }
+            set
+            {
+                SetValByKey("OLD_WORKID", value);
+            }
+        }
 		#endregion
 
         #region  Extended Attributes 
@@ -876,6 +891,8 @@ namespace BP.WF
                 map.AddTBString(GenerWorkFlowAttr.Emps, null, " Participants ", true, false, 0, 4000, 10);
                 map.AddTBString(GenerWorkFlowAttr.GUID, null, "GUID", false, false, 0, 36, 10);
                 map.AddTBMyNum();
+
+                map.AddTBInt("OLD_WORKID", 0, " Old WorkID ", true, true);
 
                 RefMethod rm = new RefMethod();
                 rm.Title = " Work trajectory ";  // " Report ";

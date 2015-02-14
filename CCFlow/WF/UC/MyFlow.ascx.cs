@@ -23,7 +23,7 @@ namespace CCFlow.WF.UC
 {
     public partial class MyFlow : BP.Web.UC.UCBase3
     {
-        #region  Controls 
+        #region  Controls
         public string _PageSamll = null;
         public string PageSmall
         {
@@ -88,7 +88,7 @@ namespace CCFlow.WF.UC
         }
         #endregion
 
-        #region   Operating variables 
+        #region   Operating variables
         /// <summary>
         ///  The current process ID 
         /// </summary>
@@ -316,7 +316,7 @@ namespace CCFlow.WF.UC
                 return;
             }
 
-            #region  Load flow controller  -  Push button 
+            #region  Load flow controller  -  Push button
             BtnLab btnLab = new BtnLab(currND.NodeID);
 
             BtnWord = btnLab.WebOfficeEnable + "";
@@ -345,7 +345,7 @@ namespace CCFlow.WF.UC
                         toolbar.AddBtn(NamesOfBtn.Send, btnLab.SendLab);
                         Btn_Send.Style.Add("display", "none");
                         this.Btn_Send.UseSubmitBehavior = false;
-                       
+
                         if (this.currND.HisFormType == NodeFormType.DisableIt)
                             this.Btn_Send.OnClientClick = jsbtnSend + ";this.disabled=true;SaveDtlAll();"; //this.disabled='disabled'; return true;";
                         else
@@ -548,7 +548,7 @@ namespace CCFlow.WF.UC
         }
         #endregion  Method .
 
-        #region Page load  Event 
+        #region Page load  Event
         public void DoDoType()
         {
             switch (this.DoType)
@@ -657,7 +657,7 @@ namespace CCFlow.WF.UC
         }
         #endregion
 
-        #region  Variable 
+        #region  Variable
         ToolBar toolbar = null;
         public Flow currFlow = null;
         public Work currWK = null;
@@ -665,7 +665,7 @@ namespace CCFlow.WF.UC
         public GenerWorkFlow gwf = null;
         #endregion
 
-        #region Page load  Event 
+        #region Page load  Event
         /// <summary>
         ///  Load Event 
         /// </summary>
@@ -712,7 +712,7 @@ namespace CCFlow.WF.UC
                 DoDoType();
                 return;
             }
-            #endregion  Check whether the user is disabled 
+            #endregion  Check whether the user is disabled
 
             #region  Determine whether there is IsRead
             try
@@ -773,9 +773,19 @@ namespace CCFlow.WF.UC
 
             string appPath = BP.WF.Glo.CCFlowAppPath; //this.Request.ApplicationPath;
             this.Page.Title = "Step " + this.currND.Step + ":" + this.currND.Name;
-            #endregion  Pre-judgment navigation 
+            #endregion  Pre-judgment navigation
 
             #region  Processed form type .
+
+            int useOldWorkid = DBAccess.RunSQLReturnValInt(string.Format("SELECT use_oldworkid FROM WF_Flow where no={0}", this.FK_Flow));
+            if (useOldWorkid != 0)
+            {
+                //2015-02-12 16:36 ating
+                this.currND.HisFormType = NodeFormType.SDKForm;
+                currND.FormUrl = "MyFlow_ModifyOldData.aspx";
+            }
+
+
             if (this.currND.HisFormType == NodeFormType.SheetTree
                 || this.currND.HisFormType == NodeFormType.WebOffice)
             {
@@ -851,11 +861,15 @@ namespace CCFlow.WF.UC
 
             if (this.currND.HisFormType == NodeFormType.SDKForm)
             {
-
-                if (this.WorkID == 0)
+                if (this.WorkID == 0 && useOldWorkid == 0)
                 {
                     currWK = this.currFlow.NewWork();
                     this.WorkID = currWK.OID;
+                }
+
+                if (useOldWorkid != 0 && this.WorkID == 0)
+                {
+                    this.WorkID = DBAccess.GenerOID("WorkID");
                 }
 
                 string url = currND.FormUrl;
@@ -888,7 +902,16 @@ namespace CCFlow.WF.UC
                     urlExt += "&FK_Node=" + currND.NodeID;
 
                 if (urlExt.Contains("&FID") == false)
-                    urlExt += "&FID=" + currWK.FID;
+                {
+                    if (useOldWorkid == 0)
+                    {
+                        urlExt += "&FID=" + currWK.FID;
+                    }
+                    else
+                    {
+                        urlExt += "&FID=0";
+                    }
+                }
 
                 if (urlExt.Contains("&UserNo") == false)
                     urlExt += "&UserNo=" + WebUser.No;
@@ -1022,9 +1045,9 @@ namespace CCFlow.WF.UC
                     return;
                 }
             }
-            #endregion  Judgment permissions 
+            #endregion  Judgment permissions
 
-            #region  Deal with ctrl Show 
+            #region  Deal with ctrl Show
             this.ToolBar1.Visible = false;
             this.ToolBar2.Visible = false;
             if (BP.WF.Glo.FlowCtrlBtnPos == "Top")
@@ -1070,12 +1093,12 @@ namespace CCFlow.WF.UC
                 }
                 return;
             }
-            #endregion  Deal with ctrl Show 
+            #endregion  Deal with ctrl Show
 
         }
         #endregion
 
-        #region  Public Methods 
+        #region  Public Methods
         /// <summary>
         /// BindWork
         /// </summary>
@@ -1412,12 +1435,12 @@ namespace CCFlow.WF.UC
                                 this.UCEn1.Add(js);
                             }
                             // this.UCEn1.Add("\t\n   var tabText = document.getElementById('HL" + frm.No + "').innerText;");
-                           // this.UCEn1.Add("\t\n   var scope = document.getElementById('F" + frm.No + "');");
-                           // this.UCEn1.Add("\t\n   var lastChar = tabText.substring(tabText.length - 1, tabText.length);");
+                            // this.UCEn1.Add("\t\n   var scope = document.getElementById('F" + frm.No + "');");
+                            // this.UCEn1.Add("\t\n   var lastChar = tabText.substring(tabText.length - 1, tabText.length);");
                             //this.UCEn1.Add("\t\n   if (lastChar == \"*\") {");
                             //hhlin 取消修改判断，全部表单都要保存一次
-                           // this.UCEn1.Add("\t\n   var contentWidow = scope.contentWindow;");
-                           // this.UCEn1.Add("\t\n   contentWidow.SaveDtlData();");
+                            // this.UCEn1.Add("\t\n   var contentWidow = scope.contentWindow;");
+                            // this.UCEn1.Add("\t\n   contentWidow.SaveDtlData();");
                             //this.UCEn1.Add("\t\n   }");
                             this.UCEn1.Add("\t\n}");
                             #endregion
@@ -1504,7 +1527,7 @@ namespace CCFlow.WF.UC
 
                             #region SaveDtlAll
                             this.UCEn1.Add("\t\n function SaveDtlAll(){");
-                            for (int i=0;i<frms.Count;i++)
+                            for (int i = 0; i < frms.Count; i++)
                             {
                                 var frm = frms[i];
                                 //this.UCEn1.Add("\t\n   var tabText = document.getElementById('HL' + currentTabId).innerText;");
@@ -1512,17 +1535,17 @@ namespace CCFlow.WF.UC
                                 //this.UCEn1.Add("\t\n   var lastChar = tabText.substring(tabText.length - 1, tabText.length);");
                                 //this.UCEn1.Add("\t\n   if (lastChar == \"*\") {");
                                 //this.UCEn1.Add("\t\n   var contentWidow = scope.contentWindow;");
-                                string js = "\t\n var F_"+i+" = document.getElementById('F"+frm.No+"');"
-                                         + "\t\n var contentWidow_"+i+" = F_"+i+".contentWindow;" 
-                                         +"$(F_"+i+".contentDocument).find('input[type=submit]:eq(0)').click();"
-                                        // + "\t\n var contentdoc_"+i+"=F_"+i+".contentDocument;"
-                                        // + " \t\n  if(contentdoc_" + i + "&&contentdoc_" + i + ".forms[0]) contentdoc_" + i + ".forms[0].submit();"   
-                                         +"\t\n if(contentWidow_" + i + ".SaveDtlData)contentWidow_" + i + ".SaveDtlData();"
-                                         //+ "\t\n if(contentWidow_" + i + ".NoSubmit)contentWidow_" + i + ".NoSubmit({keyCode:13});"
+                                string js = "\t\n var F_" + i + " = document.getElementById('F" + frm.No + "');"
+                                         + "\t\n var contentWidow_" + i + " = F_" + i + ".contentWindow;"
+                                         + "$(F_" + i + ".contentDocument).find('input[type=submit]:eq(0)').click();"
+                                    // + "\t\n var contentdoc_"+i+"=F_"+i+".contentDocument;"
+                                    // + " \t\n  if(contentdoc_" + i + "&&contentdoc_" + i + ".forms[0]) contentdoc_" + i + ".forms[0].submit();"   
+                                         + "\t\n if(contentWidow_" + i + ".SaveDtlData)contentWidow_" + i + ".SaveDtlData();"
+                                    //+ "\t\n if(contentWidow_" + i + ".NoSubmit)contentWidow_" + i + ".NoSubmit({keyCode:13});"
                                     ;
                                 this.UCEn1.Add(js);
                             }
-                            
+
                             //this.UCEn1.Add("\t\n   }");
                             this.UCEn1.Add("\t\n}");
                             #endregion
@@ -1717,7 +1740,7 @@ namespace CCFlow.WF.UC
         }
         #endregion
 
-        #region Web  Form Designer generated code 
+        #region Web  Form Designer generated code
         override protected void OnInit(EventArgs e)
         {
             //
@@ -1809,7 +1832,7 @@ namespace CCFlow.WF.UC
             //    this.FlowMsg.AlertMsg_Warning(" Information Tips ", ex.Message);
             //}
         }
-        #region  Button event 
+        #region  Button event
         /// <summary>
         ///  Save your work 
         /// </summary>
@@ -1863,7 +1886,7 @@ namespace CCFlow.WF.UC
                 throw new Exception("@ Execution logic to check for errors before saving ." + ex.Message + " @StackTrace:" + ex.StackTrace);
             }
 
-            #region  Analyzing specific business logic 
+            #region  Analyzing specific business logic
             string dbStr = SystemConfig.AppCenterDBVarStr;
             if (currND.IsStartNode)
             {
@@ -1933,7 +1956,7 @@ namespace CCFlow.WF.UC
                 return;
             }
 
-            #region  After saving event processing 
+            #region  After saving event processing
             bool isHaveSaveAfter = false;
             try
             {

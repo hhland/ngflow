@@ -118,7 +118,8 @@ namespace CCFlow.WF.CCForm
                     {
                         BP.Sys.GEDtl dt = new GEDtl(this.EnsName);
                         dt.ResetDefaultVal();
-                        dt.OID = i;
+                        //dt.OID = i;
+                        dt.OID = 0;
                         dtls.AddEntity(dt);
                     }
 
@@ -126,7 +127,8 @@ namespace CCFlow.WF.CCForm
                     {
                         BP.Sys.GEDtl dt1 = new GEDtl(this.EnsName);
                         dt1.ResetDefaultVal();
-                        dt1.OID = mdtl.RowsOfList + 1;
+                        //dt1.OID = mdtl.RowsOfList + 1;
+                        dt1.OID = 0;
                         dtls.AddEntity(dt1);
                     }
                 }

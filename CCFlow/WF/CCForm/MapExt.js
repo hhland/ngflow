@@ -624,22 +624,44 @@ function GetQueryString(name) {
     return null;
 }
 // Through regular expressions to detect 
-function CheckInput(oInput, filter) {
+function CheckInput(ele, filter) {
     var re = filter;
+    var isPass = true;
     if (typeof (filter) == "string") {
-        re = new RegExp(filter);
+        if (filter.indexOf("javascript:") == 0) {
+            var js = filter.substring(11);
+            isPass = eval(js);
+        } else {
+            re = new RegExp(filter);
+            isPass = re.test(ele.value);
+        }
+
+    } else {
+        isPass = re.test(ele.value);
     }
-    return re.test(oInput);
+    return isPass;
 }
 // Input inspection 
 function txtTest_Onkeyup(ele, filter, message) {
     if (ele == null) return;
     var re = filter;
+    var isPass = true;
     if (typeof (filter) == "string") {
-        re = new RegExp(filter);
+
+        if (filter.indexOf("javascript:") == 0) {
+            var js = filter.substring(11);
+            isPass = eval(js);
+        } else {
+            re = new RegExp(filter);
+            isPass = re.test(ele.value);
+        }
+
+    } else {
+        isPass = re.test(ele.value);
     }
-    var format = re.test(ele.value);
-    if (!format) {
+
+    //var format = re.test(ele.value);
+    if (!isPass) {
         ele.value = "";
         alert(message);
     }
@@ -647,7 +669,7 @@ function txtTest_Onkeyup(ele, filter, message) {
 // Input inspection 
 function EleInputCheck(ele, filter, message) {
     if (ele == null) return;
-    if (CheckInput(ele.value, filter) == true) {
+    if (CheckInput(ele, filter) == true) {
         ele.title = "";
         ele.style.border = "1";
         ele.style.backgroundColor = "White";
@@ -662,21 +684,26 @@ function EleInputCheck(ele, filter, message) {
 }
 function EleInputCheck2(ele, filter, message) {
     if (ele == null) return;
-
-    var reg = new RegExp(filter);
-    var isPass = reg.test(ele.value);
+    var isPass = true;
+    if (filter.indexOf("javascript:") == 0) {
+        var js = filter.substring(11);
+        isPass = eval(js);
+    } else {
+        var reg = new RegExp(filter);
+        isPass = reg.test(ele.value);
+    }
     if (isPass == true) {
-        ele.title = "";
-        ele.style.border = "1";
-        ele.style.backgroundColor = "White";
-        ele.style.borderBottomColor = "Black";
-    }
-    else {
-        ele.title = message;
-        ele.style.border = "2";
-        ele.style.backgroundColor = "#FFDEAD";
-        ele.style.borderBottomColor = "Red";
-    }
+            ele.title = "";
+            ele.style["border"] = "1";
+            ele.style["backgroundColor"] = "White";
+            ele.style["borderBottomColor"] = "Black";
+        } else {
+            ele.title = message;
+            ele.style["border"] = "2";
+            ele.style["backgroundColor"] = "#FFDEAD";
+            ele.style["borderBottomColor"] = "Red";
+        }
+    
 }
 
 function EleSubmitCheck(ele,message) {
@@ -689,7 +716,7 @@ function EleSubmitCheck(ele,message) {
 // Save inspection 
 function EleSubmitCheck(ele, filter, message) {
     if (ele == null) return;
-    if (CheckInput(ele.value, filter) == true) {
+    if (CheckInput(ele, filter) == true) {
         ele.title = "";
         ele.style.border = "1";
         ele.style.backgroundColor = "White";

@@ -666,6 +666,7 @@
     <Content Include="DataUser\JSLib\onblur\06.校验登录名：只能输入5-20个以字母开头、可带数字、“_”、“.”的字串.js" />
     <Content Include="DataUser\JSLib\onblur\07.校验邮政编码.js" />
     <Content Include="DataUser\JSLib\onblur\08.动态改变下拉框.js" />
+    <Content Include="DataUser\JSLib\onblur\JScript1.js" />
     <Content Include="DataUser\JSLib\onchange\08.动态改变下拉框.js" />
     <Content Include="DataUser\JSLib\onkeypress\01.校验手机号码：必须以数字开头，除数字外，可含有“-” .js" />
     <Content Include="DataUser\JSLib\onkeypress\02.校验用户姓名：只能输入1-30个以字母开头的字串.js" />
@@ -1557,6 +1558,9 @@
     <Content Include="WF\Img\Tree\Root.gif" />
     <Content Include="WF\MapDef\FrmSelfJs.aspx" />
     <Content Include="WF\MapDef\ImpTableField.aspx" />
+    <Content Include="WF\MyFlow_ModifyOldData.aspx" />
+    <Content Include="WF\MyFlow_ModifyOldDataCol.ascx" />
+    <Content Include="WF\MyFlow_ModifyOldDataSelect.aspx" />
     <Content Include="WF\Rpt\OneFlow.aspx" />
     <Content Include="WF\Rpt\SearchAdv.aspx" />
     <Content Include="WF\MapDef\Rpt\Home.aspx" />
@@ -4366,12 +4370,36 @@
     <Compile Include="WF\MapDef\ImpTableField.aspx.designer.cs">
       <DependentUpon>ImpTableField.aspx</DependentUpon>
     </Compile>
+    <Compile Include="WF\MapDef\MapExt.ashx.cs">
+      <DependentUpon>MapExt.ashx</DependentUpon>
+    </Compile>
     <Compile Include="WF\MapDef\Rpt\RptGuide.Master.cs">
       <DependentUpon>RptGuide.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="WF\MapDef\Rpt\RptGuide.Master.designer.cs">
       <DependentUpon>RptGuide.Master</DependentUpon>
+    </Compile>
+    <Compile Include="WF\MyFlow_ModifyOldData.aspx.cs">
+      <DependentUpon>MyFlow_ModifyOldData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF\MyFlow_ModifyOldData.aspx.designer.cs">
+      <DependentUpon>MyFlow_ModifyOldData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WF\MyFlow_ModifyOldDataCol.ascx.cs">
+      <DependentUpon>MyFlow_ModifyOldDataCol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF\MyFlow_ModifyOldDataCol.ascx.designer.cs">
+      <DependentUpon>MyFlow_ModifyOldDataCol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WF\MyFlow_ModifyOldDataSelect.aspx.cs">
+      <DependentUpon>MyFlow_ModifyOldDataSelect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF\MyFlow_ModifyOldDataSelect.aspx.designer.cs">
+      <DependentUpon>MyFlow_ModifyOldDataSelect.aspx</DependentUpon>
     </Compile>
     <Compile Include="WF\Rpt\OneFlow.aspx.cs">
       <DependentUpon>OneFlow.aspx</DependentUpon>
@@ -7210,6 +7238,7 @@
     <Content Include="WF\Rpt\SiteEUI.Master" />
     <Content Include="WF\MapDef\Rpt\RptGuide.Master" />
     <Content Include="WF\MapDef\FrmSelfJs.ashx" />
+    <Content Include="WF\MapDef\MapExt.ashx" />
     <None Include="WF\Scripts\easyUI\themes\default\images\Thumbs.db" />
     <None Include="WF\Scripts\easyUI\themes\gray\images\Thumbs.db" />
     <Content Include="WF\SDKComponents\Site.Master" />

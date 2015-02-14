@@ -19,6 +19,14 @@ namespace CCFlow.WF.MapDef
             }
         }
 
+        protected string Event
+        {
+            get
+            {
+                return Request.Params["event"];
+            }
+        }
+
         protected string selfjs_url
         {
             get
@@ -27,19 +35,38 @@ namespace CCFlow.WF.MapDef
             }
         }
 
-        protected void initFile()
+        protected FileInfo[] jslibfiles
         {
-            string filepath = Server.MapPath(selfjs_url);
-            FileInfo file=new FileInfo(filepath);
-            if (!file.Exists)
+            get
             {
-                file.Create();
+                DirectoryInfo dir = new DirectoryInfo(jslib_dir);
+                if(!dir.Exists)return new FileInfo[]{};
+               return dir.GetFiles();
             }
         }
 
+        protected string jslib_url
+        {
+            get
+            {
+                return string.Format("/DataUser/JsLib/{0}", Event);
+            }
+        }
+
+        protected string jslib_dir
+        {
+            get
+            {
+                return HttpContext.Current.Server.MapPath(jslib_url);
+            }
+        }
+
+       
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            this.initFile();
+            //this.initFile();
+            
         }
     }
 }

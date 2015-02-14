@@ -8,6 +8,8 @@ namespace CCFlow.WF.MapDef
     using System.IO;
     using System.Text.RegularExpressions;
 
+    using Microsoft.Office.Interop.Excel;
+
     /// <summary>
     /// FrmSelfJs1 的摘要说明
     /// </summary>
@@ -24,11 +26,27 @@ namespace CCFlow.WF.MapDef
             }
         }
 
+        protected string jslib_url
+        {
+            get
+            {
+                return string.Format("/DataUser/JsLib/{0}", Event);
+            }
+        }
+
         protected string selfjs_file
         {
             get
             {
                 return HttpContext.Current.Server.MapPath(selfjs_url);
+            }
+        }
+
+        protected string jslib_dir
+        {
+            get
+            {
+                return HttpContext.Current.Server.MapPath(jslib_url);
             }
         }
 
@@ -60,6 +78,10 @@ namespace CCFlow.WF.MapDef
         {
             string region = "";
             FileInfo file = new FileInfo(selfjs_file);
+            if (!file.Exists)
+            {
+                file.Create().Close();
+            }
             FileStream fs = file.OpenRead();
             StreamReader sr = new StreamReader(fs);
             string content= sr.ReadToEnd();
@@ -97,7 +119,7 @@ namespace CCFlow.WF.MapDef
             string region = this.readRegion();
             if (string.IsNullOrWhiteSpace(region))
             {
-                region += "function "+functionname+"() {\n\n } ";
+                region += "function "+functionname+"(ele) {\n\n } ";
             }
             res.Write(region);
         }
@@ -132,6 +154,24 @@ namespace CCFlow.WF.MapDef
             string msg = selfjs_file+" saved.";
             res.Write("{code:"+code+",msg:\""+msg+"\"}");
 
+        }
+
+        public void jslib(HttpRequest req, HttpResponse res)
+        {
+            res.ContentType = "text/javascript";
+            DirectoryInfo dir=new DirectoryInfo(jslib_dir);
+            
+            if (!dir.Exists) res.Write("{total:0,rows:[]}");
+            string rows = "";
+            FileInfo[] jsfiles = dir.GetFiles();
+            foreach (FileInfo file in jsfiles)
+            {
+                string furl = jslib_url + "/" + file.Name;
+                rows += string.Format("{{ name:'{0}',url:'{1}' }},",file.Name,furl);
+            }
+            
+            string grid = "{total:"+jsfiles.Count()+",rows:["+rows.Trim(',')+"]}";
+            res.Write(grid);
         }
 
        

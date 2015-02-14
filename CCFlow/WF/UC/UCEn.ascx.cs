@@ -2071,12 +2071,12 @@ namespace CCFlow.WF.UC
         {
             if (this.IsReadonly)
                 return;
-
+            int r = new Random().Next(1000000);
             this.Page.RegisterClientScriptBlock("y7",
-          "<script language='JavaScript' src='" + CCFlowAppPath + "DataUser/JSLibData/" + this.EnName + "_Self.js' ></script>");
+          "<script language='JavaScript' src='" + CCFlowAppPath + "DataUser/JSLibData/" + this.EnName + "_Self.js?r="+r+"' ></script>");
 
             this.Page.RegisterClientScriptBlock("yfd7",
-      "<script language='JavaScript' src='" + CCFlowAppPath + "DataUser/JSLibData/" + this.EnName + ".js' ></script>");
+      "<script language='JavaScript' src='" + CCFlowAppPath + "DataUser/JSLibData/" + this.EnName + ".js?r="+r+"' ></script>");
 
             foreach (MapAttr attr in mattrs)
             {
@@ -3210,6 +3210,13 @@ namespace CCFlow.WF.UC
                 {
                     /*  Single file  */
                     FrmAttachmentDB athDB = athDBs.GetEntityByKey(FrmAttachmentDBAttr.FK_FrmAttachment, ath.MyPK) as FrmAttachmentDB;
+
+                    //ating 2015-02-03
+                    if (en.PKVal.ToString() == "0")
+                    {
+                        athDB = null;
+                    }
+
                       x = ath.X + wtX;
                     float y = ath.Y;
                     this.Add("<DIV id='Fa" + ath.MyPK + "' style='position:absolute; left:" + x + "px; top:" + y + "px; text-align: left;float:left' >");
@@ -3276,6 +3283,13 @@ namespace CCFlow.WF.UC
                         else
                             uploadName = "ContentPlaceHolder1_MyFlowUC1_MyFlow1_UCEn1_" + mybtn.ID;
                         fu.Attributes["onchange"] = "UploadChange('" + mybtn.ClientID + "');";//ating
+
+                        //ating 2015-02-03
+                        if (en.PKVal.ToString() == "0")
+                        {
+                            fu.Enabled = false;
+                        }
+
                         this.Add(fu);
                     }
                     if (ath.IsDownload)

@@ -191,7 +191,22 @@ namespace CCFlow.WF.UC
 
             DataTable ndrpt = DBAccess.RunSQLReturnTable("SELECT PFlowNo,PWorkID FROM " + fl.PTable + " WHERE OID=" + workid);
 
-            string urlExt = "&PFlowNo=" + ndrpt.Rows[0]["PFlowNo"] + "&PWorkID=" + ndrpt.Rows[0]["PWorkID"] + "&IsToobar=0&IsHidden=true";
+            string urlExt = "";
+            if (ndrpt.Rows.Count > 0)
+            {
+                urlExt = "&PFlowNo=" + ndrpt.Rows[0]["PFlowNo"] + "&PWorkID=" + ndrpt.Rows[0]["PWorkID"] + "&IsToobar=0&IsHidden=true";
+            }
+            else
+            {
+                urlExt = "&IsToobar=0&IsHidden=true";
+            }
+
+            if (DBAccess.RunSQLReturnValInt(string.Format("SELECT use_oldworkid FROM WF_Flow where no={0}", this.FK_Flow)) != 0)
+            {
+                //2015-02-12 16:36 ating
+                nd.HisFormType = NodeFormType.SDKForm;
+                nd.FormUrl = "MyFlow_ModifyOldData.aspx";
+            }
 
             if (nd.HisFormType == NodeFormType.SDKForm)
             {

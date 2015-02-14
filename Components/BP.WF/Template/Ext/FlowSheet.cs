@@ -203,6 +203,9 @@ namespace BP.WF.Template.Ext
                 map.AddTBString(FlowAttr.Note, null, " Process Description ", true, false, 0, 100, 10, true);
 
                 map.AddDDLSysEnum(FlowAttr.FlowAppType, (int)FlowAppType.Normal, " Process Application Type ",true, true, "FlowAppType", "@0= Business Process @1= Engineering ( Team Process )@2= Document Process (VSTO)");
+
+                map.AddBoolean("Use_OldWorkID", false, "Use Old WorkID ?", true, true, true);
+
                 #endregion  Basic properties .
 
                 #region  Automatically start 

@@ -711,3 +711,7 @@ function replaceAll(s1, s2, s3) {
     return s1.replace(new RegExp(s2, 'gm'), s3);
 }
 
+
+function importScript(src) {
+    document.writeln("<script type='text/javascript' src=\""+src+"\"><"+"/script>");
+}

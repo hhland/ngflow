@@ -3975,6 +3975,9 @@
     <Compile Include="WF\MapDef\ImpTableField.aspx.designer.cs">
       <DependentUpon>ImpTableField.aspx</DependentUpon>
     </Compile>
+    <Compile Include="WF\MapDef\MapExt.ashx.cs">
+      <DependentUpon>MapExt.ashx</DependentUpon>
+    </Compile>
     <Compile Include="WF\MapDef\Rpt\RptGuide.Master.cs">
       <DependentUpon>RptGuide.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -7162,6 +7165,7 @@
     <Content Include="WF\Rpt\SiteEUI.Master" />
     <Content Include="WF\MapDef\Rpt\RptGuide.Master" />
     <Content Include="WF\MapDef\FrmSelfJs.ashx" />
+    <Content Include="WF\MapDef\MapExt.ashx" />
     <None Include="WF\Scripts\easyUI\themes\default\images\Thumbs.db" />
     <None Include="WF\Scripts\easyUI\themes\gray\images\Thumbs.db" />
     <Content Include="WF\SDKComponents\Site.Master" />

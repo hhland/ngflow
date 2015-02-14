@@ -27,7 +27,8 @@
     function _createTab(prefix,FrmW,FrmH,EnsName,RefPKVal,OID,IsReadonly) {
         var $maintabs = $(maintabs_regex);
         var idx = $maintabs.tabs("tabs").length;
-        OID = idx;
+        //OID = idx;
+        OID = 0;
         var src="FrmDtl.aspx?FK_MapData=" + EnsName + "&WorkID=" + RefPKVal +"&OID=" + OID + "&IsReadonly=" + IsReadonly;
         var frame = "<iframe id='IF" + idx + "' frameborder='0' style='width:" + FrmW + "px;height:" + FrmH + "px;' src=\"" + src + "\"><" + "/iframe>";
         $maintabs.tabs('add', {
