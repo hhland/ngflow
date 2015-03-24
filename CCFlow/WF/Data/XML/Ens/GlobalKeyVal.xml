@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" standalone="yes" ?>
-<NewDataSet>
-  <!--   Global system settings , Key Val  Appear .  -->
-  
-  <!--  Membership object :  Typical applications ,  In contrast to the query  ( Affiliation property )  Property  , In case ( For comparison _与( Classification Conditions )  In the same affiliation , For example, departments , Counties , Staff , Branch , PUC . System error occurs . -->
-  <Item Key="Subjection" Val="@FK_ZSJG@FK_XJ@@FK_FJ@FK_Emp@"  />
-  <Item Key="Subjection" Val="@FK_NY@FK_ND@FK_YF@FK_NYR@"  />
-
-</NewDataSet>
