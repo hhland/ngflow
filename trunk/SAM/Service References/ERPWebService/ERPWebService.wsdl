@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="CreateNewSPR">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SAM_SPR_ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SPR_Type" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Requested_By" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Supplier_ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Ammount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Request_Date" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Due_Date" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Site_ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SAM_Contract_ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SAM_Contract_Summary" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Comment" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Payment_Validity_From" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Payment_Validity_To" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Analytical_Account" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Supplier_Acc_NO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Supplier_Acc_Bank" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Supplier_ACC_SHEBA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Supplier_Address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Site_Address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Approved_By" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Reviewed_By" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Initiated_By" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateNewSPRResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateNewSPRResult" type="tns:SPR" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SPR">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ERP_SPR_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status_Updated_Date" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Execution_Date" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PaymentRef" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Remarks" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CreateNewSPRSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateNewSPR" />
+  </wsdl:message>
+  <wsdl:message name="CreateNewSPRSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateNewSPRResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ERPWebServiceSoap">
+    <wsdl:operation name="CreateNewSPR">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This interface will be used to create a new Supplier Payment Request in the ERP system. The function will return the “ERP_SPR_ID” if it is successful, otherwise an error code will be returned that is a minus number. The requester will require to pass following data.</wsdl:documentation>
+      <wsdl:input message="tns:CreateNewSPRSoapIn" />
+      <wsdl:output message="tns:CreateNewSPRSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ERPWebServiceSoap" type="tns:ERPWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateNewSPR">
+      <soap:operation soapAction="http://tempuri.org/CreateNewSPR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ERPWebServiceSoap12" type="tns:ERPWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateNewSPR">
+      <soap12:operation soapAction="http://tempuri.org/CreateNewSPR" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ERPWebService">
+    <wsdl:port name="ERPWebServiceSoap" binding="tns:ERPWebServiceSoap">
+      <soap:address location="http://localhost:9782/WebServices/ERPWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ERPWebServiceSoap12" binding="tns:ERPWebServiceSoap12">
+      <soap12:address location="http://localhost:9782/WebServices/ERPWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

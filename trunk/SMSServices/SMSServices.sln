@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMSServices", "SMSServices.csproj", "{49C541E8-CD69-4018-8EC5-9434D33E2735}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BP.En30", "..\..\trunk\Components\BP.En30\BP.En30.csproj", "{247F7483-86B3-442E-B8B1-2FCFB432BD75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BP.WF", "..\..\trunk\Components\BP.WF\BP.WF.csproj", "{51C1DADA-1B9A-41CC-B731-FDE1196778F2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{49C541E8-CD69-4018-8EC5-9434D33E2735}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49C541E8-CD69-4018-8EC5-9434D33E2735}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49C541E8-CD69-4018-8EC5-9434D33E2735}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49C541E8-CD69-4018-8EC5-9434D33E2735}.Release|Any CPU.Build.0 = Release|Any CPU
+		{247F7483-86B3-442E-B8B1-2FCFB432BD75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{247F7483-86B3-442E-B8B1-2FCFB432BD75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{247F7483-86B3-442E-B8B1-2FCFB432BD75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{247F7483-86B3-442E-B8B1-2FCFB432BD75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51C1DADA-1B9A-41CC-B731-FDE1196778F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51C1DADA-1B9A-41CC-B731-FDE1196778F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51C1DADA-1B9A-41CC-B731-FDE1196778F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51C1DADA-1B9A-41CC-B731-FDE1196778F2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
