@@ -1,0 +1,206 @@
+﻿.InfoPush
+{
+    font-size: 13px;
+    background: #6a82a2;
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+    border: 1px solid #e5e5e5;
+}
+
+.InfoPush ul
+{
+    height: 30px;
+    line-height: 30px;
+    padding-top: 5px;
+    padding-bottom: 1px;
+    color: #fff;
+    margin: 0px;
+}
+
+.InfoPush ul li
+{
+    float: left;
+    list-style-type: none;
+    height: 24px;
+    line-height: 24px;
+    color: #fff;
+    padding-right: 10px;
+}
+
+.InfoPush ul li a
+{
+    text-decoration: none;
+    color: #fff;
+}
+.InfoPush ul li ul li
+{
+    padding-right: 10px;
+}
+.InfoPush ul li ul li a
+{
+    text-decoration: none;
+    color: #ff9316;
+}
+
+.module
+{
+    float: left;
+    width: 800px;
+    margin-left: 10px;
+    margin-top: 10px;
+    display: inline;
+}
+
+.column
+{
+    width: 50%;
+    float: left;
+}
+.portlet
+{
+    margin: 0 1em 1em 0;
+}
+.portlet-header
+{
+    margin: 0.3em;
+    padding: 4px 4px;
+}
+.portlet-header .ui-icon
+{
+    float: right;
+}
+.portlet-content
+{
+    padding: 0.4em;
+    height: 90px;
+    overflow: hidden;
+}
+.ui-sortable-placeholder
+{
+    border: 1px dotted black;
+    visibility: visible !important;
+    height: 50px !important;
+}
+.ui-sortable-placeholder *
+{
+    visibility: hidden;
+}
+.portlet-content li
+{
+    list-style-type: circle;
+}
+
+.left_title
+{
+    margin: 0;
+    padding: 0;
+    background: #6a82a2;
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+    text-align: center;
+}
+
+.Pub
+{
+    padding-right: 20px;
+    background: #c7cfe2;
+    height: 100%;
+}
+.Pub ul
+{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+}
+
+.Pub ul li
+{
+    list-style-type: none;
+    padding-top: 10px;
+}
+
+.footer
+{
+}
+
+
+.Desktop tr td
+{
+    background: url(Img/back_1.png);
+    width: 33%;
+    border: solid 1px #f1f6fa;
+}
+.Desktop tr td ul
+{
+    margin: 5px;
+    padding-left: 20px;
+}
+.Desktop tr td ul li
+{
+    padding-top: 7px;
+    font-size: 13px;
+    font-family: 宋体;
+    padding-left: 10px;
+}
+.Desktop tr td ul li a
+{
+    padding-top: 5px;
+    font-size: 13px;
+    font-family: 宋体;
+    text-decoration: none;
+    color: #656565;
+}
+
+
+.Desktop tr h4
+{
+    padding: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0;
+    background: url(Img/back.png);
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    font-family: 微软雅黑;
+    color: #045395;
+}
+.InfoBarT
+{
+    width: 600px;
+    border: solid 1px #CCCCCC;
+    padding: inherit;
+    margin: 0;
+    margin-bottom: 0px;
+}
+.InfoBarTitle
+{
+    font-size: 14px;
+    border: 1px solid #C2D5E3;
+    text-align: center;
+    height: 25px;
+    line-height: 25px;
+    color: #336699;
+    white-space: nowrap;
+    padding: 0 2px;
+    background-image: url('Title0.gif');
+}
+.STemSetting
+{
+    width: 600px;
+    border: solid 1px #e5e5e5;
+}
+.STemSetting #title
+{
+    background: #e5e5e5;
+}
+.STemSetting tr td
+{
+    font-size: 14px;
+}
+.STemSetting tr td a
+{ text-decoration:none;
+}
+

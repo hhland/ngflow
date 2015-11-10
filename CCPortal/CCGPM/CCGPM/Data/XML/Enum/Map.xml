@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Item Key="DtlShowModel"
+    CH="@0=表格@1=卡片(自由模式)@2=卡片(傻瓜模式)"
+    EN=""
+    JP=""
+    RU=""    />
+    <Item Key="FrmUrlShowWay"
+    CH="@0=不显示@1=自动大小@2=指定大小@3=新窗口"
+    EN="@0=Disable@1=SQL/Produces@2=URL@3=WebServices@4=exe file"
+    JP="@0=Disable@1=SQL/Produces@2=URL@3=WebServices@4=exe file"
+    RU="@0=Disable@1=SQL/Produces@2=URL@3=WebServices@4=exe file" />
+</NewDataSet>

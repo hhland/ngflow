@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Item Attr="NumOfDot" URL="ContrastDtl.aspx?EnsName=BP.ZF1.DDEViews@Keys" For="BP.ZF1.RDEs" Desc="RDEs过错数据钻取" />
+  <Item Attr="NumOfDot" URL="ContrastDtl.aspx?EnsName=BP.ZF1.DDZs&amp;ByLike=1@Keys" For="BP.ZF1.RDZs" Desc="RDZs过错数据钻取" />
+  <Item Attr="NumOfAdjust" URL="ContrastDtl.aspx?EnsName=BP.ZF1.DDEViews@Keys&amp;FK_SBState=4" For="BP.ZF1.DDETZs" Desc="DDETZs过错数据钻取" />
+  <Item1 Attr="NumOfWGC" URL="ContrastDtl.aspx?EnsName=BP.ZF1.DDEViews@Keys&amp;FK_SBState=4" For="BP.ZF1.DDETZs" Desc="过错数据钻取" />
+  <Item Attr="NumOfDot" URL="ContrastDtl.aspx?EnsName=BP.ZF1.DDEViews@Keys" For="BP.ZF1.DDETZs" Desc="过错数据钻取" />
+  <Item Attr="OutDays" URL="../ZF/Warning.aspx?sds=sd@Keys" For="BP.WF.CurrWorks" Desc="过错数据钻取" />
+  <Item Attr="CentOfDotAdd" URL="ContrastDtl.aspx?EnsName=BP.ZF1.WorkSummarys@Keys" For="BP.ZF1.EmpSummarys" Desc="执法工作得分" />
+  <Item Attr="CentOfDotCutBefore" URL="ContrastDtl.aspx?EnsName=BP.ZF1.DDEViews@Keys" For="BP.ZF1.EmpSummarys" Desc="执法过错扣分(调整后)" />
+  <Item Attr="CentOfDotCutAfter" URL="ContrastDtl.aspx?EnsName=BP.ZF1.DDEViews@Keys" For="BP.ZF1.EmpSummarys" Desc="执法过错扣分(调整前)" />
+  <Item Attr="CentOfFlowAdd" URL="ContrastDtl.aspx?EnsName=BP.WF.CHOfNodeCentOfAdds@Keys" For="BP.ZF1.EmpSummarys" Desc="流程工作得分" />
+  <Item Attr="CentOfFlowCut" URL="ContrastDtl.aspx?EnsName=BP.WF.CHOfNodeCentOfCuts@Keys" For="BP.ZF1.EmpSummarys" Desc="流程逾期扣分" />
+</NewDataSet>

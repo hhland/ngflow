@@ -1,0 +1,63 @@
+<?xml version="1.0" standalone="yes" ?>
+<NewDataSet>
+	<AdminTools>
+		<ICON> ../../Images/Users.gif  </ICON>
+		<URL> ../UIEns.aspx?ClassName=BP.En.Emps</URL>
+		<Name>用户维护</Name>
+		<DESC> 用户增加、删除、修改系统用户。</DESC>
+		<Enable>0</Enable>
+    <DFor></DFor>
+  </AdminTools>
+	 
+	<AdminTools>
+		<ICON> ../../Images/System/Table.gif  </ICON>
+		<URL> ../UIEns.aspx?ClassName=BP.Sys.UserQuestions&amp;IsReadonly=1 </URL>
+		<Name>用户错误报告</Name>
+		<Enable>0</Enable>
+		<DESC> 显示用户的错误报告。</DESC>
+	</AdminTools>
+	<AdminTools>
+		<ICON> ../../Images/System/Sys.gif </ICON>
+		<URL> ../sys/SystemClass.aspx</URL>
+		<Name>系统实体报表</Name>
+		<DESC> 列出系统的报表的实体，您可以得到整体的数据结构。</DESC>
+	</AdminTools>
+	<AdminTools>
+		<ICON> ../../Images/System/Sys.gif </ICON>
+		<URL>  ../Sys/DBRpt.aspx </URL>
+		<Name>数据体检</Name>
+		<DESC> 检查出错误的不符合输入规范的数据。</DESC>
+	</AdminTools>
+	<AdminTools>
+		<ICON> ../../Images/System/Sys.gif </ICON>
+		<URL> DTS.aspx </URL>
+		<Name>调度</Name>
+		<DESC> 他就是手工的执行系统的调度。</DESC>
+	</AdminTools>
+	<AdminTools>
+		<ICON> ../../Images/System/Sys.gif </ICON>
+		<URL> ResetUserPass.aspx</URL>
+		<Name>重新设置用户密码</Name>
+		<DESC> 如果用户丢掉了密码，管理员就可以根据用户提供的用户编号，把密码恢复为pub.。</DESC>
+		<Enable>0</Enable>
+	</AdminTools>
+	<AdminTools>
+		<ICON>../../Images/System/Sys.gif </ICON>
+		<URL> DBIO.aspx</URL>
+		<Name>数据迁徙</Name>
+		<DESC> 为了解决各种数据库相互转换的问题。适应oracle, access, sqlserver sybase 数据转换的需要。</DESC>
+	</AdminTools>
+	<AdminTools>
+		<ICON>../../Images/System/Sys.gif </ICON>
+		<URL> ../UIEns.aspx?ClassName=BP.Sys.SysConfigs&amp;IsReadonly=1  </URL>
+		<Name>系统配置</Name>
+		<DESC> 系统配置 </DESC>
+	</AdminTools>
+	
+	<AdminTools>
+		<ICON>../../Images/System/Sys.gif </ICON>
+		<URL> ../UIEns.aspx?ClassName=BP.En.Emps&amp;IsReadonly=0 </URL>
+		<Name>操作员维护</Name>
+		<DESC> 操作员维护 </DESC>
+	</AdminTools>
+</NewDataSet>

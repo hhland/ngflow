@@ -1,0 +1,19 @@
+<?xml version="1.0" standalone="yes" ?>
+<NewDataSet>
+   <AdminTools>
+		<ICON> /GTS/App/Port/ChangeUser.gif  </ICON>
+		<URL> /GTS/App/Port/SignInOfRe.aspx?IsChangeUser=1 </URL>
+		<Name> 更改用户  </Name>
+		<DESC> 更改用户。</DESC>
+	</AdminTools>
+	<AdminTools>
+		<ICON> ../../Images/System/ChangePass.ico  </ICON>
+		<URL> ../Port/ChangePass.aspx  </URL>
+		<Name> 修改密码  </Name>
+		<DESC> 修改您在本系统登录密码。</DESC>
+		<Enable> 1</Enable>
+		
+		
+	</AdminTools>
+	   
+</NewDataSet>

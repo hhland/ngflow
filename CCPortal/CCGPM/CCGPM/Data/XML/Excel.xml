@@ -1,0 +1,8 @@
+<?xml version="1.0" standalone="yes" ?>
+<NewDataSet>
+    <Ref No="BP.Tax.Taxpayers"  />
+	<Field Key="No"  Name="工作基本信息"       Ref="BP.Tax.Taxpayers" />
+	<Field Key="Name"  Name="评估清册"         Ref="BP.Tax.Taxpayers"  />
+	<Field Key="Addr"  Name="数据采集信息"     Ref="BP.Tax.Taxpayers"   />
+	<Field Key="FR"    Name="指标区间定义"       Ref="BP.Tax.Taxpayers"  />
+</NewDataSet>

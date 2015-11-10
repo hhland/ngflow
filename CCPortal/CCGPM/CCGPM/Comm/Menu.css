@@ -1,0 +1,32 @@
+.MTable1
+{
+	border-right: #000000 1px solid;
+	border-top: #000000 1px solid;
+	border-left: #000000 1px solid;
+	border-bottom: #000000 1px solid;
+	background-color: menu;
+	cursor:hand;
+	
+}
+
+.MTR1
+{
+	border-right: #000000 1px solid;
+	border-top: #000000 1px solid;
+	font: menu;
+	border-left: #000000 1px solid;
+	border-bottom: #000000 1px solid;
+	background-color: menu;
+	cursor:hand;
+}
+
+.MTR2
+{
+	color:red;line-height:35pt;
+	FILTER: glow(color=white,strength=0) shadow(color=gray,direction=145); 
+	POSITION: relative;
+	WIDTH: 100%;
+	cursor:hand;
+}
+	
+	 

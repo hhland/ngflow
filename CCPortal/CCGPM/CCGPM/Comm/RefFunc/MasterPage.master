@@ -1,0 +1,70 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" Inherits="Comm_RefFunc_MasterPage" Codebehind="MasterPage.master.cs" %>
+<%@ Register src="Top.ascx" tagname="Top" tagprefix="uc1" %>
+<%@ Register src="Left.ascx" tagname="Left" tagprefix="uc2" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+     <script language="javascript" type="text/javascript">
+         function SelectAll(cb_selectAll) {
+             var arrObj = document.all;
+             if (cb_selectAll.checked) {
+                 for (var i = 0; i < arrObj.length; i++) {
+                     if (typeof arrObj[i].type != "undefined" && arrObj[i].type == 'checkbox') {
+                         arrObj[i].checked = true;
+                     }
+                 }
+             } else {
+                 for (var i = 0; i < arrObj.length; i++) {
+                     if (typeof arrObj[i].type != "undefined" && arrObj[i].type == 'checkbox')
+                         arrObj[i].checked = false;
+                 }
+             }
+         }
+     </script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+		<base target=_self />
+    </asp:ContentPlaceHolder>
+    <Meta http-equiv="Page-Enter" Content="blendTrans(Duration=0.5)" />
+		<script language="JavaScript" src="../JScript.js"></script>
+        <script language="JavaScript" src="../JS/Calendar/WdatePicker.js" defer="defer"></script>
+		<script language="JavaScript" src="../ActiveX.js"></script>
+		<script language="JavaScript" src="../Menu.js"></script>
+		<script language="JavaScript" src="../ShortKey.js"></script>
+		<script language="javascript">
+		function ShowEn(url, wName, h, w )
+        {
+           var s = "dialogWidth=" + parseInt(w) + "px;dialogHeight=" + parseInt(h) + "px;resizable:yes";
+           var  val=window.showModalDialog( url,null,s);
+           window.location.href=window.location.href;
+        }
+		function ImgClick()
+		{
+		}
+		function OpenAttrs(ensName)
+		{
+	       var url= '../Sys/EnsAppCfg.aspx?EnsName='+ensName;
+           var s =  'dialogWidth=680px;dialogHeight=480px;status:no;center:1;resizable:yes'.toString() ;
+		   val=window.showModalDialog( url , null ,  s);
+           window.location.href=window.location.href;
+		}
+		</script>
+		<base target=_self />
+</head>
+<body leftMargin=0 topMargin=0 onkeypress="javascript:Esc();" >
+    <form id="aspnetForm" runat="server" >
+    <table border="0"  width='100%' height='400px'  align=left >
+    <tr>
+    <td  valign=top  class="ToolBar" width='200px'   nowarp=true >
+      <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </td>
+    <td    valign=top  style="text-align:left;bgcolor:red" >
+      <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">
+        </asp:ContentPlaceHolder>
+    </td>
+    </tr>
+        </table>
+    </form>
+</body>
+</html>

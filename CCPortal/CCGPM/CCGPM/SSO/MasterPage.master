@@ -1,0 +1,116 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" Inherits="SSO_MasterPage" Codebehind="MasterPage.master.cs" %>
+
+<%@ Register Src="Link.ascx" TagName="LinkBar" TagPrefix="uc1" %>
+<%@ Register Src="~/SSO/InfoPush.ascx" TagName="InfoPush" TagPrefix="uc4" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>济南驰骋单点登录</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    <link href="Style/default.css" rel="stylesheet" type="text/css" />
+        <script src="../GPM/jquery/jquery.min.js" type="text/javascript"></script>
+        <script src="../GPM/jquery/jquery.easyui.min.js" type="text/javascript"></script>
+    <style type="text/css">
+        .style1
+        {
+            height: 19px;
+        }
+    </style>
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <table width="1008" border="0" align="center" cellspacing="0">
+        <tr>
+            <td width="267" align="center">
+                <img alt="" src="Img/logo/logo.png" width="312" height="56" />
+            </td>
+            <td width="538" align="center" valign="bottom">
+                <img alt="" src="Img/r1_c4.jpg" width="329" height="62" />
+            </td>
+            <td width="192">
+                <table width="180" border="0" cellpadding="0" cellspacing="0">
+                    <tr height="20">
+                        <td colspan="4">
+                            <marquee style="width: 180px;" scrollamount="2" direction="left">
+                                <p style="font-weight:bold;"><font color="#ff4500"><%=usermsg%></font ></p ></marquee>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="40">
+                            <img alt="" src="Img/menu_top_02.gif" width="40" height="35" />
+                        </td>
+                        <td class="font_14">
+                            <a id="reLogin" href="../GPM/Exit.aspx">退出</a>
+                        </td>
+                        <td width="40">
+                            <img alt="" src="Img/menu_top_03.gif" width="40" height="35" />
+                        </td>
+                        <td class="font_14">
+                            <a href="http://bbs.ccflow.org" target="_blank">论坛</a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <table width="1008" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+            <td height="35" style="background: url(Img/menu_bg_l.gif);">
+                <uc4:InfoPush ID="InfoPush1" runat="server" />
+            </td>
+        </tr>
+    </table>
+    <table width="1003" border="0" align="center" cellspacing="0">
+        <tr>
+            <td height="5">
+            </td>
+        </tr>
+    </table>
+    <table width="1003" border="0" align="center" cellspacing="0" cellpadding="0">
+        <tr valign="top">
+            <td width="255">
+                <uc1:LinkBar ID="LinkBar1" runat="server" />
+            </td>
+            <td width="5">
+                &nbsp;
+            </td>
+            <td>
+                <table width="746" border="0" cellspacing="0">
+                    <tr>
+                        <td style="">
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <table width="1003" border="0" align="center" cellspacing="0">
+        <tr>
+            <td height="8">
+            </td>
+        </tr>
+    </table>
+    <table width="1008" border="0" align="center" cellspacing="0" class="border3">
+        <tr>
+            <td height="25" align="center">
+                关于我们 | 联系我们 | 友情连接
+            </td>
+        </tr>
+    </table>
+    <table width="1003" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+            <td align="center">
+                Copyright &copy; 2013 - 2016 <a href=""><strong>ccflow</strong></a>，All Rights Reserved<br />
+                公司地址：山东省济南市文化东路51号汇东星座716室&nbsp;&nbsp;&nbsp;联系电话：0531-82374939
+                <br />
+                制作单位：济南驰骋信息技术有限公司&nbsp;&nbsp;&nbsp;<a href="http://www.ccflow.org/" target="_blank">鲁ICP备12028153号</a><br />
+                1024x768环境下显示全屏
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>

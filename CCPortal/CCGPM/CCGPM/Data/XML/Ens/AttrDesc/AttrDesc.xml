@@ -1,0 +1,8 @@
+<?xml version="1.0" standalone="yes" ?>
+<NewDataSet>
+  <!-- 公司注册信息 -->
+  <Item For="BP.YP.Reg" Attr="QQMSN" Height="" Desc="" />
+  <Item For="BP.YP.Reg" Attr="Addr" Height="" Desc="" />
+  <Item For="BP.YP.Reg" Attr="Url" Height="" Desc="" />
+  <Item For="BP.YP.Reg" Attr="Name" Height="" Desc="" />
+</NewDataSet>

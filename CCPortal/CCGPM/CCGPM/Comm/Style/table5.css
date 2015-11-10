@@ -1,0 +1,21 @@
+﻿.table
+{
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-left: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+    font-size: 12px;
+    width: 100%;
+}
+.table th,.table td
+{
+    border-right: 1px solid #CCCCCC;
+    border-bottom: 1px solid #CCCCCC;
+    padding: 5px 5px;
+    text-align: center;
+}
+.table th
+{
+    font-weight: bold;
+    background-color: #F3F3F3;
+}
