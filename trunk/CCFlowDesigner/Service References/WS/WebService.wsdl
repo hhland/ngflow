@@ -1,0 +1,2217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s1="http://tempuri.org/AbstractTypes" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="CfgKey">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="kev" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CfgKeyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CfgKeyResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FileByte" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="fileName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadFileResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RunSQL">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sql" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RunSQLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RunSQLResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RunSQLs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sqls" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RunSQLsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RunSQLsResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveEn">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="vals" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveEnResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaveEnResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RunSQLReturnTable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sql" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RunSQLReturnTableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RunSQLReturnTableResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RunSQLReturnString">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sql" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RunSQLReturnStringResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RunSQLReturnStringResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RunSQLReturnValInt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sql" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RunSQLReturnValIntResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RunSQLReturnValIntResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RunSQLReturnValFloat">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sql" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RunSQLReturnValFloatResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RunSQLReturnValFloatResult" type="s:float" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RunSQLReturnTableS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sqls" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RunSQLReturnTableSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RunSQLReturnTableSResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ParseStringToPinyin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ParseStringToPinyinResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ParseStringToPinyinResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RequestSFTable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ensName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RequestSFTableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RequestSFTableResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveEnum">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="enumKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="enumLab" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cfg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveEnumResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaveEnumResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="doType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="v1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="v2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="v3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="v4" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="v5" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DoTypeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDTOfWorkList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fk_flow" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="workid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDTOfWorkListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDTOfWorkListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LetAdminLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lang" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="islogin" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LetAdminLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LetAdminLoginResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFlowBySort">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sort" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFlowBySortResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFlowBySortResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStationEmps_del">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetStationEmps_delResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStationEmps_delResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Do">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="doWhat" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="para1" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="isLogin" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoNewNode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fk_flow" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="x" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="y" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="HisRunModel" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="nodeName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="isLogin" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoNewNodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DoNewNodeResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoDropLine">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="from" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="to" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoDropLineResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DoDropLineResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoNewLabel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fk_flow" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="x" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="y" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lableId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoNewLabelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DoNewLabelResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FlowTemplete_Load">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fk_flowSort" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="path" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="islogin" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FlowTemplete_LoadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FlowTemplete_LoadResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoSaveFlow">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fk_flow" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nodes" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dirs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="labes" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoSaveFlowResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DoSaveFlowResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadFlowTemplete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FileByte" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="fileName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadFlowTempleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadFlowTempleteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadfileCCForm">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FileByte" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="fileName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fk_frmSort" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadfileCCFormResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadfileCCFormResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="int" type="s:int" />
+      <s:element name="float" type="s:float" />
+      <s:element name="boolean" type="s:boolean" />
+    </s:schema>
+    <s:schema targetNamespace="http://tempuri.org/AbstractTypes">
+      <s:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <s:complexType name="StringArray">
+        <s:complexContent mixed="false">
+          <s:restriction base="soapenc:Array">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="unbounded" name="String" type="s:string" />
+            </s:sequence>
+          </s:restriction>
+        </s:complexContent>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CfgKeySoapIn">
+    <wsdl:part name="parameters" element="tns:CfgKey" />
+  </wsdl:message>
+  <wsdl:message name="CfgKeySoapOut">
+    <wsdl:part name="parameters" element="tns:CfgKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadFileSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadFile" />
+  </wsdl:message>
+  <wsdl:message name="UploadFileSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="RunSQLSoapIn">
+    <wsdl:part name="parameters" element="tns:RunSQL" />
+  </wsdl:message>
+  <wsdl:message name="RunSQLSoapOut">
+    <wsdl:part name="parameters" element="tns:RunSQLResponse" />
+  </wsdl:message>
+  <wsdl:message name="RunSQLsSoapIn">
+    <wsdl:part name="parameters" element="tns:RunSQLs" />
+  </wsdl:message>
+  <wsdl:message name="RunSQLsSoapOut">
+    <wsdl:part name="parameters" element="tns:RunSQLsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveEnSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveEn" />
+  </wsdl:message>
+  <wsdl:message name="SaveEnSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveEnResponse" />
+  </wsdl:message>
+  <wsdl:message name="RunSQLReturnTableSoapIn">
+    <wsdl:part name="parameters" element="tns:RunSQLReturnTable" />
+  </wsdl:message>
+  <wsdl:message name="RunSQLReturnTableSoapOut">
+    <wsdl:part name="parameters" element="tns:RunSQLReturnTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="RunSQLReturnStringSoapIn">
+    <wsdl:part name="parameters" element="tns:RunSQLReturnString" />
+  </wsdl:message>
+  <wsdl:message name="RunSQLReturnStringSoapOut">
+    <wsdl:part name="parameters" element="tns:RunSQLReturnStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="RunSQLReturnValIntSoapIn">
+    <wsdl:part name="parameters" element="tns:RunSQLReturnValInt" />
+  </wsdl:message>
+  <wsdl:message name="RunSQLReturnValIntSoapOut">
+    <wsdl:part name="parameters" element="tns:RunSQLReturnValIntResponse" />
+  </wsdl:message>
+  <wsdl:message name="RunSQLReturnValFloatSoapIn">
+    <wsdl:part name="parameters" element="tns:RunSQLReturnValFloat" />
+  </wsdl:message>
+  <wsdl:message name="RunSQLReturnValFloatSoapOut">
+    <wsdl:part name="parameters" element="tns:RunSQLReturnValFloatResponse" />
+  </wsdl:message>
+  <wsdl:message name="RunSQLReturnTableSSoapIn">
+    <wsdl:part name="parameters" element="tns:RunSQLReturnTableS" />
+  </wsdl:message>
+  <wsdl:message name="RunSQLReturnTableSSoapOut">
+    <wsdl:part name="parameters" element="tns:RunSQLReturnTableSResponse" />
+  </wsdl:message>
+  <wsdl:message name="ParseStringToPinyinSoapIn">
+    <wsdl:part name="parameters" element="tns:ParseStringToPinyin" />
+  </wsdl:message>
+  <wsdl:message name="ParseStringToPinyinSoapOut">
+    <wsdl:part name="parameters" element="tns:ParseStringToPinyinResponse" />
+  </wsdl:message>
+  <wsdl:message name="RequestSFTableSoapIn">
+    <wsdl:part name="parameters" element="tns:RequestSFTable" />
+  </wsdl:message>
+  <wsdl:message name="RequestSFTableSoapOut">
+    <wsdl:part name="parameters" element="tns:RequestSFTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveEnumSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveEnum" />
+  </wsdl:message>
+  <wsdl:message name="SaveEnumSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveEnumResponse" />
+  </wsdl:message>
+  <wsdl:message name="DoTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:DoType" />
+  </wsdl:message>
+  <wsdl:message name="DoTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:DoTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDTOfWorkListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDTOfWorkList" />
+  </wsdl:message>
+  <wsdl:message name="GetDTOfWorkListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDTOfWorkListResponse" />
+  </wsdl:message>
+  <wsdl:message name="LetAdminLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:LetAdminLogin" />
+  </wsdl:message>
+  <wsdl:message name="LetAdminLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:LetAdminLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFlowBySortSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFlowBySort" />
+  </wsdl:message>
+  <wsdl:message name="GetFlowBySortSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFlowBySortResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStationEmps_delSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStationEmps_del" />
+  </wsdl:message>
+  <wsdl:message name="GetStationEmps_delSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStationEmps_delResponse" />
+  </wsdl:message>
+  <wsdl:message name="DoSoapIn">
+    <wsdl:part name="parameters" element="tns:Do" />
+  </wsdl:message>
+  <wsdl:message name="DoSoapOut">
+    <wsdl:part name="parameters" element="tns:DoResponse" />
+  </wsdl:message>
+  <wsdl:message name="DoNewNodeSoapIn">
+    <wsdl:part name="parameters" element="tns:DoNewNode" />
+  </wsdl:message>
+  <wsdl:message name="DoNewNodeSoapOut">
+    <wsdl:part name="parameters" element="tns:DoNewNodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="DoDropLineSoapIn">
+    <wsdl:part name="parameters" element="tns:DoDropLine" />
+  </wsdl:message>
+  <wsdl:message name="DoDropLineSoapOut">
+    <wsdl:part name="parameters" element="tns:DoDropLineResponse" />
+  </wsdl:message>
+  <wsdl:message name="DoNewLabelSoapIn">
+    <wsdl:part name="parameters" element="tns:DoNewLabel" />
+  </wsdl:message>
+  <wsdl:message name="DoNewLabelSoapOut">
+    <wsdl:part name="parameters" element="tns:DoNewLabelResponse" />
+  </wsdl:message>
+  <wsdl:message name="FlowTemplete_LoadSoapIn">
+    <wsdl:part name="parameters" element="tns:FlowTemplete_Load" />
+  </wsdl:message>
+  <wsdl:message name="FlowTemplete_LoadSoapOut">
+    <wsdl:part name="parameters" element="tns:FlowTemplete_LoadResponse" />
+  </wsdl:message>
+  <wsdl:message name="DoSaveFlowSoapIn">
+    <wsdl:part name="parameters" element="tns:DoSaveFlow" />
+  </wsdl:message>
+  <wsdl:message name="DoSaveFlowSoapOut">
+    <wsdl:part name="parameters" element="tns:DoSaveFlowResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadFlowTempleteSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadFlowTemplete" />
+  </wsdl:message>
+  <wsdl:message name="UploadFlowTempleteSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadFlowTempleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadfileCCFormSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadfileCCForm" />
+  </wsdl:message>
+  <wsdl:message name="UploadfileCCFormSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadfileCCFormResponse" />
+  </wsdl:message>
+  <wsdl:message name="CfgKeyHttpGetIn">
+    <wsdl:part name="kev" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CfgKeyHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UploadFileHttpGetIn">
+    <wsdl:part name="FileByte" type="s1:StringArray" />
+    <wsdl:part name="fileName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UploadFileHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="RunSQLHttpGetIn">
+    <wsdl:part name="sql" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RunSQLHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="RunSQLsHttpGetIn">
+    <wsdl:part name="sqls" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RunSQLsHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="SaveEnHttpGetIn">
+    <wsdl:part name="vals" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SaveEnHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="RunSQLReturnTableHttpGetIn">
+    <wsdl:part name="sql" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RunSQLReturnTableHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="RunSQLReturnStringHttpGetIn">
+    <wsdl:part name="sql" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RunSQLReturnStringHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="RunSQLReturnValIntHttpGetIn">
+    <wsdl:part name="sql" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RunSQLReturnValIntHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="RunSQLReturnValFloatHttpGetIn">
+    <wsdl:part name="sql" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RunSQLReturnValFloatHttpGetOut">
+    <wsdl:part name="Body" element="tns:float" />
+  </wsdl:message>
+  <wsdl:message name="RunSQLReturnTableSHttpGetIn">
+    <wsdl:part name="sqls" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RunSQLReturnTableSHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ParseStringToPinyinHttpGetIn">
+    <wsdl:part name="name" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ParseStringToPinyinHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="RequestSFTableHttpGetIn">
+    <wsdl:part name="ensName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RequestSFTableHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SaveEnumHttpGetIn">
+    <wsdl:part name="enumKey" type="s:string" />
+    <wsdl:part name="enumLab" type="s:string" />
+    <wsdl:part name="cfg" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SaveEnumHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DoTypeHttpGetIn">
+    <wsdl:part name="doType" type="s:string" />
+    <wsdl:part name="v1" type="s:string" />
+    <wsdl:part name="v2" type="s:string" />
+    <wsdl:part name="v3" type="s:string" />
+    <wsdl:part name="v4" type="s:string" />
+    <wsdl:part name="v5" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DoTypeHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDTOfWorkListHttpGetIn">
+    <wsdl:part name="fk_flow" type="s:string" />
+    <wsdl:part name="workid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDTOfWorkListHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="LetAdminLoginHttpGetIn">
+    <wsdl:part name="lang" type="s:string" />
+    <wsdl:part name="islogin" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LetAdminLoginHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFlowBySortHttpGetIn">
+    <wsdl:part name="sort" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFlowBySortHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetStationEmps_delHttpGetIn" />
+  <wsdl:message name="GetStationEmps_delHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DoHttpGetIn">
+    <wsdl:part name="doWhat" type="s:string" />
+    <wsdl:part name="para1" type="s:string" />
+    <wsdl:part name="isLogin" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DoNewNodeHttpGetIn">
+    <wsdl:part name="fk_flow" type="s:string" />
+    <wsdl:part name="x" type="s:string" />
+    <wsdl:part name="y" type="s:string" />
+    <wsdl:part name="HisRunModel" type="s:string" />
+    <wsdl:part name="nodeName" type="s:string" />
+    <wsdl:part name="isLogin" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DoNewNodeHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="DoDropLineHttpGetIn">
+    <wsdl:part name="from" type="s:string" />
+    <wsdl:part name="to" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DoDropLineHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="DoNewLabelHttpGetIn">
+    <wsdl:part name="fk_flow" type="s:string" />
+    <wsdl:part name="x" type="s:string" />
+    <wsdl:part name="y" type="s:string" />
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="lableId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DoNewLabelHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="FlowTemplete_LoadHttpGetIn">
+    <wsdl:part name="fk_flowSort" type="s:string" />
+    <wsdl:part name="path" type="s:string" />
+    <wsdl:part name="islogin" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FlowTemplete_LoadHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DoSaveFlowHttpGetIn">
+    <wsdl:part name="fk_flow" type="s:string" />
+    <wsdl:part name="nodes" type="s:string" />
+    <wsdl:part name="dirs" type="s:string" />
+    <wsdl:part name="labes" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DoSaveFlowHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UploadFlowTempleteHttpGetIn">
+    <wsdl:part name="FileByte" type="s1:StringArray" />
+    <wsdl:part name="fileName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UploadFlowTempleteHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UploadfileCCFormHttpGetIn">
+    <wsdl:part name="FileByte" type="s1:StringArray" />
+    <wsdl:part name="fileName" type="s:string" />
+    <wsdl:part name="fk_frmSort" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UploadfileCCFormHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CfgKeyHttpPostIn">
+    <wsdl:part name="kev" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CfgKeyHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UploadFileHttpPostIn">
+    <wsdl:part name="FileByte" type="s1:StringArray" />
+    <wsdl:part name="fileName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UploadFileHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="RunSQLHttpPostIn">
+    <wsdl:part name="sql" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RunSQLHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="RunSQLsHttpPostIn">
+    <wsdl:part name="sqls" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RunSQLsHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="SaveEnHttpPostIn">
+    <wsdl:part name="vals" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SaveEnHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="RunSQLReturnTableHttpPostIn">
+    <wsdl:part name="sql" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RunSQLReturnTableHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="RunSQLReturnStringHttpPostIn">
+    <wsdl:part name="sql" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RunSQLReturnStringHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="RunSQLReturnValIntHttpPostIn">
+    <wsdl:part name="sql" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RunSQLReturnValIntHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="RunSQLReturnValFloatHttpPostIn">
+    <wsdl:part name="sql" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RunSQLReturnValFloatHttpPostOut">
+    <wsdl:part name="Body" element="tns:float" />
+  </wsdl:message>
+  <wsdl:message name="RunSQLReturnTableSHttpPostIn">
+    <wsdl:part name="sqls" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RunSQLReturnTableSHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ParseStringToPinyinHttpPostIn">
+    <wsdl:part name="name" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ParseStringToPinyinHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="RequestSFTableHttpPostIn">
+    <wsdl:part name="ensName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RequestSFTableHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SaveEnumHttpPostIn">
+    <wsdl:part name="enumKey" type="s:string" />
+    <wsdl:part name="enumLab" type="s:string" />
+    <wsdl:part name="cfg" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SaveEnumHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DoTypeHttpPostIn">
+    <wsdl:part name="doType" type="s:string" />
+    <wsdl:part name="v1" type="s:string" />
+    <wsdl:part name="v2" type="s:string" />
+    <wsdl:part name="v3" type="s:string" />
+    <wsdl:part name="v4" type="s:string" />
+    <wsdl:part name="v5" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DoTypeHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDTOfWorkListHttpPostIn">
+    <wsdl:part name="fk_flow" type="s:string" />
+    <wsdl:part name="workid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDTOfWorkListHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="LetAdminLoginHttpPostIn">
+    <wsdl:part name="lang" type="s:string" />
+    <wsdl:part name="islogin" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LetAdminLoginHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFlowBySortHttpPostIn">
+    <wsdl:part name="sort" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFlowBySortHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetStationEmps_delHttpPostIn" />
+  <wsdl:message name="GetStationEmps_delHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DoHttpPostIn">
+    <wsdl:part name="doWhat" type="s:string" />
+    <wsdl:part name="para1" type="s:string" />
+    <wsdl:part name="isLogin" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DoNewNodeHttpPostIn">
+    <wsdl:part name="fk_flow" type="s:string" />
+    <wsdl:part name="x" type="s:string" />
+    <wsdl:part name="y" type="s:string" />
+    <wsdl:part name="HisRunModel" type="s:string" />
+    <wsdl:part name="nodeName" type="s:string" />
+    <wsdl:part name="isLogin" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DoNewNodeHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="DoDropLineHttpPostIn">
+    <wsdl:part name="from" type="s:string" />
+    <wsdl:part name="to" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DoDropLineHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="DoNewLabelHttpPostIn">
+    <wsdl:part name="fk_flow" type="s:string" />
+    <wsdl:part name="x" type="s:string" />
+    <wsdl:part name="y" type="s:string" />
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="lableId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DoNewLabelHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="FlowTemplete_LoadHttpPostIn">
+    <wsdl:part name="fk_flowSort" type="s:string" />
+    <wsdl:part name="path" type="s:string" />
+    <wsdl:part name="islogin" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FlowTemplete_LoadHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DoSaveFlowHttpPostIn">
+    <wsdl:part name="fk_flow" type="s:string" />
+    <wsdl:part name="nodes" type="s:string" />
+    <wsdl:part name="dirs" type="s:string" />
+    <wsdl:part name="labes" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DoSaveFlowHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UploadFlowTempleteHttpPostIn">
+    <wsdl:part name="FileByte" type="s1:StringArray" />
+    <wsdl:part name="fileName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UploadFlowTempleteHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UploadfileCCFormHttpPostIn">
+    <wsdl:part name="FileByte" type="s1:StringArray" />
+    <wsdl:part name="fileName" type="s:string" />
+    <wsdl:part name="fk_frmSort" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UploadfileCCFormHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="WSDesignerSoap">
+    <wsdl:operation name="CfgKey">
+      <wsdl:input message="tns:CfgKeySoapIn" />
+      <wsdl:output message="tns:CfgKeySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadFile">
+      <wsdl:input message="tns:UploadFileSoapIn" />
+      <wsdl:output message="tns:UploadFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RunSQL">
+      <wsdl:input message="tns:RunSQLSoapIn" />
+      <wsdl:output message="tns:RunSQLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLs">
+      <wsdl:input message="tns:RunSQLsSoapIn" />
+      <wsdl:output message="tns:RunSQLsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveEn">
+      <wsdl:input message="tns:SaveEnSoapIn" />
+      <wsdl:output message="tns:SaveEnSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLReturnTable">
+      <wsdl:input message="tns:RunSQLReturnTableSoapIn" />
+      <wsdl:output message="tns:RunSQLReturnTableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLReturnString">
+      <wsdl:input message="tns:RunSQLReturnStringSoapIn" />
+      <wsdl:output message="tns:RunSQLReturnStringSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLReturnValInt">
+      <wsdl:input message="tns:RunSQLReturnValIntSoapIn" />
+      <wsdl:output message="tns:RunSQLReturnValIntSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLReturnValFloat">
+      <wsdl:input message="tns:RunSQLReturnValFloatSoapIn" />
+      <wsdl:output message="tns:RunSQLReturnValFloatSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLReturnTableS">
+      <wsdl:input message="tns:RunSQLReturnTableSSoapIn" />
+      <wsdl:output message="tns:RunSQLReturnTableSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ParseStringToPinyin">
+      <wsdl:input message="tns:ParseStringToPinyinSoapIn" />
+      <wsdl:output message="tns:ParseStringToPinyinSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RequestSFTable">
+      <wsdl:input message="tns:RequestSFTableSoapIn" />
+      <wsdl:output message="tns:RequestSFTableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveEnum">
+      <wsdl:input message="tns:SaveEnumSoapIn" />
+      <wsdl:output message="tns:SaveEnumSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoType">
+      <wsdl:input message="tns:DoTypeSoapIn" />
+      <wsdl:output message="tns:DoTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDTOfWorkList">
+      <wsdl:input message="tns:GetDTOfWorkListSoapIn" />
+      <wsdl:output message="tns:GetDTOfWorkListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LetAdminLogin">
+      <wsdl:input message="tns:LetAdminLoginSoapIn" />
+      <wsdl:output message="tns:LetAdminLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFlowBySort">
+      <wsdl:input message="tns:GetFlowBySortSoapIn" />
+      <wsdl:output message="tns:GetFlowBySortSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStationEmps_del">
+      <wsdl:input message="tns:GetStationEmps_delSoapIn" />
+      <wsdl:output message="tns:GetStationEmps_delSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Do">
+      <wsdl:input message="tns:DoSoapIn" />
+      <wsdl:output message="tns:DoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoNewNode">
+      <wsdl:input message="tns:DoNewNodeSoapIn" />
+      <wsdl:output message="tns:DoNewNodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoDropLine">
+      <wsdl:input message="tns:DoDropLineSoapIn" />
+      <wsdl:output message="tns:DoDropLineSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoNewLabel">
+      <wsdl:input message="tns:DoNewLabelSoapIn" />
+      <wsdl:output message="tns:DoNewLabelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FlowTemplete_Load">
+      <wsdl:input message="tns:FlowTemplete_LoadSoapIn" />
+      <wsdl:output message="tns:FlowTemplete_LoadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoSaveFlow">
+      <wsdl:input message="tns:DoSaveFlowSoapIn" />
+      <wsdl:output message="tns:DoSaveFlowSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadFlowTemplete">
+      <wsdl:input message="tns:UploadFlowTempleteSoapIn" />
+      <wsdl:output message="tns:UploadFlowTempleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadfileCCForm">
+      <wsdl:input message="tns:UploadfileCCFormSoapIn" />
+      <wsdl:output message="tns:UploadfileCCFormSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WSDesignerHttpGet">
+    <wsdl:operation name="CfgKey">
+      <wsdl:input message="tns:CfgKeyHttpGetIn" />
+      <wsdl:output message="tns:CfgKeyHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadFile">
+      <wsdl:input message="tns:UploadFileHttpGetIn" />
+      <wsdl:output message="tns:UploadFileHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RunSQL">
+      <wsdl:input message="tns:RunSQLHttpGetIn" />
+      <wsdl:output message="tns:RunSQLHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLs">
+      <wsdl:input message="tns:RunSQLsHttpGetIn" />
+      <wsdl:output message="tns:RunSQLsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveEn">
+      <wsdl:input message="tns:SaveEnHttpGetIn" />
+      <wsdl:output message="tns:SaveEnHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLReturnTable">
+      <wsdl:input message="tns:RunSQLReturnTableHttpGetIn" />
+      <wsdl:output message="tns:RunSQLReturnTableHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLReturnString">
+      <wsdl:input message="tns:RunSQLReturnStringHttpGetIn" />
+      <wsdl:output message="tns:RunSQLReturnStringHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLReturnValInt">
+      <wsdl:input message="tns:RunSQLReturnValIntHttpGetIn" />
+      <wsdl:output message="tns:RunSQLReturnValIntHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLReturnValFloat">
+      <wsdl:input message="tns:RunSQLReturnValFloatHttpGetIn" />
+      <wsdl:output message="tns:RunSQLReturnValFloatHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLReturnTableS">
+      <wsdl:input message="tns:RunSQLReturnTableSHttpGetIn" />
+      <wsdl:output message="tns:RunSQLReturnTableSHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ParseStringToPinyin">
+      <wsdl:input message="tns:ParseStringToPinyinHttpGetIn" />
+      <wsdl:output message="tns:ParseStringToPinyinHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RequestSFTable">
+      <wsdl:input message="tns:RequestSFTableHttpGetIn" />
+      <wsdl:output message="tns:RequestSFTableHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveEnum">
+      <wsdl:input message="tns:SaveEnumHttpGetIn" />
+      <wsdl:output message="tns:SaveEnumHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoType">
+      <wsdl:input message="tns:DoTypeHttpGetIn" />
+      <wsdl:output message="tns:DoTypeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDTOfWorkList">
+      <wsdl:input message="tns:GetDTOfWorkListHttpGetIn" />
+      <wsdl:output message="tns:GetDTOfWorkListHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LetAdminLogin">
+      <wsdl:input message="tns:LetAdminLoginHttpGetIn" />
+      <wsdl:output message="tns:LetAdminLoginHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFlowBySort">
+      <wsdl:input message="tns:GetFlowBySortHttpGetIn" />
+      <wsdl:output message="tns:GetFlowBySortHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStationEmps_del">
+      <wsdl:input message="tns:GetStationEmps_delHttpGetIn" />
+      <wsdl:output message="tns:GetStationEmps_delHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Do">
+      <wsdl:input message="tns:DoHttpGetIn" />
+      <wsdl:output message="tns:DoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoNewNode">
+      <wsdl:input message="tns:DoNewNodeHttpGetIn" />
+      <wsdl:output message="tns:DoNewNodeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoDropLine">
+      <wsdl:input message="tns:DoDropLineHttpGetIn" />
+      <wsdl:output message="tns:DoDropLineHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoNewLabel">
+      <wsdl:input message="tns:DoNewLabelHttpGetIn" />
+      <wsdl:output message="tns:DoNewLabelHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FlowTemplete_Load">
+      <wsdl:input message="tns:FlowTemplete_LoadHttpGetIn" />
+      <wsdl:output message="tns:FlowTemplete_LoadHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoSaveFlow">
+      <wsdl:input message="tns:DoSaveFlowHttpGetIn" />
+      <wsdl:output message="tns:DoSaveFlowHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadFlowTemplete">
+      <wsdl:input message="tns:UploadFlowTempleteHttpGetIn" />
+      <wsdl:output message="tns:UploadFlowTempleteHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadfileCCForm">
+      <wsdl:input message="tns:UploadfileCCFormHttpGetIn" />
+      <wsdl:output message="tns:UploadfileCCFormHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WSDesignerHttpPost">
+    <wsdl:operation name="CfgKey">
+      <wsdl:input message="tns:CfgKeyHttpPostIn" />
+      <wsdl:output message="tns:CfgKeyHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadFile">
+      <wsdl:input message="tns:UploadFileHttpPostIn" />
+      <wsdl:output message="tns:UploadFileHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RunSQL">
+      <wsdl:input message="tns:RunSQLHttpPostIn" />
+      <wsdl:output message="tns:RunSQLHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLs">
+      <wsdl:input message="tns:RunSQLsHttpPostIn" />
+      <wsdl:output message="tns:RunSQLsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveEn">
+      <wsdl:input message="tns:SaveEnHttpPostIn" />
+      <wsdl:output message="tns:SaveEnHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLReturnTable">
+      <wsdl:input message="tns:RunSQLReturnTableHttpPostIn" />
+      <wsdl:output message="tns:RunSQLReturnTableHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLReturnString">
+      <wsdl:input message="tns:RunSQLReturnStringHttpPostIn" />
+      <wsdl:output message="tns:RunSQLReturnStringHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLReturnValInt">
+      <wsdl:input message="tns:RunSQLReturnValIntHttpPostIn" />
+      <wsdl:output message="tns:RunSQLReturnValIntHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLReturnValFloat">
+      <wsdl:input message="tns:RunSQLReturnValFloatHttpPostIn" />
+      <wsdl:output message="tns:RunSQLReturnValFloatHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLReturnTableS">
+      <wsdl:input message="tns:RunSQLReturnTableSHttpPostIn" />
+      <wsdl:output message="tns:RunSQLReturnTableSHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ParseStringToPinyin">
+      <wsdl:input message="tns:ParseStringToPinyinHttpPostIn" />
+      <wsdl:output message="tns:ParseStringToPinyinHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RequestSFTable">
+      <wsdl:input message="tns:RequestSFTableHttpPostIn" />
+      <wsdl:output message="tns:RequestSFTableHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveEnum">
+      <wsdl:input message="tns:SaveEnumHttpPostIn" />
+      <wsdl:output message="tns:SaveEnumHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoType">
+      <wsdl:input message="tns:DoTypeHttpPostIn" />
+      <wsdl:output message="tns:DoTypeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDTOfWorkList">
+      <wsdl:input message="tns:GetDTOfWorkListHttpPostIn" />
+      <wsdl:output message="tns:GetDTOfWorkListHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LetAdminLogin">
+      <wsdl:input message="tns:LetAdminLoginHttpPostIn" />
+      <wsdl:output message="tns:LetAdminLoginHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFlowBySort">
+      <wsdl:input message="tns:GetFlowBySortHttpPostIn" />
+      <wsdl:output message="tns:GetFlowBySortHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStationEmps_del">
+      <wsdl:input message="tns:GetStationEmps_delHttpPostIn" />
+      <wsdl:output message="tns:GetStationEmps_delHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Do">
+      <wsdl:input message="tns:DoHttpPostIn" />
+      <wsdl:output message="tns:DoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoNewNode">
+      <wsdl:input message="tns:DoNewNodeHttpPostIn" />
+      <wsdl:output message="tns:DoNewNodeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoDropLine">
+      <wsdl:input message="tns:DoDropLineHttpPostIn" />
+      <wsdl:output message="tns:DoDropLineHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoNewLabel">
+      <wsdl:input message="tns:DoNewLabelHttpPostIn" />
+      <wsdl:output message="tns:DoNewLabelHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FlowTemplete_Load">
+      <wsdl:input message="tns:FlowTemplete_LoadHttpPostIn" />
+      <wsdl:output message="tns:FlowTemplete_LoadHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoSaveFlow">
+      <wsdl:input message="tns:DoSaveFlowHttpPostIn" />
+      <wsdl:output message="tns:DoSaveFlowHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadFlowTemplete">
+      <wsdl:input message="tns:UploadFlowTempleteHttpPostIn" />
+      <wsdl:output message="tns:UploadFlowTempleteHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadfileCCForm">
+      <wsdl:input message="tns:UploadfileCCFormHttpPostIn" />
+      <wsdl:output message="tns:UploadfileCCFormHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSDesignerSoap" type="tns:WSDesignerSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CfgKey">
+      <soap:operation soapAction="http://tempuri.org/CfgKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadFile">
+      <soap:operation soapAction="http://tempuri.org/UploadFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunSQL">
+      <soap:operation soapAction="http://tempuri.org/RunSQL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLs">
+      <soap:operation soapAction="http://tempuri.org/RunSQLs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveEn">
+      <soap:operation soapAction="http://tempuri.org/SaveEn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLReturnTable">
+      <soap:operation soapAction="http://tempuri.org/RunSQLReturnTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLReturnString">
+      <soap:operation soapAction="http://tempuri.org/RunSQLReturnString" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLReturnValInt">
+      <soap:operation soapAction="http://tempuri.org/RunSQLReturnValInt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLReturnValFloat">
+      <soap:operation soapAction="http://tempuri.org/RunSQLReturnValFloat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLReturnTableS">
+      <soap:operation soapAction="http://tempuri.org/RunSQLReturnTableS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ParseStringToPinyin">
+      <soap:operation soapAction="http://tempuri.org/ParseStringToPinyin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RequestSFTable">
+      <soap:operation soapAction="http://tempuri.org/RequestSFTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveEnum">
+      <soap:operation soapAction="http://tempuri.org/SaveEnum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoType">
+      <soap:operation soapAction="http://tempuri.org/DoType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDTOfWorkList">
+      <soap:operation soapAction="http://tempuri.org/GetDTOfWorkList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LetAdminLogin">
+      <soap:operation soapAction="http://tempuri.org/LetAdminLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFlowBySort">
+      <soap:operation soapAction="http://tempuri.org/GetFlowBySort" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStationEmps_del">
+      <soap:operation soapAction="http://tempuri.org/GetStationEmps_del" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Do">
+      <soap:operation soapAction="http://tempuri.org/Do" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoNewNode">
+      <soap:operation soapAction="http://tempuri.org/DoNewNode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoDropLine">
+      <soap:operation soapAction="http://tempuri.org/DoDropLine" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoNewLabel">
+      <soap:operation soapAction="http://tempuri.org/DoNewLabel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FlowTemplete_Load">
+      <soap:operation soapAction="http://tempuri.org/FlowTemplete_Load" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoSaveFlow">
+      <soap:operation soapAction="http://tempuri.org/DoSaveFlow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadFlowTemplete">
+      <soap:operation soapAction="http://tempuri.org/UploadFlowTemplete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadfileCCForm">
+      <soap:operation soapAction="http://tempuri.org/UploadfileCCForm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSDesignerSoap12" type="tns:WSDesignerSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CfgKey">
+      <soap12:operation soapAction="http://tempuri.org/CfgKey" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadFile">
+      <soap12:operation soapAction="http://tempuri.org/UploadFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunSQL">
+      <soap12:operation soapAction="http://tempuri.org/RunSQL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLs">
+      <soap12:operation soapAction="http://tempuri.org/RunSQLs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveEn">
+      <soap12:operation soapAction="http://tempuri.org/SaveEn" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLReturnTable">
+      <soap12:operation soapAction="http://tempuri.org/RunSQLReturnTable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLReturnString">
+      <soap12:operation soapAction="http://tempuri.org/RunSQLReturnString" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLReturnValInt">
+      <soap12:operation soapAction="http://tempuri.org/RunSQLReturnValInt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLReturnValFloat">
+      <soap12:operation soapAction="http://tempuri.org/RunSQLReturnValFloat" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLReturnTableS">
+      <soap12:operation soapAction="http://tempuri.org/RunSQLReturnTableS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ParseStringToPinyin">
+      <soap12:operation soapAction="http://tempuri.org/ParseStringToPinyin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RequestSFTable">
+      <soap12:operation soapAction="http://tempuri.org/RequestSFTable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveEnum">
+      <soap12:operation soapAction="http://tempuri.org/SaveEnum" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoType">
+      <soap12:operation soapAction="http://tempuri.org/DoType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDTOfWorkList">
+      <soap12:operation soapAction="http://tempuri.org/GetDTOfWorkList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LetAdminLogin">
+      <soap12:operation soapAction="http://tempuri.org/LetAdminLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFlowBySort">
+      <soap12:operation soapAction="http://tempuri.org/GetFlowBySort" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStationEmps_del">
+      <soap12:operation soapAction="http://tempuri.org/GetStationEmps_del" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Do">
+      <soap12:operation soapAction="http://tempuri.org/Do" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoNewNode">
+      <soap12:operation soapAction="http://tempuri.org/DoNewNode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoDropLine">
+      <soap12:operation soapAction="http://tempuri.org/DoDropLine" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoNewLabel">
+      <soap12:operation soapAction="http://tempuri.org/DoNewLabel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FlowTemplete_Load">
+      <soap12:operation soapAction="http://tempuri.org/FlowTemplete_Load" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoSaveFlow">
+      <soap12:operation soapAction="http://tempuri.org/DoSaveFlow" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadFlowTemplete">
+      <soap12:operation soapAction="http://tempuri.org/UploadFlowTemplete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadfileCCForm">
+      <soap12:operation soapAction="http://tempuri.org/UploadfileCCForm" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSDesignerHttpGet" type="tns:WSDesignerHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="CfgKey">
+      <http:operation location="/CfgKey" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadFile">
+      <http:operation location="/UploadFile" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunSQL">
+      <http:operation location="/RunSQL" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLs">
+      <http:operation location="/RunSQLs" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveEn">
+      <http:operation location="/SaveEn" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLReturnTable">
+      <http:operation location="/RunSQLReturnTable" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLReturnString">
+      <http:operation location="/RunSQLReturnString" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLReturnValInt">
+      <http:operation location="/RunSQLReturnValInt" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLReturnValFloat">
+      <http:operation location="/RunSQLReturnValFloat" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLReturnTableS">
+      <http:operation location="/RunSQLReturnTableS" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ParseStringToPinyin">
+      <http:operation location="/ParseStringToPinyin" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RequestSFTable">
+      <http:operation location="/RequestSFTable" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveEnum">
+      <http:operation location="/SaveEnum" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoType">
+      <http:operation location="/DoType" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDTOfWorkList">
+      <http:operation location="/GetDTOfWorkList" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LetAdminLogin">
+      <http:operation location="/LetAdminLogin" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFlowBySort">
+      <http:operation location="/GetFlowBySort" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStationEmps_del">
+      <http:operation location="/GetStationEmps_del" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Do">
+      <http:operation location="/Do" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoNewNode">
+      <http:operation location="/DoNewNode" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoDropLine">
+      <http:operation location="/DoDropLine" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoNewLabel">
+      <http:operation location="/DoNewLabel" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FlowTemplete_Load">
+      <http:operation location="/FlowTemplete_Load" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoSaveFlow">
+      <http:operation location="/DoSaveFlow" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadFlowTemplete">
+      <http:operation location="/UploadFlowTemplete" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadfileCCForm">
+      <http:operation location="/UploadfileCCForm" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSDesignerHttpPost" type="tns:WSDesignerHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="CfgKey">
+      <http:operation location="/CfgKey" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadFile">
+      <http:operation location="/UploadFile" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunSQL">
+      <http:operation location="/RunSQL" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLs">
+      <http:operation location="/RunSQLs" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveEn">
+      <http:operation location="/SaveEn" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLReturnTable">
+      <http:operation location="/RunSQLReturnTable" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLReturnString">
+      <http:operation location="/RunSQLReturnString" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLReturnValInt">
+      <http:operation location="/RunSQLReturnValInt" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLReturnValFloat">
+      <http:operation location="/RunSQLReturnValFloat" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLReturnTableS">
+      <http:operation location="/RunSQLReturnTableS" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ParseStringToPinyin">
+      <http:operation location="/ParseStringToPinyin" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RequestSFTable">
+      <http:operation location="/RequestSFTable" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveEnum">
+      <http:operation location="/SaveEnum" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoType">
+      <http:operation location="/DoType" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDTOfWorkList">
+      <http:operation location="/GetDTOfWorkList" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LetAdminLogin">
+      <http:operation location="/LetAdminLogin" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFlowBySort">
+      <http:operation location="/GetFlowBySort" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStationEmps_del">
+      <http:operation location="/GetStationEmps_del" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Do">
+      <http:operation location="/Do" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoNewNode">
+      <http:operation location="/DoNewNode" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoDropLine">
+      <http:operation location="/DoDropLine" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoNewLabel">
+      <http:operation location="/DoNewLabel" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FlowTemplete_Load">
+      <http:operation location="/FlowTemplete_Load" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoSaveFlow">
+      <http:operation location="/DoSaveFlow" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadFlowTemplete">
+      <http:operation location="/UploadFlowTemplete" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadfileCCForm">
+      <http:operation location="/UploadfileCCForm" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WSDesigner">
+    <wsdl:port name="WSDesignerSoap" binding="tns:WSDesignerSoap">
+      <soap:address location="http://localhost:50572/WF/Admin/XAP/WebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WSDesignerSoap12" binding="tns:WSDesignerSoap12">
+      <soap12:address location="http://localhost:50572/WF/Admin/XAP/WebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WSDesignerHttpGet" binding="tns:WSDesignerHttpGet">
+      <http:address location="http://localhost:50572/WF/Admin/XAP/WebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WSDesignerHttpPost" binding="tns:WSDesignerHttpPost">
+      <http:address location="http://localhost:50572/WF/Admin/XAP/WebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

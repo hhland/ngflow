@@ -1,0 +1,52 @@
+﻿<controls:ChildWindow x:Class="OrganizationalStructure.FrmDeptEmp"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           Width="560" Height="455" 
+           Title=" Department personnel information " xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Button x:Name="CancelButton" Content=" Cancel " Click="CancelButton_Click" Width="52" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
+        <Button x:Name="OKButton" Content=" Save " Click="OKButton_Click" Width="51" Height="23" HorizontalAlignment="Right" Margin="0,12,145,0" Grid.Row="1" />
+        <controls:TabControl Height="381" HorizontalAlignment="Left" Margin="12,0,0,0" Name="tabControl1" VerticalAlignment="Top" Width="514">
+            <controls:TabItem Header=" Basic Information " Name="tabItem1">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="42*" />
+                        <ColumnDefinition Width="460*" />
+                    </Grid.ColumnDefinitions>
+                    <sdk:Label Height="28" HorizontalAlignment="Left" Margin="214,22,0,0" Name="label1" VerticalAlignment="Top" Width="44" Content=" Login Account " Grid.Column="1" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="268,18,0,0" Name="TB_No" VerticalAlignment="Top" Width="151" Grid.Column="1" TabIndex="2" />
+                    <sdk:Label Content=" Full name " Height="23" HorizontalAlignment="Left" Margin="2,20,0,0" Name="label2" VerticalAlignment="Top" Width="52" Grid.Column="1" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="31,18,0,0" Name="TB_Name" VerticalAlignment="Top" Width="154" Grid.Column="1" LostFocus="TB_Name_LostFocus" TabIndex="1" />
+                    <ComboBox Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="268,59,0,0" Name="DDL_Duty" VerticalAlignment="Top" Width="120" TabIndex="4" />
+                    <sdk:Label Grid.Column="1" Height="19" HorizontalAlignment="Left" Margin="234,63,0,0" Name="label3" VerticalAlignment="Top" Width="44" Content=" Position " />
+                    <sdk:Label Height="28" Margin="24,148,0,0" Name="label4" VerticalAlignment="Top" Content=" Directly under the leadership " Grid.ColumnSpan="2" HorizontalAlignment="Left" Width="52" />
+                    <TextBox Grid.Column="1" Height="23" HorizontalAlignment="Right" Margin="0,144,127,0" Name="TB_Level" VerticalAlignment="Top" Width="65" />
+                    <sdk:Label Content=" Position Level " Height="28" HorizontalAlignment="Left" Margin="219,148,0,0" Name="label5" VerticalAlignment="Top" Width="48" Grid.Column="1" />
+                    <TextBox Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="32,144,0,0" Name="TB_Leader" VerticalAlignment="Top" Width="151" TabIndex="7" />
+                    <TextBox Grid.Column="1" Height="23" HorizontalAlignment="Right" Margin="0,98,278,0" Name="TB_Tel" VerticalAlignment="Top" Width="151" TabIndex="5" />
+                    <TextBox Grid.Column="1" Height="23" HorizontalAlignment="Right" Margin="0,58,277,0" Name="TB_EmpNo" VerticalAlignment="Top" Width="151" TabIndex="3" />
+                    <TextBox Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="268,97,0,0" Name="TB_Email" VerticalAlignment="Top" Width="151" TabIndex="6" />
+                    <sdk:Label HorizontalAlignment="Left" Margin="22,56,0,260" Name="label8" Width="45" Content=" Number of workers " Grid.ColumnSpan="2" />
+                    <sdk:Label Height="28" HorizontalAlignment="Left" Margin="40,101,0,0" Name="label6" VerticalAlignment="Top" Width="32" Content=" Phone " Grid.ColumnSpan="2" />
+                    <sdk:Label Grid.Column="1" Height="28" HorizontalAlignment="Left" Margin="236,100,0,0" Name="label7" VerticalAlignment="Top" Width="28" Content=" Mail " />
+                </Grid>
+            </controls:TabItem>
+            <controls:TabItem Header=" Has a job " Name="tabItem2">
+                <Grid>
+                    <ListBox Height="306" HorizontalAlignment="Left" Margin="31,19,0,0" Name="LB_Station" VerticalAlignment="Top" Width="428" />
+                </Grid>
+            </controls:TabItem>
+        </controls:TabControl>
+        <Button Content=" Delete " Grid.Row="1" Height="23" HorizontalAlignment="Right" Margin="0,11,229,0" Name="Btn_Del" VerticalAlignment="Top" Width="46" Click="Btn_Del_Click" />
+        <Button Content=" Copy " Grid.Row="1" Height="23" HorizontalAlignment="Right" Margin="0,12,370,0" Name="Btn_Copy" VerticalAlignment="Top" Width="75" Click="Btn_Copy_Click" Visibility="Collapsed" />
+        <Button Content=" Mobile " Grid.Row="1" Height="23" HorizontalAlignment="Left" Margin="12,12,0,0" Name="Btn_Move" VerticalAlignment="Top" Width="75" Click="Btn_Move_Click" Visibility="Collapsed" />
+        <Button Content=" Reset Password " Height="23" HorizontalAlignment="Left" Margin="182,12,0,0" Name="Btn_ResetPass" VerticalAlignment="Top" Width="75" Grid.Row="1" Click="Btn_ResetPass_Click" />
+        <Button Content=" Save &amp; Shut down " Height="23" HorizontalAlignment="Left" Margin="408,11,0,1" Name="Btn_SaveClose" Width="66" Grid.Row="1" Click="Btn_SaveClose_Click" />
+    </Grid>
+</controls:ChildWindow>

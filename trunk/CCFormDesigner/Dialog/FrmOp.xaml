@@ -1,0 +1,47 @@
+﻿<controls:ChildWindow x:Class="CCForm.FrmOp"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           Width="400" Height="300" 
+           Title=" Form action " xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Button x:Name="CancelButton" Content=" Cancel " Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
+        <Button x:Name="OKButton" Content=" Determine " Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" />
+        <controls:TabControl Height="223" HorizontalAlignment="Left" Margin="4,3,0,0" Name="tabControl1" VerticalAlignment="Top" Width="374">
+            <controls:TabItem Header=" Routine " Name="tabItem1">
+                <Grid>
+                    <sdk:Label Height="28" HorizontalAlignment="Left" Margin="17,69,0,0" Name="label1" VerticalAlignment="Top" Width="82" Content=" Canvas Width " />
+                    <sdk:Label Content=" Canvas height " Height="28" HorizontalAlignment="Left" Margin="15,104,0,0" Name="label2" VerticalAlignment="Top" Width="90" />
+                    <TextBox Height="23" HorizontalAlignment="Right"
+                             Margin="0,65,142,0" Name="TB_FrmW" 
+                             VerticalAlignment="Top" Width="120" />
+                    <TextBox Height="23" HorizontalAlignment="Right"
+                             Margin="0,0,142,65" Name="TB_FrmH"
+                             VerticalAlignment="Bottom" Width="120" />
+                    <sdk:Label Content=" Form Name " HorizontalAlignment="Left" Margin="28,28,0,133" Name="label3" Width="73" />
+                    <TextBox Height="23" HorizontalAlignment="Right" Margin="0,31,58,0" Name="TB_Name" VerticalAlignment="Top" Width="204" Text="" />
+                </Grid>
+            </controls:TabItem>
+            <!--<controls:TabItem Header=" Backup " Name="tabItem2">
+                <Grid />
+            </controls:TabItem>
+            <controls:TabItem Header=" Importing " Name="tabItem3">
+                <Grid />
+            </controls:TabItem>
+            <controls:TabItem Header=" Copy " Name="tabItem4">
+                <Grid />
+            </controls:TabItem>
+            <controls:TabItem Header=" Create " Name="tabItem5">
+                <Grid />
+            </controls:TabItem>
+            <controls:TabItem Header="tabItem6" Name="tabItem6">
+                <Grid />
+            </controls:TabItem>-->
+        </controls:TabControl>
+    </Grid>
+</controls:ChildWindow>
