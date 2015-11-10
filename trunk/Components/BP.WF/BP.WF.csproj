@@ -1,0 +1,383 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{04147518-E5E6-4B01-A797-094B8BA9CFD5}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>BP.WF</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>BP.WF</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <PublishUrl>http://localhost/BP.WFV4/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>0</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.OracleClient">
+      <Name>System.Data.OracleClient</Name>
+      <HintPath>..\..\WF\bin\System.Data.OracleClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices">
+      <Name>System.EnterpriseServices</Name>
+      <HintPath>..\..\WF\bin\System.EnterpriseServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CCFormAPI.cs" />
+    <Compile Include="Data\Eval.cs" />
+    <Compile Include="Dev2InterfaceGuest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DTS\ChangeUserNo.cs" />
+    <Compile Include="DTS\DeleteBlankGroupField.cs" />
+    <Compile Include="DTS\DynamicWebService.cs" />
+    <Compile Include="DTS\GenerTitle.cs" />
+    <Compile Include="DTS\GenerDustbinData.cs" />
+    <Compile Include="DTS\ClearRepLineLab.cs" />
+    <Compile Include="DTS\UpTrack.cs" />
+    <Compile Include="DTS\OneKeyLoadTemplete.cs" />
+    <Compile Include="DTS\GenerDB.cs" />
+    <Compile Include="DTS\LoadNDxxRpt2GernerWorkFlow.cs" />
+    <Compile Include="DTS\UpdateCCFlow.cs" />
+    <Compile Include="SDKTools\CCFlowPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Template\AccepterRole\SelectInfo.cs" />
+    <Compile Include="Template\FindWorker\FindWorkEnum.cs" />
+    <Compile Include="Template\FindWorker\FindWorker.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\FlowData.cs" />
+    <Compile Include="Template\AccepterRole\AccepterRole.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Template\AccepterRole\ModeSortXml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Template\AccepterRole\ModeXml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Template\AccepterRole\NodeDept.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Template\AccepterRole\NodeEmp.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Template\AccepterRole\NodeStation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Template\AccepterRole\SelectAccper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Template\BtnState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Template\Ext\Selector.cs" />
+    <Compile Include="Template\Form\Flow\FlowFormTree.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Template\Form\Sys\Sln\FrmEleType.cs" />
+    <Compile Include="Template\Form\Sys\SysForm.cs" />
+    <Compile Include="Template\Ext\NodeToolbar.cs" />
+    <Compile Include="Template\Form\Sys\Sln\FrmField.cs" />
+    <Compile Include="Template\HungUp.cs" />
+    <Compile Include="Dev2Interface.cs" />
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\Bill.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\BillType.cs" />
+    <Compile Include="DTS\LoadTemplete.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DTS\WFDTS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DTS\ClearDB.cs" />
+    <Compile Include="DTS\RepariNodeFrmMap.cs" />
+    <Compile Include="DTS\DTSCheckFlowAll.cs" />
+    <Compile Include="DTS\GenerTemplate.cs" />
+    <Compile Include="DTS\DTSDominInfo.cs" />
+    <Compile Include="DTS\ReLoadNDxxxxxxRpt.cs" />
+    <Compile Include="DTS\PackAutoErrFields.cs" />
+    <Compile Include="DTS\GenerSiganture.cs" />
+    <Compile Include="DTS\OneKeyBackCCFlow.cs" />
+    <Compile Include="Template\CC\CCDept.cs" />
+    <Compile Include="Template\CC\CCEmp.cs" />
+    <Compile Include="Template\CC\CCStation.cs" />
+    <Compile Include="Template\CC\CCList.cs" />
+    <Compile Include="Template\Condition\Cond.cs" />
+    <Compile Include="Template\Condition\TurnTo.cs" />
+    <Compile Include="Template\Ext\BtnLab.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Template\FlowEmp.cs" />
+    <Compile Include="Template\FlowNode.cs" />
+    <Compile Include="Template\Form\Sys\SysFormTree.cs" />
+    <Compile Include="Template\Form\Frm.cs" />
+    <Compile Include="Template\Listen.cs" />
+    <Compile Include="Template\NodeFlow.cs" />
+    <Compile Include="Template\Ext\FlowSheet.cs" />
+    <Compile Include="Template\Ext\NodeSheet.cs" />
+    <Compile Include="Template\LabNote.cs" />
+    <Compile Include="Template\NodeReturn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Template\Task.cs" />
+    <Compile Include="Template\Form\FrmNode.cs" />
+    <Compile Include="Template\CC\CC.cs" />
+    <Compile Include="Template\NodeCancel.cs" />
+    <Compile Include="Template\FindWorker\FindWorkerRole.cs" />
+    <Compile Include="Glo.cs" />
+    <Compile Include="Template\Direction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Template\Flow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Template\FlowSort.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Template\Node.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Port\Dept.cs" />
+    <Compile Include="Port\Emp.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Port\EmpDept.cs" />
+    <Compile Include="Port\EmpStation.cs" />
+    <Compile Include="Port\Station.cs" />
+    <Compile Include="Port\DeptFlowSearch.cs" />
+    <Compile Include="Port\SMS.cs" />
+    <Compile Include="Template\PubLib\ButtonList.cs" />
+    <Compile Include="Template\PubLib\EnumLib.cs" />
+    <Compile Include="Template\PubLib\FlowAttr.cs" />
+    <Compile Include="Template\PubLib\NodeAttr.cs" />
+    <Compile Include="Template\Rpt\RptDept.cs" />
+    <Compile Include="Template\Rpt\MapRpt.cs" />
+    <Compile Include="Template\Rpt\RptStation.cs" />
+    <Compile Include="Template\Rpt\RptEmp.cs" />
+    <Compile Include="Template\WorkflowDefintionManager.cs" />
+    <Compile Include="Template\PushMsg.cs" />
+    <Compile Include="Template\TransferCustom.cs" />
+    <Compile Include="WF.cs" />
+    <Compile Include="WFEnum.cs" />
+    <Compile Include="WF\CCWork.cs" />
+    <Compile Include="WF\Entity\GenerWorkFlow.cs" />
+    <Compile Include="WF\EventBase\FlowEventBase.cs" />
+    <Compile Include="WF\EventBase\FEETemplete.cs" />
+    <Compile Include="WF\FlowOpList.cs" />
+    <Compile Include="WF\Entity\FrmWorkCheck.cs" />
+    <Compile Include="Data\GERpt.cs" />
+    <Compile Include="WF\Entity\DataApply.cs" />
+    <Compile Include="WF\Entity\GenerFH.cs" />
+    <Compile Include="Msg.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\BillTemplate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DTS\RepariDB.cs" />
+    <Compile Include="WF\SendReturnObj.cs" />
+    <Compile Include="WF\Entity\ShiftWork.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WF\Entity\WorkCheck.cs" />
+    <Compile Include="WF\WorkFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WF\WorkNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WF\Entity\GetTask.cs" />
+    <Compile Include="WF\Entity\ReturnWork.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WF\Entity\Track.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Template\WorkBase\GEWork.cs" />
+    <Compile Include="Template\WorkBase\Work.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Template\WorkBase\StartWork.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Template\WorkBase\GEStartWork.cs" />
+    <Compile Include="Port\WFEmp.cs" />
+    <Compile Include="WF\Entity\GenerWorkerList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WF\Entity\RememberMe.cs" />
+    <Compile Include="WF\WorkReturn.cs" />
+    <Compile Include="WF\WorkUnSend.cs" />
+    <Compile Include="WF\Entity\WorkFlowDeleteLog.cs" />
+    <Compile Include="Data\NDXRptBase.cs" />
+    <Compile Include="Xml\AdminMenu.cs" />
+    <Compile Include="Xml\DefVal.cs" />
+    <Compile Include="Xml\EventSource.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Xml\GovWordLeft.cs" />
+    <Compile Include="Xml\GovWordRight.cs" />
+    <Compile Include="Xml\MapDef\MapMenu.cs" />
+    <Compile Include="Xml\SysDataType.cs" />
+    <Compile Include="Xml\Toolbar.cs" />
+    <Compile Include="Xml\Tool.cs" />
+    <Compile Include="Xml\Lang.cs" />
+    <Compile Include="Xml\GovDocBar.cs" />
+    <Compile Include="Xml\FlowBar.cs" />
+    <Compile Include="Xml\EventList.cs" />
+    <Compile Include="Xml\FeatureSet.cs" />
+    <Compile Include="Xml\SDK.cs" />
+    <Compile Include="Xml\Skin.cs" />
+    <Compile Include="Xml\CondTypeXml.cs" />
+    <Compile Include="Xml\WorkOpt.cs" />
+    <Compile Include="Xml\WorkOptDtl.cs" />
+    <Compile Include="Xml\WatchDogXml.cs" />
+    <Compile Include="Xml\EventListDtl.cs" />
+    <Compile Include="Xml\MapDef\FrmEventXml.cs" />
+    <Compile Include="Xml\OneWorkXml.cs" />
+    <Compile Include="Xml\DBSrc.cs" />
+    <Compile Include="Xml\RptXml.cs" />
+    <Compile Include="Dev2InterfaceAnonymous.cs" />
+    <Compile Include="Xml\Mobile.cs" />
+    <Compile Include="Xml\OnlineHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BP.En30\BP.En30.csproj">
+      <Project>{F9D27BAB-758D-4205-BFC8-76B49A4C87F1}</Project>
+      <Name>BP.En30</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" standalone="yes" ?>
+<NewDataSet>
+  <!--
+   TBType=  Serial number 
+   Name= Name 
+   Note= Description 
+   For= What applies to the text box .
+   onblur,onchange,ondblclick,onkeypress,onkeyup
+  -->
+  <Item No="NotNull" Name=" Field can not be empty " Note=" Applied to the field can not be empty of people checking "  ForCtrl="TB" />
+  <Dtl ItemNo="NotNull" ForEvent="onblur" Exp="sdsdsd"   Msg=" Field can not be empty "   Note=""/>
+  <Dtl ItemNo="NotNull" ForEvent="onkeypress" Exp="sdsds" Msg=" Field can not be empty "  Note=""/>
+  
+  <Item No="Tel" Name=" Check the phone number is entered correctly " Note=" Enter the number of checks used in mobile phones "  ForCtrl="TB" />
+  <Dtl ItemNo="Tel"  ForEvent="onblur"  Exp="/^[+]{0,1}(\d){1,3}[ ]?([-]?((\d)|[ ]){1,12})+$/" Msg=" Illegal phone number " />
+
+  <Item No="TelNotNull" Name=" Check the phone number is entered correctly ( And can not be empty when submitting )" Note=" Enter the number of checks used in mobile phones "  ForCtrl="TB" />
+  <Dtl ItemNo="TelNotNull"  ForEvent="onblur"   Exp="/^[+]{0,1}(\d){1,3}[ ]?([-]?((\d)|[ ]){1,12})+$/" Msg=" Illegal phone number " />
+  <Dtl ItemNo="TelNotNull"  ForEvent="onsubmit" Exp="/^[+]{0,1}(\d){1,3}[ ]?([-]?((\d)|[ ]){1,12})+$/" Msg=" Illegal phone number " />
+  
+</NewDataSet>

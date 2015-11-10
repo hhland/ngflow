@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" standalone="yes" ?>
+<NewDataSet>
+	<!--  Extended configuration form elements   -->
+	<Item DFor="HandSiganture"  Tag1="@Label= Storage path @FType=String"  Tag2="@Label= Open window width @FType=Int"   Tag3="@Label= Window opening height @FType=Int" Tag4="" />
+  <Item DFor="FrmFrame"   Tag1="@Label=Url@FType=String"  Tag2="@Label= Width @FType=Int"   Tag3="@Label= Height @FType=Int" Tag4="" />
+</NewDataSet>

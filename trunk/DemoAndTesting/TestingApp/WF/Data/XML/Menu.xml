@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <!--  Process Management   -->
+  <Item No="01" CH=" Process Management " RU="Process Management" EN="Flow Manage" Url="" Img="/WF/Img/Pub/Bill.gif" Enable="1" />
+  <Item No="0102" CH=" Reporting Process " RU="Поток заявлений" EN="Flow Report" Url="/WF/Comm/PanelEns.aspx?EnsName=BP.WF.CHOfFlows" Img="/WF/Img/Pub/Table.gif" Enable="1" />
+  <Item No="0102" CH=" Process Query " RU="Процесс запроса" EN="Flow Search" Url="/WF/Comm/PanelEns.aspx?EnsName=BP.WF.CHOfFlows" Img="/WF/Img/Pub/Table.gif" Enable="1" />
+  <Item No="0102" CH=" Process self-test " RU="Процесс самоопределения --" EN="Flow Check" Url="../SelfTest.aspx" Img="/WF/Img/Pub/Table.gif" Enable="0" />
+  <Item No="0102" CH=" Documents inquiry " RU="Инструменты запросы" EN="Bill Search" Url="/WF/Comm/PanelEns.aspx?EnsName=BP.WF.Bills" Img="/WF/Img/Pub/Table.gif" Enable="1" />
+  <Item No="0102" CH=" Node query analysis " RU="Запрос узла анализ" EN="Node Search" Url="../FlowList.aspx" Img="/WF/Img/Pub/Table.gif" Enable="1" />
+  <!-- Document management -->
+  <Item No="02" CH=" And the documents " RU="Договоры и документы" EN="Bill AND Bill" Img="/WF/Img/Pub/Bill.gif" Enable="1" />
+  <Item No="0201" CH=" Inquiry " RU="Запрос" EN="Search" Url="/WF/Comm/PanelEns.aspx?EnsName=BP.WF.Bills" Img="/WF/Img/Pub/Table.gif" Enable="1" />
+  <Item No="0201" CH=" Analysis " RU="Анализ" EN="feinxi" Url="/WF/Comm/GroupEnsMNum.aspx?EnsName=BP.WF.Bills" Img="/WF/Img/Pub/Table.gif" Enable="1" />
+  
+  <!--  Process data query   -->
+  <Item No="03" CH=" Process evaluation " RU="Процесс оценки" EN="FlowCheck" Url="" Img="/WF/Img/Pub/Bill.gif" Enable="1" />
+  <Item No="0301" CH=" Process quality assessment " RU="Оценка качества процесса" EN="Check" Img="/WF/Img/Pub/Bill.gif" Enable="1" />
+  <Item No="030101" CH=" Inquiry " RU="Запрос" EN="Search" Url="/WF/Comm/PanelEns.aspx?EnsName=BP.WF.CHOfQLs" Img="/WF/Img/Pub/Table.gif" Enable="1" />
+  <Item No="030101" CH=" Analysis " RU="Анализ" EN="feinxi" Url="/WF/Comm/GroupEnsMNum.aspx?EnsName=BP.WF.CHOfQLs" Img="/WF/Img/Pub/Table.gif" Enable="1" />
+  <Item No="0302" CH=" Aging Assessment " RU="Испытание на старение" EN="check" Img="/WF/Img/Pub/Bill.gif" Enable="1" />
+  <Item No="030201" CH=" Inquiry " RU="Запрос" EN="Search" Url="/WF/Comm/PanelEns.aspx?EnsName=BP.WF.CHOfQLs" Img="/WF/Img/Pub/Table.gif" Enable="1" />
+  <Item No="030201" CH=" Analysis " RU="Анализ" EN="feinxi" Url="/WF/Comm/GroupEnsMNum.aspx?EnsName=BP.WF.CHOfQLs" Img="/WF/Img/Pub/Table.gif" Enable="1" />
+  <!--  System Maintenance   -->
+  <Item No="09" CH=" System Maintenance " RU="Система технического обслуживания" EN="System" Url="" Img="/WF/Img/Pub/Bill.gif" Enable="1" DFor="admin" />
+  <Item No="0902" CH=" Maintenance jobs " RU="Обслуживание рабочих мест" EN="Stations" Url="/WF/Comm/PanelEns.aspx?EnsName=BP.Port.Stations" Img="/WF/Img/Pub/Table.gif" Enable="1" />
+  <Item No="0902" CH=" Maintenance department " RU="Подразделения по поддержанию" EN="Depts" Url="/WF/Comm/PanelEns.aspx?EnsName=BP.Port.Depts" Img="/WF/Img/Pub/Table.gif" Enable="1" />
+  <Item No="0902" CH=" Operator Maintenance " RU="Оператор обслуживание" EN="Users" Url="/WF/Comm/PanelEns.aspx?EnsName=BP.Port.Emps&amp;IsReadonly=1" Img="/WF/Img/Pub/Table.gif" Enable="1" />
+  <Item No="0902" CH=" Webmaster Tools " RU="Инструменты для веб-мастеров" EN="Admin Tools" Url="/WF/Comm/Sys/AdminTools.aspx" Img="/WF/Img/Pub/Table.gif" Enable="1" />
+  <Item No="0902" CH=" User Tools " RU="Пользователь инструменты" EN="User Tools" Url="/WF/Comm/Sys/UserTools.aspx" Img="/WF/Img/Pub/Table.gif" Enable="1" />
+  <Item No="0902" CH=" Documents Maintenance " RU="Документ обслуживание" EN="Bill" Url="/WF/Comm/PanelEns.aspx?EnsName=BP.WF.BillTemplates&amp;IsReadonly=1" Img="/WF/Img/Pub/Table.gif" Enable="1" />
+  <Item No="0902" CH=" Process Instructions " Url="../FlowHelp.aspx" DFor="admin" Img="/WF/Img/Pub/Table.gif" Enable="1" RU="Руководство процессами" EN="Flow hand Bill" />
+
+
+   <!--  Reports menu  -->
+    
+    
+</NewDataSet>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <!--  Data Sources :
+  No  ID tag must be unique .
+  SrcType  Type :  SrcType=DB  Database , SrcType=WS 是WebServices.
+  URL:  String links .  In the case of DBType=DB 
+  -->
+  <Item No="ccflow" Name="ccflow Application data source " SrcType="DB" Url="AppCenterDSN" DESC=" This man system default can not be deleted ."   />
+  <Item No="ccflowWS" Name="ccflow Interface provided "   SrcType="DB" Url="AppCenterDSN" DESC="."   />
+    
+</NewDataSet>
