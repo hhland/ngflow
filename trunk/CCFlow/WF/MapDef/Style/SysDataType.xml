@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DS>
+  <Item No="String" Name=" Character " Desc="" />
+  <Item No="Int" Name=" Integer " Desc="" />
+  <Item No="Money" Name=" Amount Type " Desc="" />
+  <Item No="Float" Name=" Float " Desc="" />
+  <Item No="Date" Name=" Date type " Desc="" />
+  <Item No="DateTime" Name=" Datetime type " Desc="" />
+  <Item No="Bool" Name="Boole type(Yes/No)" Desc="" />
+  <Item No="Enum" Name=" Enumerated " Desc="" />
+  <Item No="FK" Name=" Foreign key type " Desc="" />
+
+  <MapMenu No="FK" Name=" Foreign key type " Desc="" />
+  <MapMenu No="FK" Name=" Foreign key type " Desc="" />
+
+</DS>
+

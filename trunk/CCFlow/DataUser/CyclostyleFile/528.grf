@@ -1,0 +1,271 @@
+﻿Object Report
+	Version='5.8.0.6'
+	Title='你的报表标题'
+	Object Font
+		Name='宋体'
+		Size=105000,0
+		Weight=400
+		Charset=134
+	End
+	Object Printer
+	End
+	Items Section
+		Item
+			Type=PageHeader
+			Height=1.32292
+			Items Control
+				Item
+					Type=StaticBox
+					Name='StaticBox1'
+					Left=3.99521
+					Top=0.211667
+					Width=6.40292
+					Height=0.79375
+					Object Font
+						Name='宋体'
+						Size=157500,0
+						Weight=400
+						Charset=134
+					End
+					Text='CCFLOW 测试Grid++报表'
+				End
+			End
+		End
+		Item
+			Type=ReportHeader
+			Name='ReportHeader1'
+			CanGrow=T
+			Height=3.81
+			Items Control
+				Item
+					Type=SubReport
+					Name='jsonDtl0'
+					Left=0.211667
+					Width=15.7956
+					Height=3.59833
+Object Report
+	Version='5.8.0.6'
+	Title='你的报表标题'
+	Object Font
+		Name='宋体'
+		Size=105000,0
+		Weight=400
+		Charset=134
+	End
+	Object Printer
+	End
+	Object DetailGrid
+		Object Recordset
+			Items Field
+				Item
+					Name='CGDDText'
+				End
+				Item
+					Name='FindLeaderText'
+				End
+				Item
+					Name='FYLXText'
+				End
+			End
+		End
+		Items Column
+			Item
+				Name='CGDD'
+				Width=4.7625
+			End
+			Item
+				Name='FindLeader'
+				Width=7.88458
+			End
+			Item
+				Name='FYLX'
+				Width=2.93688
+			End
+		End
+		Object ColumnContent
+			Height=0.608542
+			Items ColumnContentCell
+				Item
+					Column='CGDD'
+					DataField='CGDDText'
+				End
+				Item
+					Column='FindLeader'
+					DataField='FindLeaderText'
+				End
+				Item
+					Column='FYLX'
+					DataField='FYLXText'
+				End
+			End
+		End
+		Object ColumnTitle
+			Height=0.635
+			Items ColumnTitleCell
+				Item
+					GroupTitle=F
+					Column='CGDD'
+					Text='采购地点'
+				End
+				Item
+					GroupTitle=F
+					Column='FindLeader'
+					Text='领导'
+				End
+				Item
+					GroupTitle=F
+					Column='FYLX'
+					Text='费用类型'
+				End
+			End
+		End
+	End
+	Items Section
+		Item
+			Type=ReportHeader
+			Name='ReportHeader1'
+			Height=0.978958
+			Items Control
+				Item
+					Type=StaticBox
+					Name='StaticBox1'
+					Center=Horizontal
+					Left=5.84729
+					Top=0.185208
+					Width=4.31271
+					Height=0.582083
+					Object Font
+						Name='宋体'
+						Size=150000,0
+						Bold=T
+						Charset=134
+					End
+					Text='客户基本信息2'
+				End
+			End
+		End
+	End
+End
+				End
+			End
+		End
+		Item
+			Type=ReportHeader
+			Name='ReportHeader2'
+			CanGrow=T
+			Height=3.81
+			Items Control
+				Item
+					Type=SubReport
+					Name='jsonDtl1'
+					Left=0.211667
+					Width=15.7956
+					Height=3.59833
+Object Report
+	Version='5.8.0.6'
+	Title='你的报表标题'
+	Object Font
+		Name='宋体'
+		Size=105000,0
+		Weight=400
+		Charset=134
+	End
+	Object Printer
+	End
+	Object DetailGrid
+		Object Recordset
+			Items Field
+				Item
+					Name='CGDDText'
+				End
+				Item
+					Name='FindLeaderText'
+				End
+				Item
+					Name='FYLXText'
+				End
+			End
+		End
+		Items Column
+			Item
+				Name='CGDD'
+				Width=4.7625
+			End
+			Item
+				Name='FindLeader'
+				Width=7.88458
+			End
+			Item
+				Name='FYLX'
+				Width=2.93688
+			End
+		End
+		Object ColumnContent
+			Height=0.608542
+			Items ColumnContentCell
+				Item
+					Column='CGDD'
+					DataField='CGDDText'
+				End
+				Item
+					Column='FindLeader'
+					DataField='FindLeaderText'
+				End
+				Item
+					Column='FYLX'
+					DataField='FYLXText'
+				End
+			End
+		End
+		Object ColumnTitle
+			Height=0.635
+			Items ColumnTitleCell
+				Item
+					GroupTitle=F
+					Column='CGDD'
+					Text='采购地点'
+				End
+				Item
+					GroupTitle=F
+					Column='FindLeader'
+					Text='领导'
+				End
+				Item
+					GroupTitle=F
+					Column='FYLX'
+					Text='费用类型'
+				End
+			End
+		End
+	End
+	Items Section
+		Item
+			Type=ReportHeader
+			Name='ReportHeader1'
+			Height=0.978958
+			Items Control
+				Item
+					Type=StaticBox
+					Name='StaticBox1'
+					Center=Horizontal
+					Left=5.84729
+					Top=0.185208
+					Width=4.31271
+					Height=0.582083
+					Object Font
+						Name='宋体'
+						Size=150000,0
+						Bold=T
+						Charset=134
+					End
+					Text='客户基本信息2'
+				End
+			End
+		End
+	End
+End
+				End
+			End
+		End
+	End
+End

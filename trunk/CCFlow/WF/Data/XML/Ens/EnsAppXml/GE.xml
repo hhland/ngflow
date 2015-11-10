@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <!--
+   Action : Description and settings  Ens  Information .
+   Other : Information is stored in BP.Sys.AppCfg
+  DBType = String Int Enum Boolen
+  -->
+  <!--  Information Release  -->
+  <Item EnsName="BP.GE.Infos" No="NumOfTabList" Name="Tab Display the maximum number of pages " DefVal="" 
+        Desc=" Category pages will prevent too much impact ." DBType="Int" EnumKey="NumOfTabList"  EnumVals="@0=1@1=2@2=3@3=4" WinCardH="300" WinCardW="300" />
+  <Item EnsName="BP.GE.Infos" No="HotList" Name=" Information Content tab " DefVal=" Information Release " 
+        Desc=" Displayed in Title On top of ." DBType="String" EnumKey="HotList" EnumVals="@0=Left@1=Right@2=Up@3=Down" WinCardH="300" />
+  <Item EnsName="BP.GE.Infos" No="PosSort" Name=" Location information displayed category " DefVal="10" 
+        Desc=" For about effective " DBType="Enum" EnumKey="Pos" EnumVals="@0=Left@1=Right@2=Up@3=Down" WinCardH="300" />
+</NewDataSet>

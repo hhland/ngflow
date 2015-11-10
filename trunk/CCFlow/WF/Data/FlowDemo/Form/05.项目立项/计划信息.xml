@@ -1,0 +1,1615 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Sys_MapData>
+    <No>GT_LXSQ</No>
+    <Name> Program information </Name>
+    <EnPK />
+    <PTable>Z_JH</PTable>
+    <Dtls />
+    <FrmW>900</FrmW>
+    <FrmH>1200</FrmH>
+    <TableCol>4</TableCol>
+    <TableWidth>600</TableWidth>
+    <DBURL>0</DBURL>
+    <Tag />
+    <FrmType>1</FrmType>
+    <FK_FrmSort>107</FK_FrmSort>
+    <FK_FormTree>107</FK_FormTree>
+    <AppType>0</AppType>
+    <Note />
+    <Designer />
+    <DesignerUnit />
+    <DesignerContact />
+    <AtPara />
+    <GUID />
+    <FormRunType>1</FormRunType>
+    <URL />
+    <SearchKeys />
+    <FK_Flow />
+    <IsSearchKey>0</IsSearchKey>
+    <DTSearchWay>0</DTSearchWay>
+    <DTSearchKey />
+    <ParentMapData />
+    <Idx>100</Idx>
+  </Sys_MapData>
+  <Sys_FrmLine>
+    <MyPK>Line140104180402</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <X>0</X>
+    <Y>0</Y>
+    <X1>42</X1>
+    <Y1>281</Y1>
+    <X2>639</X2>
+    <Y2>281</Y2>
+    <BorderWidth>2</BorderWidth>
+    <BorderColor>Black</BorderColor>
+  </Sys_FrmLine>
+  <Sys_FrmLine>
+    <MyPK>Line140104180441</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <X>0</X>
+    <Y>0</Y>
+    <X1>42</X1>
+    <Y1>46</Y1>
+    <X2>639</X2>
+    <Y2>46</Y2>
+    <BorderWidth>2</BorderWidth>
+    <BorderColor>Black</BorderColor>
+  </Sys_FrmLine>
+  <Sys_FrmLine>
+    <MyPK>Line140118044152_1</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <X>0</X>
+    <Y>0</Y>
+    <X1>40</X1>
+    <Y1>522</Y1>
+    <X2>637</X2>
+    <Y2>522</Y2>
+    <BorderWidth>2</BorderWidth>
+    <BorderColor>Black</BorderColor>
+  </Sys_FrmLine>
+  <Sys_FrmLine>
+    <MyPK>Line140118044532_1</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <X>0</X>
+    <Y>0</Y>
+    <X1>44</X1>
+    <Y1>809</Y1>
+    <X2>641</X2>
+    <Y2>809</Y2>
+    <BorderWidth>2</BorderWidth>
+    <BorderColor>Black</BorderColor>
+  </Sys_FrmLine>
+  <Sys_FrmLab>
+    <MyPK>Lab140118042839</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <Text> Reply Date </Text>
+    <X>424</X>
+    <Y>175</Y>
+    <FontSize>11</FontSize>
+    <FontColor>#FF000000</FontColor>
+    <FontName>Portable User Interface</FontName>
+    <FontStyle>Normal</FontStyle>
+    <IsBold>0</IsBold>
+    <IsItalic>0</IsItalic>
+  </Sys_FrmLab>
+  <Sys_FrmLab>
+    <MyPK>Lab140118042855</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <Text> Construction period </Text>
+    <X>186</X>
+    <Y>206</Y>
+    <FontSize>11</FontSize>
+    <FontColor>#FF000000</FontColor>
+    <FontName>Portable User Interface</FontName>
+    <FontStyle>Normal</FontStyle>
+    <IsBold>0</IsBold>
+    <IsItalic>0</IsItalic>
+  </Sys_FrmLab>
+  <Sys_FrmLab>
+    <MyPK>Lab140118042949_1</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <Text> Planned investment information </Text>
+    <X>38</X>
+    <Y>245</Y>
+    <FontSize>22</FontSize>
+    <FontColor>#FF000000</FontColor>
+    <FontName>Portable User Interface</FontName>
+    <FontStyle>Normal</FontStyle>
+    <IsBold>1</IsBold>
+    <IsItalic>0</IsItalic>
+  </Sys_FrmLab>
+  <Sys_FrmLab>
+    <MyPK>Lab140118043104</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <Text> Total investment ( Ten thousand yuan )</Text>
+    <X>111</X>
+    <Y>289</Y>
+    <FontSize>11</FontSize>
+    <FontColor>#FF000000</FontColor>
+    <FontName>Portable User Interface</FontName>
+    <FontStyle>Normal</FontStyle>
+    <IsBold>0</IsBold>
+    <IsItalic>0</IsItalic>
+  </Sys_FrmLab>
+  <Sys_FrmLab>
+    <MyPK>Lab140118043137</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <Text> Local funding ( Ten thousand yuan )</Text>
+    <X>392</X>
+    <Y>294</Y>
+    <FontSize>11</FontSize>
+    <FontColor>#FF000000</FontColor>
+    <FontName>Portable User Interface</FontName>
+    <FontStyle>Normal</FontStyle>
+    <IsBold>0</IsBold>
+    <IsItalic>0</IsItalic>
+  </Sys_FrmLab>
+  <Sys_FrmLab>
+    <MyPK>Lab140118043233</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <Text> New central distribution fee funds ( Ten thousand yuan )</Text>
+    <X>77</X>
+    <Y>327</Y>
+    <FontSize>11</FontSize>
+    <FontColor>#FF000000</FontColor>
+    <FontName>Portable User Interface</FontName>
+    <FontStyle>Normal</FontStyle>
+    <IsBold>0</IsBold>
+    <IsItalic>0</IsItalic>
+  </Sys_FrmLab>
+  <Sys_FrmLab>
+    <MyPK>Lab140118043309</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <Text> New local retention fee funds ( Ten thousand yuan )</Text>
+    <X>345</X>
+    <Y>332</Y>
+    <FontSize>11</FontSize>
+    <FontColor>#FF000000</FontColor>
+    <FontName>Portable User Interface</FontName>
+    <FontStyle>Normal</FontStyle>
+    <IsBold>0</IsBold>
+    <IsItalic>0</IsItalic>
+  </Sys_FrmLab>
+  <Sys_FrmLab>
+    <MyPK>Lab140118043345</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <Text> Land reclamation fees ( Ten thousand yuan )</Text>
+    <X>126</X>
+    <Y>365</Y>
+    <FontSize>11</FontSize>
+    <FontColor>#FF000000</FontColor>
+    <FontName>Portable User Interface</FontName>
+    <FontStyle>Normal</FontStyle>
+    <IsBold>0</IsBold>
+    <IsItalic>0</IsItalic>
+  </Sys_FrmLab>
+  <Sys_FrmLab>
+    <MyPK>Lab140118043413</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <Text> Supplement their own funds farmland ( Ten thousand yuan )</Text>
+    <X>354</X>
+    <Y>372</Y>
+    <FontSize>11</FontSize>
+    <FontColor>#FF000000</FontColor>
+    <FontName>Portable User Interface</FontName>
+    <FontStyle>Normal</FontStyle>
+    <IsBold>0</IsBold>
+    <IsItalic>0</IsItalic>
+  </Sys_FrmLab>
+  <Sys_FrmLab>
+    <MyPK>Lab140118044052</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <Text> Land revenue and land development for agriculture ( Ten thousand yuan )</Text>
+    <X>32</X>
+    <Y>401</Y>
+    <FontSize>11</FontSize>
+    <FontColor>#FF000000</FontColor>
+    <FontName>Portable User Interface</FontName>
+    <FontStyle>Normal</FontStyle>
+    <IsBold>0</IsBold>
+    <IsItalic>0</IsItalic>
+  </Sys_FrmLab>
+  <Sys_FrmLab>
+    <MyPK>Lab140118044108</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <Text> Land reclamation fees ( Ten thousand yuan )</Text>
+    <X>389</X>
+    <Y>412</Y>
+    <FontSize>11</FontSize>
+    <FontColor>#FF000000</FontColor>
+    <FontName>Portable User Interface</FontName>
+    <FontStyle>Normal</FontStyle>
+    <IsBold>0</IsBold>
+    <IsItalic>0</IsItalic>
+  </Sys_FrmLab>
+  <Sys_FrmLab>
+    <MyPK>Lab140118044124</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <Text> Land reclamation obligations invest ( Ten thousand yuan )</Text>
+    <X>77</X>
+    <Y>451</Y>
+    <FontSize>11</FontSize>
+    <FontColor>#FF000000</FontColor>
+    <FontName>Portable User Interface</FontName>
+    <FontStyle>Normal</FontStyle>
+    <IsBold>0</IsBold>
+    <IsItalic>0</IsItalic>
+  </Sys_FrmLab>
+  <Sys_FrmLab>
+    <MyPK>Lab140118044132</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <Text> Other funds ( Ten thousand yuan )</Text>
+    <X>399</X>
+    <Y>449</Y>
+    <FontSize>11</FontSize>
+    <FontColor>#FF000000</FontColor>
+    <FontName>Portable User Interface</FontName>
+    <FontStyle>Normal</FontStyle>
+    <IsBold>0</IsBold>
+    <IsItalic>0</IsItalic>
+  </Sys_FrmLab>
+  <Sys_FrmLab>
+    <MyPK>Lab140118044142_1</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <Text> Plans to build information </Text>
+    <X>37</X>
+    <Y>481</Y>
+    <FontSize>22</FontSize>
+    <FontColor>#FF000000</FontColor>
+    <FontName>Portable User Interface</FontName>
+    <FontStyle>Normal</FontStyle>
+    <IsBold>1</IsBold>
+    <IsItalic>0</IsItalic>
+  </Sys_FrmLab>
+  <Sys_FrmLab>
+    <MyPK>Lab140118044232</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <Text> The total size of the building ( Ha )</Text>
+    <X>138</X>
+    <Y>534</Y>
+    <FontSize>11</FontSize>
+    <FontColor>#FF000000</FontColor>
+    <FontName>Portable User Interface</FontName>
+    <FontStyle>Normal</FontStyle>
+    <IsBold>0</IsBold>
+    <IsItalic>0</IsItalic>
+  </Sys_FrmLab>
+  <Sys_FrmLab>
+    <MyPK>Lab140118044322</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <Text> Finishing size ( Ha )</Text>
+    <X>385</X>
+    <Y>535</Y>
+    <FontSize>11</FontSize>
+    <FontColor>#FF000000</FontColor>
+    <FontName>Portable User Interface</FontName>
+    <FontStyle>Normal</FontStyle>
+    <IsBold>0</IsBold>
+    <IsItalic>0</IsItalic>
+  </Sys_FrmLab>
+  <Sys_FrmLab>
+    <MyPK>Lab140118044333</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <Text> Basic Farmland Consolidation scale ( Ha )</Text>
+    <X>105</X>
+    <Y>570</Y>
+    <FontSize>11</FontSize>
+    <FontColor>#FF000000</FontColor>
+    <FontName>Portable User Interface</FontName>
+    <FontStyle>Normal</FontStyle>
+    <IsBold>0</IsBold>
+    <IsItalic>0</IsItalic>
+  </Sys_FrmLab>
+  <Sys_FrmLab>
+    <MyPK>Lab140118044345</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <Text> Scale reclamation ( Ha )</Text>
+    <X>384</X>
+    <Y>571</Y>
+    <FontSize>11</FontSize>
+    <FontColor>#FF000000</FontColor>
+    <FontName>Portable User Interface</FontName>
+    <FontStyle>Normal</FontStyle>
+    <IsBold>0</IsBold>
+    <IsItalic>0</IsItalic>
+  </Sys_FrmLab>
+  <Sys_FrmLab>
+    <MyPK>Lab140118044358</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <Text> Development scale ( Ha )</Text>
+    <X>149</X>
+    <Y>610</Y>
+    <FontSize>11</FontSize>
+    <FontColor>#FF000000</FontColor>
+    <FontName>Portable User Interface</FontName>
+    <FontStyle>Normal</FontStyle>
+    <IsBold>0</IsBold>
+    <IsItalic>0</IsItalic>
+  </Sys_FrmLab>
+  <Sys_FrmLab>
+    <MyPK>Lab140118044410</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <Text> Plans to build a high standard @ Scale of basic farmland </Text>
+    <X>382</X>
+    <Y>602</Y>
+    <FontSize>11</FontSize>
+    <FontColor>#FF000000</FontColor>
+    <FontName>Portable User Interface</FontName>
+    <FontStyle>Normal</FontStyle>
+    <IsBold>0</IsBold>
+    <IsItalic>0</IsItalic>
+  </Sys_FrmLab>
+  <Sys_FrmLab>
+    <MyPK>Lab140118044428</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <Text> High standard of basic farmland construction conditions </Text>
+    <X>101</X>
+    <Y>649</Y>
+    <FontSize>11</FontSize>
+    <FontColor>#FF000000</FontColor>
+    <FontName>Portable User Interface</FontName>
+    <FontStyle>Normal</FontStyle>
+    <IsBold>0</IsBold>
+    <IsItalic>0</IsItalic>
+  </Sys_FrmLab>
+  <Sys_FrmLab>
+    <MyPK>Lab140118044441</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <Text> New arable land ( Ha )</Text>
+    <X>105.73</X>
+    <Y>690.91</Y>
+    <FontSize>11</FontSize>
+    <FontColor>#FF000000</FontColor>
+    <FontName>Portable User Interface</FontName>
+    <FontStyle>Normal</FontStyle>
+    <IsBold>0</IsBold>
+    <IsItalic>0</IsItalic>
+  </Sys_FrmLab>
+  <Sys_FrmLab>
+    <MyPK>Lab140118044458</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <Text> Disaster destroyed arable land ( Ha )</Text>
+    <X>107.36</X>
+    <Y>731.73</Y>
+    <FontSize>11</FontSize>
+    <FontColor>#FF000000</FontColor>
+    <FontName>Portable User Interface</FontName>
+    <FontStyle>Normal</FontStyle>
+    <IsBold>0</IsBold>
+    <IsItalic>0</IsItalic>
+  </Sys_FrmLab>
+  <Sys_FrmLab>
+    <MyPK>Lab140118044511</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <Text> Program can be used to @ Occupation and retrieval area ( Ha )</Text>
+    <X>374.82</X>
+    <Y>723.64</Y>
+    <FontSize>11</FontSize>
+    <FontColor>#FF000000</FontColor>
+    <FontName>Portable User Interface</FontName>
+    <FontStyle>Normal</FontStyle>
+    <IsBold>0</IsBold>
+    <IsItalic>0</IsItalic>
+  </Sys_FrmLab>
+  <Sys_FrmLab>
+    <MyPK>Lab140118044527_1</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <Text> Project handling personal information </Text>
+    <X>36</X>
+    <Y>769.91</Y>
+    <FontSize>22</FontSize>
+    <FontColor>#FF000000</FontColor>
+    <FontName>Portable User Interface</FontName>
+    <FontStyle>Normal</FontStyle>
+    <IsBold>1</IsBold>
+    <IsItalic>0</IsItalic>
+  </Sys_FrmLab>
+  <Sys_FrmLab>
+    <MyPK>Lab140118044602</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <Text> Informant information </Text>
+    <X>159</X>
+    <Y>834.09</Y>
+    <FontSize>11</FontSize>
+    <FontColor>#FF000000</FontColor>
+    <FontName>Portable User Interface</FontName>
+    <FontStyle>Normal</FontStyle>
+    <IsBold>0</IsBold>
+    <IsItalic>0</IsItalic>
+  </Sys_FrmLab>
+  <Sys_FrmLab>
+    <MyPK>Lab140118044639</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <Text> Provincial Leader </Text>
+    <X>416</X>
+    <Y>834.09</Y>
+    <FontSize>11</FontSize>
+    <FontColor>#FF000000</FontColor>
+    <FontName>Portable User Interface</FontName>
+    <FontStyle>Normal</FontStyle>
+    <IsBold>0</IsBold>
+    <IsItalic>0</IsItalic>
+  </Sys_FrmLab>
+  <Sys_FrmLab>
+    <MyPK>Lab140118044659</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <Text> Information informant Phone </Text>
+    <X>126</X>
+    <Y>879.18</Y>
+    <FontSize>11</FontSize>
+    <FontColor>#FF000000</FontColor>
+    <FontName>Portable User Interface</FontName>
+    <FontStyle>Normal</FontStyle>
+    <IsBold>0</IsBold>
+    <IsItalic>0</IsItalic>
+  </Sys_FrmLab>
+  <Sys_FrmLab>
+    <MyPK>Lab140118044753</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <Text> Provincial Leader Phone </Text>
+    <X>399.91</X>
+    <Y>879.18</Y>
+    <FontSize>11</FontSize>
+    <FontColor>#FF000000</FontColor>
+    <FontName>Portable User Interface</FontName>
+    <FontStyle>Normal</FontStyle>
+    <IsBold>0</IsBold>
+    <IsItalic>0</IsItalic>
+  </Sys_FrmLab>
+  <Sys_FrmLab>
+    <MyPK>Lab140118044812</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <Text> Information furnished units </Text>
+    <X>162</X>
+    <Y>931</Y>
+    <FontSize>11</FontSize>
+    <FontColor>#FF000000</FontColor>
+    <FontName>Portable User Interface</FontName>
+    <FontStyle>Normal</FontStyle>
+    <IsBold>0</IsBold>
+    <IsItalic>0</IsItalic>
+  </Sys_FrmLab>
+  <Sys_FrmLab>
+    <MyPK>Lab140118044821</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <Text> Information Audit Unit </Text>
+    <X>408</X>
+    <Y>931</Y>
+    <FontSize>11</FontSize>
+    <FontColor>#FF000000</FontColor>
+    <FontName>Portable User Interface</FontName>
+    <FontStyle>Normal</FontStyle>
+    <IsBold>0</IsBold>
+    <IsItalic>0</IsItalic>
+  </Sys_FrmLab>
+  <Sys_FrmLab>
+    <MyPK>Lab140118101050</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <Text> Plan Information </Text>
+    <X>40</X>
+    <Y>8</Y>
+    <FontSize>22</FontSize>
+    <FontColor>#FF000000</FontColor>
+    <FontName>Portable User Interface</FontName>
+    <FontStyle>Normal</FontStyle>
+    <IsBold>1</IsBold>
+    <IsItalic>0</IsItalic>
+  </Sys_FrmLab>
+  <Sys_FrmLab>
+    <MyPK>Lab140118101134</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <Text> Project Title </Text>
+    <X>161</X>
+    <Y>54</Y>
+    <FontSize>11</FontSize>
+    <FontColor>#FF000000</FontColor>
+    <FontName>Portable User Interface</FontName>
+    <FontStyle>Normal</FontStyle>
+    <IsBold>0</IsBold>
+    <IsItalic>0</IsItalic>
+  </Sys_FrmLab>
+  <Sys_FrmLab>
+    <MyPK>Lab140118101203</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <Text> Project Location </Text>
+    <X>155</X>
+    <Y>92</Y>
+    <FontSize>11</FontSize>
+    <FontColor>#FF000000</FontColor>
+    <FontName>Portable User Interface</FontName>
+    <FontStyle>Normal</FontStyle>
+    <IsBold>0</IsBold>
+    <IsItalic>0</IsItalic>
+  </Sys_FrmLab>
+  <Sys_FrmLab>
+    <MyPK>Lab140118101237</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <Text> Project budget numbers </Text>
+    <X>404</X>
+    <Y>91</Y>
+    <FontSize>11</FontSize>
+    <FontColor>#FF000000</FontColor>
+    <FontName>Portable User Interface</FontName>
+    <FontStyle>Normal</FontStyle>
+    <IsBold>0</IsBold>
+    <IsItalic>0</IsItalic>
+  </Sys_FrmLab>
+  <Sys_FrmLab>
+    <MyPK>Lab140118101322</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <Text> Authorities issued a budget plan </Text>
+    <X>127</X>
+    <Y>130</Y>
+    <FontSize>11</FontSize>
+    <FontColor>#FF000000</FontColor>
+    <FontName>Portable User Interface</FontName>
+    <FontStyle>Normal</FontStyle>
+    <IsBold>0</IsBold>
+    <IsItalic>0</IsItalic>
+  </Sys_FrmLab>
+  <Sys_FrmLab>
+    <MyPK>Lab140118101459</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <Text> Budget and Planning issued a document number </Text>
+    <X>378</X>
+    <Y>133</Y>
+    <FontSize>11</FontSize>
+    <FontColor>#FF000000</FontColor>
+    <FontName>Portable User Interface</FontName>
+    <FontStyle>Normal</FontStyle>
+    <IsBold>0</IsBold>
+    <IsItalic>0</IsItalic>
+  </Sys_FrmLab>
+  <Sys_FrmLab>
+    <MyPK>Lab140118101608</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <Text> Budget and planning documents issued by name </Text>
+    <X>109</X>
+    <Y>168</Y>
+    <FontSize>11</FontSize>
+    <FontColor>#FF000000</FontColor>
+    <FontName>Portable User Interface</FontName>
+    <FontStyle>Normal</FontStyle>
+    <IsBold>0</IsBold>
+    <IsItalic>0</IsItalic>
+  </Sys_FrmLab>
+  <Sys_MapAttr>
+    <MyPK>GT_LXSQ_JH_PFRQ</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <KeyOfEn>JH_PFRQ</KeyOfEn>
+    <Name> Reply Date </Name>
+    <UIContralType>0</UIContralType>
+    <MyDataType>6</MyDataType>
+    <LGType>0</LGType>
+    <UIWidth>100</UIWidth>
+    <UIHeight>23</UIHeight>
+    <UIRefKey />
+    <UIRefKeyText />
+    <UIVisible>1</UIVisible>
+    <X>480.36</X>
+    <Y>173.09</Y>
+  </Sys_MapAttr>
+  <Sys_MapAttr>
+    <MyPK>GT_LXSQ_JH_PFWH</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <KeyOfEn>JH_PFWH</KeyOfEn>
+    <Name> Budget and Planning issued a document number </Name>
+    <DefVal />
+    <UIContralType>0</UIContralType>
+    <MyDataType>1</MyDataType>
+    <LGType>0</LGType>
+    <UIWidth>100</UIWidth>
+    <UIHeight>23</UIHeight>
+    <MinLen>0</MinLen>
+    <MaxLen>300</MaxLen>
+    <UIBindKey />
+    <UIRefKey />
+    <UIRefKeyText />
+    <UIVisible>1</UIVisible>
+    <UIIsEnable>1</UIIsEnable>
+    <UIIsLine>0</UIIsLine>
+    <IDX>0</IDX>
+    <GroupID>177</GroupID>
+    <IsSigan>0</IsSigan>
+    <X>480</X>
+    <Y>129</Y>
+    <GUID />
+    <Tag />
+    <EditType>0</EditType>
+    <ColSpan>1</ColSpan>
+  </Sys_MapAttr>
+  <Sys_MapAttr>
+    <MyPK>GT_LXSQ_JH_TZ_DF_DFLCXZF</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <KeyOfEn>JH_TZ_DF_DFLCXZF</KeyOfEn>
+    <Name> New local retention fee funds ( Ten thousand yuan )</Name>
+    <DefVal />
+    <UIContralType>0</UIContralType>
+    <MyDataType>3</MyDataType>
+    <LGType>0</LGType>
+    <UIWidth>100</UIWidth>
+    <UIHeight>23</UIHeight>
+    <MinLen>0</MinLen>
+    <MaxLen>300</MaxLen>
+    <UIBindKey />
+    <UIRefKey />
+    <UIRefKeyText />
+    <UIVisible>1</UIVisible>
+    <UIIsEnable>1</UIIsEnable>
+    <UIIsLine>0</UIIsLine>
+    <IDX>0</IDX>
+    <GroupID>177</GroupID>
+    <IsSigan>0</IsSigan>
+    <X>480.73</X>
+    <Y>329.82</Y>
+    <GUID />
+    <Tag />
+    <EditType>0</EditType>
+    <ColSpan>1</ColSpan>
+  </Sys_MapAttr>
+  <Sys_MapAttr>
+    <MyPK>GT_LXSQ_JH_TZ_DF_FKYWRTZ</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <KeyOfEn>JH_TZ_DF_FKYWRTZ</KeyOfEn>
+    <Name> Land reclamation obligations invest </Name>
+    <DefVal />
+    <UIContralType>0</UIContralType>
+    <MyDataType>3</MyDataType>
+    <LGType>0</LGType>
+    <UIWidth>100</UIWidth>
+    <UIHeight>23</UIHeight>
+    <MinLen>0</MinLen>
+    <MaxLen>300</MaxLen>
+    <UIBindKey />
+    <UIRefKey />
+    <UIRefKeyText />
+    <UIVisible>1</UIVisible>
+    <UIIsEnable>1</UIIsEnable>
+    <UIIsLine>0</UIIsLine>
+    <IDX>0</IDX>
+    <GroupID>177</GroupID>
+    <IsSigan>0</IsSigan>
+    <X>241.36</X>
+    <Y>449.64</Y>
+    <GUID />
+    <Tag />
+    <EditType>0</EditType>
+    <ColSpan>1</ColSpan>
+  </Sys_MapAttr>
+  <Sys_MapAttr>
+    <MyPK>GT_LXSQ_JH_TZ_DF_GDKKF</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <KeyOfEn>JH_TZ_DF_GDKKF</KeyOfEn>
+    <Name> Land reclamation fees （ Ten thousand yuan ）</Name>
+    <DefVal />
+    <UIContralType>0</UIContralType>
+    <MyDataType>8</MyDataType>
+    <LGType>0</LGType>
+    <UIWidth>100</UIWidth>
+    <UIHeight>23</UIHeight>
+    <MinLen>0</MinLen>
+    <MaxLen>300</MaxLen>
+    <UIBindKey />
+    <UIRefKey />
+    <UIRefKeyText />
+    <UIVisible>1</UIVisible>
+    <UIIsEnable>1</UIIsEnable>
+    <UIIsLine>0</UIIsLine>
+    <IDX>0</IDX>
+    <GroupID>177</GroupID>
+    <IsSigan>0</IsSigan>
+    <X>240</X>
+    <Y>367</Y>
+    <GUID />
+    <Tag />
+    <EditType>0</EditType>
+    <ColSpan>1</ColSpan>
+  </Sys_MapAttr>
+  <Sys_MapAttr>
+    <MyPK>GT_LXSQ_JH_TZ_DF_QT_QTZJ</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <KeyOfEn>JH_TZ_DF_QT_QTZJ</KeyOfEn>
+    <Name> Other funds </Name>
+    <DefVal />
+    <UIContralType>0</UIContralType>
+    <MyDataType>8</MyDataType>
+    <LGType>0</LGType>
+    <UIWidth>100</UIWidth>
+    <UIHeight>23</UIHeight>
+    <MinLen>0</MinLen>
+    <MaxLen>300</MaxLen>
+    <UIBindKey />
+    <UIRefKey />
+    <UIRefKeyText />
+    <UIVisible>1</UIVisible>
+    <UIIsEnable>1</UIIsEnable>
+    <UIIsLine>0</UIIsLine>
+    <IDX>0</IDX>
+    <GroupID>177</GroupID>
+    <IsSigan>0</IsSigan>
+    <X>481</X>
+    <Y>448</Y>
+    <GUID />
+    <Tag />
+    <EditType>0</EditType>
+    <ColSpan>1</ColSpan>
+  </Sys_MapAttr>
+  <Sys_MapAttr>
+    <MyPK>GT_LXSQ_JH_TZ_DF_TDCRCR</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <KeyOfEn>JH_TZ_DF_TDCRCR</KeyOfEn>
+    <Name> Land revenue and land development for agriculture （ Ten thousand yuan ）</Name>
+    <DefVal />
+    <UIContralType>0</UIContralType>
+    <MyDataType>8</MyDataType>
+    <LGType>0</LGType>
+    <UIWidth>100</UIWidth>
+    <UIHeight>23</UIHeight>
+    <MinLen>0</MinLen>
+    <MaxLen>300</MaxLen>
+    <UIBindKey />
+    <UIRefKey />
+    <UIRefKeyText />
+    <UIVisible>1</UIVisible>
+    <UIIsEnable>1</UIIsEnable>
+    <UIIsLine>0</UIIsLine>
+    <IDX>0</IDX>
+    <GroupID>177</GroupID>
+    <IsSigan>0</IsSigan>
+    <X>240</X>
+    <Y>409</Y>
+    <GUID />
+    <Tag />
+    <EditType>0</EditType>
+    <ColSpan>1</ColSpan>
+  </Sys_MapAttr>
+  <Sys_MapAttr>
+    <MyPK>GT_LXSQ_JH_TZ_DF_TDFKF</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <KeyOfEn>JH_TZ_DF_TDFKF</KeyOfEn>
+    <Name> Land reclamation fees （ Ten thousand yuan ）</Name>
+    <DefVal />
+    <UIContralType>0</UIContralType>
+    <MyDataType>8</MyDataType>
+    <LGType>0</LGType>
+    <UIWidth>100</UIWidth>
+    <UIHeight>23</UIHeight>
+    <MinLen>0</MinLen>
+    <MaxLen>300</MaxLen>
+    <UIBindKey />
+    <UIRefKey />
+    <UIRefKeyText />
+    <UIVisible>1</UIVisible>
+    <UIIsEnable>1</UIIsEnable>
+    <UIIsLine>0</UIIsLine>
+    <IDX>0</IDX>
+    <GroupID>177</GroupID>
+    <IsSigan>0</IsSigan>
+    <X>480</X>
+    <Y>409</Y>
+    <GUID />
+    <Tag />
+    <EditType>0</EditType>
+    <ColSpan>1</ColSpan>
+  </Sys_MapAttr>
+  <Sys_MapAttr>
+    <MyPK>GT_LXSQ_JH_TZ_DF_ZXBCGDZJ</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <KeyOfEn>JH_TZ_DF_ZXBCGDZJ</KeyOfEn>
+    <Name> Supplement their own funds farmland （ Ten thousand yuan ）</Name>
+    <DefVal />
+    <UIContralType>0</UIContralType>
+    <MyDataType>8</MyDataType>
+    <LGType>0</LGType>
+    <UIWidth>100</UIWidth>
+    <UIHeight>23</UIHeight>
+    <MinLen>0</MinLen>
+    <MaxLen>300</MaxLen>
+    <UIBindKey />
+    <UIRefKey />
+    <UIRefKeyText />
+    <UIVisible>1</UIVisible>
+    <UIIsEnable>1</UIIsEnable>
+    <UIIsLine>0</UIIsLine>
+    <IDX>0</IDX>
+    <GroupID>177</GroupID>
+    <IsSigan>0</IsSigan>
+    <X>479</X>
+    <Y>368</Y>
+    <GUID />
+    <Tag />
+    <EditType>0</EditType>
+    <ColSpan>1</ColSpan>
+  </Sys_MapAttr>
+  <Sys_MapAttr>
+    <MyPK>GT_LXSQ_JH_TZ_DF_ZYFPXZF</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <KeyOfEn>JH_TZ_DF_ZYFPXZF</KeyOfEn>
+    <Name> New central distribution fee funds （ Ten thousand yuan ）</Name>
+    <DefVal />
+    <UIContralType>0</UIContralType>
+    <MyDataType>8</MyDataType>
+    <LGType>0</LGType>
+    <UIWidth>100</UIWidth>
+    <UIHeight>23</UIHeight>
+    <MinLen>0</MinLen>
+    <MaxLen>300</MaxLen>
+    <UIBindKey />
+    <UIRefKey />
+    <UIRefKeyText />
+    <UIVisible>1</UIVisible>
+    <UIIsEnable>1</UIIsEnable>
+    <UIIsLine>0</UIIsLine>
+    <IDX>0</IDX>
+    <GroupID>177</GroupID>
+    <IsSigan>0</IsSigan>
+    <X>241</X>
+    <Y>329</Y>
+    <GUID />
+    <Tag />
+    <EditType>0</EditType>
+    <ColSpan>1</ColSpan>
+  </Sys_MapAttr>
+  <Sys_MapAttr>
+    <MyPK>GT_LXSQ_JH_TZ_DFZJ</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <KeyOfEn>JH_TZ_DFZJ</KeyOfEn>
+    <Name> Local funding （ Ten thousand yuan ）</Name>
+    <DefVal />
+    <UIContralType>0</UIContralType>
+    <MyDataType>8</MyDataType>
+    <LGType>0</LGType>
+    <UIWidth>100</UIWidth>
+    <UIHeight>23</UIHeight>
+    <MinLen>0</MinLen>
+    <MaxLen>300</MaxLen>
+    <UIBindKey />
+    <UIRefKey />
+    <UIRefKeyText />
+    <UIVisible>1</UIVisible>
+    <UIIsEnable>1</UIIsEnable>
+    <UIIsLine>0</UIIsLine>
+    <IDX>0</IDX>
+    <GroupID>177</GroupID>
+    <IsSigan>0</IsSigan>
+    <X>479</X>
+    <Y>291</Y>
+    <GUID />
+    <Tag />
+    <EditType>0</EditType>
+    <ColSpan>1</ColSpan>
+  </Sys_MapAttr>
+  <Sys_MapAttr>
+    <MyPK>GT_LXSQ_JH_TZ_ZTZ</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <KeyOfEn>JH_TZ_ZTZ</KeyOfEn>
+    <Name> Total investment （ Ten thousand yuan ）</Name>
+    <DefVal />
+    <UIContralType>0</UIContralType>
+    <MyDataType>8</MyDataType>
+    <LGType>0</LGType>
+    <UIWidth>100</UIWidth>
+    <UIHeight>23</UIHeight>
+    <MinLen>0</MinLen>
+    <MaxLen>300</MaxLen>
+    <UIBindKey />
+    <UIRefKey />
+    <UIRefKeyText />
+    <UIVisible>1</UIVisible>
+    <UIIsEnable>1</UIIsEnable>
+    <UIIsLine>0</UIIsLine>
+    <IDX>0</IDX>
+    <GroupID>177</GroupID>
+    <IsSigan>0</IsSigan>
+    <X>240</X>
+    <Y>292</Y>
+    <GUID />
+    <Tag />
+    <EditType>0</EditType>
+    <ColSpan>1</ColSpan>
+  </Sys_MapAttr>
+  <Sys_MapAttr>
+    <MyPK>GT_LXSQ_JH_WJMC</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <KeyOfEn>JH_WJMC</KeyOfEn>
+    <Name> Budget and planning documents issued by name </Name>
+    <DefVal />
+    <UIContralType>0</UIContralType>
+    <MyDataType>1</MyDataType>
+    <LGType>0</LGType>
+    <UIWidth>100</UIWidth>
+    <UIHeight>23</UIHeight>
+    <MinLen>0</MinLen>
+    <MaxLen>300</MaxLen>
+    <UIBindKey />
+    <UIRefKey />
+    <UIRefKeyText />
+    <UIVisible>1</UIVisible>
+    <UIIsEnable>1</UIIsEnable>
+    <UIIsLine>0</UIIsLine>
+    <IDX>0</IDX>
+    <GroupID>177</GroupID>
+    <IsSigan>0</IsSigan>
+    <X>240</X>
+    <Y>167</Y>
+    <GUID />
+    <Tag />
+    <EditType>0</EditType>
+    <ColSpan>1</ColSpan>
+  </Sys_MapAttr>
+  <Sys_MapAttr>
+    <MyPK>GT_LXSQ_LXDH2</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <KeyOfEn>LXDH2</KeyOfEn>
+    <Name> Provincial Leader Phone </Name>
+    <DefVal />
+    <UIContralType>0</UIContralType>
+    <MyDataType>1</MyDataType>
+    <LGType>0</LGType>
+    <UIWidth>100</UIWidth>
+    <UIHeight>23</UIHeight>
+    <MinLen>0</MinLen>
+    <MaxLen>300</MaxLen>
+    <UIBindKey />
+    <UIRefKey />
+    <UIRefKeyText />
+    <UIVisible>1</UIVisible>
+    <UIIsEnable>1</UIIsEnable>
+    <UIIsLine>0</UIIsLine>
+    <IDX>0</IDX>
+    <GroupID>177</GroupID>
+    <IsSigan>0</IsSigan>
+    <X>480</X>
+    <Y>873.18</Y>
+    <GUID />
+    <Tag />
+    <EditType>0</EditType>
+    <ColSpan>1</ColSpan>
+  </Sys_MapAttr>
+  <Sys_MapAttr>
+    <MyPK>GT_LXSQ_JH_GM_JBNTZL</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <KeyOfEn>JH_GM_JBNTZL</KeyOfEn>
+    <Name> Basic Farmland Consolidation scale （ Ha ）</Name>
+    <DefVal />
+    <UIContralType>0</UIContralType>
+    <MyDataType>3</MyDataType>
+    <LGType>0</LGType>
+    <UIWidth>100</UIWidth>
+    <UIHeight>23</UIHeight>
+    <MinLen>0</MinLen>
+    <MaxLen>300</MaxLen>
+    <UIBindKey />
+    <UIRefKey />
+    <UIRefKeyText />
+    <UIVisible>1</UIVisible>
+    <UIIsEnable>1</UIIsEnable>
+    <UIIsLine>0</UIIsLine>
+    <IDX>0</IDX>
+    <GroupID>177</GroupID>
+    <IsSigan>0</IsSigan>
+    <X>240</X>
+    <Y>569</Y>
+    <GUID />
+    <Tag />
+    <EditType>0</EditType>
+    <ColSpan>1</ColSpan>
+  </Sys_MapAttr>
+  <Sys_MapAttr>
+    <MyPK>GT_LXSQ_JH_GM_KF</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <KeyOfEn>JH_GM_KF</KeyOfEn>
+    <Name> Development scale （ Ha ）</Name>
+    <DefVal />
+    <UIContralType>0</UIContralType>
+    <MyDataType>3</MyDataType>
+    <LGType>0</LGType>
+    <UIWidth>100</UIWidth>
+    <UIHeight>23</UIHeight>
+    <MinLen>0</MinLen>
+    <MaxLen>300</MaxLen>
+    <UIBindKey />
+    <UIRefKey />
+    <UIRefKeyText />
+    <UIVisible>1</UIVisible>
+    <UIIsEnable>1</UIIsEnable>
+    <UIIsLine>0</UIIsLine>
+    <IDX>0</IDX>
+    <GroupID>177</GroupID>
+    <IsSigan>0</IsSigan>
+    <X>240</X>
+    <Y>608</Y>
+    <GUID />
+    <Tag />
+    <EditType>0</EditType>
+    <ColSpan>1</ColSpan>
+  </Sys_MapAttr>
+  <Sys_MapAttr>
+    <MyPK>GT_LXSQ_JH_GM_KYYZBPH</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <KeyOfEn>JH_GM_KYYZBPH</KeyOfEn>
+    <Name> Program can be used for occupation and retrieval area </Name>
+    <DefVal />
+    <UIContralType>0</UIContralType>
+    <MyDataType>3</MyDataType>
+    <LGType>0</LGType>
+    <UIWidth>100</UIWidth>
+    <UIHeight>23</UIHeight>
+    <MinLen>0</MinLen>
+    <MaxLen>300</MaxLen>
+    <UIBindKey />
+    <UIRefKey />
+    <UIRefKeyText />
+    <UIVisible>1</UIVisible>
+    <UIIsEnable>1</UIIsEnable>
+    <UIIsLine>0</UIIsLine>
+    <IDX>0</IDX>
+    <GroupID>177</GroupID>
+    <IsSigan>0</IsSigan>
+    <X>479.18</X>
+    <Y>731</Y>
+    <GUID />
+    <Tag />
+    <EditType>0</EditType>
+    <ColSpan>1</ColSpan>
+  </Sys_MapAttr>
+  <Sys_MapAttr>
+    <MyPK>GT_LXSQ_JH_GM_XZGD</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <KeyOfEn>JH_GM_XZGD</KeyOfEn>
+    <Name> New arable land （ Ha ）</Name>
+    <DefVal />
+    <UIContralType>0</UIContralType>
+    <MyDataType>3</MyDataType>
+    <LGType>0</LGType>
+    <UIWidth>100</UIWidth>
+    <UIHeight>23</UIHeight>
+    <MinLen>0</MinLen>
+    <MaxLen>300</MaxLen>
+    <UIBindKey />
+    <UIRefKey />
+    <UIRefKeyText />
+    <UIVisible>1</UIVisible>
+    <UIIsEnable>1</UIIsEnable>
+    <UIIsLine>0</UIIsLine>
+    <IDX>0</IDX>
+    <GroupID>177</GroupID>
+    <IsSigan>0</IsSigan>
+    <X>242</X>
+    <Y>687.18</Y>
+    <GUID />
+    <Tag />
+    <EditType>0</EditType>
+    <ColSpan>1</ColSpan>
+  </Sys_MapAttr>
+  <Sys_MapAttr>
+    <MyPK>GT_LXSQ_JH_GM_ZHGD</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <KeyOfEn>JH_GM_ZHGD</KeyOfEn>
+    <Name> Disaster destroyed arable land </Name>
+    <DefVal />
+    <UIContralType>0</UIContralType>
+    <MyDataType>3</MyDataType>
+    <LGType>0</LGType>
+    <UIWidth>100</UIWidth>
+    <UIHeight>23</UIHeight>
+    <MinLen>0</MinLen>
+    <MaxLen>300</MaxLen>
+    <UIBindKey />
+    <UIRefKey />
+    <UIRefKeyText />
+    <UIVisible>1</UIVisible>
+    <UIIsEnable>1</UIIsEnable>
+    <UIIsLine>0</UIIsLine>
+    <IDX>0</IDX>
+    <GroupID>177</GroupID>
+    <IsSigan>0</IsSigan>
+    <X>240</X>
+    <Y>729</Y>
+    <GUID />
+    <Tag />
+    <EditType>0</EditType>
+    <ColSpan>1</ColSpan>
+  </Sys_MapAttr>
+  <Sys_MapAttr>
+    <MyPK>GT_LXSQ_JH_GM_ZL</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <KeyOfEn>JH_GM_ZL</KeyOfEn>
+    <Name> Finishing size （ Ha ）</Name>
+    <DefVal />
+    <UIContralType>0</UIContralType>
+    <MyDataType>3</MyDataType>
+    <LGType>0</LGType>
+    <UIWidth>100</UIWidth>
+    <UIHeight>23</UIHeight>
+    <MinLen>0</MinLen>
+    <MaxLen>300</MaxLen>
+    <UIBindKey />
+    <UIRefKey />
+    <UIRefKeyText />
+    <UIVisible>1</UIVisible>
+    <UIIsEnable>1</UIIsEnable>
+    <UIIsLine>0</UIIsLine>
+    <IDX>0</IDX>
+    <GroupID>177</GroupID>
+    <IsSigan>0</IsSigan>
+    <X>481</X>
+    <Y>531</Y>
+    <GUID />
+    <Tag />
+    <EditType>0</EditType>
+    <ColSpan>1</ColSpan>
+  </Sys_MapAttr>
+  <Sys_MapAttr>
+    <MyPK>GT_LXSQ_JH_GM_ZMJ</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <KeyOfEn>JH_GM_ZMJ</KeyOfEn>
+    <Name> The total size of the building （ Ha ）</Name>
+    <DefVal />
+    <UIContralType>0</UIContralType>
+    <MyDataType>3</MyDataType>
+    <LGType>0</LGType>
+    <UIWidth>100</UIWidth>
+    <UIHeight>23</UIHeight>
+    <MinLen>0</MinLen>
+    <MaxLen>300</MaxLen>
+    <UIBindKey />
+    <UIRefKey />
+    <UIRefKeyText />
+    <UIVisible>1</UIVisible>
+    <UIIsEnable>1</UIIsEnable>
+    <UIIsLine>0</UIIsLine>
+    <IDX>0</IDX>
+    <GroupID>177</GroupID>
+    <IsSigan>0</IsSigan>
+    <X>240</X>
+    <Y>532</Y>
+    <GUID />
+    <Tag />
+    <EditType>0</EditType>
+    <ColSpan>1</ColSpan>
+  </Sys_MapAttr>
+  <Sys_MapAttr>
+    <MyPK>GT_LXSQ_JH_JSQ</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <KeyOfEn>JH_JSQ</KeyOfEn>
+    <Name> Construction period </Name>
+    <DefVal />
+    <UIContralType>0</UIContralType>
+    <MyDataType>1</MyDataType>
+    <LGType>0</LGType>
+    <UIWidth>100</UIWidth>
+    <UIHeight>23</UIHeight>
+    <MinLen>0</MinLen>
+    <MaxLen>300</MaxLen>
+    <UIBindKey />
+    <UIRefKey />
+    <UIRefKeyText />
+    <UIVisible>1</UIVisible>
+    <UIIsEnable>1</UIIsEnable>
+    <UIIsLine>0</UIIsLine>
+    <IDX>0</IDX>
+    <GroupID>177</GroupID>
+    <IsSigan>0</IsSigan>
+    <X>240</X>
+    <Y>208</Y>
+    <GUID />
+    <Tag />
+    <EditType>0</EditType>
+    <ColSpan>1</ColSpan>
+  </Sys_MapAttr>
+  <Sys_MapAttr>
+    <MyPK>GT_LXSQ_JH_PFJG</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <KeyOfEn>JH_PFJG</KeyOfEn>
+    <Name> Authorities issued a budget plan </Name>
+    <DefVal />
+    <UIContralType>0</UIContralType>
+    <MyDataType>1</MyDataType>
+    <LGType>0</LGType>
+    <UIWidth>100</UIWidth>
+    <UIHeight>23</UIHeight>
+    <MinLen>0</MinLen>
+    <MaxLen>300</MaxLen>
+    <UIBindKey />
+    <UIRefKey />
+    <UIRefKeyText />
+    <UIVisible>1</UIVisible>
+    <UIIsEnable>1</UIIsEnable>
+    <UIIsLine>0</UIIsLine>
+    <IDX>0</IDX>
+    <GroupID>177</GroupID>
+    <IsSigan>0</IsSigan>
+    <X>240</X>
+    <Y>127</Y>
+    <GUID />
+    <Tag />
+    <EditType>0</EditType>
+    <ColSpan>1</ColSpan>
+  </Sys_MapAttr>
+  <Sys_MapAttr>
+    <MyPK>GT_LXSQ_JBXX_XMMC</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <KeyOfEn>JBXX_XMMC</KeyOfEn>
+    <Name> Project Title </Name>
+    <DefVal />
+    <UIContralType>0</UIContralType>
+    <MyDataType>1</MyDataType>
+    <LGType>0</LGType>
+    <UIWidth>338</UIWidth>
+    <UIHeight>23</UIHeight>
+    <MinLen>0</MinLen>
+    <MaxLen>300</MaxLen>
+    <UIBindKey />
+    <UIRefKey />
+    <UIRefKeyText />
+    <UIVisible>1</UIVisible>
+    <UIIsEnable>1</UIIsEnable>
+    <UIIsLine>0</UIIsLine>
+    <IDX>0</IDX>
+    <GroupID>177</GroupID>
+    <IsSigan>0</IsSigan>
+    <X>240</X>
+    <Y>55</Y>
+    <GUID />
+    <Tag />
+    <EditType>0</EditType>
+    <ColSpan>1</ColSpan>
+  </Sys_MapAttr>
+  <Sys_MapAttr>
+    <MyPK>GT_LXSQ_JBXX_XZQMC</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <KeyOfEn>JBXX_XZQMC</KeyOfEn>
+    <Name> Project Location </Name>
+    <DefVal />
+    <UIContralType>0</UIContralType>
+    <MyDataType>1</MyDataType>
+    <LGType>0</LGType>
+    <UIWidth>156.36</UIWidth>
+    <UIHeight>23</UIHeight>
+    <MinLen>0</MinLen>
+    <MaxLen>300</MaxLen>
+    <UIBindKey />
+    <UIRefKey />
+    <UIRefKeyText />
+    <UIVisible>1</UIVisible>
+    <UIIsEnable>1</UIIsEnable>
+    <UIIsLine>0</UIIsLine>
+    <IDX>0</IDX>
+    <GroupID>177</GroupID>
+    <IsSigan>0</IsSigan>
+    <X>240</X>
+    <Y>89</Y>
+    <GUID />
+    <Tag />
+    <EditType>0</EditType>
+    <ColSpan>1</ColSpan>
+  </Sys_MapAttr>
+  <Sys_MapAttr>
+    <MyPK>GT_LXSQ_JBXX_YSBH</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <KeyOfEn>JBXX_YSBH</KeyOfEn>
+    <Name> Project budget numbers </Name>
+    <DefVal />
+    <UIContralType>0</UIContralType>
+    <MyDataType>1</MyDataType>
+    <LGType>0</LGType>
+    <UIWidth>100</UIWidth>
+    <UIHeight>23</UIHeight>
+    <MinLen>0</MinLen>
+    <MaxLen>300</MaxLen>
+    <UIBindKey />
+    <UIRefKey />
+    <UIRefKeyText />
+    <UIVisible>1</UIVisible>
+    <UIIsEnable>1</UIIsEnable>
+    <UIIsLine>0</UIIsLine>
+    <IDX>0</IDX>
+    <GroupID>177</GroupID>
+    <IsSigan>0</IsSigan>
+    <X>479</X>
+    <Y>87</Y>
+    <GUID />
+    <Tag />
+    <EditType>0</EditType>
+    <ColSpan>1</ColSpan>
+  </Sys_MapAttr>
+  <Sys_MapAttr>
+    <MyPK>GT_LXSQ_JH_GM_FK</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <KeyOfEn>JH_GM_FK</KeyOfEn>
+    <Name> Scale reclamation （ Ha ）</Name>
+    <DefVal />
+    <UIContralType>0</UIContralType>
+    <MyDataType>3</MyDataType>
+    <LGType>0</LGType>
+    <UIWidth>100</UIWidth>
+    <UIHeight>23</UIHeight>
+    <MinLen>0</MinLen>
+    <MaxLen>300</MaxLen>
+    <UIBindKey />
+    <UIRefKey />
+    <UIRefKeyText />
+    <UIVisible>1</UIVisible>
+    <UIIsEnable>1</UIIsEnable>
+    <UIIsLine>0</UIIsLine>
+    <IDX>0</IDX>
+    <GroupID>177</GroupID>
+    <IsSigan>0</IsSigan>
+    <X>480</X>
+    <Y>569</Y>
+    <GUID />
+    <Tag />
+    <EditType>0</EditType>
+    <ColSpan>1</ColSpan>
+  </Sys_MapAttr>
+  <Sys_MapAttr>
+    <MyPK>GT_LXSQ_JH_GM_GBZ</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <KeyOfEn>JH_GM_GBZ</KeyOfEn>
+    <Name> Plans to build a high standard basic farmland scale </Name>
+    <DefVal />
+    <UIContralType>0</UIContralType>
+    <MyDataType>3</MyDataType>
+    <LGType>0</LGType>
+    <UIWidth>100</UIWidth>
+    <UIHeight>23</UIHeight>
+    <MinLen>0</MinLen>
+    <MaxLen>300</MaxLen>
+    <UIBindKey />
+    <UIRefKey />
+    <UIRefKeyText />
+    <UIVisible>1</UIVisible>
+    <UIIsEnable>1</UIIsEnable>
+    <UIIsLine>0</UIIsLine>
+    <IDX>0</IDX>
+    <GroupID>177</GroupID>
+    <IsSigan>0</IsSigan>
+    <X>481</X>
+    <Y>607</Y>
+    <GUID />
+    <Tag />
+    <EditType>0</EditType>
+    <ColSpan>1</ColSpan>
+  </Sys_MapAttr>
+  <Sys_MapAttr>
+    <MyPK>GT_LXSQ_JH_GM_GBZJSTJ</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <KeyOfEn>JH_GM_GBZJSTJ</KeyOfEn>
+    <Name> Construction Conditions </Name>
+    <DefVal />
+    <UIContralType>1</UIContralType>
+    <MyDataType>1</MyDataType>
+    <LGType>2</LGType>
+    <UIWidth>100</UIWidth>
+    <UIHeight>23</UIHeight>
+    <MinLen>0</MinLen>
+    <MaxLen>300</MaxLen>
+    <UIBindKey>Demo_JSTJ</UIBindKey>
+    <UIRefKey>No</UIRefKey>
+    <UIRefKeyText>Name</UIRefKeyText>
+    <UIVisible>1</UIVisible>
+    <UIIsEnable>1</UIIsEnable>
+    <UIIsLine>0</UIIsLine>
+    <IDX>999</IDX>
+    <GroupID>177</GroupID>
+    <IsSigan>0</IsSigan>
+    <X>237.91</X>
+    <Y>654.91</Y>
+    <GUID />
+    <Tag />
+    <EditType>0</EditType>
+    <ColSpan>1</ColSpan>
+  </Sys_MapAttr>
+  <Sys_MapAttr>
+    <MyPK>GT_LXSQ_JBXX_ISZHXM</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <KeyOfEn>JBXX_ISZHXM</KeyOfEn>
+    <Name> Whether the project was destroyed by disasters </Name>
+    <DefVal />
+    <UIContralType>2</UIContralType>
+    <MyDataType>4</MyDataType>
+    <LGType>0</LGType>
+    <UIWidth>100</UIWidth>
+    <UIHeight>23</UIHeight>
+    <MinLen>0</MinLen>
+    <MaxLen>300</MaxLen>
+    <UIBindKey />
+    <UIRefKey />
+    <UIRefKeyText />
+    <UIVisible>1</UIVisible>
+    <UIIsEnable>1</UIIsEnable>
+    <UIIsLine>0</UIIsLine>
+    <IDX>999</IDX>
+    <GroupID>177</GroupID>
+    <IsSigan>0</IsSigan>
+    <X>461</X>
+    <Y>213</Y>
+    <GUID />
+    <Tag />
+    <EditType>0</EditType>
+    <ColSpan>1</ColSpan>
+  </Sys_MapAttr>
+  <Sys_MapAttr>
+    <MyPK>GT_LXSQ_LXR</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <KeyOfEn>LXR</KeyOfEn>
+    <Name> Informant information </Name>
+    <DefVal />
+    <UIContralType>0</UIContralType>
+    <MyDataType>1</MyDataType>
+    <LGType>0</LGType>
+    <UIWidth>100</UIWidth>
+    <UIHeight>23</UIHeight>
+    <MinLen>0</MinLen>
+    <MaxLen>300</MaxLen>
+    <UIBindKey />
+    <UIRefKey />
+    <UIRefKeyText />
+    <UIVisible>1</UIVisible>
+    <UIIsEnable>1</UIIsEnable>
+    <UIIsLine>0</UIIsLine>
+    <IDX>999</IDX>
+    <GroupID>177</GroupID>
+    <IsSigan>0</IsSigan>
+    <X>241.82</X>
+    <Y>828.09</Y>
+    <GUID />
+    <Tag />
+    <EditType>0</EditType>
+    <ColSpan>1</ColSpan>
+  </Sys_MapAttr>
+  <Sys_MapAttr>
+    <MyPK>GT_LXSQ_LXRDH</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <KeyOfEn>LXRDH</KeyOfEn>
+    <Name> Phone </Name>
+    <DefVal />
+    <UIContralType>0</UIContralType>
+    <MyDataType>1</MyDataType>
+    <LGType>0</LGType>
+    <UIWidth>100</UIWidth>
+    <UIHeight>23</UIHeight>
+    <MinLen>0</MinLen>
+    <MaxLen>300</MaxLen>
+    <UIBindKey />
+    <UIRefKey />
+    <UIRefKeyText />
+    <UIVisible>1</UIVisible>
+    <UIIsEnable>1</UIIsEnable>
+    <UIIsLine>0</UIIsLine>
+    <IDX>999</IDX>
+    <GroupID>177</GroupID>
+    <IsSigan>0</IsSigan>
+    <X>241.73</X>
+    <Y>874.09</Y>
+    <GUID />
+    <Tag />
+    <EditType>0</EditType>
+    <ColSpan>1</ColSpan>
+  </Sys_MapAttr>
+  <Sys_MapAttr>
+    <MyPK>GT_LXSQ_OID</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <KeyOfEn>OID</KeyOfEn>
+    <Name>OID</Name>
+    <DefVal>0</DefVal>
+    <UIContralType>0</UIContralType>
+    <MyDataType>2</MyDataType>
+    <LGType>0</LGType>
+    <UIWidth>100</UIWidth>
+    <UIHeight>23</UIHeight>
+    <MinLen>0</MinLen>
+    <MaxLen>300</MaxLen>
+    <UIBindKey />
+    <UIRefKey />
+    <UIRefKeyText />
+    <UIVisible>0</UIVisible>
+    <UIIsEnable>0</UIIsEnable>
+    <UIIsLine>0</UIIsLine>
+    <IDX>999</IDX>
+    <GroupID>177</GroupID>
+    <IsSigan>0</IsSigan>
+    <X>5</X>
+    <Y>5</Y>
+    <GUID />
+    <Tag />
+    <EditType>2</EditType>
+    <ColSpan>1</ColSpan>
+  </Sys_MapAttr>
+  <Sys_MapAttr>
+    <MyPK>GT_LXSQ_SJFZR</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <KeyOfEn>SJFZR</KeyOfEn>
+    <Name> Provincial Leader </Name>
+    <DefVal />
+    <UIContralType>0</UIContralType>
+    <MyDataType>1</MyDataType>
+    <LGType>0</LGType>
+    <UIWidth>100</UIWidth>
+    <UIHeight>23</UIHeight>
+    <MinLen>0</MinLen>
+    <MaxLen>300</MaxLen>
+    <UIBindKey />
+    <UIRefKey />
+    <UIRefKeyText />
+    <UIVisible>1</UIVisible>
+    <UIIsEnable>1</UIIsEnable>
+    <UIIsLine>0</UIIsLine>
+    <IDX>999</IDX>
+    <GroupID>177</GroupID>
+    <IsSigan>0</IsSigan>
+    <X>479</X>
+    <Y>828.09</Y>
+    <GUID />
+    <Tag />
+    <EditType>0</EditType>
+    <ColSpan>1</ColSpan>
+  </Sys_MapAttr>
+  <Sys_MapAttr>
+    <MyPK>GT_LXSQ_SQDW</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <KeyOfEn>SQDW</KeyOfEn>
+    <Name> Information furnished units </Name>
+    <DefVal />
+    <UIContralType>0</UIContralType>
+    <MyDataType>1</MyDataType>
+    <LGType>0</LGType>
+    <UIWidth>100</UIWidth>
+    <UIHeight>23</UIHeight>
+    <MinLen>0</MinLen>
+    <MaxLen>300</MaxLen>
+    <UIBindKey />
+    <UIRefKey />
+    <UIRefKeyText />
+    <UIVisible>1</UIVisible>
+    <UIIsEnable>1</UIIsEnable>
+    <UIIsLine>0</UIIsLine>
+    <IDX>999</IDX>
+    <GroupID>177</GroupID>
+    <IsSigan>0</IsSigan>
+    <X>239.09</X>
+    <Y>925</Y>
+    <GUID />
+    <Tag />
+    <EditType>0</EditType>
+    <ColSpan>1</ColSpan>
+  </Sys_MapAttr>
+  <Sys_MapAttr>
+    <MyPK>GT_LXSQ_XXSHDW</MyPK>
+    <FK_MapData>GT_LXSQ</FK_MapData>
+    <KeyOfEn>XXSHDW</KeyOfEn>
+    <Name> Information Audit Unit </Name>
+    <DefVal />
+    <UIContralType>0</UIContralType>
+    <MyDataType>1</MyDataType>
+    <LGType>0</LGType>
+    <UIWidth>100</UIWidth>
+    <UIHeight>23</UIHeight>
+    <MinLen>0</MinLen>
+    <MaxLen>300</MaxLen>
+    <UIBindKey />
+    <UIRefKey />
+    <UIRefKeyText />
+    <UIVisible>1</UIVisible>
+    <UIIsEnable>1</UIIsEnable>
+    <UIIsLine>0</UIIsLine>
+    <IDX>999</IDX>
+    <GroupID>177</GroupID>
+    <IsSigan>0</IsSigan>
+    <X>482</X>
+    <Y>925</Y>
+    <GUID />
+    <Tag />
+    <EditType>0</EditType>
+    <ColSpan>1</ColSpan>
+  </Sys_MapAttr>
+  <Sys_GroupField>
+    <OID>177</OID>
+    <Lab> Municipal project application </Lab>
+    <EnName>GT_LXSQ</EnName>
+    <Idx>1</Idx>
+    <GUID />
+  </Sys_GroupField>
+</NewDataSet>

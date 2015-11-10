@@ -1,0 +1,34 @@
+﻿<!DocType HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	<HEAD>
+		<META NAME="GENERATOR" Content="Microsoft Visual Studio 7.0">
+		 
+		
+		<TITLE> Fast Data Help </TITLE>
+		<script language="javascript">
+      function frame_load()
+      {
+        var parm_string ;
+        //alert('hello') ;
+        parm_string = new String(window.location);
+        var pos = parm_string.indexOf("?") ;
+        var len = parm_string.length ; 
+        if( pos < 0 )
+        {
+          alert(" Passing parameters is empty , Please check the input .") ;
+          window.close();
+          return ;
+        }
+        parm_string = parm_string.substring( pos+1, len) ;
+      //  alert(parm_string);      
+        document.all.left.src =parm_string;
+        }
+		</script>
+	</HEAD>
+	<frameset rows="*" onload="frame_load()">
+		<frame name="left">
+		</form>
+		<frameset>
+		<body bgcolor=#d4d0c8  ></body>
+</HTML>
+

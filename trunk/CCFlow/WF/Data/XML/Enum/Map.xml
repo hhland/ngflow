@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Item Key="DtlShowModel"
+    CH="@0= Form @1= Card ( Free Mode )@2= Card ( Fool mode )"
+    EN=""
+    JP=""
+    RU=""    />
+
+  <Item Key="PopValFormat"
+    CH="@0=No( Only numbers )@1=Name( Name Only )@2=No,Name( Number and name , Such as zhangsan, Joe Smith ;lisi, John Doe ;)"
+    EN=""
+    JP=""
+    RU=""    />
+
+ <Item Key="DTSearchWay"
+ CH="@0= Not enabled @1= By date @2= By date and time "
+ EN="@0= Not enabled @1= By date @2= By date and time "
+ JP="@0= Not enabled @1= By date @2= By date and time "
+ RU="@0= Not enabled @1= By date @2= By date and time " />
+    
+    <Item Key="CtrlWay"
+  CH="@0= By post @1= By sector @2= By staff @3=By SQL"
+  EN="@0=Disable@1=SQL/Produces@2=URL@3=WebServices@4=exe file"
+  JP="@0=Disable@1=SQL/Produces@2=URL@3=WebServices@4=exe file"
+  RU="@0=Disable@1=SQL/Produces@2=URL@3=WebServices@4=exe file" />
+    
+
+    <Item Key="FrmUrlShowWay"
+    CH="@0= Do not show @1= Automatic size @2= Specify size @3= New Window "
+    EN="@0=Disable@1=SQL/Produces@2=URL@3=WebServices@4=exe file"
+    JP="@0=Disable@1=SQL/Produces@2=URL@3=WebServices@4=exe file"
+    RU="@0=Disable@1=SQL/Produces@2=URL@3=WebServices@4=exe file" />
+    
+ <Item Key="TBModel"
+    CH="@0= Single line of text @1= Multi-line text @2= Rich Text "
+    EN="@0= Single line of text @1= Multi-line text @2= Rich Text "
+    JP="@0= Single line of text @1= Multi-line text @2= Rich Text "
+    RU="@0= Single line of text @1= Multi-line text @2= Rich Text " />
+</NewDataSet>
