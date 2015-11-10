@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--  toolbar -->
+<DataSet>
+  <!--
+  showtype =
+  0, Any state .
+  1, There session state .
+  2, No session state .
+  -->
+  <Tab No="GovDoc"  Name=" Electronic Document " />
+  <Group No="Oper"  Name=" Basic Operation "  FK_Tab="GovDoc" ShowType="1" Desc="" />
+  <Item No="Start"  Name=" Prepare documents " DoType="Start"  Tag="@Serv/WF/DocFlow/DoPort.aspx?DoType=Start" Icon="1" Width="600" Height="400" FK_Group="Oper" CtlType="Btn" WinModel="Dilg"   Desc=""/>
+  <Item No="Send"   Name=" Send " DoType="RunIE"  Tag="@Serv/WF/DocFlow/DoPort.aspx?DoType=Send" Icon="1" Width="700" Height="500" FK_Group="Oper" CtlType="Btn" WinModel="Dilg"   Desc=""/>
+  <Item No="Save"   Name=" Save " DoType="Save"  Tag="" Width="400" Height="300" FK_Group="Oper" CtlType="Btn" WinModel="Dilg"   Desc=""/>
+  <Item No="Return" Name=" Return " DoType="Return"  Tag="@Serv/WF/DocFlow/DoPort.aspx?DoType=Return" Width="550" Height="450" FK_Group="Oper" CtlType="Btn" WinModel="Dilg"   Desc=""/>
+  <Item No="FW"     Name=" Transfer " DoType="Shift"  Tag="@Serv/WF/DocFlow/DoPort.aspx?DoType=FW" Width="550" Height="450" FK_Group="Oper" CtlType="Btn" WinModel="Dilg"   Desc=""/>
+  
+  <Item No="UnSend" Name=" Undo Send " DoType="RunIE"  Tag="@Serv/WF/DocFlow/DoPort.aspx?DoType=UnSend" Width="600" Height="400" FK_Group="Oper" CtlType="Btn" WinModel="Dilg"   Desc=""/>
+  <Item No="Truck" Name=" Process track " DoType="Truck"  Tag="@Serv/WF/DocFlow/DoPort.aspx?DoType=Rpt" Width="800" Height="700" FK_Group="Oper" CtlType="Btn" WinModel="Dilg"   Desc=""/>
+  <Item No="Del" Name=" Delete Process " DoType="RunIE"  Tag="@Serv/WF/DocFlow/DoPort.aspx?DoType=DelFlow" Width="10" Height="10" FK_Group="Oper" CtlType="Btn" WinModel="Dilg"   Desc=""/>
+  <Item11 No="Ath" Name=" Accessory " DoType="RunIE"  Tag="@Serv/WF/DocFlow/DoPort.aspx?DoType=Ath" Width="10" Height="10" FK_Group="Oper" CtlType="Btn" WinModel="Dilg"   Desc=""/>
+
+  <Group No="Doc" Name=" Electronic Document "  FK_Tab="GovDoc" ShowType="1" Desc="" />
+  <Item No="EmpWorks" Name=" Be office paper " DoType="EmpWorks"  Tag="@Serv/WF/DocFlow/DoPort.aspx?DoType=EmpWorks" Width="600" Height="400" FK_Group="Doc" CtlType="Btn" WinModel="Dilg"   Desc=""/>
+  <Itemaaaa No="EmpWorks" Name=" Be office paper " DoType="RunIE"  Tag="@Serv/WF/DocFlow/DoPort.aspx?DoType=EmpWorks" Width="600" Height="400" FK_Group="Doc" CtlType="Btn" WinModel="Dilg"   Desc=""/>
+
+  <Item No="Runing" Name=" In-transit documents " DoType="RunIE"  Tag="@Serv/WF/DocFlow/DoPort.aspx?DoType=Runing" Width="600" Height="400" FK_Group="Doc" CtlType="Btn" WinModel="Dilg"   Desc=""/>
+  <Item No="View" Name=" Official inquiry " DoType="RunIE"  Tag="@Serv/WF/DocFlow/DoPort.aspx?DoType=View" Width="600" Height="400" FK_Group="Doc" CtlType="Btn" WinModel="Dilg"   Desc=""/>
+   
+  <!--<Item1 No="Reg" Name=" Registration receipt " DoType="RunIE"  Tag="@Serv/WF/DocFlow/DoPort.aspx?DoType=Reg" Width="600" Height="400" FK_Group="Doc" CtlType="Btn" WinModel="Dilg"   Desc=""/>
+
+  <Group No="SaveTab" Name=" File Operations "  FK_Tab="GovDoc" ShowType="1" Desc="" />
+  <Item No="SaveToU" Name=" Send to U盘" DoType="RunFunc"  Tag="" Width="400" Height="300" FK_Group="SaveTab" CtlType="Btn" WinModel="Dilg"   Desc=""/>
+  <Item No="SaveAs" Name=" Save as " DoType="RunFunc"  Tag="" Width="400" Height="300" FK_Group="SaveTab" CtlType="Btn" WinModel="Dilg"   Desc=""/>
+  <Item No="SaveAsPDF" Name=" Save as PDF" DoType="RunFunc"  Tag="" Width="400" Height="300" FK_Group="SaveTab" CtlType="Btn" WinModel="Dilg"   Desc=""/>
+  <Item No="SendToMail" Name=" Send e-mail " DoType="RunFunc"  Tag="" Width="400" Height="300" FK_Group="SaveTab" CtlType="Btn" WinModel="Dilg"   Desc=""/>-->
+
+  <Group No="Help" Name=" Help "  FK_Tab="GovDoc" ShowType="1" Desc="" />
+  <Item No="HelpUrl" Name=" Help " DoType="RunFunc"  Tag="" Width="800" Height="700" FK_Group="Help" CtlType="Btn" WinModel="Dilg"   Desc=""/>
+  <Item No="About" Name=" With respect to " DoType="RunFunc"  Tag="" Width="800" Height="700" FK_Group="Help" CtlType="Btn" WinModel="Dilg"   Desc=""/>
+  <Item No="Login" Name=" Log in " DoType="RunFunc"  Tag="" Width="800" Height="700" FK_Group="Help" CtlType="Btn" WinModel="Dilg"   Desc=""/>
+  <Item No="LogOut" Name=" Write off " DoType="RunFunc"  Tag="" Width="800" Height="700" FK_Group="Help" CtlType="Btn" WinModel="Dilg"   Desc=""/>
+  <Item No="WKInfo" Name=" Test " DoType="RunFunc"  Tag="" Width="800" Height="700" FK_Group="Help" CtlType="Btn" WinModel="Dilg"   Desc=""/>
+</DataSet>
